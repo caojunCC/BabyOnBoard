@@ -1,0 +1,19 @@
+
+
+
+<pre>----------
+Mess: select  email from iwebshop_email_registry  where    order by id DESC limit 0,50
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by id DESC limit 0,50' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:546  	File:F:\wamp\www\xmlyclub\iwebshop\controllers\message.php
+	Func:registry_message_send	Class:Message        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\xmlyclub\iwebshop\index.php
+------------</pre>

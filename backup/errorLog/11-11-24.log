@@ -1,0 +1,192 @@
+
+
+
+<pre>------
+errID:2
+errStr:require_once(./discuz_passport.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:23
+errTime:11-11-24 09:59:16
+##出错时变量的值：##
+array (
+  'className' => 'simple',
+  'classPath' => 'controllers.*',
+  'filePath' => 'F:/wamp/www/iwebshop/controllers/simple.php',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:57
+errTime:11-11-24 17:05:19
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:2
+errStr:require_once(./discuz_passport.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:23
+errTime:11-11-24 17:15:38
+##出错时变量的值：##
+array (
+  'className' => 'simple',
+  'classPath' => 'controllers.*',
+  'filePath' => 'F:/wamp/www/iwebshop/controllers/simple.php',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-24 17:17:29
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz',
+  'FROMURL' => 'http://localhost/discuz/index.php',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-24 17:17:30
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz',
+  'FROMURL' => 'http://localhost/discuz/index.php',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-24 17:21:22
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz',
+  'FROMURL' => 'http://localhost/discuz/index.php',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-24 17:21:34
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz',
+  'FROMURL' => 'http://localhost/discuz/index.php',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-24 17:23:26
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz',
+  'FROMURL' => 'http://localhost/discuz/',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-24 17:24:40
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz',
+  'FROMURL' => 'http://localhost/discuz/',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Use of undefined constant username - assumed 'username'
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:184
+errTime:11-11-24 17:27:13
+##出错时变量的值：##
+array (
+  'login_info' => 'qiulin',
+  'password' => 'liqiulin',
+  'remember' => '',
+  'autoLogin' => '',
+  'callback' => '?controller=simple&action=login&forward=http%3A%2F%2Flocalhost%2Fdiscuz%2Findex.php',
+  'message' => '',
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz',
+  'userRow' => 
+  array (
+    'id' => '1',
+    'username' => 'qiulin',
+    'password' => '26c67d31bfa976711c9aed5a13a85515',
+    'email' => 'xcodeman@gmail.com',
+    'head_ico' => NULL,
+    'user_id' => '1',
+    'true_name' => NULL,
+    'telephone' => NULL,
+    'mobile' => NULL,
+    'area' => NULL,
+    'contact_addr' => NULL,
+    'qq' => NULL,
+    'msn' => NULL,
+    'sex' => '1',
+    'birthday' => NULL,
+    'group_id' => '0',
+    'exp' => '0',
+    'point' => '0',
+    'message_ids' => NULL,
+    'time' => '2011-11-23 21:06:12',
+    'zip' => NULL,
+    'status' => '1',
+    'prop' => NULL,
+    'balance' => '0.00',
+    'last_login' => '2011-11-24 15:34:22',
+    'custom' => NULL,
+  ),
+  'cktime' => 3600,
+)
+-------</pre>

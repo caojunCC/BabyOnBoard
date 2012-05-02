@@ -1,0 +1,105 @@
+<div class="headbar clearfix">
+	<div class="position">订单<span>></span><span>订单管理</span><span>></span><span>打印模板</span></div>
+	<ul class="tab" name="menu">
+		<li name="selec" class="selected" id="selec1"><a href="javascript:selectTab('1');" hidefocus="true">购物清单模板</a></li>
+		<li name="selec"  id="selec2"><a href="javascript:selectTab('2');" hidefocus="true">配货单模板</a></li>
+		<!-- <li name="selec"  id="selec3"><a href="javascript:selectTab('3');" hidefocus="true">快递单模板</a></li> -->
+	</ul>
+</div>
+<script type="text/javascript">
+//恢复默认值
+function default_va(value,id)
+{
+	var tempUrl = '{url:/order/template/type/@value@}';
+	tempUrl     = tempUrl.replace('@value@',value);
+
+	$.post(tempUrl,function(date){
+		$('#'+id).val(date);
+	});
+}
+</script>
+<form name="ModelForm" action="{url:/order/print_template_update}" method="post">
+<div class="content_box">
+	<div class="content form_content">
+		<table name="form_table" id="tab-1" class="form_table">
+			<col width="150px" />
+			<col />
+			<tr>
+				<th valign="top">购物清单模板：</th>
+				<td><textarea class="big" name="con_shop" id="con_shop" >{$ifile_shop}</textarea></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td><button class='btn' type="button" onclick="return default_va('default1','con_shop')"><span>恢复默认设置</span></button></td>
+			</tr>
+		</table>
+		<table name="form_table" id="tab-2" style="display:none" class="form_table">
+			<col width="150px" />
+			<col />
+			<tr>
+				<th valign="top">配货单模板：</th>
+				<td><textarea class="big" name="con_pick" id="con_pick" >{$ifile_pick}</textarea></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td><button class='btn' type="button" onclick="default_va('default2','con_pick')"><span>恢复默认设置</span></button></td>
+			</tr>
+		</table>
+		<table name="form_table" id="tab-3" style="display:none" class="form_table">
+			<col width="150px" />
+			<col />
+			<tr>
+				<th valign="top">快递单模板：</th>
+				<td><textarea class="big" name="con_exp" id="con_exp" >{$ifile_exp}</textarea></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td><button class='btn' type="button" onclick="default_va('default3','con_exp')"><span>恢复默认设置</span></button></td>
+			</tr>
+		</table>
+		<table class="form_table">
+			<col width="150px" />
+			<col />
+			<tr>
+				<td></td><td><button class='submit' type="submit"  onclick="return checkForm();"><span>保 存</span></button></td>
+			</tr>
+		</table>
+	</div>
+</div>
+</form>
+<script>
+
+	//选择当前Tab
+	function selectTab(curr_tab)
+	{
+		$("table[name=form_table]").hide();
+		$("#tab-"+curr_tab).show();
+		$("li[name='selec']").removeClass("selected");
+		$("#selec"+curr_tab).addClass("selected");
+	}
+
+	//模型属性表单验证
+	function checkForm()
+	{
+		var con1=$("#con_shop").val();
+		var con2=$("#con_pick").val();
+		var con3=$("#con_exp").val();
+		if($.trim(con1)==""){
+			selectTab('1');
+			alert("购物清单模板不能为空!");
+			return false;
+		}
+		if($.trim(con2)==""){
+			selectTab('2');
+			alert("配货单模板不能为空!");
+			return false;
+		}
+		if($.trim(con3)==""){
+			selectTab('3');
+			alert("快递单模板不能为空!");
+			return false;
+		}
+		return true;
+	}
+
+</script>

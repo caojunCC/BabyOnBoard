@@ -1,0 +1,38 @@
+{set:$user_id = $this->user['user_id']}
+{query:name=member where=user_id eq $user_id items=$users/}
+{set:$user = $users[0];}
+<div class="main f_r">
+	<div class="userinfo_bar"><span class="f_r">上一次登录时间：{$user['last_login']}</span><b class="f14">您好，{$this->user['username']} 欢迎回来!</b></div>
+	<div class="box clearfix">
+		<h3>用户信息</h3>
+		<dl class="userinfo_box">
+			<dt>
+			{set:$user_ico = $this->user['head_ico']}
+			<a class="ico"><img id="user_ico_img" src="{webroot:$user_ico}" width="100" height="100" alt="" onerror="this.src='{skin:images/front/user_ico.gif}'" /></a>
+			<a class="blue" href="javascript:select_ico();">修改头像</a>
+			</dt>
+		</dl>
+	</div>
+</div>
+<script type='text/javascript'>
+	//修改头像
+function select_ico()
+{
+	art.dialog.open('{url:/block/user_ico}',{id:'user_ico',title:'设置头像'});
+}
+
+//头像上传回调函数
+function callback_user_ico(content)
+{
+	var content = eval(content);
+	if(content.isError == true)
+	{
+		alert(content.message);
+	}
+	else
+	{
+		$('#user_ico_img').attr('src',content.data);
+	}
+	art.dialog({id:'user_ico'}).close();
+}
+</script>

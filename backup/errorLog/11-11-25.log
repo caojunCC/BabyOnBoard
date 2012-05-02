@@ -1,0 +1,300 @@
+
+
+
+<pre>------
+errID:8
+errStr:Use of undefined constant username - assumed 'username'
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:174
+errTime:11-11-25 09:58:15
+##出错时变量的值：##
+array (
+  'login_info' => 'qiulin',
+  'password' => 'liqiulin',
+  'remember' => '',
+  'autoLogin' => '',
+  'callback' => '?controller=simple&action=login&forward=http%3A%2F%2Flocalhost%2Fdiscuz%2Findex.php',
+  'message' => '',
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz',
+  'userRow' => 
+  array (
+    'id' => '1',
+    'username' => 'qiulin',
+    'password' => '26c67d31bfa976711c9aed5a13a85515',
+    'email' => 'xcodeman@gmail.com',
+    'head_ico' => NULL,
+    'user_id' => '1',
+    'true_name' => NULL,
+    'telephone' => NULL,
+    'mobile' => NULL,
+    'area' => NULL,
+    'contact_addr' => NULL,
+    'qq' => NULL,
+    'msn' => NULL,
+    'sex' => '1',
+    'birthday' => NULL,
+    'group_id' => '0',
+    'exp' => '0',
+    'point' => '0',
+    'message_ids' => NULL,
+    'time' => '2011-11-23 21:06:12',
+    'zip' => NULL,
+    'status' => '1',
+    'prop' => NULL,
+    'balance' => '0.00',
+    'last_login' => '2011-11-24 17:27:13',
+    'custom' => NULL,
+  ),
+  'cktime' => 3600,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: forward
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:182
+errTime:11-11-25 09:59:12
+##出错时变量的值：##
+array (
+  'login_info' => 'qiulin',
+  'password' => 'liqiulin',
+  'remember' => '',
+  'autoLogin' => '',
+  'callback' => '?controller=simple&action=login&forward=http%3A%2F%2Flocalhost%2Fdiscuz%2Findex.php',
+  'message' => '',
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz',
+  'userRow' => 
+  array (
+    'id' => '1',
+    'username' => 'qiulin',
+    'password' => '26c67d31bfa976711c9aed5a13a85515',
+    'email' => 'xcodeman@gmail.com',
+    'head_ico' => NULL,
+    'user_id' => '1',
+    'true_name' => NULL,
+    'telephone' => NULL,
+    'mobile' => NULL,
+    'area' => NULL,
+    'contact_addr' => NULL,
+    'qq' => NULL,
+    'msn' => NULL,
+    'sex' => '1',
+    'birthday' => NULL,
+    'group_id' => '0',
+    'exp' => '0',
+    'point' => '0',
+    'message_ids' => NULL,
+    'time' => '2011-11-23 21:06:12',
+    'zip' => NULL,
+    'status' => '1',
+    'prop' => NULL,
+    'balance' => '0.00',
+    'last_login' => '2011-11-24 17:27:13',
+    'custom' => NULL,
+  ),
+  'cktime' => 3600,
+  'member' => 
+  array (
+    'cookietime' => 3600,
+    'time' => 1322186352,
+    'username' => 'qiulin',
+    'password' => '26c67d31bfa976711c9aed5a13a85515',
+    'email' => 'xcodeman@gmail.com',
+  ),
+  'auth' => 'Az0Hb15mB2lVYlRnUyVUaV9pUWYDN1NiUmUGPVY2WiNTegdpVmwHZwBjAWZXZlE3XTQDYFdmBjJUZlBuVjRcJQMrB3NebAdwVWVUY1M8VGVfOVFyA2NTJFI/BmRWaFojU34HYVZyB3EAKQE4VydRYV07A2NXaAZnVGNQbFZiXDADbwdiXm8HY1UyVDVTZ1Q3XzVRMgNpU2hSMgZoVmJaMFNvBzFWMgdjAGYBYldgUTRdMwN3VzsGaVQ0UDJWalw+AyYHY15mB2ZVblRvUzBUbl8hUTcDOlM2Uj4GbFZvWmlTIAdjVm4Hbw==',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: forward
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:182
+errTime:11-11-25 10:42:13
+##出错时变量的值：##
+array (
+  'login_info' => 'qiulin',
+  'password' => 'liqiulin',
+  'remember' => '',
+  'autoLogin' => '',
+  'callback' => '',
+  'message' => '',
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz',
+  'userRow' => 
+  array (
+    'id' => '1',
+    'username' => 'qiulin',
+    'password' => '26c67d31bfa976711c9aed5a13a85515',
+    'email' => 'xcodeman@gmail.com',
+    'head_ico' => NULL,
+    'user_id' => '1',
+    'true_name' => NULL,
+    'telephone' => NULL,
+    'mobile' => NULL,
+    'area' => NULL,
+    'contact_addr' => NULL,
+    'qq' => NULL,
+    'msn' => NULL,
+    'sex' => '1',
+    'birthday' => NULL,
+    'group_id' => '0',
+    'exp' => '0',
+    'point' => '0',
+    'message_ids' => NULL,
+    'time' => '2011-11-23 21:06:12',
+    'zip' => NULL,
+    'status' => '1',
+    'prop' => NULL,
+    'balance' => '0.00',
+    'last_login' => '2011-11-24 17:27:13',
+    'custom' => NULL,
+  ),
+  'cktime' => 3600,
+  'member' => 
+  array (
+    'cookietime' => 3600,
+    'time' => 1322188933,
+    'username' => 'qiulin',
+    'password' => '26c67d31bfa976711c9aed5a13a85515',
+    'email' => 'xcodeman@gmail.com',
+  ),
+  'auth' => 'V2kAaFFpVzkHMFZlUyVTbgk/ATZXY1JjBDMGPQVlWyJUfVQ6BT8FZVc0BmEENQRiC2JTMAIzVG5SagY+AGMMdVd/AHRRY1cgBzdWYVM8U2IJbwEiVzdSJQRpBmQFO1siVHlUMgUhBXNXfgY/BHQENAttUzMCPVQ1UmUGOgA0DGBXOwBlUWBXMwdgVjdTZ1MwCWMBYlc9UmkEZAZoBTFbMVRoVGIFYQVhVzEGZQQzBGELZVMnAm5UO1IyBmQAPAxuV3IAZFFpVzYHPFZtUzBTaQl3AWdXblI3BGgGbAU8W2hUJ1QwBT0FbQ==',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-25 10:46:26
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz/',
+  'FROMURL' => 'http://localhost/discuz/',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-25 10:46:30
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz/',
+  'FROMURL' => 'http://localhost/iwebshop/index.php?controller=ucenter&action=index',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-25 10:49:16
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz/',
+  'FROMURL' => 'http://localhost/iwebshop/index.php?controller=ucenter&action=index',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-25 10:49:18
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz/',
+  'FROMURL' => 'http://localhost/iwebshop/index.php?controller=ucenter&action=index',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-25 10:49:23
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz/',
+  'FROMURL' => 'http://localhost/iwebshop/index.php?controller=ucenter&action=index',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-25 10:52:21
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz/',
+  'FROMURL' => 'http://localhost/iwebshop/index.php?controller=ucenter&action=index',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined index: auth
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:58
+errTime:11-11-25 10:55:30
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz/',
+  'FROMURL' => 'http://localhost/discuz/',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: FROMURL
+errFile:F:\wamp\www\iwebshop\controllers\simple.php
+errLine:61
+errTime:11-11-25 10:57:08
+##出错时变量的值：##
+array (
+  'passportkey' => '1234567890',
+  'discuzbbsurl' => 'http://localhost/discuz/',
+  'auth' => 'AT9VPQM7UT9TZAEyCH4HOgA2UmUBNVBhADdRagNjXSQBKFM9Bz1TMwdkUDcJOFQyWjNSMVNiW2AFPAY8VjFcJQEpVSEDMVEmU2MBNghnBzYAZlJxAWFQJwBtUTMDPV0kASxTNQcjUyUHLlBpCXlUZFo8UjJTbFs6BTIGOlZiXDABbVUwAzJRNVM0AWAIPAdkAGpSMQFrUGsAYFE/AzddNwE9U2UHY1M3B2FQMwk+VDFaNFImUz9bNAVlBmRWalw+ASRVMQM7UTBTaAE6CGsHPQB+UjQBOFA1AGxROwM6XW4BclM3Bz9TOw==',
+  'forward' => NULL,
+)
+-------</pre>

@@ -1,0 +1,459 @@
+
+
+
+<pre>------
+errID:2
+errStr:mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES)
+errFile:IWEB_PATH/db\driver\mysql_class.php
+errLine:27
+errTime:12-04-19 20:35:53
+##出错时变量的值：##
+array (
+  'dbinfo' => 
+  array (
+    'host' => 'localhost:3306',
+    'user' => 'root',
+    'passwd' => 'liqiulin',
+    'name' => 'iwebshop',
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:2
+errStr:mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES)
+errFile:IWEB_PATH/db\driver\mysql_class.php
+errLine:27
+errTime:12-04-19 20:36:04
+##出错时变量的值：##
+array (
+  'dbinfo' => 
+  array (
+    'host' => 'localhost:3306',
+    'user' => 'root',
+    'passwd' => 'liqiulin',
+    'name' => 'iwebshop',
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:2
+errStr:file_get_contents(http://product.jooyea.net/version.php?name=shop) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! 
+errFile:E:\wamp\www\iwebshop\classes\iwebupgrade.php
+errLine:171
+errTime:12-04-19 21:08:54
+##出错时变量的值：##
+array (
+  'url' => 'http://product.jooyea.net/version.php?name=shop',
+  'opts' => 
+  array (
+    'http' => 
+    array (
+      'method' => 'get',
+      'timeout' => 30,
+    ),
+  ),
+  'c' => NULL,
+  'http_response_header' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:2
+errStr:file_get_contents(http://product.jooyea.net/version.php?name=shop) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! 
+errFile:E:\wamp\www\iwebshop\classes\iwebupgrade.php
+errLine:171
+errTime:12-04-19 21:17:51
+##出错时变量的值：##
+array (
+  'url' => 'http://product.jooyea.net/version.php?name=shop',
+  'opts' => 
+  array (
+    'http' => 
+    array (
+      'method' => 'get',
+      'timeout' => 30,
+    ),
+  ),
+  'c' => NULL,
+  'http_response_header' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  count(id) as coun from dbclass_goods  where is_del = 0    limit 500
+ -- Table 'dbclass.dbclass_goods' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:70   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  count(id) as coun from dbclass_goods  where is_del = 0    limit 500
+ -- Table 'dbclass.dbclass_goods' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:70   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from dbclass_guide      limit 500
+ -- Table 'dbclass.dbclass_guide' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:163  	File:E:\wamp\www\iwebshop\runtime\system\conf_base.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:749  	File:E:\wamp\www\iwebshop\controllers\system.php
+	Func:conf_base      	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from dbclass_guide      limit 500
+ -- Table 'dbclass.dbclass_guide' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:163  	File:E:\wamp\www\iwebshop\runtime\system\conf_base.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:749  	File:E:\wamp\www\iwebshop\controllers\system.php
+	Func:conf_base      	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from dbclass_guide      limit 500
+ -- Table 'dbclass.dbclass_guide' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:163  	File:E:\wamp\www\iwebshop\runtime\system\conf_base.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:749  	File:E:\wamp\www\iwebshop\controllers\system.php
+	Func:conf_base      	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from dbclass_guide      limit 500
+ -- Table 'dbclass.dbclass_guide' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:163  	File:E:\wamp\www\iwebshop\runtime\system\conf_base.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:749  	File:E:\wamp\www\iwebshop\controllers\system.php
+	Func:conf_base      	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from dbclass_guide      limit 500
+ -- Table 'dbclass.dbclass_guide' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:163  	File:E:\wamp\www\iwebshop\runtime\system\conf_base.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:749  	File:E:\wamp\www\iwebshop\controllers\system.php
+	Func:conf_base      	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from dbclass_guide      limit 500
+ -- Table 'dbclass.dbclass_guide' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:163  	File:E:\wamp\www\iwebshop\runtime\system\conf_base.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:749  	File:E:\wamp\www\iwebshop\controllers\system.php
+	Func:conf_base      	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from dbclass_guide      limit 500
+ -- Table 'dbclass.dbclass_guide' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:163  	File:E:\wamp\www\iwebshop\runtime\system\conf_base.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:749  	File:E:\wamp\www\iwebshop\controllers\system.php
+	Func:conf_base      	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from dbclass_guide      limit 500
+ -- Table 'dbclass.dbclass_guide' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:163  	File:E:\wamp\www\iwebshop\runtime\system\conf_base.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:749  	File:E:\wamp\www\iwebshop\controllers\system.php
+	Func:conf_base      	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from dbclass_guide      limit 500
+ -- Table 'dbclass.dbclass_guide' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:163  	File:E:\wamp\www\iwebshop\runtime\system\conf_base.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:749  	File:E:\wamp\www\iwebshop\controllers\system.php
+	Func:conf_base      	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from dbclass_guide      limit 500
+ -- Table 'dbclass.dbclass_guide' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:163  	File:E:\wamp\www\iwebshop\runtime\system\conf_base.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:749  	File:E:\wamp\www\iwebshop\controllers\system.php
+	Func:conf_base      	Class:System         	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>

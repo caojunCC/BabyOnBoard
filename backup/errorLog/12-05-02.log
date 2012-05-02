@@ -1,0 +1,3438 @@
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: getdata
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:33:28
+##出错时变量的值：##
+array (
+  'config' => 'E:\\wamp\\www\\iwebshop/config/config.php',
+  'php_errormsg' => 'Undefined variable: sql',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:33:28
+##出错时变量的值：##
+array (
+  'config' => 'E:\\wamp\\www\\iwebshop/config/config.php',
+  'php_errormsg' => 'Undefined variable: sql',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: getdata
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:33:37
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:33:37
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Use of undefined constant IInterceptor - assumed 'IInterceptor'
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:43:04
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Use of undefined constant IInterceptor - assumed 'IInterceptor'
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:43:04
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: obj
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:44:04
+##出错时变量的值：##
+array (
+  'url' => '',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: obj
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:44:04
+##出错时变量的值：##
+array (
+  'url' => '',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: rewriteRule
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:44:51
+##出错时变量的值：##
+array (
+  'url' => '?',
+  'obj' => 
+  IServerVars_Apache::__set_state(array(
+  )),
+  'phpurl' => 
+  array (
+    1 => '?',
+  ),
+  'urlArray' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: urlArray
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:47:05
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: urlArray
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:47:09
+##出错时变量的值：##
+array (
+  'position' => 'onCreateController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: urlArray
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:47:22
+##出错时变量的值：##
+array (
+  'position' => 'onCreateController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: urlArray
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:47:29
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: urlArray
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:47:37
+##出错时变量的值：##
+array (
+  'this' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: urlArray
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:47:47
+##出错时变量的值：##
+array (
+  'this' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controller' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:48:11
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:48:15
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:48:18
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:48:24
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:48:33
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:48:37
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+  'classPath' => 'controllers.*',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:48:44
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:48:46
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+  'classPath' => 'controllers.*',
+  'filePath' => 'E:/wamp/www/iwebshop/controllers/mastercode.php',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:06
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+  'classPath' => 'controllers.*',
+  'filePath' => 'E:/wamp/www/iwebshop/controllers/mastercode.php',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:07
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+  'classPath' => 'controllers.*',
+  'filePath' => 'E:/wamp/www/iwebshop/controllers/mastercode.php',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:17
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:17
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:19
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:19
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:22
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:22
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:24
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:25
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:28
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:28
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:29
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:29
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:33
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:33
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:34
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:34
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:34
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:34
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:35
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:35
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:44
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:44
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:45
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:45
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:48
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:48
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:49
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:49
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:51
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:51
+##出错时变量的值：##
+array (
+  'className' => 'IObject',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:52
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:52
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:53
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:53
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:53
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:53
+##出错时变量的值：##
+array (
+  'className' => 'IControllerBase',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:54
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:54
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:55
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:55
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:56
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:56
+##出错时变量的值：##
+array (
+  'className' => 'IController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:56
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+  'classPath' => 'controllers.*',
+  'filePath' => 'E:/wamp/www/iwebshop/controllers/mastercode.php',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:58
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:58
+##出错时变量的值：##
+array (
+  'className' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:59
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:49:59
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:07
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:07
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:39
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:39
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:40
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:40
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:41
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:41
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:42
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:42
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:43
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:43
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:43
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:43
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:44
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: filePath
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:50:44
+##出错时变量的值：##
+array (
+  'module' => 
+  IWebApplication::__set_state(array(
+     'defaultController' => 'system',
+     'controller' => NULL,
+     'name' => 'My Application',
+     'charset' => 'UTF-8',
+     'language' => 'zh_sc',
+     'basePath' => 'E:/wamp/www/iwebshop/',
+     'config' => 
+    array (
+      'logs' => 
+      array (
+        'path' => 'logs/log',
+        'type' => 'file',
+      ),
+      'DB' => 
+      array (
+        'type' => 'mysql',
+        'tablePre' => 'dbclass_',
+        'read' => 
+        array (
+          0 => 
+          array (
+            'host' => 'localhost:3306',
+            'user' => 'root',
+            'passwd' => '',
+            'name' => 'dbclass',
+          ),
+        ),
+        'write' => 
+        array (
+          'host' => 'localhost:3306',
+          'user' => 'root',
+          'passwd' => '',
+          'name' => 'dbclass',
+        ),
+      ),
+      'langPath' => 'language',
+      'viewPath' => 'views',
+      'classes' => 'classes.*',
+      'rewriteRule' => 'url',
+      'theme' => 'default',
+      'skin' => 'default',
+      'timezone' => 'Etc/GMT-8',
+      'upload' => 'upload',
+      'dbbackup' => 'backup/database',
+      'safe' => 'cookie',
+      'lang' => 'zh_sc',
+      'debug' => false,
+      'configExt' => 
+      array (
+        'site_config' => 'config/site_config.php',
+      ),
+      'encryptKey' => '8700b73b009b3486e722832642f5d481',
+      'basePath' => 'E:/wamp/www/iwebshop/',
+    ),
+     'id' => NULL,
+     'runtimePath' => NULL,
+     'webRunPath' => NULL,
+     'timezone' => 'Asia/Shanghai',
+     'renderData' => 
+    array (
+    ),
+  )),
+  'controllerId' => 'mastercode',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controllerClass
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:52:23
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controllerClass
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:52:31
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controllerClass
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:52:40
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controllerClass
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:52:41
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controllerClass
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:53:02
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controllerClass
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:53:15
+##出错时变量的值：##
+array (
+  'php_errormsg' => 'syntax error, unexpected \'.\'',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controllerClass
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:53:20
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controllerClass
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:53:22
+##出错时变量的值：##
+array (
+  'php_errormsg' => 'syntax error, unexpected \'.\'',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controllerClass
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:53:35
+##出错时变量的值：##
+array (
+  'php_errormsg' => 'syntax error, unexpected \'.\'',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:55:38
+##出错时变量的值：##
+array (
+  'key' => 'action',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: arr
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:55:48
+##出错时变量的值：##
+array (
+  'key' => 'action',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: arr
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:55:48
+##出错时变量的值：##
+array (
+  'key' => 'action',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:55:49
+##出错时变量的值：##
+array (
+  'key' => 'action',
+  'arr' => 
+  array (
+    'controller' => 'controller',
+    'action' => 'action',
+    'module' => 'module',
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:56:07
+##出错时变量的值：##
+array (
+  'key' => 'action',
+  'arr' => 
+  array (
+    'controller' => 'controller',
+    'action' => 'action',
+    'module' => 'module',
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:19
+##出错时变量的值：##
+array (
+  'className' => 'IViewAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:21
+##出错时变量的值：##
+array (
+  'className' => 'IViewAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:25
+##出错时变量的值：##
+array (
+  'className' => 'IViewAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:26
+##出错时变量的值：##
+array (
+  'className' => 'IViewAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:27
+##出错时变量的值：##
+array (
+  'className' => 'IAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:28
+##出错时变量的值：##
+array (
+  'className' => 'IAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:30
+##出错时变量的值：##
+array (
+  'className' => 'IAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:30
+##出错时变量的值：##
+array (
+  'className' => 'IAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:31
+##出错时变量的值：##
+array (
+  'className' => 'IAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:32
+##出错时变量的值：##
+array (
+  'className' => 'IAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:32
+##出错时变量的值：##
+array (
+  'className' => 'IAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:33
+##出错时变量的值：##
+array (
+  'className' => 'IViewAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:33
+##出错时变量的值：##
+array (
+  'className' => 'IViewAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: this
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 13:58:34
+##出错时变量的值：##
+array (
+  'className' => 'IViewAction',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined property: IViewAction::$action
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 14:03:27
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined property: IViewAction::$action
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 14:03:37
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined property: IInlineAction::$action
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 14:19:27
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: controller
+errFile:xdebug eval
+errLine:1
+errTime:12-05-02 14:20:05
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>

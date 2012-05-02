@@ -1,0 +1,20 @@
+
+
+
+<pre>----------
+Mess: CREATE TABLE `discuz_access` (`uid` mediumint(8) unsigned NOT NULL  PRIMARY KEY  DEFAULT 0,`fid` smallint(6) unsigned NOT NULL  PRIMARY KEY  DEFAULT 0,`allowview` tinyint(1) NOT NULL  DEFAULT 0,`allowpost` tinyint(1) NOT NULL  DEFAULT 0,`allowreply` tinyint(1) NOT NULL  DEFAULT 0,`allowgetattach` tinyint(1) NOT NULL  DEFAULT 0,`allowpostattach` tinyint(1) NOT NULL  DEFAULT 0) ENGINE=MyISAM CHARSET=gbk COMMENT='';
+ -- Multiple primary key defined
+Line: 118
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:write          	Class:IMysql         	Type:->   	Line:65   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:169  	File:F:\wamp\www\iwebshop\classes\dbbackup.php
+	Func:query          	Class:DBBackup       	Type:->   	Line:143  	File:F:\wamp\www\iwebshop\classes\dbbackup.php
+	Func:parseSQL       	Class:DBBackup       	Type:->   	Line:184  	File:F:\wamp\www\iwebshop\controllers\tools.php
+	Func:localUpload    	Class:Tools          	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>

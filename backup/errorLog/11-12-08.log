@@ -1,0 +1,787 @@
+
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: SELECT * FROM iwebshop_user WHERE id =  limit 1
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 1' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:187  	File:IWEB_PATH/web\model\model_class.php
+	Func:query          	Class:IModel         	Type:->   	Line:134  	File:IWEB_PATH/web\model\model_class.php
+	Func:getObj         	Class:IModel         	Type:->   	Line:517  	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:info           	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: SELECT * FROM iwebshop_user WHERE id =  limit 1
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 1' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:187  	File:IWEB_PATH/web\model\model_class.php
+	Func:query          	Class:IModel         	Type:->   	Line:134  	File:IWEB_PATH/web\model\model_class.php
+	Func:getObj         	Class:IModel         	Type:->   	Line:520  	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:info           	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: SELECT * FROM iwebshop_user WHERE id =  limit 1
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 1' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:187  	File:IWEB_PATH/web\model\model_class.php
+	Func:query          	Class:IModel         	Type:->   	Line:134  	File:IWEB_PATH/web\model\model_class.php
+	Func:getObj         	Class:IModel         	Type:->   	Line:520  	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:info           	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: SELECT * FROM iwebshop_user WHERE id =  limit 1
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 1' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:187  	File:IWEB_PATH/web\model\model_class.php
+	Func:query          	Class:IModel         	Type:->   	Line:134  	File:IWEB_PATH/web\model\model_class.php
+	Func:getObj         	Class:IModel         	Type:->   	Line:520  	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:info           	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: SELECT * FROM iwebshop_user WHERE id =  limit 1
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 1' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:187  	File:IWEB_PATH/web\model\model_class.php
+	Func:query          	Class:IModel         	Type:->   	Line:134  	File:IWEB_PATH/web\model\model_class.php
+	Func:getObj         	Class:IModel         	Type:->   	Line:520  	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:info           	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: SELECT * FROM iwebshop_user WHERE id =  limit 1
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 1' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:187  	File:IWEB_PATH/web\model\model_class.php
+	Func:query          	Class:IModel         	Type:->   	Line:134  	File:IWEB_PATH/web\model\model_class.php
+	Func:getObj         	Class:IModel         	Type:->   	Line:520  	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:info           	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  * from iwebshop_member  where user_id =     limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:171  	File:F:\wamp\www\iwebshop\runtime\ucenter\index.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:32   	File:F:\wamp\www\iwebshop\controllers\ucenter.php
+	Func:index          	Class:Ucenter        	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:F:\wamp\www\iwebshop\index.php
+------------</pre>
