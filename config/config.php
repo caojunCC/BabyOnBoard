@@ -8,11 +8,11 @@ return array(
 		'type'=>'mysql',
         'tablePre'=>'dbclass_',
 		'read'=>array(
-			array('host'=>'localhost:3306','user'=>'root','passwd'=>'','name'=>'dbclass'),
+			array('host'=>'localhost:3306','user'=>'root','passwd'=>'123456','name'=>'dbclass'),
 		),
 
 		'write'=>array(
-			'host'=>'localhost:3306','user'=>'root','passwd'=>'','name'=>'dbclass',
+			'host'=>'localhost:3306','user'=>'root','passwd'=>'123456','name'=>'dbclass',
 		),
 	),
 	'langPath' => 'language',
