@@ -148,30 +148,58 @@ class Menu
 				)
 				*/
 		),
-		'Mastercode' =>array(
+		'Mastercode模板' =>array(
 		
-			'Hospital' =>array(
-				'/mastercode/hospital_list' => 'Hospital_list' ,
+			'Hospital医院' =>array(
+				'/mastercode/hospital_list' => '	list医院列表',
+				'/mastercode/hospital_edit' => 'edit编辑医院',
 				),
-				/*
-			'Board Types' =>array(
+			'Board Types病房' =>array(
+				'/mastercode/board_type_list' => 'list病房列表',
+				'/mastercode/board_type_edit' => 'edit编辑病房',
 				),
-			'Beds'  =>array(
-				),
+				'Beds'  =>array(
+				'/mastercode/beds_list' => 'list病床列表',
+				'/mastercode/beds_add'  => 'add编辑病床',
+				),/*
 			'Providers' =>array(
+				),*/
+				
+			'Anesthesia麻醉' =>array(
+				'/mastercode/anesthesia_list' => 'list麻醉列表',
+				'/mastercode/anesthesia_edit' => 'edit麻醉编辑',
 				),
-			'Anesthesia' =>array(
+			'Patient status病人状态' =>array(
+				'/mastercode/patient_statues_list' => 'list病人状态列表',
+				'/mastercode/patient_statues_edit' => 'edit病人状态编辑',
 				),
-			'Patient status' =>array(
+				
+			'Anesthesia Prob麻醉问题'=>array(
+				'/mastercode/anesthesia_problems_list' => 'list麻醉问题列表',
+				'/mastercode/anesthesia_problems_edit' => 'edit麻醉问题编辑',
 				),
-			'Anesthesia Problems'=>array(
+			'Presentation简述' =>array(
+				'/mastercode/presentation_list' => 'list简述列表',
+				'/mastercode/presentation_edit' => 'edit简述编辑',
 				),
-			'Presentation' =>array(
+				
+			'Amniotic Types羊水类型' =>array(
+				'/mastercode/amniotic_types_list' => 'list羊水列表',
+				'/mastercode/amniotic_types_edit' => 'edit羊水编辑',
 				),
-			'Amniot Types' =>array(
-				),
-				*/
+				/**/
 		),
+		'Hospital医院' =>array(
+			'Providers人员' =>array(
+				'/hospital/providers_list' =>'list人员列表',
+			),
+		),
+		'Patient病人' =>array(
+			'report_stats报告统计' =>array(
+			'/patient/report_stats_list ' =>'list报告统计',
+			),
+		),
+		
 		/**/
 		/*,
 
