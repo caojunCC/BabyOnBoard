@@ -1,1 +1,78 @@
-<p>编辑框</p>
+<script type="text/javascript" src="{theme:javascript/Calendar4.js}"></script>
+
+<div class="headbar">
+	<div class="position"><span>Mastercode</span><span>></span><span>Hospital</span><span>></span><span>{if:isset($id)}Edit Hospital Detail{else:}Add New Hospital{/if}</span></div>
+</div>
+<div class="content_box">
+	<div class="content form_content">
+		<form action="{url:/mastercode/hospital_edit_act}" method="post">
+			<table class="form_table" cellpadding="0" cellspacing="0">
+				<col width="150px" />
+				<col />
+				<tr>
+					<th>Hospital Name：</th>
+					<td>
+					<p>
+						<input class="normal" name="hospital_name_en" type="text" value="{$hospital_name_en}" pattern="required" alt="Name can not be empty" />*English
+					</p>
+						<input name="id" value="{$id}" type="hidden" />
+				
+					<p style='margin-top:10px;'>
+						<input class="normal" name="hospital_name_ch" type="text" value="{$hospital_name_ch}" pattern="required" alt="名称不能为空" />*Chinese
+					</p>
+					</td>
+				</tr>
+				<tr>
+					<th>Adress：</th>
+					<td >
+					<p style='margin-top:15px;'>
+						<input class="normal" name="hospital_adress_en" type="text" value="{$hospital_adress_en}" pattern="required" alt="Adress can not be empty" />*English
+					</p>
+					<p style='margin-top:10px;'>
+						<input class="normal" name="hospital_adress_ch" type="text" value="{$hospital_adress_ch}" pattern="required" alt="地址不能为空" />*Chinese
+						</p>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>Province：</th>
+					<td >
+					<p style='margin-top:15px;'>
+						<input class="normal" name="hospital_province_en" type="text" value="{$hospital_province_en}" pattern="required" alt="Province can not be empty" />*English
+					</p>
+					<p style='margin-top:10px;'>
+						<input class="normal" name="hospital_province_ch" type="text" value="{$hospital_province_ch}" pattern="required" alt="省份不能为空" />*Chinese
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<th>Zipcode：</th>
+					<td >
+					<p style='margin-top:15px;'>
+						<input class="small" name="hospital_zipcode" type="text" value="{$hospital_zipcode}" pattern="required" alt="Zipcode can not be empty" />
+					</p>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>Date of visit：</th>
+					<td >
+					<p style='margin-top:15px;'>
+						<input class="small" name="visited_date_b" id="visited_date_b" type="text" value="{$visited_date_b}" pattern="required" readonly="readonly" onclick="MyCalendar.SetDate(this)" alt="Time can not be empty" />
+					</p>
+					<p>
+					to
+					</p>
+					<p>
+						<input class="small" name="visited_date_e" id="visited_date_e" type="text" value="{$visited_date_e}" pattern="required" readonly="readonly" onclick="MyCalendar.SetDate(this)" alt="Time can not be empty" />
+					</p>
+					</td>
+				</tr>
+				
+				<tr>
+					<td></td><td><button class="submit" type="submit"><span>确 定</span></button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
