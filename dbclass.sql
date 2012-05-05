@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2012 年 05 月 02 日 13:29
+-- 生成日期: 2012 年 05 月 05 日 08:31
 -- 服务器版本: 5.5.16
 -- PHP 版本: 5.3.8
 
@@ -59,14 +59,15 @@ CREATE TABLE IF NOT EXISTS `dbclass_admin` (
   `last_time` datetime DEFAULT NULL COMMENT '最后登录时间',
   `is_del` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除状态 1删除,0正常',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='管理员用户表' AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='管理员用户表' AUTO_INCREMENT=3 ;
 
 --
 -- 转存表中的数据 `dbclass_admin`
 --
 
 INSERT INTO `dbclass_admin` (`id`, `admin_name`, `password`, `role_id`, `create_time`, `email`, `last_ip`, `last_time`, `is_del`) VALUES
-(1, 'admin', 'f6fdffe48c908deb0f4c3bd36c032e72', 0, '2012-04-19 12:40:23', NULL, '0.0.0.0', '2012-05-02 19:26:26', 0);
+(1, 'admin', 'f6fdffe48c908deb0f4c3bd36c032e72', 0, '2012-04-19 12:40:23', NULL, '0.0.0.0', '2012-05-05 15:23:14', 0),
+(2, 'abcd', 'e10adc3949ba59abbe56e057f20f883e', 1, '2012-05-03 10:37:24', '499139122@qq.com', '0.0.0.0', '2012-05-03 10:38:39', 0);
 
 -- --------------------------------------------------------
 
@@ -80,7 +81,71 @@ CREATE TABLE IF NOT EXISTS `dbclass_admin_role` (
   `rights` text COMMENT '权限',
   `is_del` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除状态 1删除,0正常',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='后台角色分组表' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='后台角色分组表' AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `dbclass_admin_role`
+--
+
+INSERT INTO `dbclass_admin_role` (`id`, `name`, `rights`, `is_del`) VALUES
+(1, '痛苦', ',block@create_thumb,comment@comment_del,comment@comment_list,comment@discussion_del,comment@discussion_list,comment@message_del,comment@message_send,comment@refer_del,comment@refer_list,comment@refer_reply,comment@suggestion_edit,comment@suggestion_edit_act,goods@category_del,goods@goods_add,goods@goods_list,goods@goods_sort,goods@model_edit,goods@spec_del,goods@spec_photo,', 1);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `dbclass_ammiot_type`
+--
+
+CREATE TABLE IF NOT EXISTS `dbclass_ammiot_type` (
+  `id` int(11) NOT NULL,
+  `description_en` varchar(200) NOT NULL COMMENT '英文描述',
+  `description_ch` varchar(200) NOT NULL COMMENT '中文描述',
+  `mnemonics_en` varchar(200) NOT NULL COMMENT '英文简称',
+  `mnemonics_ch` varchar(200) NOT NULL COMMENT '中文简称',
+  `front_colot` varchar(200) NOT NULL COMMENT '前景色',
+  `background_color` varchar(200) NOT NULL COMMENT '背景色',
+  `is_bold` int(11) NOT NULL COMMENT '粗体',
+  `order` int(11) NOT NULL COMMENT '排序',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='羊膜类型';
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `dbclass_anesthesia_pro`
+--
+
+CREATE TABLE IF NOT EXISTS `dbclass_anesthesia_pro` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `description_en` varchar(200) NOT NULL COMMENT '英文描述',
+  `description_ch` varchar(200) NOT NULL COMMENT '中文描述',
+  `mnemonics_en` varchar(200) NOT NULL COMMENT '英文简称',
+  `mnemonics_ch` varchar(200) NOT NULL COMMENT '中文简称',
+  `front_color` varchar(200) NOT NULL COMMENT '前景色',
+  `background_color` varchar(200) NOT NULL COMMENT '背景色',
+  `is_bold` int(11) NOT NULL COMMENT '粗体:1',
+  `order` int(11) NOT NULL COMMENT '排序',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='麻醉问题' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `dbclass_anethesia`
+--
+
+CREATE TABLE IF NOT EXISTS `dbclass_anethesia` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `mnemonic_ch` varchar(200) NOT NULL COMMENT '中文简称',
+  `mnemonic_en` varchar(200) NOT NULL COMMENT '英文简称',
+  `description_ch` varchar(200) NOT NULL COMMENT '中文描述',
+  `description_en` varchar(200) NOT NULL COMMENT '英文描述',
+  `front_color` varchar(200) NOT NULL COMMENT '前景色',
+  `background_color` varchar(200) NOT NULL COMMENT '背景色',
+  `is_bold` int(11) NOT NULL COMMENT '1表示粗体',
+  `order` int(11) NOT NULL COMMENT '排序',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='麻醉' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -97,6 +162,36 @@ CREATE TABLE IF NOT EXISTS `dbclass_attribute` (
   `search` tinyint(1) DEFAULT '0' COMMENT '是否支持搜索0不支持1支持',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='属性表' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `dbclass_beds_type`
+--
+
+CREATE TABLE IF NOT EXISTS `dbclass_beds_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `hospital_id` int(11) NOT NULL COMMENT 'id of hospital',
+  `department` int(11) NOT NULL COMMENT 'id of department',
+  `description_en` varchar(200) NOT NULL COMMENT '英文描述',
+  `description_ch` varchar(200) NOT NULL COMMENT '中文描述',
+  `order` int(11) NOT NULL COMMENT '排序',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='病床图' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `dbclass_department_type`
+--
+
+CREATE TABLE IF NOT EXISTS `dbclass_department_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `name_en` varchar(200) NOT NULL COMMENT 'name of department',
+  `name_ch` varchar(200) NOT NULL COMMENT '科室名称',
+  `order` int(11) NOT NULL COMMENT '排序',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='科室分类' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -125,6 +220,34 @@ CREATE TABLE IF NOT EXISTS `dbclass_guide` (
   `link` varchar(255) NOT NULL COMMENT '链接地址',
   PRIMARY KEY (`order`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='首页导航栏';
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `dbclass_hospital_detail`
+--
+
+CREATE TABLE IF NOT EXISTS `dbclass_hospital_detail` (
+  `hospital_name_ch` varchar(200) NOT NULL COMMENT '医院中文名',
+  `hospital_name_en` varchar(200) NOT NULL COMMENT 'hospital_english_name',
+  `hospital_adress_ch` varchar(200) NOT NULL COMMENT '医院地址',
+  `hospital_adress_en` varchar(200) NOT NULL,
+  `hospital_province_ch` varchar(200) NOT NULL COMMENT '医院所在省',
+  `hospital_province_en` varchar(200) NOT NULL,
+  `hospital_zipcode` int(20) NOT NULL COMMENT '邮编/zipcode',
+  `visited_date_b` date NOT NULL COMMENT 'begin date of visit',
+  `visited_date_e` date NOT NULL COMMENT 'end date of visit',
+  `id` int(20) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='医院详细信息表/hospital_detail' AUTO_INCREMENT=4 ;
+
+--
+-- 转存表中的数据 `dbclass_hospital_detail`
+--
+
+INSERT INTO `dbclass_hospital_detail` (`hospital_name_ch`, `hospital_name_en`, `hospital_adress_ch`, `hospital_adress_en`, `hospital_province_ch`, `hospital_province_en`, `hospital_zipcode`, `visited_date_b`, `visited_date_e`, `id`) VALUES
+('宁波市妇女儿童医院', 'Ningbo Women & Children''s Hospital', '宁波市柳汀街339号 电话：0574-87083300', '399 Liuding Road， Ningbo ', '浙江', 'Zhejiang', 315012, '2011-08-13', '2011-08-21', 1),
+('（上海）中国福利会国际和平妇幼保健院', '(Shanghai) International Peace Maternity & Child Health Hospital of the China Welfare Institute', '上海市徐汇区衡山路910号，电话： 021-64070434', '910 Hengsan Road, Shanghai  ', '上海', 'Shanghai', 200030, '2012-05-01', '2012-05-31', 3);
 
 -- --------------------------------------------------------
 
@@ -257,6 +380,37 @@ CREATE TABLE IF NOT EXISTS `dbclass_navigate` (
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `dbclass_patient_status`
+--
+
+CREATE TABLE IF NOT EXISTS `dbclass_patient_status` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `description_en` varchar(200) NOT NULL COMMENT '英文描述',
+  `description_ch` varchar(200) NOT NULL COMMENT '中文描述',
+  `front_color` varchar(200) NOT NULL COMMENT '前景色',
+  `background_color` varchar(200) NOT NULL COMMENT '背景色',
+  `is_bold` varchar(200) NOT NULL COMMENT '粗体：1',
+  `order` int(11) NOT NULL COMMENT '排序',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='病人状态' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `dbclass_presentation`
+--
+
+CREATE TABLE IF NOT EXISTS `dbclass_presentation` (
+  `id` int(11) NOT NULL,
+  `description_en` varchar(200) NOT NULL COMMENT '英文描述',
+  `description_ch` varchar(200) NOT NULL COMMENT '中文描述',
+  `order` int(11) NOT NULL COMMENT '排序',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='简称';
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `dbclass_quick_naviga`
 --
 
@@ -281,7 +435,7 @@ CREATE TABLE IF NOT EXISTS `dbclass_right` (
   `right` varchar(255) NOT NULL COMMENT '权限码(控制器+动作)',
   `is_del` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除状态 1删除,0正常',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='权限资源码' AUTO_INCREMENT=113 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='权限资源码' AUTO_INCREMENT=114 ;
 
 --
 -- 转存表中的数据 `dbclass_right`
@@ -387,7 +541,7 @@ INSERT INTO `dbclass_right` (`id`, `name`, `right`, `is_del`) VALUES
 (97, '商品排序[动作]', 'goods@goods_sort', 0),
 (98, '商品回收站删除[动作]', 'goods@goods_recycle_del', 0),
 (99, '商品规格回收站删除[动作]', 'goods@spec_recycle_del', 0),
-(100, '生成缩略图[动作]', 'block@create_thumb', 1),
+(100, '生成缩略图[动作]', 'block@create_thumb', 0),
 (101, '建议详细页面', 'comment@suggestion_edit', 0),
 (102, '建议恢复[动作]', 'comment@suggestion_edit_act', 0),
 (103, '建议删除[动作]', 'comment@suggestion_del', 0),
@@ -399,7 +553,8 @@ INSERT INTO `dbclass_right` (`id`, `name`, `right`, `is_del`) VALUES
 (109, '咨询详情页面', 'comment@refer_edit', 0),
 (110, '咨询回复[动作]', 'comment@refer_reply', 0),
 (111, '站内信删除', 'comment@message_del', 0),
-(112, '站内信发送', 'comment@message_send', 0);
+(112, '站内信发送', 'comment@message_send', 0),
+(113, '邮件测试', 'system@test_sendmail', 0);
 
 -- --------------------------------------------------------
 
