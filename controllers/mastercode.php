@@ -72,6 +72,21 @@ class Mastercode extends IController
 	//医院删除
 	function hospital_del()
 	{
+		$id = IFilter::act( IReq::get('id') ,'int' );
+		
+		$obj = new IModel('hospital_detail');
+
+		if(is_array($id) && isset($id[0]) && $id[0]!='')
+		{
+			$id_str = join(',',$id);
+			$where1 = ' id in ('.$id_str.')';
+		}
+		else
+		{
+			$where1 = 'id = '.$id;
+		}
+		$obj->del($where1);               //删除商品
+		$this->redirect('hospital_list');
 		
 	}
 }
