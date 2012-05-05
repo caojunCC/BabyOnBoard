@@ -154,11 +154,11 @@ class Menu
 				'/mastercode/hospital_list' => '	list医院列表',
 				'/mastercode/hospital_edit' => 'edit编辑医院',
 				),
-			'Board Types病房' =>array(
-				'/mastercode/board_type_list' => 'list病房列表',
-				'/mastercode/board_type_edit' => 'edit编辑病房',
+			'Department Types科室' =>array(
+				'/mastercode/department_type_list' => 'list科室列表',
+				'/mastercode/department_type_edit' => 'edit编辑科室',
 				),
-				'Beds'  =>array(
+				'Beds 床位'  =>array(
 				'/mastercode/beds_list' => 'list病床列表',
 				'/mastercode/beds_add'  => 'add编辑病床',
 				),/*
