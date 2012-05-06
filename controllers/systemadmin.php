@@ -56,6 +56,11 @@ class SystemAdmin extends IController
 					ISafe::set('admin_right',$roleRow['rights']);
 					ISafe::set('admin_role_name',$roleRow['name']);
 				}
+				
+				
+				ISafe::set('hospital_id',$adminRow['hospital_id']); //设置hospital_id add by caojun
+				
+				
 				ISafe::set('admin_id',$adminRow['id']);
 				ISafe::set('admin_name',$adminRow['admin_name']);
 				ISafe::set('admin_pwd',$adminRow['password']);

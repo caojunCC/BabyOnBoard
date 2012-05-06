@@ -119,5 +119,35 @@ class CheckRights
 			return $userRow;
 		}
 	}
+	/**
+	 * @brief 设置用户的组别，为0则为超级管理员,所有医院可见,为其他数字则为对应id的医院
+	 **/
+	public static  function  checkHospitalRight()
+	{
+//		$object = $this->ctrlObj;
+		$admin                    = array();
+		$admin['hospital_id']        = ISafe::get('hospital_id');
+		if($admin['hospital_id'] == null )
+		{
+//			$object->redirect('/systemadmin/index');
+			exit;
+		}
+		else
+		{
+			$hospital_detail = new IModel('hospital_detail');
+			//查询数据
+			//超级管理员
+			if ($admin['hospital_id'] == 0)
+			{
+				return $hospital_detail->query();	
+			}
+			//普通用户
+			else
+			{
+				$where = 'id ='.$admin['hospital_id'];
+				return $hospital_detail->getObj($where);
+			} 
+		}
+	}
 }
 ?>
