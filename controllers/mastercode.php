@@ -87,6 +87,74 @@ class Mastercode extends IController
 		}
 		$obj->del($where1);               //删除商品
 		$this->redirect('hospital_list');
+	}
+	
+	/**
+	 * @科室模板数据配置
+	 */
+	//科室列表
+	function department_type_list()
+	{
+		$this->redirect('department_type_list');
+	}
+	//科室编辑
+	function department_type_edit()
+	{
+		$id = IReq::get('id','get');
+		if($id)
+		{
+			$department_type_obj = new IModel('department_type');
+			$where = "id =".$id;
+			$data = $department_type_obj->getObj($where);
+			$this->setRenderData($data);
+			$this->redirect('department_type_edit');
+		}
+		else 
+		{
+			$this->redirect('department_type_edit');
+		}
+	}
+	//科室保存
+	function department_type_edit_act()
+	{
+		$id = IReq::get('id','post');
+		$obj = new IModel('department_type');
+		$dataarray= array(
+		'name_ch' =>IReq::get('name_ch'),
+		'name_en' =>IReq::get('name_en'),
+		'order' =>IReq::get('order'),
+		);
+		$obj->setData($dataarray);
+		//更新操作
+		if ($id)
+		{
+			$where = 'id ='.$id;
+			$obj->update($where);
+		}
+		//增加操作
+		else
+		{
+			$obj->add($where);
+		}
+		$this->redirect('department_type_list');
+	}
+	//科室删除
+	function department_type_del()
+	{
+		$id = IFilter::act( IReq::get('id') ,'int' );
 		
+		$obj = new IModel('department_type');
+
+		if(is_array($id) && isset($id[0]) && $id[0]!='')
+		{
+			$id_str = join(',',$id);
+			$where1 = ' id in ('.$id_str.')';
+		}
+		else
+		{
+			$where1 = 'id = '.$id;
+		}
+		$obj->del($where1);               //删除商品
+		$this->redirect('department_type_list');
 	}
 }
