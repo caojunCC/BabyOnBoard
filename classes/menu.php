@@ -133,11 +133,7 @@ class Menu
             	'/system/express'		=> '快递跟踪'
             	),
             	*/
-            	'权限管理'=>array(
-            		'/system/admin_list' => '管理员',
-            		'/system/role_list'  => '角色',
-            		'/system/right_list' => '权限资源'
-            	),
+
             	'数据库管理'=>array(
 					'/tools/db_bak' => '数据库备份',
 					'/tools/db_res' => '数据库还原',
@@ -191,9 +187,15 @@ class Menu
 		),
 		'Hospital医院' =>array(
 			'Providers人员' =>array(
-				'/hospital/providers_list' =>'list人员列表',
+				'/hospital/providers_list' => 'list人员列表',
+				'/hospital/providers_edit' =>  'edit编辑人员',
+				),
+			'Position职位管理'=>array(
+         //   		'/system/admin_list' => '用户',
+            		'/system/role_list'  => 'role角色',
+            		'/system/right_list' => 'rights权限资源'
+            	),
 			),
-		),
 		'Patient病人' =>array(
 			'report_stats报告统计' =>array(
 			'/patient/report_stats_list ' =>'list报告统计',
