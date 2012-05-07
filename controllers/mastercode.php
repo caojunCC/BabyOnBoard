@@ -240,36 +240,38 @@ class Mastercode extends IController
 	 * @病人状态模板数据配置
 	 */
 	//病人状态列表
-	function patient_statues_list()
+	function patient_status_list()
 	{
-		$this->redirect('patient_statues_list');
+		$this->redirect('patient_status_list');
 	}
 	//病人状态编辑
-	function patient_statues_edit()
-	{/*
+	function patient_status_edit()
+	{
 		$id = IReq::get('id','get');
 		if($id)
 		{
-			$department_type_obj = new IModel('department_type');
+			$patient_status_obj = new IModel('patient_status');
 			$where = "id =".$id;
-			$data = $department_type_obj->getObj($where);
+			$data = $patient_status_obj->getObj($where);
 			$this->setRenderData($data);
-			$this->redirect('department_type_edit');
+			$this->redirect('patient_status_edit');
 		}
 		else 
 		{
-			$this->redirect('patient_statues_edit');
-		}*/
-		$this->redirect('patient_statues_edit');
+			$this->redirect('patient_status_edit');
+		}
 	}
 	//病人状态保存
-	function patient_statues_edit_act()
-	{/*
+	function patient_status_edit_act()
+	{
 		$id = IReq::get('id','post');
-		$obj = new IModel('department_type');
+		$obj = new IModel('patient_status');
 		$dataarray= array(
-		'name_ch' =>IReq::get('name_ch'),
-		'name_en' =>IReq::get('name_en'),
+		'description_en' =>IReq::get('description_en'),
+		'description_ch' =>IReq::get('description_ch'),
+		'front_color' =>IReq::get('front_color'),
+		'background_color' =>IReq::get('background_color'),
+		'is_bold' =>IReq::get('is_bold'),
 		'order' =>IReq::get('order'),
 		);
 		$obj->setData($dataarray);
@@ -283,15 +285,15 @@ class Mastercode extends IController
 		else
 		{
 			$obj->add($where);
-		}*/
-		$this->redirect('patient_statues_list');
+		}
+		$this->redirect('patient_status_list');
 	}
 	//病人状态删除
-	function patient_statues_del()
-	{/*
+	function patient_status_del()
+	{
 		$id = IFilter::act( IReq::get('id') ,'int' );
 		
-		$obj = new IModel('department_type');
+		$obj = new IModel('patient_status');
 
 		if(is_array($id) && isset($id[0]) && $id[0]!='')
 		{
@@ -302,8 +304,8 @@ class Mastercode extends IController
 		{
 			$where1 = 'id = '.$id;
 		}
-		$obj->del($where1);               //删除商品*/
-		$this->redirect('patient_statues_list');
+		$obj->del($where1);               //删除商品
+		$this->redirect('patient_status_list');
 	}
 	
 }
