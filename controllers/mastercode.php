@@ -235,6 +235,75 @@ class Mastercode extends IController
 		$obj->del($where1);               //删除商品
 		$this->redirect('beds_list');
 	}
-	
+
+	/**
+	 * @病人状态模板数据配置
+	 */
+	//病人状态列表
+	function patient_statues_list()
+	{
+		$this->redirect('patient_statues_list');
+	}
+	//病人状态编辑
+	function patient_statues_edit()
+	{/*
+		$id = IReq::get('id','get');
+		if($id)
+		{
+			$department_type_obj = new IModel('department_type');
+			$where = "id =".$id;
+			$data = $department_type_obj->getObj($where);
+			$this->setRenderData($data);
+			$this->redirect('department_type_edit');
+		}
+		else 
+		{
+			$this->redirect('patient_statues_edit');
+		}*/
+		$this->redirect('patient_statues_edit');
+	}
+	//病人状态保存
+	function patient_statues_edit_act()
+	{/*
+		$id = IReq::get('id','post');
+		$obj = new IModel('department_type');
+		$dataarray= array(
+		'name_ch' =>IReq::get('name_ch'),
+		'name_en' =>IReq::get('name_en'),
+		'order' =>IReq::get('order'),
+		);
+		$obj->setData($dataarray);
+		//更新操作
+		if ($id)
+		{
+			$where = 'id ='.$id;
+			$obj->update($where);
+		}
+		//增加操作
+		else
+		{
+			$obj->add($where);
+		}*/
+		$this->redirect('patient_statues_list');
+	}
+	//病人状态删除
+	function patient_statues_del()
+	{/*
+		$id = IFilter::act( IReq::get('id') ,'int' );
+		
+		$obj = new IModel('department_type');
+
+		if(is_array($id) && isset($id[0]) && $id[0]!='')
+		{
+			$id_str = join(',',$id);
+			$where1 = ' id in ('.$id_str.')';
+		}
+		else
+		{
+			$where1 = 'id = '.$id;
+		}
+		$obj->del($where1);               //删除商品*/
+		$this->redirect('patient_statues_list');
+	}
 	
 }
