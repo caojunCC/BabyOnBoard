@@ -46,16 +46,17 @@
 	</script>
 	<div id="admin_right">
 	<div class="headbar">
-	<div class="position"><span>Hospital</span><span>></span><span>Rights</spam><span>></span><span>List</span></div>
+	<div class="position"><span>Hospital</span><span>></span><span>Rights</span><span>></span><span>Rights Recycle Bin</span></div>
 	<div class="operating">
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_edit");?>')"><button class="operating_btn" type="button"><span class="addition">Add New Right</span></button></a>
+		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_edit");?>')"><button class="operating_btn" type="button"><span class="addition">Add Rights</span></button></a>
 		<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">Choose All</span></button></a>
-		<a href="javascript:void(0)" onclick="delModel({msg:'是否把信息放到回收站内？'});"><button class="operating_btn" type="button"><span class="delete">Delete All</span></button></a>
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_recycle");?>')"><button class="operating_btn" type="button"><span class="recycle">Recycle Bin</span></button></a>
+		<a href="javascript:void(0)" onclick=$('[name="right_list"]').attr("action","<?php echo IUrl::creatUrl("/system/right_update");?>");delModel({msg:'是否进行彻底删除？'});><button class="operating_btn" type="button"><span class="delete">Delete All</span></button></a>
+		<a href="javascript:void(0)" onclick=$('[name="right_list"]').attr("action","<?php echo IUrl::creatUrl("/system/right_update/recycle/rec");?>");delModel({msg:'是否进行恢复？'});><button class="operating_btn" type="button"><span class="recover">Restore All</span></button></a>
+		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_list");?>')"><button class="operating_btn" type="button"><span class="link">Right List</span></button></a>
 	</div>
 	<div class="field">
 		<table class="list_table">
-			<col width="50px" />
+			<col width="40px" />
 			<col />
 			<thead>
 				<tr>
@@ -70,19 +71,19 @@
 </div>
 
 <div class="content">
-	<form name='right_list' method='post' action='<?php echo IUrl::creatUrl("/system/right_update/recycle/del");?>'>
+	<form name='right_list' method='post' action='#'>
 		<table id="list_table" class="list_table">
 			<col width="40px" />
 			<col />
 			<tbody>
-				<?php $query = new IQuery("right");$query->where = "is_del = 0";$items = $query->find(); foreach($items as $key => $item){?>
+				<?php $query = new IQuery("right");$query->where = "is_del = 1";$items = $query->find(); foreach($items as $key => $item){?>
 				<tr>
 					<td><input type='checkbox' name='id[]' value='<?php echo isset($item['id'])?$item['id']:"";?>' /></td>
 					<td><?php echo isset($item['name'])?$item['name']:"";?></td>
 					<td><?php echo isset($item['right'])?$item['right']:"";?></td>
 					<td>
-						<a href='<?php echo IUrl::creatUrl("/system/right_edit/id/$item[id]");?>'><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_edit.gif";?>" alt="编辑" title="编辑" /></a>
-						<a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/system/right_update/recycle/del/id/$item[id]");?>',msg:'是否把信息放到回收站内？'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
+						<a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/system/right_update/id/$item[id]");?>',msg:'是否进行彻底删除？'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
+						<a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/system/right_update/recycle/rec/id/$item[id]");?>',msg:'是否进行恢复？'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_recover.gif";?>" alt="恢复" title="恢复" /></a>
 					</td>
 				</tr>
 				<?php }?>

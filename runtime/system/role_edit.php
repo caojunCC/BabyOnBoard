@@ -46,7 +46,7 @@
 	</script>
 	<div id="admin_right">
 	<div class="headbar">
-	<div class="position"><span>系统</span><span>></span><span>权限管理</span><span>></span><span><?php if(isset($this->roleRow['id'])){?>编辑<?php }else{?>添加<?php }?>角色</span></div>
+	<div class="position"><span>Hospital</span><span>></span>Position<span></span><span>></span><span><?php if(isset($this->roleRow['id'])){?>Edit<?php }else{?>Add<?php }?>Position</span></div>
 </div>
 <div class="content_box">
 	<div class="content form_content">
@@ -56,11 +56,11 @@
 				<col width="150px" />
 				<col />
 				<tr>
-					<th>名称：</th>
-					<td><input type='text' class='normal' name='name' pattern='required' alt='请填写角色名称' /><label>* 角色名称</label></td>
+					<th>Position Name：</th>
+					<td><input type='text' class='normal' name='name' pattern='required' alt='请填写角色名称' /><label>* Position Name</label></td>
 				</tr>
 				<tr>
-					<th valign="top">权限分配：</th>
+					<th valign="top">Rights：</th>
 					<td>
 						<ul class='attr_list'>
 							<?php $query = new IQuery("right");$query->order = "`right` asc";$items = $query->find(); foreach($items as $key => $item){?>

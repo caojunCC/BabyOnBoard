@@ -1,0 +1,1049 @@
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: admin
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 13:58:25
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: admin
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 13:59:42
+##出错时变量的值：##
+array (
+  'where' => false,
+  'cols' => '*',
+  'orderBy' => false,
+  'desc' => 'DESC',
+  'limit' => 500,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: admin
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 13:59:43
+##出错时变量的值：##
+array (
+  'where' => false,
+  'cols' => '*',
+  'orderBy' => false,
+  'desc' => 'DESC',
+  'limit' => 500,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: admin
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 13:59:44
+##出错时变量的值：##
+array (
+  'where' => false,
+  'cols' => '*',
+  'orderBy' => false,
+  'desc' => 'DESC',
+  'limit' => 500,
+  'colStr' => '*',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: admin
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 13:59:45
+##出错时变量的值：##
+array (
+  'where' => false,
+  'cols' => '*',
+  'orderBy' => false,
+  'desc' => 'DESC',
+  'limit' => 500,
+  'colStr' => '*',
+  'sql' => 'SELECT * FROM dbclass_hospital_detail',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: admin
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 13:59:45
+##出错时变量的值：##
+array (
+  'where' => false,
+  'cols' => '*',
+  'orderBy' => false,
+  'desc' => 'DESC',
+  'limit' => 500,
+  'colStr' => '*',
+  'sql' => 'SELECT * FROM dbclass_hospital_detail',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: admin
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 13:59:46
+##出错时变量的值：##
+array (
+  'where' => false,
+  'cols' => '*',
+  'orderBy' => false,
+  'desc' => 'DESC',
+  'limit' => 500,
+  'colStr' => '*',
+  'sql' => 'SELECT * FROM dbclass_hospital_detail',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: admin
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 13:59:47
+##出错时变量的值：##
+array (
+  'where' => false,
+  'cols' => '*',
+  'orderBy' => false,
+  'desc' => 'DESC',
+  'limit' => 500,
+  'colStr' => '*',
+  'sql' => 'SELECT * FROM dbclass_hospital_detail',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: admin
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 13:59:47
+##出错时变量的值：##
+array (
+  'where' => false,
+  'cols' => '*',
+  'orderBy' => false,
+  'desc' => 'DESC',
+  'limit' => 500,
+  'colStr' => '*',
+  'sql' => 'SELECT * FROM dbclass_hospital_detail',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: admin
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 13:59:48
+##出错时变量的值：##
+array (
+  'where' => false,
+  'cols' => '*',
+  'orderBy' => false,
+  'desc' => 'DESC',
+  'limit' => 500,
+  'colStr' => '*',
+  'sql' => 'SELECT * FROM dbclass_hospital_detail limit 500',
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  d.hospital_name_en,ad.admin_name,c.name from dbclass_admin as ad left join dbclass_admin_role  as c on ad.role_id = c.id left join dbclass_hospital_detail  as d on ad.hospital_id = d.id where hospital_id =    limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:31   	File:E:\wamp\www\iwebshop\controllers\hospital.php
+	Func:providers_list_data	Class:Hospital       	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  d.hospital_name_en,ad.admin_name,c.name from dbclass_admin as ad left join dbclass_admin_role  as c on ad.role_id = c.id left join dbclass_hospital_detail  as d on ad.hospital_id = d.id where hospital_id =    limit 500
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 500' at line 1
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:31   	File:E:\wamp\www\iwebshop\controllers\hospital.php
+	Func:providers_list_data	Class:Hospital       	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:36:46
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:36:46
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:36:59
+##出错时变量的值：##
+array (
+  'hospital_id' => '1',
+  'hospital_Obj' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin as ad',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:05
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:07
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:08
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:09
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+  'hospital_Obj' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin as ad',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:09
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+  'hospital_Obj' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin as ad',
+      'fields' => 'd.hospital_name_en,ad.admin_name,c.name',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:10
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+  'hospital_Obj' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin as ad',
+      'fields' => 'd.hospital_name_en,ad.admin_name,c.name',
+      'where' => '',
+      'join' => 'left join dbclass_admin_role  as c on ad.role_id = c.id left join dbclass_hospital_detail  as d on ad.hospital_id = d.id',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:11
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+  'hospital_Obj' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin as ad',
+      'fields' => 'd.hospital_name_en,ad.admin_name,c.name',
+      'where' => 'where 1',
+      'join' => 'left join dbclass_admin_role  as c on ad.role_id = c.id left join dbclass_hospital_detail  as d on ad.hospital_id = d.id',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:11
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:13
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:15
+##出错时变量的值：##
+array (
+  'name' => 'distinct',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:18
+##出错时变量的值：##
+array (
+  'name' => 'fields',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:21
+##出错时变量的值：##
+array (
+  'name' => 'table',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:22
+##出错时变量的值：##
+array (
+  'name' => 'join',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:23
+##出错时变量的值：##
+array (
+  'name' => 'where',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:23
+##出错时变量的值：##
+array (
+  'name' => 'group',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:24
+##出错时变量的值：##
+array (
+  'name' => 'having',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:28
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:34
+##出错时变量的值：##
+array (
+  'hospital_id' => '1',
+  'hospital_Obj' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin as ad',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:39
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:56
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:37:59
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:38:06
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+  'hospital_Obj' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin as ad',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:38:07
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+  'hospital_Obj' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin as ad',
+      'fields' => 'd.hospital_name_en,ad.admin_name,c.name',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:38:07
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+  'hospital_Obj' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin as ad',
+      'fields' => 'd.hospital_name_en,ad.admin_name,c.name',
+      'where' => '',
+      'join' => 'left join dbclass_admin_role  as c on ad.role_id = c.id left join dbclass_hospital_detail  as d on ad.hospital_id = d.id',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:38:08
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+  'hospital_Obj' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin as ad',
+      'fields' => 'd.hospital_name_en,ad.admin_name,c.name',
+      'where' => 'where 1',
+      'join' => 'left join dbclass_admin_role  as c on ad.role_id = c.id left join dbclass_hospital_detail  as d on ad.hospital_id = d.id',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:38:09
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:38:09
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:38:27
+##出错时变量的值：##
+array (
+  'hospital_id' => '0',
+  'hospital_Obj' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin as ad',
+      'fields' => 'd.hospital_name_en,ad.admin_name,c.name',
+      'where' => 'where 1',
+      'join' => 'left join dbclass_admin_role  as c on ad.role_id = c.id left join dbclass_hospital_detail  as d on ad.hospital_id = d.id',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'info' => 
+  array (
+    0 => 
+    array (
+      'hospital_name_en' => NULL,
+      'admin_name' => 'admin',
+      'name' => NULL,
+    ),
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: info
+errFile:xdebug eval
+errLine:1
+errTime:12-05-06 21:39:20
+##出错时变量的值：##
+array (
+)
+-------</pre>

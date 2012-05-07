@@ -1,11 +1,11 @@
 <div class="headbar">
-	<div class="position"><span>系统</span><span>></span><span>权限管理</span><span>></span><span>权限回收站</span></div>
+	<div class="position"><span>Hospital</span><span>></span><span>Rights</span><span>></span><span>Rights Recycle Bin</span></div>
 	<div class="operating">
-		<a href="javascript:;" onclick="event_link('{url:/system/right_edit}')"><button class="operating_btn" type="button"><span class="addition">添加权限</span></button></a>
-		<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">全选</span></button></a>
-		<a href="javascript:void(0)" onclick=$('[name="right_list"]').attr("action","{url:/system/right_update}");delModel({msg:'是否进行彻底删除？'});><button class="operating_btn" type="button"><span class="delete">批量删除</span></button></a>
-		<a href="javascript:void(0)" onclick=$('[name="right_list"]').attr("action","{url:/system/right_update/recycle/rec}");delModel({msg:'是否进行恢复？'});><button class="operating_btn" type="button"><span class="recover">批量还原</span></button></a>
-		<a href="javascript:;" onclick="event_link('{url:/system/right_list}')"><button class="operating_btn" type="button"><span class="link">权限列表</span></button></a>
+		<a href="javascript:;" onclick="event_link('{url:/system/right_edit}')"><button class="operating_btn" type="button"><span class="addition">Add Rights</span></button></a>
+		<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">Choose All</span></button></a>
+		<a href="javascript:void(0)" onclick=$('[name="right_list"]').attr("action","{url:/system/right_update}");delModel({msg:'是否进行彻底删除？'});><button class="operating_btn" type="button"><span class="delete">Delete All</span></button></a>
+		<a href="javascript:void(0)" onclick=$('[name="right_list"]').attr("action","{url:/system/right_update/recycle/rec}");delModel({msg:'是否进行恢复？'});><button class="operating_btn" type="button"><span class="recover">Restore All</span></button></a>
+		<a href="javascript:;" onclick="event_link('{url:/system/right_list}')"><button class="operating_btn" type="button"><span class="link">Right List</span></button></a>
 	</div>
 	<div class="field">
 		<table class="list_table">
@@ -13,10 +13,10 @@
 			<col />
 			<thead>
 				<tr>
-					<th>选择</th>
-					<th>名字</th>
-					<th>权限码</th>
-					<th>操作</th>
+					<th>Choose</th>
+					<th>User Name</th>
+					<th>Right Code</th>
+					<th>Operate</th>
 				</tr>
 			</thead>
 		</table>

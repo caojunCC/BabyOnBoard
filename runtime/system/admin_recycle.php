@@ -46,23 +46,29 @@
 	</script>
 	<div id="admin_right">
 	<div class="headbar">
-	<div class="position"><span>Hospital</span><span>></span><span>Rights</spam><span>></span><span>List</span></div>
+	<div class="position"><span>系统</span><span>></span><span>权限管理</span><span>></span><span>管理员回收站</span></div>
 	<div class="operating">
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_edit");?>')"><button class="operating_btn" type="button"><span class="addition">Add New Right</span></button></a>
-		<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">Choose All</span></button></a>
-		<a href="javascript:void(0)" onclick="delModel({msg:'是否把信息放到回收站内？'});"><button class="operating_btn" type="button"><span class="delete">Delete All</span></button></a>
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_recycle");?>')"><button class="operating_btn" type="button"><span class="recycle">Recycle Bin</span></button></a>
+		<a href="javascript:void(0)" onclick="event_link('<?php echo IUrl::creatUrl("/system/admin_edit");?>')"><button class="operating_btn" type="button"><span class="addition">添加管理员</span></button></a>
+		<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">全选</span></button></a>
+		<a href="javascript:void(0)" onclick=$('[name="admin_list"]').attr("action","<?php echo IUrl::creatUrl("/system/admin_update");?>");delModel({msg:'是否进行彻底删除？'});><button class="operating_btn" type="button"><span class="delete">批量删除</span></button></a>
+		<a href="javascript:void(0)" onclick=$('[name="admin_list"]').attr("action","<?php echo IUrl::creatUrl("/system/admin_update/recycle/rec");?>");delModel({msg:'是否进行恢复？'});><button class="operating_btn" type="button"><span class="recover">批量还原</span></button></a>
 	</div>
 	<div class="field">
 		<table class="list_table">
-			<col width="50px" />
+			<col width="40px" />
+			<col width="150px" />
+			<col width="100px" />
+			<col width="200px" />
 			<col />
 			<thead>
 				<tr>
-					<th>Choose</th>
-					<th>User Name</th>
-					<th>Right Code</th>
-					<th>Operate</th>
+					<th>选择</th>
+					<th>用户名</th>
+					<th>角色</th>
+					<th>Email</th>
+					<th>上次登录IP</th>
+					<th>上次登录时间</th>
+					<th>操作</th>
 				</tr>
 			</thead>
 		</table>
@@ -70,19 +76,26 @@
 </div>
 
 <div class="content">
-	<form name='right_list' method='post' action='<?php echo IUrl::creatUrl("/system/right_update/recycle/del");?>'>
+	<form name='admin_list' method='post' action='#'>
 		<table id="list_table" class="list_table">
 			<col width="40px" />
+			<col width="150px" />
+			<col width="100px" />
+			<col width="200px" />
 			<col />
 			<tbody>
-				<?php $query = new IQuery("right");$query->where = "is_del = 0";$items = $query->find(); foreach($items as $key => $item){?>
+				<?php $page= (isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;?>
+				<?php $query = new IQuery("admin as a");$query->join = "left join admin_role as b on a.role_id = b.id";$query->fields = "a.*,b.name as role_name";$query->where = "a.is_del = 1";$query->page = "$page";$query->pagesize = "20";$items = $query->find(); foreach($items as $key => $item){?>
 				<tr>
 					<td><input type='checkbox' name='id[]' value='<?php echo isset($item['id'])?$item['id']:"";?>' /></td>
-					<td><?php echo isset($item['name'])?$item['name']:"";?></td>
-					<td><?php echo isset($item['right'])?$item['right']:"";?></td>
+					<td><?php echo isset($item['admin_name'])?$item['admin_name']:"";?></td>
+					<td><?php echo $item['role_name'] ? $item['role_name'] : '超级管理员';?></td>
+					<td><?php echo isset($item['email'])?$item['email']:"";?></td>
+					<td><?php echo isset($item['last_ip'])?$item['last_ip']:"";?></td>
+					<td><?php echo isset($item['last_time'])?$item['last_time']:"";?></td>
 					<td>
-						<a href='<?php echo IUrl::creatUrl("/system/right_edit/id/$item[id]");?>'><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_edit.gif";?>" alt="编辑" title="编辑" /></a>
-						<a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/system/right_update/recycle/del/id/$item[id]");?>',msg:'是否把信息放到回收站内？'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
+						<a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/system/admin_update/id/$item[id]");?>',msg:'是否对信息进行彻底删除？'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
+						<a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/system/admin_update/recycle/rec/id/$item[id]");?>',msg:'是否对信息进行恢复？'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_recover.gif";?>" alt="恢复" title="恢复" /></a>
 					</td>
 				</tr>
 				<?php }?>

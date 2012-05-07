@@ -45,23 +45,84 @@
 		initMenu(data,current,url);
 	</script>
 	<div id="admin_right">
-	<div class="headbar">
-	<div class="position"><span>Hospital</span><span>></span><span>Rights</spam><span>></span><span>List</span></div>
+	<script type='text/javascript'>
+function render_data(selector)
+{
+	var temp =selector.options[selector.options.selectedIndex].value
+	//清除原有的数据
+	$('#list_table>tbody').remove();
+	//Ajax获取填充的数据
+	var html;
+	var i=0;
+	$.ajax({
+		type: "POST",
+		url : "<?php echo IUrl::creatUrl("/hospital/providers_list_data");?>",
+		data: "id="+temp,
+		dataType: "json",
+		success: function(data){
+			if(data)
+			{
+				//循环写出表格
+				for(i=0;i< data.length;i++)
+				{
+					html +="<tr>"+
+					"<td><input type='checkbox' name='id[]' value="+data[i].id+" /></td>"+
+					"<td>"+data[i].admin_name+"</td>"+
+					"<td>"+data[i].name+"</td>"+
+					"<td>"+data[i].hospital_name_en+"</td>"+
+					"<td>"+
+					 "<a href='<?php echo IUrl::creatUrl("/hospital/providers_edit/id/");?>"+data[i].id+"'><img class=\"operator\" src=\"<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_edit.gif";?>\" alt=\"编辑\" title=\"编辑\" /></a>"+
+					 "<a href='javascript:void(0)' onclick=\"delModel({link:'<?php echo IUrl::creatUrl("/hospital/admin_update/recycle/del/id/");?>"+data[i].id+"',msg:'是否把信息放到回收站内？'});\""+"><img class='operator' src='<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>' alt='删除' title='删除' /></a>"+
+					"</td></tr>" ;
+					
+				}
+				$('#list_table').append(html);
+			}
+			else
+			{
+				alert('数据为空');
+			}
+				
+		}
+	});
+	
+}
+</script>
+
+<div class="headbar">
+	<div class="position"><span>Hospital</span><span>></span><span>Providers</span><span>></span><span>list</span></div>
 	<div class="operating">
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_edit");?>')"><button class="operating_btn" type="button"><span class="addition">Add New Right</span></button></a>
+		<a href="javascript:void(0)" onclick="event_link('<?php echo IUrl::creatUrl("/system/admin_edit");?>')"><button class="operating_btn" type="button"><span class="addition">Add New Provider</span></button></a>
 		<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">Choose All</span></button></a>
-		<a href="javascript:void(0)" onclick="delModel({msg:'是否把信息放到回收站内？'});"><button class="operating_btn" type="button"><span class="delete">Delete All</span></button></a>
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_recycle");?>')"><button class="operating_btn" type="button"><span class="recycle">Recycle Bin</span></button></a>
+		<a href="javascript:void(0)" onclick="delModel();"><button class="operating_btn" type="button"><span class="delete">Delete All</span></button></a>
+		<a>
+		Hospital:
+		<select width='50px' onchange="render_data(this);">
+			<option value='-1'>*Please choose one</option>
+			<?php if($this->role_hospital_id == 0){?>
+				<option value='0'>All</option>				
+			<?php }?>
+			
+			<?php foreach($this->role_hospital_data as $key => $item){?>
+				<option value='<?php echo isset($item['id'])?$item['id']:"";?>' ><?php echo isset($item['hospital_name_en'])?$item['hospital_name_en']:"";?></option>
+			<?php }?>
+		</select>
+		</a>
 	</div>
 	<div class="field">
-		<table class="list_table">
+		<table class="list_table" id ='list_table'>
 			<col width="50px" />
+			<col width="150px" />
+			<col width="280px" />
+			<col width="380px" />
+			<col width="100px" />
 			<col />
 			<thead>
 				<tr>
 					<th>Choose</th>
-					<th>User Name</th>
-					<th>Right Code</th>
+					<th>Username</th>
+					<th>Position</th>
+					<th>Hospital Name</th>
 					<th>Operate</th>
 				</tr>
 			</thead>
@@ -70,22 +131,14 @@
 </div>
 
 <div class="content">
-	<form name='right_list' method='post' action='<?php echo IUrl::creatUrl("/system/right_update/recycle/del");?>'>
+	<form name='admin_list' method='post' action='<?php echo IUrl::creatUrl("/system/admin_update/recycle/del");?>'>
 		<table id="list_table" class="list_table">
-			<col width="40px" />
+			<col width="50px" />
+			<col width="150px" />
+			<col width="100px" />
+			<col width="200px" />
 			<col />
 			<tbody>
-				<?php $query = new IQuery("right");$query->where = "is_del = 0";$items = $query->find(); foreach($items as $key => $item){?>
-				<tr>
-					<td><input type='checkbox' name='id[]' value='<?php echo isset($item['id'])?$item['id']:"";?>' /></td>
-					<td><?php echo isset($item['name'])?$item['name']:"";?></td>
-					<td><?php echo isset($item['right'])?$item['right']:"";?></td>
-					<td>
-						<a href='<?php echo IUrl::creatUrl("/system/right_edit/id/$item[id]");?>'><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_edit.gif";?>" alt="编辑" title="编辑" /></a>
-						<a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/system/right_update/recycle/del/id/$item[id]");?>',msg:'是否把信息放到回收站内？'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
-					</td>
-				</tr>
-				<?php }?>
 			</tbody>
 		</table>
 	</form>

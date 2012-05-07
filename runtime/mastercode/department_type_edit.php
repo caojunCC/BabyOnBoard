@@ -45,50 +45,44 @@
 		initMenu(data,current,url);
 	</script>
 	<div id="admin_right">
-	<div class="headbar">
-	<div class="position"><span>Hospital</span><span>></span><span>Rights</spam><span>></span><span>List</span></div>
-	<div class="operating">
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_edit");?>')"><button class="operating_btn" type="button"><span class="addition">Add New Right</span></button></a>
-		<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">Choose All</span></button></a>
-		<a href="javascript:void(0)" onclick="delModel({msg:'是否把信息放到回收站内？'});"><button class="operating_btn" type="button"><span class="delete">Delete All</span></button></a>
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_recycle");?>')"><button class="operating_btn" type="button"><span class="recycle">Recycle Bin</span></button></a>
-	</div>
-	<div class="field">
-		<table class="list_table">
-			<col width="50px" />
-			<col />
-			<thead>
-				<tr>
-					<th>Choose</th>
-					<th>User Name</th>
-					<th>Right Code</th>
-					<th>Operate</th>
-				</tr>
-			</thead>
-		</table>
-	</div>
-</div>
+	<script type="text/javascript" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/javascript/Calendar4.js";?>"></script>
 
-<div class="content">
-	<form name='right_list' method='post' action='<?php echo IUrl::creatUrl("/system/right_update/recycle/del");?>'>
-		<table id="list_table" class="list_table">
-			<col width="40px" />
-			<col />
-			<tbody>
-				<?php $query = new IQuery("right");$query->where = "is_del = 0";$items = $query->find(); foreach($items as $key => $item){?>
+<div class="headbar">
+	<div class="position"><span>Mastercode</span><span>></span><span>department type</span><span>></span><span><?php if(isset($id)){?>Edit department type<?php }else{?>Add New department type<?php }?></span></div>
+</div>
+<div class="content_box">
+	<div class="content form_content">
+		<form action="<?php echo IUrl::creatUrl("/mastercode/department_type_edit_act");?>" method="post">
+			<table class="form_table" cellpadding="0" cellspacing="0">
+				<col width="150px" />
+				<col />
 				<tr>
-					<td><input type='checkbox' name='id[]' value='<?php echo isset($item['id'])?$item['id']:"";?>' /></td>
-					<td><?php echo isset($item['name'])?$item['name']:"";?></td>
-					<td><?php echo isset($item['right'])?$item['right']:"";?></td>
+					<th>Department type Name ：</th>
 					<td>
-						<a href='<?php echo IUrl::creatUrl("/system/right_edit/id/$item[id]");?>'><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_edit.gif";?>" alt="编辑" title="编辑" /></a>
-						<a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/system/right_update/recycle/del/id/$item[id]");?>',msg:'是否把信息放到回收站内？'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
+					<p>
+						<input class="normal" name="name_en" type="text" value="<?php echo isset($name_en)?$name_en:"";?>" pattern="required" alt="Name can not be empty" />*English
+					</p>
+						<input name="id" value="<?php echo isset($id)?$id:"";?>" type="hidden" />
+				
+					<p style='margin-top:10px;'>
+						<input class="normal" name="name_ch" type="text" value="<?php echo isset($name_ch)?$name_ch:"";?>" pattern="required" alt="名称不能为空" />*Chinese
+					</p>
 					</td>
 				</tr>
-				<?php }?>
-			</tbody>
-		</table>
-	</form>
+				<tr>
+					<th>Order ：</th>
+					<td >
+					<p style='margin-top:15px;'>
+						<input class="normal" name="order" type="text" value="<?php echo isset($order)?$order:"";?>" pattern="required" alt="Order can not be empty" />
+					</p>
+					</td>
+				</tr>
+				<tr>
+					<td></td><td><button class="submit" type="submit"><span>确 定</span></button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
 </div>
 	</div>
 	<div id="separator"></div>

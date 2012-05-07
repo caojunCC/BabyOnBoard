@@ -46,7 +46,7 @@
 	</script>
 	<div id="admin_right">
 	<div class="headbar">
-	<div class="position"><span>系统</span><span>></span><span>权限管理</span><span>></span><span><?php if(isset($this->rightRow['id'])){?>编辑<?php }else{?>添加<?php }?>权限</span></div>
+	<div class="position"><span>Hospital</span><span>></span><span>Rights</span><span>></span><span><?php if(isset($this->rightRow['id'])){?>Edit<?php }else{?>Add<?php }?>Rights</span></div>
 </div>
 <div class="content_box">
 	<div class="content form_content">

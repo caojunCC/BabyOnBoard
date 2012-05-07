@@ -95,7 +95,7 @@
 					<td><?php echo isset($item['hospital_zipcode'])?$item['hospital_zipcode']:"";?></td>
 					<td>
                         <a href='<?php echo IUrl::creatUrl("/mastercode/hospital_edit/id/");?><?php echo isset($item['id'])?$item['id']:"";?>'><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_edit.gif";?>" alt="编辑" title="编辑" /></a>
-                        <a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/mastercode/hospital_del/id/");?><?php echo isset($item['id'])?$item['id']:"";?>'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
+                        <a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/mastercode/hospital_del/id/$item[id]");?>'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
                     </td>
 				   </tr>
 				    <tr>      

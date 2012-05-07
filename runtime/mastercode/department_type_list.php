@@ -46,50 +46,62 @@
 	</script>
 	<div id="admin_right">
 	<div class="headbar">
-	<div class="position"><span>Hospital</span><span>></span><span>Rights</spam><span>></span><span>List</span></div>
-	<div class="operating">
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_edit");?>')"><button class="operating_btn" type="button"><span class="addition">Add New Right</span></button></a>
-		<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">Choose All</span></button></a>
-		<a href="javascript:void(0)" onclick="delModel({msg:'是否把信息放到回收站内？'});"><button class="operating_btn" type="button"><span class="delete">Delete All</span></button></a>
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/system/right_recycle");?>')"><button class="operating_btn" type="button"><span class="recycle">Recycle Bin</span></button></a>
-	</div>
-	<div class="field">
-		<table class="list_table">
-			<col width="50px" />
-			<col />
-			<thead>
-				<tr>
-					<th>Choose</th>
-					<th>User Name</th>
-					<th>Right Code</th>
-					<th>Operate</th>
-				</tr>
-			</thead>
-		</table>
-	</div>
+    <div class="position"><span>Mastercode</span><span>></span><span>department type</span><span>></span><span>department type list</span></div>
+    <div class="operating">
+        <a href="javascript:void(0)" onclick="event_link('<?php echo IUrl::creatUrl("/mastercode/department_type_edit");?>')"><button class="operating_btn" type="button"><span class="addition">Add New department type</span></button></a>
+        <a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">Choose all</span></button></a>
+        <a href="javascript:void(0)" onclick="delModel();"><button class="operating_btn" type="button"><span class="delete">Delete all</span></button></a>
+    </div>
+    <div class="field">
+        <table class="list_table">
+            <col width="50px" />
+            <col width="60%" />
+            <col width="10%" />
+            <col width="10%" />
+    	  <col width="10%" />
+            <col />
+            <thead>
+                <tr>
+                    <th class="t_c">Choose</th>
+                    <th>department type Name</th>
+                    <th>Order</th>
+                    <th>编辑&nbsp;&nbsp;&nbsp;删除</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 </div>
-
 <div class="content">
-	<form name='right_list' method='post' action='<?php echo IUrl::creatUrl("/system/right_update/recycle/del");?>'>
-		<table id="list_table" class="list_table">
-			<col width="40px" />
-			<col />
-			<tbody>
-				<?php $query = new IQuery("right");$query->where = "is_del = 0";$items = $query->find(); foreach($items as $key => $item){?>
-				<tr>
-					<td><input type='checkbox' name='id[]' value='<?php echo isset($item['id'])?$item['id']:"";?>' /></td>
-					<td><?php echo isset($item['name'])?$item['name']:"";?></td>
-					<td><?php echo isset($item['right'])?$item['right']:"";?></td>
+    <form action="<?php echo IUrl::creatUrl("/mastercode/department_type_del");?>" method="post" name="department_type">
+        <table class="list_table">
+            <col width="40px" />
+            <col width="30%" />
+            <col width="30%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col />
+            <tbody>
+           <?php $page= (isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;?>
+        	<?php $query = new IQuery("department_type as dt");$query->order = "dt.order asc";$query->page = "$page";$query->pagesize = "20";$items = $query->find(); foreach($items as $key => $item){?> 
+             	  <tr>
+					<td class="t_c"><input type="checkbox" name="id[]" value="<?php echo isset($item['id'])?$item['id']:"";?>" /></td>
+					<td><?php echo isset($item['name_en'])?$item['name_en']:"";?></td>
+					<td><?php echo isset($item['name_ch'])?$item['name_ch']:"";?></td>
+					<td><?php echo isset($item['order'])?$item['order']:"";?></td>
 					<td>
-						<a href='<?php echo IUrl::creatUrl("/system/right_edit/id/$item[id]");?>'><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_edit.gif";?>" alt="编辑" title="编辑" /></a>
-						<a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/system/right_update/recycle/del/id/$item[id]");?>',msg:'是否把信息放到回收站内？'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
-					</td>
-				</tr>
+                        <a href='<?php echo IUrl::creatUrl("/mastercode/department_type_edit/id/");?><?php echo isset($item['id'])?$item['id']:"";?>'><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_edit.gif";?>" alt="编辑" title="编辑" /></a>
+                        <a href='javascript:void(0)' onclick="delModel({link:'<?php echo IUrl::creatUrl("/mastercode/department_type_del/id/$item[id]");?>'});"><img class="operator" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
+                    </td>
+				   </tr>
 				<?php }?>
-			</tbody>
-		</table>
-	</form>
+
+            </tbody>
+        </table>
+    </form>
 </div>
+<?php echo $query->getPageBar();?>
+
 	</div>
 	<div id="separator"></div>
 </div>
