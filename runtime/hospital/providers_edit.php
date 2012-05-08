@@ -109,8 +109,8 @@
 							<?php if($this->role_hospital_id ==0){?>
 							<option value='0'>All Hospital</option>
 							<?php }?>
-							<?php $query = new IQuery("hospital_detail");$items = $query->find(); foreach($items as $key => $item){?>
-							<option value='<?php echo isset($item['id'])?$item['id']:"";?>'><?php echo isset($item['hospital_name_en'])?$item['hospital_name_en']:"";?></option>
+							<?php foreach($this->role_hospital_data as $key => $item){?>
+								<option value='<?php echo isset($item['id'])?$item['id']:"";?>' ><?php echo isset($item['hospital_name_en'])?$item['hospital_name_en']:"";?></option>
 							<?php }?>
 						</select>
 						<label>*为人员分配一个医院</label>		

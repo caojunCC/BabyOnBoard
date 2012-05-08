@@ -197,5 +197,36 @@ class Hospital extends IController
 			}
 		}
 	}
+	//[权限管理][管理员]管理员更新操作[回收站操作][物理删除]
+	function admin_del()
+	{
+		$id = IFilter::act( IReq::get('id') ,'int' );
+
+		if($id == 1 || (is_array($id) && in_array(1,$id)))
+		{
+			$this->redirect('admin_list',false);
+			Util::showMessage('不允许删除系统初始化管理员');
+		}
+		if(is_array($id) && isset($id[0]) && $id[0]!='')
+		{
+			$id_str = join(',',$id);
+			$where = ' id in ('.$id_str.')';
+		}
+		else
+		{
+			$where = 'id = '.$id;
+		}	
+		if(!empty($id))
+		{
+			$obj   = new IModel('admin');
+			$obj->del($where);
+			$this->redirect('providers_list');
+		}
+		else
+		{
+			$this->redirect('providers_list',false);
+			Util::showMessage('请选择要操作的管理员ID');
+		}
+	}
 
 }

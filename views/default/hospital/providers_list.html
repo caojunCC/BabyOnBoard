@@ -25,7 +25,7 @@ function render_data(selector)
 					"<td>"+data[i].hospital_name_en+"</td>"+
 					"<td>"+
 					 "<a href='{url:/hospital/providers_edit/id/}"+data[i].id+"'><img class=\"operator\" src=\"{skin:images/admin/icon_edit.gif}\" alt=\"编辑\" title=\"编辑\" /></a>"+
-					 "<a href='javascript:void(0)' onclick=\"delModel({link:'{url:/hospital/admin_update/recycle/del/id/}"+data[i].id+"',msg:'是否把信息放到回收站内？'});\""+"><img class='operator' src='{skin:images/admin/icon_del.gif}' alt='删除' title='删除' /></a>"+
+					 "<a href='javascript:void(0)' onclick=\"delModel({link:'{url:/hospital/admin_del/id/}"+data[i].id+"',msg:'是否删除？'});\""+"><img class='operator' src='{skin:images/admin/icon_del.gif}' alt='删除' title='删除' /></a>"+
 					"</td></tr>" ;
 					
 				}
@@ -45,7 +45,7 @@ function render_data(selector)
 <div class="headbar">
 	<div class="position"><span>Hospital</span><span>></span><span>Providers</span><span>></span><span>list</span></div>
 	<div class="operating">
-		<a href="javascript:void(0)" onclick="event_link('{url:/system/admin_edit}')"><button class="operating_btn" type="button"><span class="addition">Add New Provider</span></button></a>
+		<a href="javascript:void(0)" onclick="event_link('{url:/hospital/providers_edit}')"><button class="operating_btn" type="button"><span class="addition">Add New Provider</span></button></a>
 		<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">Choose All</span></button></a>
 		<a href="javascript:void(0)" onclick="delModel();"><button class="operating_btn" type="button"><span class="delete">Delete All</span></button></a>
 		<a>
@@ -55,10 +55,10 @@ function render_data(selector)
 			{if:$this->role_hospital_id == 0}
 				<option value='0'>All</option>				
 			{/if}
-			
 			{foreach:$items=$this->role_hospital_data}
 				<option value='{$item['id']}' >{$item['hospital_name_en']}</option>
 			{/foreach}
+			
 		</select>
 		</a>
 	</div>
@@ -84,7 +84,7 @@ function render_data(selector)
 </div>
 
 <div class="content">
-	<form name='admin_list' method='post' action='{url:/system/admin_update/recycle/del}'>
+	<form name='admin_list' method='post' action='{url:/hospital/admin_del}'>
 		<table id="list_table" class="list_table">
 			<col width="50px" />
 			<col width="150px" />
