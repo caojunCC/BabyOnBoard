@@ -166,8 +166,8 @@ class Menu
 				'/mastercode/anesthesia_edit' => 'edit麻醉编辑',
 				),
 			'Patient status病人状态' =>array(
-				'/mastercode/patient_statues_list' => 'list病人状态列表',
-				'/mastercode/patient_statues_edit' => 'edit病人状态编辑',
+				'/mastercode/patient_status_list' => 'list病人状态列表',
+				'/mastercode/patient_status_edit' => 'edit病人状态编辑',
 				),
 				
 			'Anesthesia Prob麻醉问题'=>array(

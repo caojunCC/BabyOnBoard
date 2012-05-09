@@ -1,0 +1,100 @@
+<script type="text/javascript" src="{theme:javascript/Calendar4.js}"></script>
+
+<div class="headbar">
+	<div class="position"><span>Mastercode</span><span>></span><span>Anesthesia problems</span><span>></span><span>{if:isset($id)}Edit anesthesia problems{else:}Add new anesthesia problems{/if}</span></div>
+</div>
+<div class="content_box">
+	<div class="content form_content">
+		<form action="{url:/mastercode/anesthesia_problems_edit_act}" method="post">
+			<table class="form_table" cellpadding="0" cellspacing="0">
+				<col width="150px" />
+				<col />
+				<tr>
+					<th>Description：</th>
+					<td>
+					<p>
+						<input class="normal" name="description_en" type="text" value="{$description_en}" pattern="required" alt="Description can not be empty" />*English
+					</p>
+						<input name="id" value="{$id}" type="hidden" />
+				
+					<p style='margin-top:10px;'>
+						<input class="normal" name="description_ch" type="text" value="{$description_ch}" pattern="required" alt="描述不能为空" />*Chinese
+					</p>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>Mnemonics ：</th>
+					<td>
+					<p>
+						<input class="normal" name="mnemonics_en" type="text" value="{$mnemonics_en}" pattern="required" alt="Mnemonics can not be empty" />*English
+					</p>
+					<p style='margin-top:10px;'>
+						<input class="normal" name="mnemonics_ch" type="text" value="{$mnemonics_ch}" pattern="required" alt="简称不能为空" />*Chinese
+					</p>
+					</td>
+				</tr>
+				
+				<script type="text/javascript" src="{theme:javascript/jquery-1.4.4.min.js}"></script>
+				<script type="text/javascript" src="{theme:javascript/farbtastic.js}"></script>
+				<link rel="stylesheet" href="{skin:css/farbtastic.css}" type="text/css" />
+				
+				<tr>
+					<th>FG Color：</th>
+					<td >
+						<input class="colorField" type="text" id="front_color" name="front_color" value="{if:isset($front_color)}{$front_color}{else:}#000000{/if}" />
+					</td>
+				</tr>	
+				<tr>
+					<th></th>
+					<td>
+						<div id="colorpicker"></div>
+						<script type="text/javascript">
+						   $(document).ready(function() {
+						     $('#colorpicker').farbtastic('#front_color');
+						   });
+						</script>
+ 					</td>
+				</tr>	
+				
+				<tr>
+					<th>BG Color：</th>
+					<td >
+						<input class="colorField" type="text" id="background_color" name="background_color" value="{if:isset($background_color)}{$background_color}{else:}#ffffff{/if}" />
+					</td>
+				</tr>	
+				<tr>
+					<th></th>
+					<td >
+						<div id="colorpicker2"></div>
+						<script type="text/javascript">
+						   $(document).ready(function() {
+						     $('#colorpicker2').farbtastic('#background_color');
+						   });
+						</script>
+ 					</td>
+				</tr>
+				
+				<tr>
+				<th>Bold:</th>
+				<td>
+				<input type="checkbox" name="is_bold" value="1" {if:$is_bold=='1'} checked {/if}>
+				</td>
+				</tr>
+				
+				<tr>
+					<th>Order：</th>
+					<td>
+					<p>
+						<input class="normal" name="order" type="text" value="{$order}" pattern="required" alt="Order can not be empty" />
+					</p>
+					</td>
+				</tr>
+				
+				<tr>
+					<td></td><td><button class="submit" type="submit"><span>确 定</span></button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>

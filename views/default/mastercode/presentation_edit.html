@@ -1,0 +1,39 @@
+<script type="text/javascript" src="{theme:javascript/Calendar4.js}"></script>
+
+<div class="headbar">
+	<div class="position"><span>Mastercode</span><span>></span><span>Presentation</span><span>></span><span>{if:isset($id)}Edit presentation{else:}Add new presentation{/if}</span></div>
+</div>
+<div class="content_box">
+	<div class="content form_content">
+		<form action="{url:/mastercode/presentation_edit_act}" method="post">
+			<table class="form_table" cellpadding="0" cellspacing="0">
+				<col width="150px" />
+				<col />
+				<tr>
+					<th>Description ：</th>
+					<td>
+					<p>
+						<input class="normal" name="description_en" type="text" value="{$description_en}" pattern="required" alt="Description can not be empty" />*English
+					</p>
+						<input name="id" value="{$id}" type="hidden" />
+				
+					<p style='margin-top:10px;'>
+						<input class="normal" name="description_ch" type="text" value="{$description_ch}" pattern="required" alt="描述不能为空" />*Chinese
+					</p>
+					</td>
+				</tr>
+				<tr>
+					<th>Order ：</th>
+					<td >
+					<p style='margin-top:15px;'>
+						<input class="normal" name="order" type="text" value="{$order}" pattern="required" alt="Order can not be empty" />
+					</p>
+					</td>
+				</tr>
+				<tr>
+					<td></td><td><button class="submit" type="submit"><span>确 定</span></button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
