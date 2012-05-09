@@ -87,6 +87,7 @@ class SystemAdmin extends IController
     	ISafe::clear('admin_right');
     	ISafe::clear('admin_name');
     	ISafe::clear('admin_pwd');
+    	ISafe::clear('hospital_id');
     	ISafe::clearAll();
     	$this->redirect('index');
 	}

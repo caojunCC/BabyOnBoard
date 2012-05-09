@@ -145,7 +145,7 @@ class CheckRights
 			else
 			{
 				$where = 'id ='.$admin['hospital_id'];
-				return $hospital_detail->getObj($where);
+				return $hospital_detail->query($where);
 			} 
 		}
 	}

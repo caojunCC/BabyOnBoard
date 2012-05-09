@@ -197,9 +197,17 @@ class Menu
             	),
 			),
 		'Patient病人' =>array(
+			'Basic Information' => array(
+				'patient/patient_basic_list' =>'list',
+				'patient/patient_basic_edit' =>'edit',
+				),
+			'Basic Information' => array(
+				'patient/patient_basic_list' =>'list',
+				'patient/patient_basic_edit' =>'edit',
+				),
 			'report_stats报告统计' =>array(
-			'/patient/report_stats_list ' =>'list报告统计',
-			),
+				'/patient/report_stats_list ' =>'list报告统计',
+				),
 		),
 		
 		/**/
