@@ -30,7 +30,7 @@
 				<tr>
 					<th>FG Color：</th>
 					<td >
-						<input type="text" id="front_color" name="front_color" value="{$front_color}" />
+						<input class="colorField" type="text" id="front_color" name="front_color" value="{if:isset($front_color)}{$front_color}{else:}#000000{/if}" />
 					</td>
 				</tr>	
 				<tr>
@@ -48,7 +48,7 @@
 				<tr>
 					<th>BG Color：</th>
 					<td >
-						<input type="text" id="background_color" name="background_color" value="{$background_color}" />
+						<input class="colorField" type="text" id="background_color" name="background_color" value="{if:isset($background_color)}{$background_color}{else:}#ffffff{/if}" />
 					</td>
 				</tr>	
 				<tr>
