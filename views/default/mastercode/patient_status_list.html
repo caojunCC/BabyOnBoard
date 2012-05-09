@@ -1,0 +1,73 @@
+<div class="headbar">
+    <div class="position"><span>Mastercode</span><span>></span><span>Patient status</span><span>></span><span>Patient status list</span></div>
+    <div class="operating">
+        <a href="javascript:void(0)" onclick="event_link('{url:/mastercode/Patient_status_edit}')"><button class="operating_btn" type="button"><span class="addition">Add new patient status</span></button></a>
+        <a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">Choose all</span></button></a>
+        <a href="javascript:void(0)" onclick="delModel();"><button class="operating_btn" type="button"><span class="delete">Delete all</span></button></a>
+    </div>
+    <div class="field">
+        <table class="list_table">
+            <col width="50px" />
+            <col width="40%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+    	    <col width="10%" />
+    	    <col width="10%" />
+            <col />
+            <thead>
+                <tr>
+                    <th class="t_c">Choose</th>
+                    <th>Patient status</th>
+                    <th>FG Color</th>
+                    <th>BG Color</th>
+                    <th>Bold</th>
+                    <th>Order</th>
+                    <th>编辑&nbsp;&nbsp;&nbsp;删除</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<div class="content">
+    <form action="{url:/mastercode/Patient_status_del}" method="post" name="Patient_status">
+        <table class="list_table">
+            <col width="50px" />
+            <col width="40%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col />
+            <tbody>
+           {set:$page= (isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;}
+             	{query: name=patient_status as ps order=ps.order asc page=$page pagesize=20}
+             	  <tr style="background-color:{$item['background_color']};color:{$item['front_color']}">
+					<td class="t_c"><input type="checkbox" name="id[]" value="{$item['id']}" /></td>
+					<td>{$item['description_en']}</td>
+					<td>{$item['front_color']}</td>
+					<td>{$item['background_color']}</td>
+					<td>{echo:($item['is_bold']==1) ? '是':'否'}</td>
+					<td>{$item['order']}</td>
+					<td>
+                        <a href='{url:/mastercode/patient_status_edit/id/}{$item['id']}'><img class="operator" src="{skin:images/admin/icon_edit.gif}" alt="编辑" title="编辑" /></a>
+                        <a href='javascript:void(0)' onclick="delModel({link:'{url:/mastercode/patient_status_del/id/$item[id]}'});"><img class="operator" src="{skin:images/admin/icon_del.gif}" alt="删除" title="删除" /></a>
+                    </td>
+				   </tr>
+				   <tr >
+				    <td></td>
+				    <td>{$item['description_ch']}</td>
+				    <td></td>
+				    <td></td>
+				    <td></td>
+				    <td></td>
+				    <td></td>
+				   </tr>
+				{/query}
+
+            </tbody>
+        </table>
+    </form>
+</div>
+{$query->getPageBar()}

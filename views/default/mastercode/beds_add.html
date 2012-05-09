@@ -1,0 +1,67 @@
+<script type="text/javascript" src="{theme:javascript/Calendar4.js}"></script>
+
+<div class="headbar">
+	<div class="position"><span>Mastercode</span><span>></span><span>Beds type</span><span>></span><span>{if:isset($id)}Edit new type{else:}Add New bed type{/if}</span></div>
+</div>
+<div class="content_box">
+	<div class="content form_content">
+		<form action="{url:/mastercode/beds_add_act}" method="post">
+			<table class="form_table" cellpadding="0" cellspacing="0">
+				<col width="150px" />
+				<col />
+				<tr>
+				<th>Hospital ：</th>
+				<td>
+				<p>
+					<select class="normal" name="hospital_id" onchange='update_model();'>
+					<option value="0">请选择医院</option>
+					{foreach:items=$hospital item=$value}
+					<option value="{$value[id]}" {if:isset($beds['hospital_id']) && $beds['hospital_id']==$value['id']} selected {/if} >{$value['hospital_name_en']}</option>
+					{/foreach}
+					</select><label>*必选项</label>
+				</p>
+				</td>
+				</tr>
+				
+				<tr>
+				<th>Department ：</th>
+				<td>
+				<p>
+					<select class="normal" name="department" onchange='update_model();'>
+					<option value="0">请选择科室</option>
+					{foreach:items=$department item=$value}
+					<option value="{$value[id]}" {if:isset($beds['department']) && $beds['department']==$value['id']} selected {/if}>{$value['name_en']}</option>
+					{/foreach}
+					</select><label>*必选项</label>
+				</p>
+				</td>
+				</tr>
+				
+				<tr>
+					<th>Description  ：</th>
+					<td>
+					<p>
+						<input class="normal" name="description_en" type="text" value="{$beds[description_en]}" pattern="required" alt="Name can not be empty" />*English
+					</p>
+						<input name="id" value="{$beds[id]}" type="hidden" />
+				
+					<p style='margin-top:10px;'>
+						<input class="normal" name="description_ch" type="text" value="{$beds[description_ch]}" pattern="required" alt="名称不能为空" />*Chinese
+					</p>
+					</td>
+				</tr>
+				<tr>
+					<th>Order ：</th>
+					<td >
+					<p style='margin-top:15px;'>
+						<input class="normal" name="order" type="text" value="{$beds[order]}" pattern="required" alt="Order can not be empty" />
+					</p>
+					</td>
+				</tr>
+				<tr>
+					<td></td><td><button class="submit" type="submit"><span>确 定</span></button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
