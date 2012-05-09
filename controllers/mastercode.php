@@ -86,7 +86,7 @@ class Mastercode extends IController
 		{
 			$where1 = 'id = '.$id;
 		}
-		$obj->del($where1);               //删除商品
+		$obj->del($where1);               //删除
 		$this->redirect('hospital_list');
 	}
 	
@@ -155,7 +155,7 @@ class Mastercode extends IController
 		{
 			$where1 = 'id = '.$id;
 		}
-		$obj->del($where1);               //删除商品
+		$obj->del($where1);               //删除
 		$this->redirect('department_type_list');
 	}
 	/**
@@ -232,7 +232,7 @@ class Mastercode extends IController
 		{
 			$where1 = 'id = '.$id;
 		}
-		$obj->del($where1);               //删除商品
+		$obj->del($where1);               //删除
 		$this->redirect('beds_list');
 	}
 
@@ -304,8 +304,81 @@ class Mastercode extends IController
 		{
 			$where1 = 'id = '.$id;
 		}
-		$obj->del($where1);               //删除商品
+		$obj->del($where1);               //删除
 		$this->redirect('patient_status_list');
+	}
+	/**
+	 * @麻醉问题模板数据配置
+	 */
+	//麻醉问题列表
+	function anesthesia_problems_list()
+	{
+		$this->redirect('anesthesia_problems_list');
+	}
+	//麻醉问题编辑
+	function anesthesia_problems_edit()
+	{
+		$id = IReq::get('id','get');
+		if($id)
+		{
+			$anesthesia_problems_obj = new IModel('anesthesia_pro');
+			$where = "id =".$id;
+			$data = $anesthesia_problems_obj->getObj($where);
+			$this->setRenderData($data);
+			$this->redirect('anesthesia_problems_edit');
+		}
+		else 
+		{
+			$this->redirect('anesthesia_problems_edit');
+		}
+	}
+	//麻醉问题保存
+	function anesthesia_problems_edit_act()
+	{
+		$id = IReq::get('id','post');
+		$obj = new IModel('anesthesia_pro');
+		$dataarray= array(
+		'description_en' =>IReq::get('description_en'),
+		'description_ch' =>IReq::get('description_ch'),
+		'mnemonics_en' =>IReq::get('mnemonics_en'),
+		'mnemonics_ch' =>IReq::get('mnemonics_ch'),
+		'front_color' =>IReq::get('front_color'),
+		'background_color' =>IReq::get('background_color'),
+		'is_bold' =>IReq::get('is_bold'),
+		'order' =>IReq::get('order'),
+		);
+		$obj->setData($dataarray);
+		//更新操作
+		if ($id)
+		{
+			$where = 'id ='.$id;
+			$obj->update($where);
+		}
+		//增加操作
+		else
+		{
+			$obj->add($where);
+		}
+		$this->redirect('anesthesia_problems_list');
+	}
+	//麻醉问题删除
+	function anesthesia_problems_del()
+	{
+		$id = IFilter::act( IReq::get('id') ,'int' );
+		
+		$obj = new IModel('anesthesia_pro');
+
+		if(is_array($id) && isset($id[0]) && $id[0]!='')
+		{
+			$id_str = join(',',$id);
+			$where1 = ' id in ('.$id_str.')';
+		}
+		else
+		{
+			$where1 = 'id = '.$id;
+		}
+		$obj->del($where1);               //删除
+		$this->redirect('anesthesia_problems_list');
 	}
 	
 }
