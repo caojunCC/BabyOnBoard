@@ -52,7 +52,7 @@ function render_data(selector)
 	//清除原有的数据
 	$('#list_table>tbody').remove();
 	//Ajax获取填充的数据
-	var html;
+	var html="";
 	var i=0;
 	$.ajax({
 		type: "POST",
@@ -100,7 +100,7 @@ function render_data(selector)
 		<select width='50px' onchange="render_data(this);">
 			<option value='-1'>*Please choose one</option>
 			<?php if($this->role_hospital_id == 0){?>
-				<option value='0'>All</option>				
+				<option value='0'>All</option>		
 			<?php }?>
 			<?php foreach($this->role_hospital_data as $key => $item){?>
 				<option value='<?php echo isset($item['id'])?$item['id']:"";?>' ><?php echo isset($item['hospital_name_en'])?$item['hospital_name_en']:"";?></option>

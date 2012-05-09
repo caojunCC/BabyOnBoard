@@ -1,0 +1,1036 @@
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:E:\wamp\www\iwebshop\runtime\hospital\providers_edit.php
+errLine:49
+errTime:12-05-09 19:16:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\hospital\\providers_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/hospital/providers_edit',
+     'vcurrent' => '/hospital/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:E:\wamp\www\iwebshop\runtime\hospital\providers_edit.php
+errLine:66
+errTime:12-05-09 19:16:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\hospital\\providers_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/hospital/providers_edit',
+     'vcurrent' => '/hospital/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:E:\wamp\www\iwebshop\runtime\hospital\providers_edit.php
+errLine:164
+errTime:12-05-09 19:16:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\hospital\\providers_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin_role',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+    0 => 
+    array (
+      'id' => '2',
+      'name' => '护士',
+      'rights' => ',block@create_thumb,comment@comment_list,comment@discussion_list,',
+      'is_del' => '0',
+    ),
+    1 => 
+    array (
+      'id' => '3',
+      'name' => '院长',
+      'rights' => ',mastercode@hospital_edit,',
+      'is_del' => '0',
+    ),
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/hospital/providers_edit',
+     'vcurrent' => '/hospital/',
+  )),
+  'item' => 
+  array (
+    'hospital_name_ch' => '（上海）中国福利会国际和平妇幼保健院',
+    'hospital_name_en' => '(Shanghai) International Peace Maternity & Child Health Hospital of the China Welfare Institute',
+    'hospital_adress_ch' => '上海市徐汇区衡山路910号，电话： 021-64070434',
+    'hospital_adress_en' => '910 Hengsan Road, Shanghai  ',
+    'hospital_province_ch' => '上海',
+    'hospital_province_en' => 'Shanghai',
+    'hospital_zipcode' => '200030',
+    'visited_date_b' => '2012-05-01',
+    'visited_date_e' => '2012-05-31',
+    'id' => '3',
+  ),
+  'key' => 1,
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:E:\wamp\www\iwebshop\runtime\hospital\providers_edit.php
+errLine:49
+errTime:12-05-09 19:18:48
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\hospital\\providers_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/hospital/providers_edit',
+     'vcurrent' => '/hospital/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:E:\wamp\www\iwebshop\runtime\hospital\providers_edit.php
+errLine:66
+errTime:12-05-09 19:18:48
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\hospital\\providers_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/hospital/providers_edit',
+     'vcurrent' => '/hospital/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:E:\wamp\www\iwebshop\runtime\hospital\providers_edit.php
+errLine:164
+errTime:12-05-09 19:18:48
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\hospital\\providers_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_admin_role',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+    0 => 
+    array (
+      'id' => '2',
+      'name' => '护士',
+      'rights' => ',block@create_thumb,comment@comment_list,comment@discussion_list,',
+      'is_del' => '0',
+    ),
+    1 => 
+    array (
+      'id' => '3',
+      'name' => '院长',
+      'rights' => ',mastercode@hospital_edit,',
+      'is_del' => '0',
+    ),
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/hospital/providers_edit',
+     'vcurrent' => '/hospital/',
+  )),
+  'item' => 
+  array (
+    'hospital_name_ch' => '（上海）中国福利会国际和平妇幼保健院',
+    'hospital_name_en' => '(Shanghai) International Peace Maternity & Child Health Hospital of the China Welfare Institute',
+    'hospital_adress_ch' => '上海市徐汇区衡山路910号，电话： 021-64070434',
+    'hospital_adress_en' => '910 Hengsan Road, Shanghai  ',
+    'hospital_province_ch' => '上海',
+    'hospital_province_en' => 'Shanghai',
+    'hospital_zipcode' => '200030',
+    'visited_date_b' => '2012-05-01',
+    'visited_date_e' => '2012-05-31',
+    'id' => '3',
+  ),
+  'key' => 1,
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: info
+errFile:xdebug eval
+errLine:1
+errTime:12-05-09 20:41:24
+##出错时变量的值：##
+array (
+  'config' => 'E:\\wamp\\www\\iwebshop/config/config.php',
+  'php_errormsg' => 'Undefined variable: info',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: info
+errFile:xdebug eval
+errLine:1
+errTime:12-05-09 20:41:25
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: info
+errFile:xdebug eval
+errLine:1
+errTime:12-05-09 20:41:29
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: info
+errFile:xdebug eval
+errLine:1
+errTime:12-05-09 20:41:32
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: info
+errFile:xdebug eval
+errLine:1
+errTime:12-05-09 20:41:33
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: info
+errFile:xdebug eval
+errLine:1
+errTime:12-05-09 20:41:34
+##出错时变量的值：##
+array (
+  'position' => 'onCreateController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: info
+errFile:xdebug eval
+errLine:1
+errTime:12-05-09 20:41:35
+##出错时变量的值：##
+array (
+  'position' => 'onCreateController',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: info
+errFile:xdebug eval
+errLine:1
+errTime:12-05-09 20:41:35
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: info
+errFile:xdebug eval
+errLine:1
+errTime:12-05-09 20:41:36
+##出错时变量的值：##
+array (
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
