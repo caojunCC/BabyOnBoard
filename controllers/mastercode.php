@@ -448,5 +448,78 @@ class Mastercode extends IController
 		$obj->del($where1);               //删除
 		$this->redirect('presentation_list');
 	}
+	/**
+	 * @羊水类型模板数据配置
+	 */
+	//羊水类型问题列表
+	function amniotic_types_list()
+	{
+		$this->redirect('amniotic_types_list');
+	}
+	//羊水类型问题编辑
+	function amniotic_types_edit()
+	{
+		$id = IReq::get('id','get');
+		if($id)
+		{
+			$amniotic_types_obj = new IModel('amniot_type');
+			$where = "id =".$id;
+			$data = $amniotic_types_obj->getObj($where);
+			$this->setRenderData($data);
+			$this->redirect('amniotic_types_edit');
+		}
+		else 
+		{
+			$this->redirect('amniotic_types_edit');
+		}
+	}
+	//羊水类型问题保存
+	function amniotic_types_edit_act()
+	{
+		$id = IReq::get('id','post');
+		$obj = new IModel('amniot_type');
+		$dataarray= array(
+		'description_en' =>IReq::get('description_en'),
+		'description_ch' =>IReq::get('description_ch'),
+		'mnemonics_en' =>IReq::get('mnemonics_en'),
+		'mnemonics_ch' =>IReq::get('mnemonics_ch'),
+		'front_color' =>IReq::get('front_color'),
+		'background_color' =>IReq::get('background_color'),
+		'is_bold' =>IReq::get('is_bold'),
+		'order' =>IReq::get('order'),
+		);
+		$obj->setData($dataarray);
+		//更新操作
+		if ($id)
+		{
+			$where = 'id ='.$id;
+			$obj->update($where);
+		}
+		//增加操作
+		else
+		{
+			$obj->add($where);
+		}
+		$this->redirect('amniotic_types_list');
+	}
+	//羊水类型问题删除
+	function amniotic_types_del()
+	{
+		$id = IFilter::act( IReq::get('id') ,'int' );
+		
+		$obj = new IModel('amniot_type');
+
+		if(is_array($id) && isset($id[0]) && $id[0]!='')
+		{
+			$id_str = join(',',$id);
+			$where1 = ' id in ('.$id_str.')';
+		}
+		else
+		{
+			$where1 = 'id = '.$id;
+		}
+		$obj->del($where1);               //删除
+		$this->redirect('amniotic_types_list');
+	}
 	
 }
