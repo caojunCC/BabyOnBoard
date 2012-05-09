@@ -380,5 +380,73 @@ class Mastercode extends IController
 		$obj->del($where1);               //删除
 		$this->redirect('anesthesia_problems_list');
 	}
+	/**
+	 * @简述模板数据配置
+	 */
+	//简述列表
+	function presentation_list()
+	{
+		$this->redirect('presentation_list');
+	}
+	//简述编辑
+	function presentation_edit()
+	{
+		$id = IReq::get('id','get');
+		if($id)
+		{
+			$presentation_obj = new IModel('presentation');
+			$where = "id =".$id;
+			$data = $presentation_obj->getObj($where);
+			$this->setRenderData($data);
+			$this->redirect('presentation_edit');
+		}
+		else 
+		{
+			$this->redirect('presentation_edit');
+		}
+	}
+	//简述保存
+	function presentation_edit_act()
+	{
+		$id = IReq::get('id','post');
+		$obj = new IModel('presentation');
+		$dataarray= array(
+		'description_ch' =>IReq::get('description_ch'),
+		'description_en' =>IReq::get('description_en'),
+		'order' =>IReq::get('order'),
+		);
+		$obj->setData($dataarray);
+		//更新操作
+		if ($id)
+		{
+			$where = 'id ='.$id;
+			$obj->update($where);
+		}
+		//增加操作
+		else
+		{
+			$obj->add($where);
+		}
+		$this->redirect('presentation_list');
+	}
+	//简述删除
+	function presentation_del()
+	{
+		$id = IFilter::act( IReq::get('id') ,'int' );
+		
+		$obj = new IModel('presentation');
+
+		if(is_array($id) && isset($id[0]) && $id[0]!='')
+		{
+			$id_str = join(',',$id);
+			$where1 = ' id in ('.$id_str.')';
+		}
+		else
+		{
+			$where1 = 'id = '.$id;
+		}
+		$obj->del($where1);               //删除
+		$this->redirect('presentation_list');
+	}
 	
 }
