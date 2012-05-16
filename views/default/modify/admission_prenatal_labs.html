@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<div class="xf-main1">
+<form id="admission_detail_edit_act_1" action="{url:/modify/admission_prenatal_labs_act}"  method="post">
+	<input type='hidden' name='id' value='{$id}'/>
+	<input type='hidden' name='basic_id' value='{$this->id }'/>
+			<table style="border-collapse:collapse">
+			<tr>
+				<td rowspan="5">
+					<p>PRENAL LABS:产前实验室</p>
+					<p>
+					<input type="radio" name="status" {if:$status==1}checked=true{/if} value="1">Done有
+					<input type="radio" name="status" {if:$status==2}checked=true{/if} value="2">Not Done无
+					</p>
+					<p>
+					<input type="radio" name="status" {if:$status==3}checked=true{/if} value="3">Available能做
+					<input type="radio" name="status" {if:$status==4}checked=true{/if} value="4">Not Available不能做</p>
+					<p>Blood Type血型 <input type="text" class='small' name="blood_type" value="{$blood_type}"></p>
+					<p>Antibody 抗体 <input type="text" class='small' name="antibody" value="{$antibody}"></p>
+					<p>Rubella风疹  <input type="text" class='small' name="rubella" value="{$rubella}"></p>
+					<p>HBsAg乙肝表面抗原  <input type="text" class='small' name="hbsag" value="{$hbsag}"></p>
+					<p>VDRL梅毒  <input type="text" class='small' name="vdrl" value="{$vdrl}">
+					Date日期<input type="text" class='small' name="vdrl_date" value="{$vdrl_date}"   onclick="MyCalendar.SetDate(this)" >
+					</p>
+					<p>GBBS(ASO) <input type="text" class='small' name="gbbs" value="{$gbbs}"></p>
+					<p>HIV艾滋病毒 <input type="text" class='small' name="hiv" value="{$hiv}"></p>
+					<p>PPD结核菌素试验 <input type="text" class='small' name="ppd" value="{$ppd}"></p>
+					<p>CXR胸片  <input type="text" class='small' name="cxr" value="{$cxr}"></p>
+				</td>
+				<td>
+					<p>CURRENT MEDICATIONS 目前服用药物：
+					 <input type="text" class='small' name="current_medication" value="{$current_medication}"></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>CURRENT RISK FACTORS/OB COMPLICATIONS 目前危险因素、产科并发症：
+					 <input type="text" class='small' name="current_risk" value="{$current_risk}"></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>PRIOR PREGNANCY RISK FACTORS怀孕前危险因素：
+					 <input type="text" class='small' name="pre_risk" value="{$pre_risk}"></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>MEDICAL/SURGICAL Hx 内/外科病史：
+					 <input type="text" class='small' name="medical_surgical_hx" value="{$medical_surgical_hx}"></p>	
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>ALLERGIES 过敏/副反应史: <input type="text" class='small' name="allergies" value="{$allergies}"></p>
+					<p>Reaction表现： <input type="text" class='small' name="reaction" value="{$reaction}"></p>
+					<p>
+					<input type="checkbox" name='nkda' {if:$nkda==1}checked{/if} value='1'>NKDA无药物过敏
+					<input type="checkbox" name='allergy' {if:$allergy==1}checked{/if} value='1' >Allergy Bracelet Applied带上药物过敏警示手镯</p>	
+				</td>
+			</tr>
+		
+		</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div>

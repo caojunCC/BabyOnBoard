@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+
+<div class="xf-main1">
+<form id="admission_detail_edit_act_1" action="{url:/modify/admission_detail_edit_act}"  method="post">
+	<table style="border-collapse:collapse" >
+		<tr>
+			<input type='hidden' name='id' value='{$id}'/>
+			<input type='hidden' name='basic_id' value='{$this->id }'/>
+			<td>TIME时间 <input type="text" id="time" name="time" value="{$time}"   onclick="MyCalendar.SetDate(this)" ></td>
+			<td>ARRIVED FROM来自：<br>
+				<input type="radio" id="form_where" name="form_where" {if:$form_where ==1}checked=true{/if} value="1">ED急诊
+				<input type="radio" id="form_where" name="form_where" {if:$form_where ==2}checked=true{/if} value="2">Home家
+				<input type="radio" id="form_where" name="form_where" {if:$form_where ==3}checked=true{/if} value="3">Clinic门诊
+				<input type="radio" id="form_where" name="form_where" {if:$form_where ==4}checked=true{/if} value="4">Floor病房
+				<input type="radio" id="form_where" name="form_where" {if:$form_where ==5}checked=true{/if} value="5">Transfer from外院
+			</td>
+			<td>ACOMPANIED BY陪同：<input type="text" id="accompany" name="accompany" value="{$accompany}"> </td>
+		</tr>
+		<tr><td>UNIT部门
+		<select id = 'unit' name='unit'>
+			<option value='0' >Please Choose</option>
+			{query: name =department_type order=`order`}
+				<option value= "{$item['id']}" {if:$item['id']==$unit}selected{/if}>{$item['name_en']}</option>
+			{/query}
+		</select>
+			<td>ADDMITTING NURSE接待护士 <input type="text" id="add_nurse" name="add_nurse" value="{$add_nurse}"></td>
+			<td>VIA通过：
+				<input type="radio" id="via" name="via" {if:$via ==1}checked=true{/if} value="1">Wheelchair轮椅
+				<input type="radio" id="via" name="via" {if:$via ==2}checked=true{/if} value="2">Cart推车
+				<input type="radio" id="via" name="via" {if:$via ==3}checked=true{/if} value="3">Ambulatory步行
+				<input type="radio" id="via" name="via" {if:$via ==4}checked=true{/if} value="4">Ambulance救护车
+				<input type="radio" id="via" name="via" {if:$via ==5}checked=true{/if} value="5">Other其他
+			</td>	
+		</tr>
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div>

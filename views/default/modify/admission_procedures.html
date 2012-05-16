@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<div class="xf-main1">
+<form id="admission_detail_edit_act_1" action="{url:/modify/admission_procedures_act}"  method="post">
+	<input type='hidden' name='id' value='{$id}'/>
+	<input type='hidden' name='basic_id' value='{$this->id }'/>
+	<table style="border-collapse:collapse">
+			<tr>
+				<td rowspan="2">
+					<p>PROCEDURES:(Objective)操作(客观指标)</p>
+					<p>IV Start静脉：Location部位 <input type="text" class='small' name="iv_start_location" value="{$iv_start_location}">
+					Size针号<input type="text" class='small' name="iv_start_size" value="{$iv_start_size}"></p>
+					<p>Fluid 液体type/Rate种类/滴速<input type="text" class='small' name="fluid_type_rate" value="{$fluid_type_rate}">
+					Glucose血糖<input type="text" class='small' name="fluid_glucose" value="{$fluid_glucose}"></p>
+					<p>SSE:Examiner检查人<input type="text" class='small' name="fluid_glucose" value="{$fluid_glucose}">
+					Date/Time时间<input type="text" class='small' name="initial_date" value="{$initial_date}"   onclick="MyCalendar.SetDate(this)" ></p>
+					<p><input type="checkbox" name='nkda' {if:$nkda==1}checked{/if} value='1'>Intact完整
+					<input type="checkbox" value="">ROM Color破膜羊水颜色________</p>
+					<p>Ferning羊齿状结晶：<input type="checkbox" value="">Absent阴性<input type="checkbox" value="">Present阳性</p>
+					<p>Nitrazine石蕊试纸：<input type="checkbox" value="">Absent阴性<input type="checkbox" value="">Present阳性(碱性)</p>
+					<p>Pooling羊水池：<input type="checkbox" value="">Absent阴性<input type="checkbox" value="">Present阳性</p>
+					<p><input type="checkbox" value="">Labs Sent送血检________<input type="checkbox" value="">Urine sent送尿检______</p>
+					<p><input type="checkbox" value="">Cultures sent送培养_______<input type="checkbox" value="">Other其他_______</p>
+					<p>URINALYSIS尿常规：S-Gravity比重_______Color颜色_______</p>
+					<p>Apprnce外观______Leuko白细胞_____Heme尿红素_____</p>
+					<p>Glucose糖______Ketones酮______Proein蛋白_______</p>		
+				</td>
+				<td>
+					<p>RESEARCH SUDIES参加研究：</p>
+					<p><input type="checkbox" value="">No 无<input type="checkbox" value="">Yes 有_________</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>AMBULATION活动</p>
+					<p>EFM off无胎心监护______Walking for 行走_______Hrs小时</p>
+					<p>DISPOSITION 出产房 Date/Time时间_______</p>
+					<p><input type="checkbox" value="">Admitted to 住院病区________</p>
+					<p>via通过：<input type="checkbox" value="">Ambulatory行走<input type="checkbox" value="">Wheelchair轮椅<input type="checkbox" value="">Cart推车</p>
+					<p>Report given to交班给：_________</p>
+					<p><input type="checkbox" value="">ID Band Applied病人手镯<input type="checkbox" value="">Clinical Nutrition Consult营养师会诊</p>
+					<p><input type="checkbox" value="">Home W/Instruction带出院指导回家</p>
+					<p><input type="checkbox" value="">Verbalize Understanding能理解口头交代</p>
+					<p><input type="checkbox" value="">Discharge AMA自动离院</p>
+					<p><input type="checkbox" value="">Social Work/Wellness Center Consult社区服务中心</p>
+				</td>
+			</tr>
+	</table>
+</form>
+</div>

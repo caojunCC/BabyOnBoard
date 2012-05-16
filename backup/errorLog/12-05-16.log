@@ -1,0 +1,3014 @@
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:11
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:12
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:13
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:14
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:19
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:20
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:21
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:43
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:44
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:45
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:46
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:57
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:58
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:59
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: pre_c_s
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:66
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: pre_c_s
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:67
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: attempted
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:70
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: attempted
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:71
+errTime:12-05-16 12:51:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:43
+errTime:12-05-16 12:52:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'id' => '1',
+  'uterus' => '1',
+  'contraction' => 'asdf',
+  'contruction_date' => '2012-05-17',
+  'fetal_movement' => '1',
+  'fetal_date' => '2012-05-12',
+  'membranes' => '0',
+  'membranes_date' => '2012-05-14',
+  'recent_intercourse' => '2012-05-21',
+  's_p' => '0',
+  'basic_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:44
+errTime:12-05-16 12:52:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'id' => '1',
+  'uterus' => '1',
+  'contraction' => 'asdf',
+  'contruction_date' => '2012-05-17',
+  'fetal_movement' => '1',
+  'fetal_date' => '2012-05-12',
+  'membranes' => '0',
+  'membranes_date' => '2012-05-14',
+  'recent_intercourse' => '2012-05-21',
+  's_p' => '0',
+  'basic_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:45
+errTime:12-05-16 12:52:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'id' => '1',
+  'uterus' => '1',
+  'contraction' => 'asdf',
+  'contruction_date' => '2012-05-17',
+  'fetal_movement' => '1',
+  'fetal_date' => '2012-05-12',
+  'membranes' => '0',
+  'membranes_date' => '2012-05-14',
+  'recent_intercourse' => '2012-05-21',
+  's_p' => '0',
+  'basic_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:46
+errTime:12-05-16 12:52:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'id' => '1',
+  'uterus' => '1',
+  'contraction' => 'asdf',
+  'contruction_date' => '2012-05-17',
+  'fetal_movement' => '1',
+  'fetal_date' => '2012-05-12',
+  'membranes' => '0',
+  'membranes_date' => '2012-05-14',
+  'recent_intercourse' => '2012-05-21',
+  's_p' => '0',
+  'basic_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:57
+errTime:12-05-16 12:52:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'id' => '1',
+  'uterus' => '1',
+  'contraction' => 'asdf',
+  'contruction_date' => '2012-05-17',
+  'fetal_movement' => '1',
+  'fetal_date' => '2012-05-12',
+  'membranes' => '0',
+  'membranes_date' => '2012-05-14',
+  'recent_intercourse' => '2012-05-21',
+  's_p' => '0',
+  'basic_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:58
+errTime:12-05-16 12:52:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'id' => '1',
+  'uterus' => '1',
+  'contraction' => 'asdf',
+  'contruction_date' => '2012-05-17',
+  'fetal_movement' => '1',
+  'fetal_date' => '2012-05-12',
+  'membranes' => '0',
+  'membranes_date' => '2012-05-14',
+  'recent_intercourse' => '2012-05-21',
+  's_p' => '0',
+  'basic_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:59
+errTime:12-05-16 12:52:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'id' => '1',
+  'uterus' => '1',
+  'contraction' => 'asdf',
+  'contruction_date' => '2012-05-17',
+  'fetal_movement' => '1',
+  'fetal_date' => '2012-05-12',
+  'membranes' => '0',
+  'membranes_date' => '2012-05-14',
+  'recent_intercourse' => '2012-05-21',
+  's_p' => '0',
+  'basic_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: pre_c_s
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:66
+errTime:12-05-16 12:52:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'id' => '1',
+  'uterus' => '1',
+  'contraction' => 'asdf',
+  'contruction_date' => '2012-05-17',
+  'fetal_movement' => '1',
+  'fetal_date' => '2012-05-12',
+  'membranes' => '0',
+  'membranes_date' => '2012-05-14',
+  'recent_intercourse' => '2012-05-21',
+  's_p' => '0',
+  'basic_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: pre_c_s
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:67
+errTime:12-05-16 12:52:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'id' => '1',
+  'uterus' => '1',
+  'contraction' => 'asdf',
+  'contruction_date' => '2012-05-17',
+  'fetal_movement' => '1',
+  'fetal_date' => '2012-05-12',
+  'membranes' => '0',
+  'membranes_date' => '2012-05-14',
+  'recent_intercourse' => '2012-05-21',
+  's_p' => '0',
+  'basic_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: attempted
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:70
+errTime:12-05-16 12:52:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'id' => '1',
+  'uterus' => '1',
+  'contraction' => 'asdf',
+  'contruction_date' => '2012-05-17',
+  'fetal_movement' => '1',
+  'fetal_date' => '2012-05-12',
+  'membranes' => '0',
+  'membranes_date' => '2012-05-14',
+  'recent_intercourse' => '2012-05-21',
+  's_p' => '0',
+  'basic_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: attempted
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:71
+errTime:12-05-16 12:52:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'id' => '1',
+  'uterus' => '1',
+  'contraction' => 'asdf',
+  'contruction_date' => '2012-05-17',
+  'fetal_movement' => '1',
+  'fetal_date' => '2012-05-12',
+  'membranes' => '0',
+  'membranes_date' => '2012-05-14',
+  'recent_intercourse' => '2012-05-21',
+  's_p' => '0',
+  'basic_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:11
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:12
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:13
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:14
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:19
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:20
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:21
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:43
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:44
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:45
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:46
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:57
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:58
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:59
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: pre_c_s
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:66
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: pre_c_s
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:67
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: attempted
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:70
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: attempted
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:71
+errTime:12-05-16 13:12:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:11
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:12
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:13
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:14
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:19
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:20
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:21
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:43
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:44
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:45
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:46
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:57
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:58
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:59
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: pre_c_s
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:66
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: pre_c_s
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:67
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: attempted
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:70
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: attempted
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:71
+errTime:12-05-16 13:12:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:11
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:12
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:13
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:14
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:19
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:20
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:21
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:43
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:44
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:45
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: initial
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:46
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:57
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:58
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: blood_transfusion_solid
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:59
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: pre_c_s
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:66
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: pre_c_s
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:67
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: attempted
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:70
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: attempted
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_ob_assessment.php
+errLine:71
+errTime:12-05-16 13:13:24
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_ob_assessment.php',
+  'data' => NULL,
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_ammiot_type',
+      'fields' => '*',
+      'where' => '',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => 'order by `order`',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: is_bold
+errFile:E:\wamp\www\iwebshop\runtime\mastercode\patient_status_edit.php
+errLine:116
+errTime:12-05-16 13:22:39
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\mastercode\\patient_status_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/mastercode/patient_status_edit',
+     'vcurrent' => '/mastercode/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: is_bold
+errFile:E:\wamp\www\iwebshop\runtime\mastercode\anesthesia_problems_edit.php
+errLine:128
+errTime:12-05-16 13:22:42
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\mastercode\\anesthesia_problems_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/mastercode/anesthesia_problems_edit',
+     'vcurrent' => '/mastercode/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: is_bold
+errFile:E:\wamp\www\iwebshop\runtime\mastercode\amniotic_types_edit.php
+errLine:128
+errTime:12-05-16 13:22:47
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\mastercode\\amniotic_types_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/mastercode/amniotic_types_edit',
+     'vcurrent' => '/mastercode/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: status
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_prenatal_labs.php
+errLine:11
+errTime:12-05-16 14:04:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_prenatal_labs.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: status
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_prenatal_labs.php
+errLine:12
+errTime:12-05-16 14:04:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_prenatal_labs.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: status
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_prenatal_labs.php
+errLine:15
+errTime:12-05-16 14:04:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_prenatal_labs.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: status
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_prenatal_labs.php
+errLine:16
+errTime:12-05-16 14:04:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_prenatal_labs.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: status
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_prenatal_labs.php
+errLine:11
+errTime:12-05-16 14:10:15
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_prenatal_labs.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: status
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_prenatal_labs.php
+errLine:12
+errTime:12-05-16 14:10:15
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_prenatal_labs.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: status
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_prenatal_labs.php
+errLine:15
+errTime:12-05-16 14:10:15
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_prenatal_labs.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: status
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_prenatal_labs.php
+errLine:16
+errTime:12-05-16 14:10:15
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_prenatal_labs.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: nkda
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_prenatal_labs.php
+errLine:57
+errTime:12-05-16 14:10:15
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_prenatal_labs.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: nkda
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_prenatal_labs.php
+errLine:58
+errTime:12-05-16 14:10:15
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_prenatal_labs.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>

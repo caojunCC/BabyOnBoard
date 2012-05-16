@@ -1,0 +1,60 @@
+<script type="text/javascript" src="{theme:javascript/Calendar4.js}"></script>
+<div class="headbar">
+	<div class="position"><span>Hospital</span><span>></span><span>Providers</span><span>></span><span>{if:$id}Edit{else:}Add{/if}</span></div>
+</div>
+<div class="content_box">
+	<div class="content form_content">
+		<form action="{url:/obstetrical/providers_edit_act}"  method="post" name="admin_edit">
+			<input type='hidden' name='id' value='{$id}'/>
+			<table class="form_table">
+				<col width="150px" />
+				<col />
+				<input type='hidden' name='id' value="{$id}" />
+					<tr>
+					<th>Obstetrical Name：</th>
+					<td>
+						<input class="normal" name="name" type="text" value="{$name}" pattern="required" alt="Name can not be empty" />*English
+					</td>
+				</tr>
+				<tr>
+					<th>Hospital：</th>
+					<td >
+					<p style='margin-top:15px;'>
+						<input class="normal" name="hospital" type="text" value="{$hospital}" pattern="required" alt="Adress can not be empty" />*Number
+					</p>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>Date：</th>
+					<td >
+						<input class="small" name="date" id="date" type="text" value="{$date}" pattern="required" readonly="readonly" onclick="MyCalendar.SetDate(this);" alt="Time can not be empty" />
+					</td>
+				</tr>
+				<tr>
+					<th>Hospital：</th>
+					<td>
+						<select class='normal' id='hospital_id' name='hospital_id' pattern='required' alt='请选择一个医院' >
+							<option value=''>Please Choose</option>
+							{if:$this->role_hospital_id ==0}
+							<option value='0'>All Hospital</option>
+							{/if}
+							{foreach:$items=$this->role_hospital_data}
+								<option value='{$item['id']}' >{$item['hospital_name_en']}</option>
+							{/foreach}
+						</select>
+						<label>*为产妇分配一个医院</label>		
+					</td>
+				</tr>
+				<tr><td></td><td><button class="submit" type="submit"><span>保 存</span></button></td></tr>
+			</table>
+		</form>
+	</div>
+</div>
+
+<script type='text/javascript'>
+	window.onload= function a()
+	{
+		$('#hospital_id').val({$hospital_id});
+	}
+</script>

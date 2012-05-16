@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<div class="xf-main1">
+<form id="admission_detail_edit_act_1" action="{url:/modify/admission_ob_assessment_act}"  method="post">
+	<input type='hidden' name='id' value='{$id}'/>
+	<input type='hidden' name='basic_id' value='{$this->id }'/>
+	<table style="border-collapse:collapse">
+			<tr>
+				<td rowspan="4">
+					<p style='font-size:14px;'>OB ASSESSMENT:(Subiective)产前评估（主观指标）</p>
+					<p>Uterus:&nbsp;
+					<input type="radio" name ='uterus' {if:$uterus==1}checked=true{/if} value="1">Soft软
+					&nbsp;<input type="radio" name ='uterus' {if:$uterus==2}checked=true{/if} value="2">NonTender不硬
+					&nbsp;<input type="radio" name ='uterus' {if:$uterus==3}checked=true{/if} value="3">Tender硬
+					&nbsp;<input type="radio" name ='uterus' {if:$uterus==4}checked=true{/if} value="4">Ridge极硬
+					</p>
+					
+					<p>(子宫)contraction宫缩 q<input type="text" class='small' name="contraction" value="{$contraction}">Date/Time时间  <input type="text" class='small' name="contruction_date" value="{$contruction_date}"   onclick="MyCalendar.SetDate(this)" ></p>
+					<p>FetalNovement:
+					<input type="radio" name ='fetal_movement' {if:$fetal_movement==1}checked=true{/if} value="1">Present有
+					<input type="radio" name ='fetal_movement' {if:$fetal_movement==2}checked=true{/if} value="2">Absent无
+					<input type="radio" name ='fetal_movement' {if:$fetal_movement==3}checked=true{/if} value="3">Decreased减少
+					</p>
+					
+					<p>(胎动)Last move:Date/Time末次时间<input type="text" class='small' name="fetal_date" value="{$fetal_date}"   onclick="MyCalendar.SetDate(this)" ></p>
+					
+					<p>Membranes:
+					<select id = 'unit' name='unit'>
+						<option value='0' >Please Choose</option>
+						{query: name =ammiot_type order=`order`}
+							<option value= "{$item['id']}" {if:$item['id']==$membranes}selected{/if}>{$item['name_en']}</option>
+						{/query}
+					</select>
+					</p>
+					
+					<p>(羊膜)Rupture Date/Time破膜时间：<input type="text" class='small' name="membranes_date" value="{$membranes_date}"   onclick="MyCalendar.SetDate(this)" ></p>
+					<p>R/O PTL排除早产：</p>
+					<p>Recent Intercourse Time末次性交时间<input type="text" class='small' name="recent_intercourse" value="{$recent_intercourse}"   onclick="MyCalendar.SetDate(this)" ></p>
+					<p>S/P Fall/MVA point of Impact摔倒、车祸涉及部位<input type="text" class='small' name="s_p" value="{$s_p}"></p>
+				</td>
+				<td>
+					<p>ULTRASOUND超声：</p>
+					<p>
+					<input type="radio" name="initial" {if:$initial==1}checked=true{/if} value="1">Done有
+					<input type="radio" name="initial" {if:$initial==2}checked=true{/if} value="2">Not Done无
+					<input type="radio" name="initial" {if:$initial==3}checked=true{/if} value="3">Available能做
+					<input type="radio" name="initial" {if:$initial==4}checked=true{/if} value="4">Not Available不能做
+					</p>
+					<p>Initial Date首次日期：<input type="text" class='small' name="initial_date" value="{$initial_date}"   onclick="MyCalendar.SetDate(this)" ></p>
+					<p>EDC by US预产期<input type="text" class='small' name="edc_by_us" value="{$edc_by_us}"  onclick="MyCalendar.SetDate(this)" >EGA by US胎龄(周)<input type="text" class='small' name="ega_by_us" value="{$ega_by_us}"></p>
+					<p>FINAL EDC最后确定的预产期<input type="text" class='small' name="final_edc" value="{$final_edc}"  onclick="MyCalendar.SetDate(this)" ></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>PREVIOUS BLOOD TRANSFUSION输血史</p>
+					<p>
+					<input type="radio" name ='blood_transfusion_solid' {if:$blood_transfusion_solid==1}checked=true{/if} value="1">No 无
+					<input type="radio" name ='blood_transfusion_solid' {if:$blood_transfusion_solid==2}checked=true{/if} value="2">Yes 有
+					<input type="radio" name ='blood_transfusion_solid' {if:$blood_transfusion_solid==3}checked=true{/if} value="3">Reaction
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Previous C/S剖宫产史：
+					<input type="radio" name ='pre_c_s' {if:$pre_c_s==1}checked=true{/if} value="1">Yes 有
+					<input type="radio" name ='pre_c_s' {if:$pre_c_s==2}checked=true{/if} value="2">No 无
+					</p>
+					<p>Attempted VTOL剖宫产后阴道分娩：
+					<input type="radio" name ='attempted' {if:$attempted==1}checked=true{/if} value="1">Yes 有
+					<input type="radio" name ='attempted' {if:$attempted==1}checked=true{/if} value="1">No 无</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>LAST INTAKE 末次饮食</p>
+					<p>Solid固体：Date/Time:日期时间<input type="text" class='small' name="last_intake_solid" value="{$last_intake_solid}"   onclick="MyCalendar.SetDate(this)" ></p>
+					<p>Fluid液体：Date/Time:日期时间<input type="text" class='small' name="lasr_intake_fluid" value="{$lasr_intake_fluid}"   onclick="MyCalendar.SetDate(this)" ></p>
+				</td>
+			</tr>
+	
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div>

@@ -1,0 +1,1122 @@
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:68   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\obstetrical_basic_edit.php
+errLine:51
+errTime:12-05-13 11:16:32
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\obstetrical_basic_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/obstetrical_basic_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\obstetrical_basic_edit.php
+errLine:50
+errTime:12-05-13 11:19:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\obstetrical_basic_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/obstetrical_basic_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Use of undefined constant admission_list - assumed 'admission_list'
+errFile:E:\wamp\www\iwebshop\controllers\obstetrical.php
+errLine:93
+errTime:12-05-13 11:44:27
+##出错时变量的值：##
+array (
+  'id' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Use of undefined constant admission_list - assumed 'admission_list'
+errFile:E:\wamp\www\iwebshop\controllers\obstetrical.php
+errLine:93
+errTime:12-05-13 11:44:29
+##出错时变量的值：##
+array (
+  'id' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Use of undefined constant admission_list - assumed 'admission_list'
+errFile:E:\wamp\www\iwebshop\controllers\obstetrical.php
+errLine:93
+errTime:12-05-13 11:44:30
+##出错时变量的值：##
+array (
+  'id' => NULL,
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\obstetrical_basic_edit.php
+errLine:50
+errTime:12-05-13 11:52:29
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\obstetrical_basic_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/obstetrical_basic_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: SELECT * FROM dbclass_addmission_view WHERE id= 1 limit 1
+ -- Table 'dbclass.dbclass_addmission_view' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:187  	File:IWEB_PATH/web\model\model_class.php
+	Func:query          	Class:IModel         	Type:->   	Line:134  	File:IWEB_PATH/web\model\model_class.php
+	Func:getObj         	Class:IModel         	Type:->   	Line:92   	File:E:\wamp\www\iwebshop\controllers\obstetrical.php
+	Func:admission_edit 	Class:Obstetrical    	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: SELECT * FROM dbclass_addmission_view WHERE id= 1 limit 1
+ -- Table 'dbclass.dbclass_addmission_view' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:187  	File:IWEB_PATH/web\model\model_class.php
+	Func:query          	Class:IModel         	Type:->   	Line:134  	File:IWEB_PATH/web\model\model_class.php
+	Func:getObj         	Class:IModel         	Type:->   	Line:92   	File:E:\wamp\www\iwebshop\controllers\obstetrical.php
+	Func:admission_edit 	Class:Obstetrical    	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-13 14:02:33
+##出错时变量的值：##
+array (
+  'id' => '1',
+  'admission_Obj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'tableName' => 'dbclass_addmission_view',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'where' => 'id= 1',
+  'data' => 
+  array (
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-13 14:02:38
+##出错时变量的值：##
+array (
+  'where' => 'id= 1',
+  'cols' => '*',
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sql
+errFile:xdebug eval
+errLine:1
+errTime:12-05-13 14:02:42
+##出错时变量的值：##
+array (
+  'where' => 'id= 1',
+  'cols' => '*',
+  'result' => 
+  array (
+    0 => 
+    array (
+      'id' => '1',
+      'name' => 'zhangfan',
+      'date' => '2012-05-10',
+      'hospital_id' => '1',
+      'pre_sympton' => NULL,
+      'other' => NULL,
+      'scheduled_provedure' => NULL,
+      'current_medication' => NULL,
+      'current_risk' => NULL,
+      'pre_risk' => NULL,
+      'medical_surgical_hx' => NULL,
+      'allergies' => NULL,
+      'reaction' => NULL,
+      'nkda' => NULL,
+      'allergy' => NULL,
+      'time' => NULL,
+      'unit' => NULL,
+      'form_where' => NULL,
+      'accompany' => NULL,
+      'add_nurse' => NULL,
+      'via' => NULL,
+      'uterus' => NULL,
+      'contraction' => NULL,
+      'contruction_date' => NULL,
+      'fetal_movement' => NULL,
+      'fetal_date' => NULL,
+      'membranes' => NULL,
+      'membranes_date' => NULL,
+      'recent_intercourse' => NULL,
+      's_p' => NULL,
+      'age' => NULL,
+      'gracida' => NULL,
+      'term' => NULL,
+      'preter' => NULL,
+      'antibdy' => NULL,
+      'living' => NULL,
+      'lmp' => NULL,
+      'ega' => NULL,
+      'edc' => NULL,
+      'ht' => NULL,
+      'wt' => NULL,
+      'wt_gain' => NULL,
+      'status' => NULL,
+      'blood_type' => NULL,
+      'antibody' => NULL,
+      'rubella' => NULL,
+      'hbsag' => NULL,
+      'vdrl' => NULL,
+      'vdrl_date' => NULL,
+      'gbbs' => NULL,
+      'hiv' => NULL,
+      'ppd' => NULL,
+      'cxr' => NULL,
+      'iv_start_location' => NULL,
+      'iv_start_size' => NULL,
+      'fluid_type_rate' => NULL,
+      'fluid_glucose' => NULL,
+      'sse_examiner' => NULL,
+      'sse_date_time' => NULL,
+      'sse_intact' => NULL,
+      'sse_rom_color' => NULL,
+      'sse_ferning' => NULL,
+      'sse_nitrazine' => NULL,
+      'sse_pooling' => NULL,
+      'sse_is_labs_sent' => NULL,
+      'sse_labs_sent' => NULL,
+      'sse_is_urine_sent' => NULL,
+      'sse_urine_sent' => NULL,
+      'sse_is_cultures_sent' => NULL,
+      'sse_cultures_sent' => NULL,
+      'sse_is_other' => NULL,
+      'sse_other' => NULL,
+      'urinalysis_sgravity' => NULL,
+      'urinalysis_color' => NULL,
+      'urinalysis_apprnce' => NULL,
+      'urinalysis_leuo' => NULL,
+      'urinalysis_heme' => NULL,
+      'urinalysis_glucose' => NULL,
+      'urinalysis_ketones' => NULL,
+      'urinalysis_protein' => NULL,
+      'initial' => NULL,
+      'initial_date' => NULL,
+      'edc_by_us' => NULL,
+      'ega_by_us' => NULL,
+      'final_edc' => NULL,
+      'blood_transfusion_solid' => NULL,
+      'pre_c_s' => NULL,
+      'attempted' => NULL,
+      'last_intake_solid' => NULL,
+      'lasr_intake_fluid' => NULL,
+      'research_sudies' => NULL,
+      'ambulation_em_off' => NULL,
+      'ambulation_walking_for' => NULL,
+      'disposition_date' => NULL,
+      'disposition_admitted' => NULL,
+      'disposition_via' => NULL,
+      'disposition_report_given' => NULL,
+      'ida' => NULL,
+      'clinical_nutrition_consult' => NULL,
+      'home_with_instruction' => NULL,
+      'verbalizes_understand' => NULL,
+      'discharge_ama' => NULL,
+      'social_work_center_consult' => NULL,
+    ),
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: result
+errFile:xdebug eval
+errLine:1
+errTime:12-05-13 14:03:07
+##出错时变量的值：##
+array (
+  'id' => '1',
+  'admission_Obj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'tableName' => 'dbclass_addmission_view',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'where' => 'id= 1',
+  'data' => 
+  array (
+    'id' => '1',
+    'name' => 'zhangfan',
+    'date' => '2012-05-10',
+    'hospital_id' => '1',
+    'pre_sympton' => NULL,
+    'other' => NULL,
+    'scheduled_provedure' => NULL,
+    'current_medication' => NULL,
+    'current_risk' => NULL,
+    'pre_risk' => NULL,
+    'medical_surgical_hx' => NULL,
+    'allergies' => NULL,
+    'reaction' => NULL,
+    'nkda' => NULL,
+    'allergy' => NULL,
+    'time' => NULL,
+    'unit' => NULL,
+    'form_where' => NULL,
+    'accompany' => NULL,
+    'add_nurse' => NULL,
+    'via' => NULL,
+    'uterus' => NULL,
+    'contraction' => NULL,
+    'contruction_date' => NULL,
+    'fetal_movement' => NULL,
+    'fetal_date' => NULL,
+    'membranes' => NULL,
+    'membranes_date' => NULL,
+    'recent_intercourse' => NULL,
+    's_p' => NULL,
+    'age' => NULL,
+    'gracida' => NULL,
+    'term' => NULL,
+    'preter' => NULL,
+    'antibdy' => NULL,
+    'living' => NULL,
+    'lmp' => NULL,
+    'ega' => NULL,
+    'edc' => NULL,
+    'ht' => NULL,
+    'wt' => NULL,
+    'wt_gain' => NULL,
+    'status' => NULL,
+    'blood_type' => NULL,
+    'antibody' => NULL,
+    'rubella' => NULL,
+    'hbsag' => NULL,
+    'vdrl' => NULL,
+    'vdrl_date' => NULL,
+    'gbbs' => NULL,
+    'hiv' => NULL,
+    'ppd' => NULL,
+    'cxr' => NULL,
+    'iv_start_location' => NULL,
+    'iv_start_size' => NULL,
+    'fluid_type_rate' => NULL,
+    'fluid_glucose' => NULL,
+    'sse_examiner' => NULL,
+    'sse_date_time' => NULL,
+    'sse_intact' => NULL,
+    'sse_rom_color' => NULL,
+    'sse_ferning' => NULL,
+    'sse_nitrazine' => NULL,
+    'sse_pooling' => NULL,
+    'sse_is_labs_sent' => NULL,
+    'sse_labs_sent' => NULL,
+    'sse_is_urine_sent' => NULL,
+    'sse_urine_sent' => NULL,
+    'sse_is_cultures_sent' => NULL,
+    'sse_cultures_sent' => NULL,
+    'sse_is_other' => NULL,
+    'sse_other' => NULL,
+    'urinalysis_sgravity' => NULL,
+    'urinalysis_color' => NULL,
+    'urinalysis_apprnce' => NULL,
+    'urinalysis_leuo' => NULL,
+    'urinalysis_heme' => NULL,
+    'urinalysis_glucose' => NULL,
+    'urinalysis_ketones' => NULL,
+    'urinalysis_protein' => NULL,
+    'initial' => NULL,
+    'initial_date' => NULL,
+    'edc_by_us' => NULL,
+    'ega_by_us' => NULL,
+    'final_edc' => NULL,
+    'blood_transfusion_solid' => NULL,
+    'pre_c_s' => NULL,
+    'attempted' => NULL,
+    'last_intake_solid' => NULL,
+    'lasr_intake_fluid' => NULL,
+    'research_sudies' => NULL,
+    'ambulation_em_off' => NULL,
+    'ambulation_walking_for' => NULL,
+    'disposition_date' => NULL,
+    'disposition_admitted' => NULL,
+    'disposition_via' => NULL,
+    'disposition_report_given' => NULL,
+    'ida' => NULL,
+    'clinical_nutrition_consult' => NULL,
+    'home_with_instruction' => NULL,
+    'verbalizes_understand' => NULL,
+    'discharge_ama' => NULL,
+    'social_work_center_consult' => NULL,
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: result
+errFile:xdebug eval
+errLine:1
+errTime:12-05-13 14:03:14
+##出错时变量的值：##
+array (
+  'data' => 
+  array (
+    'id' => '1',
+    'name' => 'zhangfan',
+    'date' => '2012-05-10',
+    'hospital_id' => '1',
+    'pre_sympton' => NULL,
+    'other' => NULL,
+    'scheduled_provedure' => NULL,
+    'current_medication' => NULL,
+    'current_risk' => NULL,
+    'pre_risk' => NULL,
+    'medical_surgical_hx' => NULL,
+    'allergies' => NULL,
+    'reaction' => NULL,
+    'nkda' => NULL,
+    'allergy' => NULL,
+    'time' => NULL,
+    'unit' => NULL,
+    'form_where' => NULL,
+    'accompany' => NULL,
+    'add_nurse' => NULL,
+    'via' => NULL,
+    'uterus' => NULL,
+    'contraction' => NULL,
+    'contruction_date' => NULL,
+    'fetal_movement' => NULL,
+    'fetal_date' => NULL,
+    'membranes' => NULL,
+    'membranes_date' => NULL,
+    'recent_intercourse' => NULL,
+    's_p' => NULL,
+    'age' => NULL,
+    'gracida' => NULL,
+    'term' => NULL,
+    'preter' => NULL,
+    'antibdy' => NULL,
+    'living' => NULL,
+    'lmp' => NULL,
+    'ega' => NULL,
+    'edc' => NULL,
+    'ht' => NULL,
+    'wt' => NULL,
+    'wt_gain' => NULL,
+    'status' => NULL,
+    'blood_type' => NULL,
+    'antibody' => NULL,
+    'rubella' => NULL,
+    'hbsag' => NULL,
+    'vdrl' => NULL,
+    'vdrl_date' => NULL,
+    'gbbs' => NULL,
+    'hiv' => NULL,
+    'ppd' => NULL,
+    'cxr' => NULL,
+    'iv_start_location' => NULL,
+    'iv_start_size' => NULL,
+    'fluid_type_rate' => NULL,
+    'fluid_glucose' => NULL,
+    'sse_examiner' => NULL,
+    'sse_date_time' => NULL,
+    'sse_intact' => NULL,
+    'sse_rom_color' => NULL,
+    'sse_ferning' => NULL,
+    'sse_nitrazine' => NULL,
+    'sse_pooling' => NULL,
+    'sse_is_labs_sent' => NULL,
+    'sse_labs_sent' => NULL,
+    'sse_is_urine_sent' => NULL,
+    'sse_urine_sent' => NULL,
+    'sse_is_cultures_sent' => NULL,
+    'sse_cultures_sent' => NULL,
+    'sse_is_other' => NULL,
+    'sse_other' => NULL,
+    'urinalysis_sgravity' => NULL,
+    'urinalysis_color' => NULL,
+    'urinalysis_apprnce' => NULL,
+    'urinalysis_leuo' => NULL,
+    'urinalysis_heme' => NULL,
+    'urinalysis_glucose' => NULL,
+    'urinalysis_ketones' => NULL,
+    'urinalysis_protein' => NULL,
+    'initial' => NULL,
+    'initial_date' => NULL,
+    'edc_by_us' => NULL,
+    'ega_by_us' => NULL,
+    'final_edc' => NULL,
+    'blood_transfusion_solid' => NULL,
+    'pre_c_s' => NULL,
+    'attempted' => NULL,
+    'last_intake_solid' => NULL,
+    'lasr_intake_fluid' => NULL,
+    'research_sudies' => NULL,
+    'ambulation_em_off' => NULL,
+    'ambulation_walking_for' => NULL,
+    'disposition_date' => NULL,
+    'disposition_admitted' => NULL,
+    'disposition_via' => NULL,
+    'disposition_report_given' => NULL,
+    'ida' => NULL,
+    'clinical_nutrition_consult' => NULL,
+    'home_with_instruction' => NULL,
+    'verbalizes_understand' => NULL,
+    'discharge_ama' => NULL,
+    'social_work_center_consult' => NULL,
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: result
+errFile:xdebug eval
+errLine:1
+errTime:12-05-13 14:03:17
+##出错时变量的值：##
+array (
+  'data' => 
+  array (
+    'id' => '1',
+    'name' => 'zhangfan',
+    'date' => '2012-05-10',
+    'hospital_id' => '1',
+    'pre_sympton' => NULL,
+    'other' => NULL,
+    'scheduled_provedure' => NULL,
+    'current_medication' => NULL,
+    'current_risk' => NULL,
+    'pre_risk' => NULL,
+    'medical_surgical_hx' => NULL,
+    'allergies' => NULL,
+    'reaction' => NULL,
+    'nkda' => NULL,
+    'allergy' => NULL,
+    'time' => NULL,
+    'unit' => NULL,
+    'form_where' => NULL,
+    'accompany' => NULL,
+    'add_nurse' => NULL,
+    'via' => NULL,
+    'uterus' => NULL,
+    'contraction' => NULL,
+    'contruction_date' => NULL,
+    'fetal_movement' => NULL,
+    'fetal_date' => NULL,
+    'membranes' => NULL,
+    'membranes_date' => NULL,
+    'recent_intercourse' => NULL,
+    's_p' => NULL,
+    'age' => NULL,
+    'gracida' => NULL,
+    'term' => NULL,
+    'preter' => NULL,
+    'antibdy' => NULL,
+    'living' => NULL,
+    'lmp' => NULL,
+    'ega' => NULL,
+    'edc' => NULL,
+    'ht' => NULL,
+    'wt' => NULL,
+    'wt_gain' => NULL,
+    'status' => NULL,
+    'blood_type' => NULL,
+    'antibody' => NULL,
+    'rubella' => NULL,
+    'hbsag' => NULL,
+    'vdrl' => NULL,
+    'vdrl_date' => NULL,
+    'gbbs' => NULL,
+    'hiv' => NULL,
+    'ppd' => NULL,
+    'cxr' => NULL,
+    'iv_start_location' => NULL,
+    'iv_start_size' => NULL,
+    'fluid_type_rate' => NULL,
+    'fluid_glucose' => NULL,
+    'sse_examiner' => NULL,
+    'sse_date_time' => NULL,
+    'sse_intact' => NULL,
+    'sse_rom_color' => NULL,
+    'sse_ferning' => NULL,
+    'sse_nitrazine' => NULL,
+    'sse_pooling' => NULL,
+    'sse_is_labs_sent' => NULL,
+    'sse_labs_sent' => NULL,
+    'sse_is_urine_sent' => NULL,
+    'sse_urine_sent' => NULL,
+    'sse_is_cultures_sent' => NULL,
+    'sse_cultures_sent' => NULL,
+    'sse_is_other' => NULL,
+    'sse_other' => NULL,
+    'urinalysis_sgravity' => NULL,
+    'urinalysis_color' => NULL,
+    'urinalysis_apprnce' => NULL,
+    'urinalysis_leuo' => NULL,
+    'urinalysis_heme' => NULL,
+    'urinalysis_glucose' => NULL,
+    'urinalysis_ketones' => NULL,
+    'urinalysis_protein' => NULL,
+    'initial' => NULL,
+    'initial_date' => NULL,
+    'edc_by_us' => NULL,
+    'ega_by_us' => NULL,
+    'final_edc' => NULL,
+    'blood_transfusion_solid' => NULL,
+    'pre_c_s' => NULL,
+    'attempted' => NULL,
+    'last_intake_solid' => NULL,
+    'lasr_intake_fluid' => NULL,
+    'research_sudies' => NULL,
+    'ambulation_em_off' => NULL,
+    'ambulation_walking_for' => NULL,
+    'disposition_date' => NULL,
+    'disposition_admitted' => NULL,
+    'disposition_via' => NULL,
+    'disposition_report_given' => NULL,
+    'ida' => NULL,
+    'clinical_nutrition_consult' => NULL,
+    'home_with_instruction' => NULL,
+    'verbalizes_understand' => NULL,
+    'discharge_ama' => NULL,
+    'social_work_center_consult' => NULL,
+  ),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: result
+errFile:xdebug eval
+errLine:1
+errTime:12-05-13 14:03:22
+##出错时变量的值：##
+array (
+  'id' => '1',
+  'admission_Obj' => 
+  IModel::__set_state(array(
+     'db' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'tableName' => 'dbclass_addmission_view',
+     'tableData' => 
+    array (
+    ),
+  )),
+  'where' => 'id= 1',
+  'data' => 
+  array (
+    'id' => '1',
+    'name' => 'zhangfan',
+    'date' => '2012-05-10',
+    'hospital_id' => '1',
+    'pre_sympton' => NULL,
+    'other' => NULL,
+    'scheduled_provedure' => NULL,
+    'current_medication' => NULL,
+    'current_risk' => NULL,
+    'pre_risk' => NULL,
+    'medical_surgical_hx' => NULL,
+    'allergies' => NULL,
+    'reaction' => NULL,
+    'nkda' => NULL,
+    'allergy' => NULL,
+    'time' => NULL,
+    'unit' => NULL,
+    'form_where' => NULL,
+    'accompany' => NULL,
+    'add_nurse' => NULL,
+    'via' => NULL,
+    'uterus' => NULL,
+    'contraction' => NULL,
+    'contruction_date' => NULL,
+    'fetal_movement' => NULL,
+    'fetal_date' => NULL,
+    'membranes' => NULL,
+    'membranes_date' => NULL,
+    'recent_intercourse' => NULL,
+    's_p' => NULL,
+    'age' => NULL,
+    'gracida' => NULL,
+    'term' => NULL,
+    'preter' => NULL,
+    'antibdy' => NULL,
+    'living' => NULL,
+    'lmp' => NULL,
+    'ega' => NULL,
+    'edc' => NULL,
+    'ht' => NULL,
+    'wt' => NULL,
+    'wt_gain' => NULL,
+    'status' => NULL,
+    'blood_type' => NULL,
+    'antibody' => NULL,
+    'rubella' => NULL,
+    'hbsag' => NULL,
+    'vdrl' => NULL,
+    'vdrl_date' => NULL,
+    'gbbs' => NULL,
+    'hiv' => NULL,
+    'ppd' => NULL,
+    'cxr' => NULL,
+    'iv_start_location' => NULL,
+    'iv_start_size' => NULL,
+    'fluid_type_rate' => NULL,
+    'fluid_glucose' => NULL,
+    'sse_examiner' => NULL,
+    'sse_date_time' => NULL,
+    'sse_intact' => NULL,
+    'sse_rom_color' => NULL,
+    'sse_ferning' => NULL,
+    'sse_nitrazine' => NULL,
+    'sse_pooling' => NULL,
+    'sse_is_labs_sent' => NULL,
+    'sse_labs_sent' => NULL,
+    'sse_is_urine_sent' => NULL,
+    'sse_urine_sent' => NULL,
+    'sse_is_cultures_sent' => NULL,
+    'sse_cultures_sent' => NULL,
+    'sse_is_other' => NULL,
+    'sse_other' => NULL,
+    'urinalysis_sgravity' => NULL,
+    'urinalysis_color' => NULL,
+    'urinalysis_apprnce' => NULL,
+    'urinalysis_leuo' => NULL,
+    'urinalysis_heme' => NULL,
+    'urinalysis_glucose' => NULL,
+    'urinalysis_ketones' => NULL,
+    'urinalysis_protein' => NULL,
+    'initial' => NULL,
+    'initial_date' => NULL,
+    'edc_by_us' => NULL,
+    'ega_by_us' => NULL,
+    'final_edc' => NULL,
+    'blood_transfusion_solid' => NULL,
+    'pre_c_s' => NULL,
+    'attempted' => NULL,
+    'last_intake_solid' => NULL,
+    'lasr_intake_fluid' => NULL,
+    'research_sudies' => NULL,
+    'ambulation_em_off' => NULL,
+    'ambulation_walking_for' => NULL,
+    'disposition_date' => NULL,
+    'disposition_admitted' => NULL,
+    'disposition_via' => NULL,
+    'disposition_report_given' => NULL,
+    'ida' => NULL,
+    'clinical_nutrition_consult' => NULL,
+    'home_with_instruction' => NULL,
+    'verbalizes_understand' => NULL,
+    'discharge_ama' => NULL,
+    'social_work_center_consult' => NULL,
+  ),
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select count(*) as total from dbclass_amniot_type as at     
+ -- Table 'dbclass.dbclass_amniot_type' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:55   	File:IWEB_PATH/core\paging_class.php
+	Func:setSql         	Class:IPaging        	Type:->   	Line:41   	File:IWEB_PATH/core\paging_class.php
+	Func:__construct    	Class:IPaging        	Type:->   	Line:121  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:95   	File:E:\wamp\www\iwebshop\runtime\mastercode\amniotic_types_list.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:457  	File:E:\wamp\www\iwebshop\controllers\mastercode.php
+	Func:amniotic_types_list	Class:Mastercode     	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>

@@ -1,0 +1,13 @@
+/*
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,button{padding:0;margin:0;font-size:100%}
+
+*/
+.xf-main{width:800px;min-height:1200px;margin:25px auto;height:auto;}
+.xf-main01{width:1000px;min-height:1200px;margin:25px auto;height:auto;}
+.xf-main table,.xf-main01 table{width:99%}
+.xf-main table td,.xf-main01 table td{border: 1px solid #000000;padding:10px;}
+
+.xf-main1{width:800px;min-height:200px;margin:25px auto;height:auto;}
+.xf-main011{width:1000px;min-height:200px;margin:25px auto;height:auto;}
+.xf-main1 table,.xf-main01 table{width:99%}
+.xf-main1 table td,.xf-main01 table td{border: 1px solid #000000;padding:10px;}
