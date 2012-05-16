@@ -149,6 +149,7 @@ img.operator{width:12px;height:12px;margin:0 6px;cursor:pointer; vertical-align:
 .field{position:relative;height:30px;padding:0 10px 0 15px;border-top:1px solid #cecece;border-bottom:1px solid #cecece;background-color:#f5f5f5}
 	.field span{/*line-height:30px;*/margin-right:20px;}
 .content{margin:0 10px 0 15px;_margin-right:17px;overflow-x:hidden;overflow-y:auto}
+.content1{margin:0 10px 0 15px;_margin-right:17px;height:750px; overflow-y:scroll;text-align:left;}
 /* content_box style start */
 .content_box{margin:0 10px 10px 15px;border:1px #dddddd solid;background-color:#fff}
 	.content_box .content{margin:0}

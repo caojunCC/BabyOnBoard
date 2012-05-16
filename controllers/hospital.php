@@ -1,7 +1,7 @@
 <?php
 /**
- * @class Mastercode
- * @brief 模板数据配置
+ * @class Hospital
+ * @brief 医院人员配置
  */
 class Hospital extends IController
 {

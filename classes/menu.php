@@ -196,18 +196,19 @@ class Menu
             		'/system/right_list' => 'rights权限资源'
             	),
 			),
-		'Patient病人' =>array(
+		'Obstetrical产妇' =>array(
 			'Basic Information' => array(
-				'patient/patient_basic_list' =>'list',
-				'patient/patient_basic_edit' =>'edit',
+				'/obstetrical/obstetrical_basic_list' =>'list',
+				'/obstetrical/obstetrical_basic_edit' =>'edit',
 				),
-			'Basic Information' => array(
-				'patient/patient_basic_list' =>'list',
-				'patient/patient_basic_edit' =>'edit',
+			'Admission Record' => array(
+				'/obstetrical/admission_list' =>'list',
+				'/obstetrical/admission_edit' =>'edit',
 				),
 			'report_stats报告统计' =>array(
 				'/patient/report_stats_list ' =>'list报告统计',
 				),
+				
 		),
 		
 		/**/

@@ -135,8 +135,9 @@ function render_data(selector)
 		<table id="list_table" class="list_table">
 			<col width="50px" />
 			<col width="150px" />
+			<col width="280px" />
+			<col width="380px" />
 			<col width="100px" />
-			<col width="200px" />
 			<col />
 			<tbody>
 			</tbody>
@@ -146,17 +147,6 @@ function render_data(selector)
 	</div>
 	<div id="separator"></div>
 </div>
-<script type='text/javascript'>
-	//隔行换色
-	$(".list_table tr::nth-child(even)").addClass('even');
-	$(".list_table tr").hover(
-		function () {
-			$(this).addClass("sel");
-		},
-		function () {
-			$(this).removeClass("sel");
-		}
-	);
-</script>
+
 </body>
 </html>

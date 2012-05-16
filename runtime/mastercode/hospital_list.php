@@ -59,7 +59,7 @@
             <col width="30%" />
             <col width="10%" />
             <col width="10%" />
-    	  <col width="10%" />
+    	    <col width="10%" />
             <col />
             <thead>
                 <tr>
@@ -75,7 +75,7 @@
     </div>
 </div>
 <div class="content">
-    <form action="<?php echo IUrl::creatUrl("/tools/news_del");?>" method="post" name="article">
+    <form action="<?php echo IUrl::creatUrl("/mastercode/hospital_del");?>" method="post" name="hospital">
         <table class="list_table">
             <col width="40px" />
             <col width="30%" />
@@ -117,17 +117,6 @@
 	</div>
 	<div id="separator"></div>
 </div>
-<script type='text/javascript'>
-	//隔行换色
-	$(".list_table tr::nth-child(even)").addClass('even');
-	$(".list_table tr").hover(
-		function () {
-			$(this).addClass("sel");
-		},
-		function () {
-			$(this).removeClass("sel");
-		}
-	);
-</script>
+
 </body>
 </html>
