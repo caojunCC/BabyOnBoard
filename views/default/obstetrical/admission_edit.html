@@ -43,10 +43,19 @@ function admission_prenatal_labs()
 	    width: '1000px'
 	}, true);
 }
-
+//admission_procedures
+function admission_procedures()
+{
+	art.dialog.load('{url:/modify/admission_procedures/id/$id}', {
+		id:'add_complaint',
+		lock: true,
+	    title: 'Edit Assessment Data',
+	    width: '1000px'
+	}, true);
+}
 </script>
 <div class="headbar">
-	<div class="position"><span>Obstetrical</span><span>></span><span>Basic Info</span><span>></span><span>list</span></div>
+	<div class="position"><span>Obstetrical</span><span>></span><span>Admission Record</span><span>></span><span>edit</span></div>
 </div>
 	<div class="content1"  >
 	<table>
@@ -59,25 +68,24 @@ function admission_prenatal_labs()
 	<div class="xf-main">
 		<table style="border-collapse:collapse"  onclick='admission_detail_edit();'>
 					<tr>
-						<td>TIME时间:&nbsp;{$time}</td>
+						<td>TIME时间:&nbsp;<a style='color:red'>{$time}</a></td>
 						<td>ARRIVED FROM来自：<br>
-							{if:$form_where == 1}√{else:}□{/if}ED急诊&nbsp;
-							{if:$form_where == 2}√{else:}□{/if}Home家&nbsp;
-							<input type="checkbox" id="" value="Clinic门诊">Clinic门诊
-							<input type="checkbox" id="" value="Floor病房">Floor病房
-							<input type="checkbox" id="" value="Transfer from外院">Transfer from外院
-							<input type="text" id="" value="">
+							{if:$form_where == 1}<a style='color:red'>√</a>{else:}□{/if}ED急诊&nbsp;
+							{if:$form_where == 2}<a style='color:red'>√</a>{else:}□{/if}Home家&nbsp;
+							{if:$form_where == 3}<a style='color:red'>√</a>{else:}□{/if}Clinic门诊&nbsp;
+							{if:$form_where == 4}<a style='color:red'>√</a>{else:}□{/if}Floor病房&nbsp;
+							{if:$form_where == 5}<a style='color:red'>√</a>{else:}□{/if}Transfer from外院&nbsp;
 						</td>
-						<td>ACOMPANIED BY陪同：</td>
+						<td>ACOMPANIED BY陪同：<a style='color:red'>{$accompany}</a></td>
 					</tr>
-					<tr><td>UNIT部门</td>
-						<td>ADDMITTING NURSE接待护士</td>
+					<tr><td>UNIT部门:<a style='color:red'>{$unit}</a></td>
+						<td>ADDMITTING NURSE接待护士:<a style='color:red'>{$add_nurse}</a></td>
 						<td>VIA通过：
-							<input type="checkbox" value="Wheelchair轮椅">Wheelchair轮椅
-							<input type="checkbox" value="">Cart推车
-							<input type="checkbox" value="">Ambulatory步行
-							<input type="checkbox" value="">Ambulance救护车
-							<input type="checkbox" value="">Other其他
+							{if:$via == 1}<a style='color:red'>√</a>{else:}□{/if}Wheelchair轮椅
+							{if:$via == 2}<a style='color:red'>√</a>{else:}□{/if}Cart推车
+							{if:$via == 3}<a style='color:red'>√</a>{else:}□{/if}Ambulatory步行
+							{if:$via == 4}<a style='color:red'>√</a>{else:}□{/if}Ambulance救护车
+							{if:$via == 5}<a style='color:red'>√</a>{else:}□{/if}Other其他
 						</td>
 					</tr>
 		</table>
@@ -85,72 +93,107 @@ function admission_prenatal_labs()
 			<tr>
 				<td rowspan="2">
 						<p>ADNISSION COMPLAINT入院主诉：</p><br>
-							<p><input type="checkbox" value="">R/O Labor排除临产</p>
-							<p><input type="checkbox" value="">R/O PTL排除早产</p>
-							<p><input type="checkbox" value="">R/O SROM排除破水</p>
-							<p><input type="checkbox" value="">R/O PIH排除妊高症</p>
-							<p><input type="checkbox" value="">Decrease Fetal Movement 胎动减少</p>
-							<p><input type="checkbox" value="">Headache头痛</p>
-							<p><input type="checkbox" value="">Nausea/Vomiting恶心/呕吐</p>
-							<p><input type="checkbox" value="">Status Post Fall/MVA摔倒/车祸</p>
-							<p><input type="checkbox" value="">Scheduled Procedure预约操作</p>
-							<p><input type="checkbox" value="">Other其他</p>
+							<p>{if:in_array(1,$this->all_pre_sympton )}<a style='color:red'>√</a>{else:}□{/if}R/O Labor排除临产</p>
+							<p>{if:in_array(2,$this->all_pre_sympton )}<a style='color:red'>√</a>{else:}□{/if}R/O PTL排除早产</p>
+							<p>{if:in_array(3,$this->all_pre_sympton )}<a style='color:red'>√</a>{else:}□{/if}R/O SROM排除破水</p>
+							<p>{if:in_array(4,$this->all_pre_sympton )}<a style='color:red'>√</a>{else:}□{/if}R/O PIH排除妊高症</p>
+							<p>{if:in_array(5,$this->all_pre_sympton )}<a style='color:red'>√</a>{else:}□{/if}Decrease Fetal Movement 胎动减少</p>
+							<p>{if:in_array(6,$this->all_pre_sympton )}<a style='color:red'>√</a>{else:}□{/if}Headache头痛</p>
+							<p>{if:in_array(7,$this->all_pre_sympton )}<a style='color:red'>√</a>{else:}□{/if}Nausea/Vomiting恶心/呕吐</p>
+							<p>{if:in_array(8,$this->all_pre_sympton )}<a style='color:red'>√</a>{else:}□{/if}Status Post Fall/MVA摔倒/车祸</p>
+							<p>{if:in_array(9,$this->all_pre_sympton )}<a style='color:red'>√</a>{else:}□{/if}Scheduled Procedure预约操作<a style='color:red'>{$scheduled_provedure}</a></p>
+							<p>{if:in_array(10,$this->all_pre_sympton )}<a style='color:red'>√</a>{else:}□{/if}Other其他<a style='color:red'>{$other}</a></p>
 				</td>
-				<td>AGE年龄</td>
-				<td>GRACIDA次孕</td>
-				<td>TERM足月</td>
-				<td>PRETERM早产</td>
-				<td>Antibdy抗体</td>
-				<td>LIVING存活</td>
+				<td>AGE年龄:<a style='color:red'>{$age}</a></td>
+				<td>GRACIDA次孕:<a style='color:red'>{$gracida}</a></td>
+				<td>TERM足月：<a style='color:red'>{$term}</a></td>
+				<td>PRETERM早产：<a style='color:red'>{$preter}</a></td>
+				<td>Antibdy抗体：<a style='color:red'>{$antibdy}</a></td>
+				<td>LIVING存活：<a style='color:red'>{$living}</a></td>
 			</tr>
 			<tr>
-				<td>LMO末次月经</td>
-				<td>EDC预产期</td>
-				<td>EGA胎龄</td>
-				<td>HT身高</td>
-				<td>WT体重</td>
-				<td>Wt Gain增重</td>
+				<td>LMO末次月经：<a style='color:red'>{$lmp}</a></td>
+				<td>EDC预产期：<a style='color:red'>{$ega}</a></td>
+				<td>EGA胎龄：<a style='color:red'>{$edc}</a></td>
+				<td>HT身高：<a style='color:red'>{$ht}</a></td>
+				<td>WT体重：<a style='color:red'>{$wt}</a></td>
+				<td>Wt Gain增重：<a style='color:red'>{$wt_gain}</a></td>
 			</tr>
 		</table>
 		<table style="border-collapse:collapse"  onclick='admission_ob_assessment();'>
 			<tr>
 				<td rowspan="4">
 					<p>OB ASSESSMENT:(Subiective)产前评估（主观指标）</p>
-					<p>Uterus:<input type="checkbox" value="">Soft软<input type="checkbox" value="">NonTender不硬<input type="checkbox" value="">Tender硬<input type="checkbox" value="">Ridge极硬</p>
-					<p>(子宫)contraction宫缩q_______Date/Time时间_____</p>
-					<p>FetalNovement:<input type="checkbox" value="">Present有<input type="checkbox" value="">Absent无<input type="checkbox" value="">Decreased减少</p>
-					<p>(胎动)Last move:Date/Time末次时间____</p>
-					<p>Membranes:<input type="checkbox" value="">DeniesRupture没破<input type="checkbox" value="">Rupture破<input type="checkbox" value="">Unsure不清</p>
+					<p>Uterus:
+					{if:$uterus == 1}<a style='color:red'>√</a>{else:}□{/if}Soft软
+					{if:$uterus == 2}<a style='color:red'>√</a>{else:}□{/if}NonTender不硬
+					{if:$uterus == 3}<a style='color:red'>√</a>{else:}□{/if}Tender硬
+					{if:$uterus == 4}<a style='color:red'>√</a>{else:}□{/if}Ridge极硬
+					</p>
+					<p>(子宫)contraction宫缩q: <a style='color:red'>{$contraction}</a>&nbsp;&nbsp;Date/Time时间:<a style='color:red'>{$contruction_date}</a></p>
+					<p>FetalNovement:
+					{if:$fetal_movement == 1}<a style='color:red'>√</a>{else:}□{/if}Present有
+					{if:$fetal_movement == 2}<a style='color:red'>√</a>{else:}□{/if}Absent无
+					{if:$fetal_movement == 3}<a style='color:red'>√</a>{else:}□{/if}Decreased减少
+					</p>
+					<p>(胎动)Last move:Date/Time末次时间:<a style='color:red'>{$fetal_date}</a></p>
+					
+					<!-- 
+					<p>Membranes:
+					<?php
+						$temp_obj = new IModel('ammiot_type');
+						$temp = $temp_obj->getObj('id ='.$membranes);
+					?>
+					{if:!empty($temp)}
+					<a style='color:red'>{$temp['description_en']}</a>
+					{else:}空
+					{/if}
+					</p>
 					<p>(羊膜)Rupture Date/Time破膜时间：____Color颜色____</p>
+					 -->
 					<p>R/O PTL排除早产：</p>
-					<p>Recent Intercourse Time末次性交时间________</p>
-					<p>S/P Fall/MVA point of Impact摔倒、车祸涉及部位______</p>
+					<p>Recent Intercourse Time末次性交时间:<a style='color:red'>{$recent_intercourse}</a></p>
+					<p>S/P Fall/MVA point of Impact摔倒、车祸涉及部位：<a style='color:red'>{$s_p}</a></p>
 				</td>
 				<td>
 					<p>ULTRASOUND超声：</p>
-					<p><input type="checkbox" value="">Done有<input type="checkbox" value="">Not Done无<input type="checkbox" value="">Available能做<input type="checkbox" value="">Not Available不能做</p>
-					<p>Initial Date首次日期：________________</p>
-					<p>EDC by US预产期___________EGA by US胎龄(周)</p>
-					<p>FINAL EDC最后确定的预产期_____________</p>
+					<p>
+					{if:$initial == 1}<a style='color:red'>√</a>{else:}□{/if}Done有
+					{if:$initial == 2}<a style='color:red'>√</a>{else:}□{/if}Not Done无
+					{if:$initial == 3}<a style='color:red'>√</a>{else:}□{/if}Available能做
+					{if:$initial == 4}<a style='color:red'>√</a>{else:}□{/if}Not Available不能做
+					</p>
+					<p>Initial Date首次日期：<a style='color:red'>{$initial_date}</a></p>
+					<p>EDC by US预产期:<a style='color:red'>{$edc_by_us}</a>EGA by US胎龄(周):<a style='color:red'>{$ega_by_us}</a></p>
+					<p>FINAL EDC最后确定的预产期:<a style='color:red'>{$final_edc}</a></p>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<p>PREVIOUS BLOOD TRANSFUSION输血史</p>
-					<p><input type="checkbox" value="">No 无<input type="checkbox" value="">Yes 有<input type="checkbox" value="">Reaction反应_________</p>
+					<p>
+					{if:$blood_transfusion_solid == 1}<a style='color:red'>√</a>{else:}□{/if} No 无
+					{if:$blood_transfusion_solid == 2}<a style='color:red'>√</a>{else:}□{/if} Yes 有
+					{if:$blood_transfusion_solid == 3}<a style='color:red'>√</a>{else:}□{/if} Reaction反应</p>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p>Previous C/S剖宫产史：<input type="checkbox" value="">Yes 有<input type="checkbox" value="">No 无</p>
-					<p>Attempted VTOL剖宫产后阴道分娩：<input type="checkbox" value="">Yes 有<input type="checkbox" value="">No 无</p>
+					<p>Previous C/S剖宫产史：
+					{if:$pre_c_s == 1}<a style='color:red'>√</a>{else:}□{/if}Yes 有
+					{if:$pre_c_s == 2}<a style='color:red'>√</a>{else:}□{/if}No 无
+					</p>
+					<p>Attempted VTOL剖宫产后阴道分娩：
+					{if:$attempted == 1}<a style='color:red'>√</a>{else:}□{/if}Yes 有
+					{if:$attempted == 2}<a style='color:red'>√</a>{else:}□{/if}No 无
+					</p>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<p>LAST INTAKE 末次饮食</p>
-					<p>Solid固体：Date/Time:日期时间__________</p>
-					<p>Fluid液体：Date/Time:日期时间__________</p>
+					<p>Solid固体：Date/Time:日期时间:<a style='color:red'>{$last_intake_solid}</a></p>
+					<p>Fluid液体：Date/Time:日期时间:<a style='color:red'>{$lasr_intake_fluid}</a></p>
 				</td>
 			</tr>
 	
@@ -159,81 +202,121 @@ function admission_prenatal_labs()
 			<tr>
 				<td rowspan="5">
 					<p>PRENAL LABS:产前实验室</p>
-					<p><input type="checkbox" value="">Done有<input type="checkbox" value="">Not Done无</p>
-					<p><input type="checkbox" value="">Available能做<input type="checkbox" value="">Not Available不能做</p>
-					<p>Blood Type血型  __________________</p>
-					<p>Antibody 抗体 _________________</p>
-					<p>Rubella风疹 __________________</p>
-					<p>HBsAg乙肝表面抗原 ___________________</p>
-					<p>VDRL梅毒  ________Date日期____________</p>
-					<p>GBBS(ASO) _______________</p>
-					<p>HIV艾滋病毒 _____________</p>
-					<p>PPD结核菌素试验 _____________</p>
-					<p>CXR胸片  ____________________</p>
+					<p>
+					{if:$status == 1}<a style='color:red'>√</a>{else:}□{/if}Done有
+					{if:$status == 2}<a style='color:red'>√</a>{else:}□{/if}Not Done无
+					</p>
+					<p>
+					{if:$status == 3}<a style='color:red'>√</a>{else:}□{/if}Available能做
+					{if:$status == 4}<a style='color:red'>√</a>{else:}□{/if}Not Available不能做
+					</p>
+					<p>Blood Type血型 :<a style='color:red'>{$blood_type}</a></p>
+					<p>Antibody 抗体:<a style='color:red'>{$antibody}</a></p>
+					<p>Rubella风疹:<a style='color:red'>{$rubella}</a></p>
+					<p>HBsAg乙肝表面抗原:<a style='color:red'>{$hbsag}</a></p>
+					<p>VDRL梅毒:<a style='color:red'>{$vdrl}</a>Date日期:<a style='color:red'>{$vdrl_date}</a></p>
+					<p>GBBS(ASO):<a style='color:red'>{$gbbs}</a></p>
+					<p>HIV艾滋病毒:<a style='color:red'>{$hiv}</a></p>
+					<p>PPD结核菌素试验:<a style='color:red'>{$ppd}</a></p>
+					<p>CXR胸片 :<a style='color:red'>{$cxr}</a></p>
 				</td>
 				<td>
-					<p>CURRENT MEDICATIONS 目前服用药物：</p>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<p>CURRENT RISK FACTORS/OB COMPLICATIONS 目前危险因素、产科并发症：</p>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<p>PRIOR PREGNANCY RISK FACTORS怀孕前危险因素：</p>
+					<p>CURRENT MEDICATIONS 目前服用药物：<a style='color:red'>{$current_medication}</a></p>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p>MEDICAL/SURGICAL Hx 内/外科病史：</p>	
+					<p>CURRENT RISK FACTORS/OB COMPLICATIONS 目前危险因素、产科并发症：<a style='color:red'>{$current_risk}</p>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p>ALLERGIES 过敏/副反应史:_________________</p>
-					<p>Reaction表现：________________</p>
-					<p><input type="checkbox" value="">NKDA无药物过敏<input type="checkbox" value="">Allergy Bracelet Applied带上药物过敏警示手镯</p>	
+					<p>PRIOR PREGNANCY RISK FACTORS怀孕前危险因素：<a style='color:red'>{$pre_risk}</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>MEDICAL/SURGICAL Hx 内/外科病史：<a style='color:red'>{$medical_surgical_hx}</p>	
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>ALLERGIES 过敏/副反应史:<a style='color:red'>{$allergies}</a></p>
+					<p>Reaction表现：<a style='color:red'>{$reaction}</a></p>
+					<p>
+					{if:$nkda == 1}<a style='color:red'>√</a>{else:}□{/if}NKDA无药物过敏
+					{if:$allergy == 1}<a style='color:red'>√</a>{else:}□{/if}Allergy Bracelet Applied带上药物过敏警示手镯</p>	
 				</td>
 			</tr>
 		
 		</table>
-		<table style="border-collapse:collapse">
+		<table style="border-collapse:collapse" onclick='admission_procedures();'>
 			<tr>
 				<td rowspan="2">
 					<p>PROCEDURES:(Objective)操作(客观指标)</p>
-					<p>IV Start静脉：Location部位________Size针号________</p>
-					<p>Fluid 液体type/Rate种类/滴速______Glucose血糖_______</p>
-					<p>SSE:Examiner检查人________Date/Time时间_______</p>
-					<p><input type="checkbox" value="">Intact完整<input type="checkbox" value="">ROM Color破膜羊水颜色________</p>
-					<p>Ferning羊齿状结晶：<input type="checkbox" value="">Absent阴性<input type="checkbox" value="">Present阳性</p>
-					<p>Nitrazine石蕊试纸：<input type="checkbox" value="">Absent阴性<input type="checkbox" value="">Present阳性(碱性)</p>
-					<p>Pooling羊水池：<input type="checkbox" value="">Absent阴性<input type="checkbox" value="">Present阳性</p>
-					<p><input type="checkbox" value="">Labs Sent送血检________<input type="checkbox" value="">Urine sent送尿检______</p>
-					<p><input type="checkbox" value="">Cultures sent送培养_______<input type="checkbox" value="">Other其他_______</p>
-					<p>URINALYSIS尿常规：S-Gravity比重_______Color颜色_______</p>
-					<p>Apprnce外观______Leuko白细胞_____Heme尿红素_____</p>
-					<p>Glucose糖______Ketones酮______Proein蛋白_______</p>		
+					<p>IV Start静脉：Location部位
+					<a style='color:red'>{$iv_start_location}</a>
+					Size针号<a style='color:red'>{$iv_start_size}</a>
+					</p>
+					<p>Fluid 液体type/Rate
+					种类/滴速:<a style='color:red'>{$fluid_type_rate}</a>
+					Glucose血糖:<a style='color:red'>{$fluid_glucose}</a>
+					</p>
+					<p>SSE:Examiner检查人:<a style='color:red'>{$sse_examiner}</a>
+					Date/Time时间:<a style='color:red'>{$sse_date_time}</a>
+					</p>
+					<p>
+					{if:$sse_intact == 1}<a style='color:red'>√</a>Intact完整  □ ROM Color破膜羊水颜色{else:}
+					□ Intact完整  <a style='color:red'>√</a> ROM Color破膜羊水颜色 <a style='color:red'>{$sse_rom_color}</a>{/if}
+					</p>
+					<p>
+					Ferning羊齿状结晶：
+					{if:$sse_ferning == 1}<a style='color:red'>√</a>{else:}□{/if}Absent阴性
+					{if:$sse_ferning == 2}<a style='color:red'>√</a>{else:}□{/if}Present阳性
+					</p>
+					<p>Nitrazine石蕊试纸：
+					{if:$sse_nitrazine == 1}<a style='color:red'>√</a>{else:}□{/if}Absent阴性
+					{if:$sse_nitrazine == 2}<a style='color:red'>√</a>{else:}□{/if}Present阳性(碱性)
+					</p>
+					<p>Pooling羊水池：
+					{if:$sse_pooling == 1}<a style='color:red'>√</a>{else:}□{/if}Absent阴性
+					{if:$sse_pooling == 2}<a style='color:red'>√</a>{else:}□{/if}Present阳性</p>
+					<p>
+					{if:$sse_is_labs_sent == 1}<a style='color:red'>√</a>{else:}□{/if}Labs Sent送血检<a style='color:red'>{$sse_labs_sent}</a>
+					{if:$sse_is_urine_sent == 1}<a style='color:red'>√</a>{else:}□{/if}Urine sent送尿检<a style='color:red'>{$sse_urine_sent}</a></p>
+					<p>{if:$sse_is_cultures_sent == 1}<a style='color:red'>√</a>{else:}□{/if}Cultures sent送培养<a style='color:red'>{$sse_cultures_sent}</a>
+					{if:$sse_is_other == 1}<a style='color:red'>√</a>{else:}□{/if}Other其他<a style='color:red'>{$sse_other}</a></p>
+					<p>URINALYSIS尿常规：S-Gravity比重&nbsp;<a style='color:red'>{$urinalysis_sgravity}&nbsp;</a>Color颜色&nbsp;<a style='color:red'>{$urinalysis_color}&nbsp;</a></p>
+					<p>Apprnce外观&nbsp;<a style='color:red'>{$urinalysis_apprnce}&nbsp;</a>Leuko白细胞&nbsp;<a style='color:red'>{$urinalysis_leuo}&nbsp;</a>Heme尿红素&nbsp;<a style='color:red'>{$urinalysis_heme}&nbsp;</a></p>
+					<p>Glucose糖&nbsp;<a style='color:red'>{$urinalysis_glucose}&nbsp;</a>Ketones酮&nbsp;<a style='color:red'>{$urinalysis_ketones}&nbsp;</a>Proein蛋白&nbsp;<a style='color:red'>{$urinalysis_protein}&nbsp;</a></p>		
 				</td>
 				<td>
 					<p>RESEARCH SUDIES参加研究：</p>
-					<p><input type="checkbox" value="">No 无<input type="checkbox" value="">Yes 有_________</p>
+					<p>
+					{if:$is_research_sudies == 1}<a style='color:red'>√</a>{else:}□{/if}No 无
+					{if:$is_research_sudies == 2}<a style='color:red'>√</a>{else:}□{/if}Yes 有<a style='color:red'>{$research_sudies}</a></p>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<p>AMBULATION活动</p>
-					<p>EFM off无胎心监护______Walking for 行走_______Hrs小时</p>
-					<p>DISPOSITION 出产房 Date/Time时间_______</p>
-					<p><input type="checkbox" value="">Admitted to 住院病区________</p>
-					<p>via通过：<input type="checkbox" value="">Ambulatory行走<input type="checkbox" value="">Wheelchair轮椅<input type="checkbox" value="">Cart推车</p>
-					<p>Report given to交班给：_________</p>
-					<p><input type="checkbox" value="">ID Band Applied病人手镯<input type="checkbox" value="">Clinical Nutrition Consult营养师会诊</p>
-					<p><input type="checkbox" value="">Home W/Instruction带出院指导回家</p>
-					<p><input type="checkbox" value="">Verbalize Understanding能理解口头交代</p>
-					<p><input type="checkbox" value="">Discharge AMA自动离院</p>
-					<p><input type="checkbox" value="">Social Work/Wellness Center Consult社区服务中心</p>
+					<p>EFM off无胎心监护<a style='color:red'>{$ambulation_em_off}</a>Walking for 行走<a style='color:red'>{$ambulation_walking_for}</a>Hrs小时</p>
+					<p>DISPOSITION 出产房 Date/Time时间<a style='color:red'>{$disposition_date}</a></p>
+					<p>
+					Admitted to 住院病区<a style='color:red'>{$disposition_admitted}</a></p>
+					<p>via通过：
+					{if:$disposition_via == 1}<a style='color:red'>√</a>{else:}□{/if}Ambulatory行走
+					{if:$disposition_via == 2}<a style='color:red'>√</a>{else:}□{/if}Wheelchair轮椅
+					{if:$disposition_via == 3}<a style='color:red'>√</a>{else:}□{/if}Cart推车
+					</p>
+					<p>Report given to交班给：<a style='color:red'>{$disposition_report_given}</a></p>
+					<p>{if:$ida == 1}<a style='color:red'>√</a>{else:}□{/if}ID Band Applied病人手镯
+					{if:$clinical_nutrition_consult == 1}<a style='color:red'>√</a>{else:}□{/if}Clinical Nutrition Consult营养师会诊
+					</p>
+					<p>{if:$home_with_instruction == 1}<a style='color:red'>√</a>{else:}□{/if}Home W/Instruction带出院指导回家</p>
+					<p>{if:$verbalizes_understand == 1}<a style='color:red'>√</a>{else:}□{/if}Verbalize Understanding能理解口头交代</p>
+					<p>{if:$discharge_ama == 1}<a style='color:red'>√</a>{else:}□{/if}Discharge AMA自动离院</p>
+					<p>{if:$social_work_center_consult == 1}<a style='color:red'>√</a>{else:}□{/if}Social Work/Wellness Center Consult社区服务中心</p>
 				</td>
 			</tr>
 		</table>

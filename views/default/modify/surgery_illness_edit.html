@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+
+<div class="xf-main1">
+<form id="surgery_illness_edit_1" action="{url:/modify/surgery_illness_edit_act}"  method="post">
+	<table style="border-collapse:collapse" >
+		<tr>
+		<input type='hidden' name='id' value='{$id}'/>
+		<input type='hidden' name='basic_id' value='{$this->id }'/>
+		<td colspan="2">
+		<p>
+		Hx of Present Pregnancy and Illness
+		</p><br>
+							<p>G孕 <input type="text" class='small' name="gracida" value="{$gracida}"> 
+							P产<input type="text" class='small' name="living" value="{$living}">Gestational Week(days)孕期<input type="text" class='small' name="ega_by_us" value="{$ega_by_us}"></p>
+							<p>HTN高血压；Edemas水肿：+，++，+++：Headache头痛：Blur Vision视物模糊；</p>
+							<p>Hyperglycemia高血糖：Abdominal Pain腹痛：Vaginal Bleeding阴道出血:</p>
+							<p><input type="text" class='normal' name="pregnacy_description" value="{$pregnacy_description}"></p>
+			</td>
+			<td rowspan="3" ><p>Current Nedications现用药物
+			<input type="text" class='normal' name="current_medication" value="{$current_medication}"></p></td></tr>
+		</tr>
+		<tr><td>Previous Anesthesia&Surgeries麻醉/手术史
+		<input type="text" class='normal' name="pre_anesthesia" value="{$pre_anesthesia}"></td>
+			<td rowspan="2">Allergies/Intolerances药物过敏/副反应史
+		<input type="text" class='normal' name="allergies" value="{$allergies}">
+			</td>
+		</tr>
+		<tr><td>Family Hx of Anesthesia/Medical/Surgical Cx麻醉/内科/外科并发症
+		<input type="text" class='normal' name="medical_surgical_hx" value="{$medical_surgical_hx}">
+		</td>		
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div>

@@ -113,6 +113,7 @@ class Menu
       		'后台首页'=>array(
         			'/system/default' => '后台首页',
         		),
+				
             	'网站管理'=>array(
             		'/system/conf_base' => '网站设置',
             		'/system/conf_ui'   => '主题设置',
@@ -146,10 +147,7 @@ class Menu
 		),
 		'Mastercode模板' =>array(
 		
-			'Hospital医院' =>array(
-				'/mastercode/hospital_list' => '	list医院列表',
-				'/mastercode/hospital_edit' => 'edit编辑医院',
-				),
+
 			'Department Types科室' =>array(
 				'/mastercode/department_type_list' => 'list科室列表',
 				'/mastercode/department_type_edit' => 'edit编辑科室',
@@ -186,6 +184,10 @@ class Menu
 				/**/
 		),
 		'Hospital医院' =>array(
+			'Hospital医院' =>array(
+				'/mastercode/hospital_list' => '	list医院列表',
+				'/mastercode/hospital_edit' => 'edit编辑医院',
+				),
 			'Providers人员' =>array(
 				'/hospital/providers_list' => 'list人员列表',
 				'/hospital/providers_edit' =>  'edit编辑人员',
@@ -205,9 +207,16 @@ class Menu
 				'/obstetrical/admission_list' =>'list',
 				'/obstetrical/admission_edit' =>'edit',
 				),
+			'Surgery Record' => array(
+				'/obstetrical/surgery_list' =>'list',
+				'/obstetrical/surgery_edit' =>'edit',
+				),
+				/*
 			'report_stats报告统计' =>array(
 				'/patient/report_stats_list ' =>'list报告统计',
 				),
+				*/
+
 				
 		),
 		

@@ -4,10 +4,10 @@
 <title>后台管理</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/css/admin.css";?>" />
-<script charset="UTF-8" src="/iwebshop/runtime/systemjs/jquery-1.4.4.min.js"></script>
-<script charset="UTF-8" src="/iwebshop/runtime/systemjs/artdialog/artDialog.min.js"></script>
-<script charset="UTF-8" src="/iwebshop/runtime/systemjs/form.js"></script>
-<link rel="stylesheet" type="text/css" href="/iwebshop/runtime/systemjs/autovalidate/style.css"/><script charset="UTF-8" src="/iwebshop/runtime/systemjs/autovalidate/validate.js"></script>
+<script charset="UTF-8" src="/board/runtime/systemjs/jquery-1.4.4.min.js"></script>
+<script charset="UTF-8" src="/board/runtime/systemjs/artdialog/artDialog.min.js"></script>
+<script charset="UTF-8" src="/board/runtime/systemjs/form.js"></script>
+<link rel="stylesheet" type="text/css" href="/board/runtime/systemjs/autovalidate/style.css"/><script charset="UTF-8" src="/board/runtime/systemjs/autovalidate/validate.js"></script>
 <script type='text/javascript' src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/javascript/common.js";?>"></script>
 <script type='text/javascript' src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/javascript/admin.js";?>"></script>
 <script type='text/javascript' src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/javascript/menu.js";?>"></script>
@@ -16,7 +16,7 @@
 <div class="container">
 	<div id="header">
 		<div class="logo">
-			<a href="<?php echo IUrl::creatUrl("/system/default");?>"><img src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/logo.gif";?>" width="303" height="43" /></a>
+			<a href="<?php echo IUrl::creatUrl("/system/default");?>"><img src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/bob2_anime.gif";?>" width="70" height="70" /></a>
 		</div>
 		<div id="menu">
 			<ul name="menu">
@@ -87,6 +87,49 @@ function render_data(selector)
 	});
 	
 }
+window.onload = selector_all_ajax;
+
+function selector_all_ajax()
+{
+	$('#selector_all').get(0).selectedIndex = 1;
+	var temp =$('#selector_all').val();
+	//清除原有的数据
+	$('#list_table>tbody').remove();
+	//Ajax获取填充的数据
+	var html="";
+	var i=0;
+	$.ajax({
+		type: "POST",
+		url : "<?php echo IUrl::creatUrl("/hospital/providers_list_data");?>",
+		data: "id="+temp,
+		dataType: "json",
+		success: function(data){
+			if(data)
+			{
+				//循环写出表格
+				for(i=0;i< data.length;i++)
+				{
+					html +="<tr>"+
+					"<td><input type='checkbox' name='id[]' value="+data[i].id+" /></td>"+
+					"<td>"+data[i].admin_name+"</td>"+
+					"<td>"+data[i].name+"</td>"+
+					"<td>"+data[i].hospital_name_en+"</td>"+
+					"<td>"+
+					 "<a href='<?php echo IUrl::creatUrl("/hospital/providers_edit/id/");?>"+data[i].id+"'><img class=\"operator\" src=\"<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_edit.gif";?>\" alt=\"编辑\" title=\"编辑\" /></a>"+
+					 "<a href='javascript:void(0)' onclick=\"delModel({link:'<?php echo IUrl::creatUrl("/hospital/admin_del/id/");?>"+data[i].id+"',msg:'是否删除？'});\""+"><img class='operator' src='<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/icon_del.gif";?>' alt='删除' title='删除' /></a>"+
+					"</td></tr>" ;
+					
+				}
+				$('#list_table').append(html);
+			}
+			else
+			{
+				alert('数据为空');
+			}
+				
+		}
+	});
+}
 </script>
 
 <div class="headbar">
@@ -97,7 +140,7 @@ function render_data(selector)
 		<a href="javascript:void(0)" onclick="delModel();"><button class="operating_btn" type="button"><span class="delete">Delete All</span></button></a>
 		<a>
 		Hospital:
-		<select width='50px' onchange="render_data(this);">
+		<select width='50px' onchange="render_data(this);" id='selector_all'>
 			<option value='-1'>*Please choose one</option>
 			<?php if($this->role_hospital_id == 0){?>
 				<option value='0'>All</option>		

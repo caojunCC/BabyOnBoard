@@ -1,0 +1,135 @@
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:D:\wwwroot\panfeng\wwwroot\board\runtime\obstetrical\obstetrical_basic_edit.php
+errLine:50
+errTime:12-06-03 14:34:38
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:\\wwwroot\\panfeng\\wwwroot/board/runtime\\obstetrical\\obstetrical_basic_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/obstetrical_basic_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:D:\wwwroot\panfeng\wwwroot\board\runtime\obstetrical\obstetrical_basic_edit.php
+errLine:50
+errTime:12-06-03 14:36:00
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:\\wwwroot\\panfeng\\wwwroot/board/runtime\\obstetrical\\obstetrical_basic_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/obstetrical_basic_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: id
+errFile:D:\wwwroot\panfeng\wwwroot\board\runtime\obstetrical\obstetrical_basic_edit.php
+errLine:50
+errTime:12-06-03 14:36:17
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'D:\\wwwroot\\panfeng\\wwwroot/board/runtime\\obstetrical\\obstetrical_basic_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/obstetrical_basic_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>

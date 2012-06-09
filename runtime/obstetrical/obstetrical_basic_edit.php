@@ -4,10 +4,10 @@
 <title>后台管理</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/css/admin.css";?>" />
-<script charset="UTF-8" src="/iwebshop/runtime/systemjs/jquery-1.4.4.min.js"></script>
-<script charset="UTF-8" src="/iwebshop/runtime/systemjs/artdialog/artDialog.min.js"></script>
-<script charset="UTF-8" src="/iwebshop/runtime/systemjs/form.js"></script>
-<link rel="stylesheet" type="text/css" href="/iwebshop/runtime/systemjs/autovalidate/style.css"/><script charset="UTF-8" src="/iwebshop/runtime/systemjs/autovalidate/validate.js"></script>
+<script charset="UTF-8" src="/board/runtime/systemjs/jquery-1.4.4.min.js"></script>
+<script charset="UTF-8" src="/board/runtime/systemjs/artdialog/artDialog.min.js"></script>
+<script charset="UTF-8" src="/board/runtime/systemjs/form.js"></script>
+<link rel="stylesheet" type="text/css" href="/board/runtime/systemjs/autovalidate/style.css"/><script charset="UTF-8" src="/board/runtime/systemjs/autovalidate/validate.js"></script>
 <script type='text/javascript' src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/javascript/common.js";?>"></script>
 <script type='text/javascript' src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/javascript/admin.js";?>"></script>
 <script type='text/javascript' src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/javascript/menu.js";?>"></script>
@@ -16,7 +16,7 @@
 <div class="container">
 	<div id="header">
 		<div class="logo">
-			<a href="<?php echo IUrl::creatUrl("/system/default");?>"><img src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/logo.gif";?>" width="303" height="43" /></a>
+			<a href="<?php echo IUrl::creatUrl("/system/default");?>"><img src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/bob2_anime.gif";?>" width="70" height="70" /></a>
 		</div>
 		<div id="menu">
 			<ul name="menu">
@@ -58,13 +58,13 @@
 				<col />
 				<input type='hidden' name='id' value="<?php echo isset($id)?$id:"";?>" />
 					<tr>
-					<th>Obstetrical Name：</th>
+					<th>Obstetrical Name姓名：</th>
 					<td>
 						<input class="normal" name="name" type="text" value="<?php echo isset($name)?$name:"";?>" pattern="required" alt="Name can not be empty" />*English
 					</td>
 				</tr>
 				<tr>
-					<th>Hospital：</th>
+					<th>Hospital#住院号：</th>
 					<td >
 					<p style='margin-top:15px;'>
 						<input class="normal" name="hospital" type="text" value="<?php echo isset($hospital)?$hospital:"";?>" pattern="required" alt="Adress can not be empty" />*Number
@@ -73,20 +73,17 @@
 				</tr>
 				
 				<tr>
-					<th>Date：</th>
+					<th>Date日期：</th>
 					<td >
 						<input class="small" name="date" id="date" type="text" value="<?php echo isset($date)?$date:"";?>" pattern="required" readonly="readonly" onclick="MyCalendar.SetDate(this);" alt="Time can not be empty" />
 					</td>
 				</tr>
 				<tr>
-					<th>Hospital：</th>
+					<th>Hospital所属医院：</th>
 					<td>
 						<select class='normal' id='hospital_id' name='hospital_id' pattern='required' alt='请选择一个医院' >
 							<option value=''>Please Choose</option>
-							<?php if($this->role_hospital_id ==0){?>
-							<option value='0'>All Hospital</option>
-							<?php }?>
-							<?php foreach($this->role_hospital_data as $key => $item){?>
+							<?php $query = new IQuery("hospital_detail");$items = $query->find(); foreach($items as $key => $item){?>
 								<option value='<?php echo isset($item['id'])?$item['id']:"";?>' ><?php echo isset($item['hospital_name_en'])?$item['hospital_name_en']:"";?></option>
 							<?php }?>
 						</select>

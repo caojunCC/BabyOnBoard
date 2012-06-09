@@ -81,6 +81,7 @@ class Obstetrical extends IController
 	{
 		$this->redirect('admission_list');
 	}
+	
 	function admission_edit()
 	{
 		$id = IReq::get('id');
@@ -90,6 +91,13 @@ class Obstetrical extends IController
 			$where ='id= '.$id;		
 			$data = array();
 			$data = $admission_Obj->getObj($where);
+			//处理pre_sympton
+			$pre = $data['pre_sympton'];
+			$array = Util::removeSeparator($pre,-1);
+			$select=explode(',', $pre);
+			$this->all_pre_sympton =$select;
+			
+			
 			$this->setRenderData($data);
 			$this->redirect('admission_edit');
 		}
@@ -100,6 +108,31 @@ class Obstetrical extends IController
 		}
 	}
 	
+	//anesthesia surgery
+	function surgery_list()
+	{
+		$this->redirect('surgery_list');
+	}
+	
+	function surgery_edit()
+	{
+		$id = IReq::get('id');
+		if($id)
+		{
+			$admission_Obj = new IModel('surgery_view');
+			$where ='id= '.$id;		
+			$data = array();
+			$data = $admission_Obj->getObj($where);
+					
+			$this->setRenderData($data);
+			$this->redirect('surgery_edit');
+		}
+		else 
+		{
+			$this->redirect('surgery_list',false);
+			Util::showMessage('Please choose a person');
+		}
+	}
 }
 
 ?>

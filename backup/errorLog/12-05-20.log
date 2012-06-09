@@ -1,0 +1,4643 @@
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: form_where
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:202
+errTime:12-05-20 12:08:52
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '0',
+  'fasting_status_last_solid' => '',
+  'fasting_status_last_liquid' => '',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: form_where
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:203
+errTime:12-05-20 12:08:52
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '0',
+  'fasting_status_last_solid' => '',
+  'fasting_status_last_liquid' => '',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: form_where
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:204
+errTime:12-05-20 12:08:52
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '0',
+  'fasting_status_last_solid' => '',
+  'fasting_status_last_liquid' => '',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: form_where
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:205
+errTime:12-05-20 12:08:52
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '0',
+  'fasting_status_last_solid' => '',
+  'fasting_status_last_liquid' => '',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: form_where
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:202
+errTime:12-05-20 12:09:15
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => '',
+  'fasting_status_last_liquid' => '',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: form_where
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:203
+errTime:12-05-20 12:09:15
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => '',
+  'fasting_status_last_liquid' => '',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: form_where
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:204
+errTime:12-05-20 12:09:15
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => '',
+  'fasting_status_last_liquid' => '',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: form_where
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:205
+errTime:12-05-20 12:09:15
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => '',
+  'fasting_status_last_liquid' => '',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:190
+errTime:12-05-20 12:24:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:191
+errTime:12-05-20 12:24:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:192
+errTime:12-05-20 12:24:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:193
+errTime:12-05-20 12:24:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:197
+errTime:12-05-20 12:24:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:198
+errTime:12-05-20 12:24:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:199
+errTime:12-05-20 12:24:20
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:190
+errTime:12-05-20 13:42:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:191
+errTime:12-05-20 13:42:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:192
+errTime:12-05-20 13:42:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:193
+errTime:12-05-20 13:42:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:197
+errTime:12-05-20 13:42:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:198
+errTime:12-05-20 13:42:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:199
+errTime:12-05-20 13:42:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:190
+errTime:12-05-20 13:50:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:191
+errTime:12-05-20 13:50:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:192
+errTime:12-05-20 13:50:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:193
+errTime:12-05-20 13:50:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:197
+errTime:12-05-20 13:50:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:198
+errTime:12-05-20 13:50:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:199
+errTime:12-05-20 13:50:36
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:190
+errTime:12-05-20 13:51:46
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:191
+errTime:12-05-20 13:51:46
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:192
+errTime:12-05-20 13:51:46
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:193
+errTime:12-05-20 13:51:46
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:197
+errTime:12-05-20 13:51:46
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:198
+errTime:12-05-20 13:51:46
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:199
+errTime:12-05-20 13:51:46
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:190
+errTime:12-05-20 13:53:19
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:191
+errTime:12-05-20 13:53:19
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:192
+errTime:12-05-20 13:53:19
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: uterus
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:193
+errTime:12-05-20 13:53:19
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:197
+errTime:12-05-20 13:53:19
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:198
+errTime:12-05-20 13:53:19
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: fetal_movement
+errFile:E:\wamp\www\iwebshop\runtime\obstetrical\surgery_edit.php
+errLine:199
+errTime:12-05-20 13:53:19
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\obstetrical\\surgery_edit.php',
+  'data' => NULL,
+  'id' => '1',
+  'name' => 'zhangfan',
+  'date' => '2012-05-10',
+  'hospital_id' => '1',
+  'hospital' => '20',
+  'pregnacy_description' => 'panfeng0',
+  'pre_anesthesia' => 'panfeng2',
+  'anesthetic_plan' => 'asdfasdf',
+  'obstetrical_plan' => 'asdfasdf',
+  'obsterian' => 'asdf',
+  'anesthesiologist' => 'asdf',
+  'sign_date' => '2012-05-01',
+  'sign_time' => '00:00:00',
+  'ega_by_us' => '3',
+  'current_medication' => 'panfeng1',
+  'medical_surgical_hx' => 'panfeng3',
+  'allergies' => 'panfeng4',
+  'review_cardovascular' => 'asdfasd',
+  'review_respiratory' => 'asdfasdf',
+  'review_gi_hepatic' => 'asdfasdf',
+  'review_renal' => 'asdf',
+  'review_newuro' => 'asdf',
+  'review_hemotology' => 'asdf',
+  'review_laboratory' => 'asdfasdf',
+  'review_liver' => 'sadf',
+  'review_chmistries' => 'asdf',
+  'hx_smocking' => 'asdf',
+  'hx_alcohol_use' => 'panfeng0',
+  'hx_substance_use' => 'panfeng1',
+  'hx_social_situation' => 'panfeng2',
+  'airway_tnj' => 'asdf',
+  'airway_neck_full_rom' => 'asdf',
+  'airway_hm_distance' => 'asdf',
+  'airway_dental' => 'asdf',
+  'airway_path' => 'asdfa',
+  'physical_examination_heart' => '1',
+  'physical_examination_lungs' => '453',
+  'Obtestrical_dx' => '',
+  'asa_physical_statues' => '1',
+  'fasting_status_last_solid' => 'asdf',
+  'fasting_status_last_liquid' => 'asdf',
+  'physical_examination_bp' => '1501',
+  'physical_examination_hr' => '010',
+  'physical_examination_rr' => '10',
+  'physical_examination_sao2' => '10',
+  'physical_examination_t' => '10',
+  'physical_examination_ht' => '10',
+  'physical_examination_wt' => '010',
+  'gracida' => '5',
+  'living' => '4',
+  'lmp' => '156',
+  'status' => '1',
+  'blood_type' => 'A',
+  'antibody' => 'ALL',
+  'rubella' => '1',
+  'hbsag' => '1',
+  'vdrl' => '1',
+  'vdrl_date' => '2012-05-10',
+  'gbbs' => '20',
+  'hiv' => '1',
+  'ppd' => '1',
+  'cxr' => '1',
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/obstetrical/surgery_edit',
+     'vcurrent' => '/obstetrical/',
+  )),
+)
+-------</pre>

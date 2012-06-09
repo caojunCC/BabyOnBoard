@@ -109,7 +109,9 @@ class Modify extends IController
 			$where = 'basic_id ='.$basic_id;
 			$Obj = new IModel('admission_complaint');
 			$dataarray= array(
-				'pre_sympton' => $pre_sympton
+				'pre_sympton' => $pre_sympton,
+				'other' =>IReq::get('other'),
+				'scheduled_provedure' =>IReq::get('scheduled_provedure')
 				);
 			$Obj->setData($dataarray);
 			$Obj->update($where);
@@ -142,7 +144,9 @@ class Modify extends IController
 			$Obj = new IModel('admission_complaint');
 			$dataarray= array(
 				'basic_id' =>IReq::get('basic_id'),
-				'pre_sympton' => $pre_sympton
+				'pre_sympton' => $pre_sympton,
+				'other' =>IReq::get('other'),
+				'scheduled_provedure' =>IReq::get('scheduled_provedure')
 				);
 			$Obj->setData($dataarray);
 			$Obj->add();	
@@ -409,9 +413,10 @@ class Modify extends IController
 				'basic_id' => IReq:: get('basic_id')
 				);
 			$dataarray1= array(
+				'is_research_sudies' => IReq:: get('is_research_sudies'),
 				'research_sudies' => IReq:: get('research_sudies'),
 				'ambulation_em_off' =>IReq::get('ambulation_em_off'),
-				'ambulation_em_off' => IReq:: get('ambulation_em_off'),
+				'ambulation_walking_for' => IReq:: get('ambulation_walking_for'),
 				'disposition_date' =>IReq::get('disposition_date'),
 				'disposition_admitted' => IReq:: get('disposition_admitted'),
 				'disposition_via' =>IReq::get('disposition_via'),
@@ -451,5 +456,338 @@ class Modify extends IController
 		$url = IUrl::creatUrl("/obstetrical/admission_edit/id/").$basic_id;
 		header('Location:'.$url);
 	}
+
+	
+	//surgery_illness_edit
+	public function surgery_illness_edit()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		if($id)
+		{
+			$where = 'basic_id ='.$id;
+			$Obj = new IModel('admission_ob_physical_info');
+			$dataRow = $Obj->getObj($where,'gracida,living');
+			$Obj2 = new IModel('admission_ultrasound_other');
+			$dataRow2 = $Obj2->getObj($where,'ega_by_us');
+			$Obj3 = new IModel('admission_current_info');
+			$dataRow3 = $Obj3->getObj($where,'current_medication,medical_surgical_hx,allergies');
+			
+			$Obj1 = new IModel('surgery_illness');
+			$dataRow1 = $Obj1->getObj($where);	
+			if(!empty($dataRow) )
+			{
+				$this->setRenderData($dataRow);
+			}
+			if(!empty($dataRow1) )
+			{
+				$this->setRenderData($dataRow1);
+			}
+			if(!empty($dataRow2) )
+			{
+				$this->setRenderData($dataRow2);
+			}
+			if(!empty($dataRow3) )
+			{
+				$this->setRenderData($dataRow3);
+			}
+		}
+		$this->redirect('surgery_illness_edit');
+	}
+	
+	
+	public function surgery_illness_edit_act()
+	{
+		$id = IReq::get('id');
+		$basic_id = IReq::get('basic_id');
+		$dataarray= array(
+				'gracida' => IReq:: get('gracida'),
+				'living' => IReq:: get('living'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+		$dataarray1= array(
+				'ega_by_us' => IReq:: get('ega_by_us'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+		$dataarray2= array(
+				'current_medication' => IReq:: get('current_medication'),
+				'medical_surgical_hx' => IReq:: get('medical_surgical_hx'),
+				'allergies' => IReq:: get('allergies'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+		$dataarray3= array(
+				'pregnacy_description' => IReq:: get('pregnacy_description'),
+				'pre_anesthesia' => IReq:: get('pre_anesthesia'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+		$Obj = new IModel('admission_ob_physical_info');
+		$Obj1 = new IModel('admission_ultrasound_other');
+		$Obj2 = new IModel('admission_current_info');
+		$Obj3 = new IModel('surgery_illness');
+		$where ='basic_id ='.$basic_id;
+		$is_in = $Obj ->getObj($where);
+		$is_in1 = $Obj1 ->getObj($where);
+		$is_in2 = $Obj2 ->getObj($where);
+		$is_in3 = $Obj3 ->getObj($where);
+		
+		$Obj->setData($dataarray);
+		$Obj1->setData($dataarray1);
+		$Obj2->setData($dataarray2);
+		$Obj3->setData($dataarray3);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		if(!empty($is_in1))
+		{	
+			$Obj1->update($where);	
+		}
+		else 
+		{
+			$Obj1->add();	
+		}
+		if(!empty($is_in2))
+		{	
+			$Obj2->update($where);	
+		}
+		else 
+		{
+			$Obj2->add();	
+		}
+		if(!empty($is_in3))
+		{	
+			$Obj3->update($where);	
+		}
+		else 
+		{
+			$Obj3->add();	
+		}
+		$url = IUrl::creatUrl("/obstetrical/surgery_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	//surgery_system_review
+
+	public function surgery_system_review()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		if($id)
+		{
+			$where = 'basic_id ='.$id;
+			$Obj = new IModel('surgery_system_review');
+			$Obj1 = new IModel('admission_ob_physical_info');
+			$dataRow1 = $Obj1->getObj($where,'lmp');
+			$dataRow = $Obj->getObj($where);
+			if(!empty($dataRow))
+			{
+				$this->setRenderData($dataRow);
+			}
+			if(!empty($dataRow1))
+			{
+				$this->setRenderData($dataRow1);
+			}
+		}
+		$this->redirect('surgery_system_review');
+	}
+	
+	
+	public function surgery_system_review_act()
+	{
+		$id = IReq::get('id');
+		$basic_id = IReq::get('basic_id');
+		$dataarray= array(
+				'review_cardovascular' => IReq:: get('review_cardovascular'),
+				'review_respiratory' => IReq:: get('review_respiratory'),
+				'review_gi_hepatic' => IReq:: get('review_gi_hepatic'),
+				'review_renal' => IReq:: get('review_renal'),
+				'review_newuro' => IReq:: get('review_newuro'),
+				'review_hemotology' => IReq:: get('review_hemotology'),
+				'review_laboratory' => IReq:: get('review_laboratory'),
+				'review_liver' => IReq:: get('review_liver'),
+				'review_chmistries' => IReq:: get('review_chmistries'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+		$dataarray1= array(
+				'lmp' => IReq:: get('lmp'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+		$Obj = new IModel('surgery_system_review');
+		$Obj1 = new IModel('admission_ob_physical_info');
+		$where ='basic_id ='.$basic_id;
+		$is_in = $Obj ->getObj($where);
+		$is_in1 = $Obj1 ->getObj($where);
+		
+		$Obj->setData($dataarray);
+		$Obj1->setData($dataarray1);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		if(!empty($is_in1))
+		{	
+			$Obj1->update($where);	
+		}
+		else 
+		{
+			$Obj1->add();	
+		}
+		$url = IUrl::creatUrl("/obstetrical/surgery_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	//surgery_hx_all
+	public function surgery_hx_all()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		if($id)
+		{
+			$where = 'basic_id ='.$id;
+			$Obj = new IModel('surgery_hx_all');
+			$Obj1 = new IModel('admission_ob_assessment');
+			$dataRow1 = $Obj1->getObj($where);
+			$dataRow = $Obj->getObj($where);
+			if(!empty($dataRow))
+			{
+				$this->setRenderData($dataRow);
+			}
+			if(!empty($dataRow1))
+			{
+				$this->setRenderData($dataRow1);
+			}
+		}
+		$this->redirect('surgery_hx_all');
+	}
+	
+	
+	public function surgery_hx_all_act()
+	{
+		$id = IReq::get('id');
+		$basic_id = IReq::get('basic_id');
+		$dataarray= array(
+				'hx_smocking' => IReq:: get('hx_smocking'),
+				'hx_alcohol_use' => IReq:: get('hx_alcohol_use'),
+				'hx_substance_use' => IReq:: get('hx_substance_use'),
+				'hx_social_situation' => IReq:: get('hx_social_situation'),
+				'airway_tnj' => IReq:: get('airway_tnj'),
+				'airway_neck_full_rom' => IReq:: get('airway_neck_full_rom'),
+				'airway_hm_distance' => IReq:: get('airway_hm_distance'),
+				'airway_dental' => IReq:: get('airway_dental'),
+				'airway_path' => IReq:: get('airway_path'),
+
+				'physical_examination_heart' => IReq:: get('physical_examination_heart'),
+				'physical_examination_lungs' => IReq:: get('physical_examination_lungs'),
+				'Obtestrical_dx' => IReq:: get('Obtestrical_dx'),
+				'asa_physical_statues' => IReq:: get('asa_physical_statues'),
+				'fasting_status_last_solid' => IReq:: get('fasting_status_last_solid'),
+				'fasting_status_last_liquid' => IReq:: get('fasting_status_last_liquid'),
+				'physical_examination_bp' => IReq:: get('physical_examination_bp'),
+				'physical_examination_hr' => IReq:: get('physical_examination_hr'),
+				'physical_examination_rr' => IReq:: get('physical_examination_rr'),
+		
+				'physical_examination_sao2' => IReq:: get('physical_examination_sao2'),
+				'physical_examination_t' => IReq:: get('physical_examination_t'),
+				'physical_examination_ht' => IReq:: get('physical_examination_ht'),
+				'physical_examination_wt' => IReq:: get('physical_examination_wt'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+				
+		$dataarray1= array(
+			'uterus' => IReq:: get('uterus'),
+			'contraction' => IReq:: get('contraction'),
+			'contruction_date' => IReq:: get('contruction_date'),
+			'fetal_movement' => IReq:: get('fetal_movement'),
+			'fetal_date' => IReq:: get('fetal_date'),
+			'membranes' => IReq:: get('membranes'),
+			'membranes_date' => IReq:: get('membranes_date'),
+			'recent_intercourse' => IReq:: get('recent_intercourse'),
+			's_p' => IReq:: get('s_p'),
+			'basic_id' => IReq:: get('basic_id')
+			);
+			
+		$Obj = new IModel('surgery_hx_all');
+		$Obj1 = new IModel('admission_ob_assessment');
+		$where ='basic_id ='.$basic_id;
+		$is_in = $Obj ->getObj($where);
+		$is_in1 = $Obj1 ->getObj($where);
+		
+		$Obj->setData($dataarray);
+		$Obj1->setData($dataarray1);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		if(!empty($is_in1))
+		{	
+			$Obj1->update($where);	
+		}
+		else 
+		{
+			$Obj1->add();	
+		}
+		$url = IUrl::creatUrl("/obstetrical/surgery_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	//surgery_plan_all
+	public function surgery_plan_all()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		if($id)
+		{
+			$where = 'basic_id ='.$id;
+			$Obj = new IModel('surgery_plan');
+			$dataRow = $Obj->getObj($where);
+			if(!empty($dataRow))
+			{
+				$this->setRenderData($dataRow);
+			}
+		}
+		$this->redirect('surgery_plan_all');
+	}
+	
+	
+	public function surgery_plan_all_act()
+	{
+		$id = IReq::get('id');
+		$basic_id = IReq::get('basic_id');
+		$dataarray= array(
+				'anesthetic_plan' => IReq:: get('anesthetic_plan'),
+				'obstetrical_plan' => IReq:: get('obstetrical_plan'),
+				'obsterian' => IReq:: get('obsterian'),
+				'anesthesiologist' => IReq:: get('anesthesiologist'),
+				'sign_date' => IReq:: get('sign_date'),
+				'sign_time' => IReq:: get('sign_time'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+
+		$Obj = new IModel('surgery_plan');
+		$where ='basic_id ='.$basic_id;
+		$is_in = $Obj ->getObj($where);
+		
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		$url = IUrl::creatUrl("/obstetrical/surgery_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
 }
+
 ?>

@@ -1,0 +1,1560 @@
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: nkda
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:17
+errTime:12-05-17 13:59:46
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: nkda
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:17
+errTime:12-05-17 14:00:05
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_intact
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:17
+errTime:12-05-17 14:12:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:21
+errTime:12-05-17 14:12:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:22
+errTime:12-05-17 14:12:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:26
+errTime:12-05-17 14:12:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:27
+errTime:12-05-17 14:12:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:31
+errTime:12-05-17 14:12:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:32
+errTime:12-05-17 14:12:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_labs_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:35
+errTime:12-05-17 14:12:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_urine_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:36
+errTime:12-05-17 14:12:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_cultures_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:39
+errTime:12-05-17 14:12:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_other
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:40
+errTime:12-05-17 14:12:06
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_intact
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:17
+errTime:12-05-17 14:13:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:21
+errTime:12-05-17 14:13:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:22
+errTime:12-05-17 14:13:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:26
+errTime:12-05-17 14:13:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:27
+errTime:12-05-17 14:13:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:31
+errTime:12-05-17 14:13:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:32
+errTime:12-05-17 14:13:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_labs_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:35
+errTime:12-05-17 14:13:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_urine_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:36
+errTime:12-05-17 14:13:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_cultures_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:39
+errTime:12-05-17 14:13:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_other
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:40
+errTime:12-05-17 14:13:40
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_intact
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:17
+errTime:12-05-17 14:14:30
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:21
+errTime:12-05-17 14:14:30
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:22
+errTime:12-05-17 14:14:30
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:26
+errTime:12-05-17 14:14:30
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:27
+errTime:12-05-17 14:14:30
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:31
+errTime:12-05-17 14:14:30
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:32
+errTime:12-05-17 14:14:30
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_labs_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:35
+errTime:12-05-17 14:14:30
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_urine_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:36
+errTime:12-05-17 14:14:30
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_cultures_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:39
+errTime:12-05-17 14:14:30
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_other
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:40
+errTime:12-05-17 14:14:30
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_intact
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:17
+errTime:12-05-17 14:15:26
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:21
+errTime:12-05-17 14:15:26
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:22
+errTime:12-05-17 14:15:26
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:26
+errTime:12-05-17 14:15:26
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:27
+errTime:12-05-17 14:15:26
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:31
+errTime:12-05-17 14:15:26
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:32
+errTime:12-05-17 14:15:26
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_labs_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:35
+errTime:12-05-17 14:15:26
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_urine_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:36
+errTime:12-05-17 14:15:26
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_cultures_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:39
+errTime:12-05-17 14:15:26
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_other
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:40
+errTime:12-05-17 14:15:26
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_intact
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:17
+errTime:12-05-17 14:17:16
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:21
+errTime:12-05-17 14:17:16
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:22
+errTime:12-05-17 14:17:16
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:26
+errTime:12-05-17 14:17:16
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:27
+errTime:12-05-17 14:17:16
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:31
+errTime:12-05-17 14:17:16
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:32
+errTime:12-05-17 14:17:16
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_labs_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:35
+errTime:12-05-17 14:17:16
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_urine_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:36
+errTime:12-05-17 14:17:16
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_cultures_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:39
+errTime:12-05-17 14:17:16
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_other
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:40
+errTime:12-05-17 14:17:16
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_intact
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:17
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:21
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:22
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:26
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:27
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:31
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:32
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_labs_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:35
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_urine_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:36
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_cultures_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:39
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_other
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:40
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: is_research_sudies
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:62
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: is_research_sudies
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:63
+errTime:12-05-17 14:26:18
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_intact
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:17
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:21
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_ferning
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:22
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:26
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_nitrazine
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:27
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:31
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_pooling
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:32
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_labs_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:35
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_urine_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:36
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_cultures_sent
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:39
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: sse_is_other
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:40
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: is_research_sudies
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:62
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: is_research_sudies
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:63
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: disposition_via
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:80
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: disposition_via
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:81
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: disposition_via
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:82
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: ida
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:84
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: clinical_nutrition_consult
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:85
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: home_with_instruction
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:86
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: verbalizes_understand
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:87
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: discharge_ama
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:88
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: social_work_center_consult
+errFile:E:\wamp\www\iwebshop\runtime\modify\admission_procedures.php
+errLine:89
+errTime:12-05-17 14:57:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\modify\\admission_procedures.php',
+  'data' => NULL,
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select count(*) as total from dbclass_amniot_type as at     
+ -- Table 'dbclass.dbclass_amniot_type' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:55   	File:IWEB_PATH/core\paging_class.php
+	Func:setSql         	Class:IPaging        	Type:->   	Line:41   	File:IWEB_PATH/core\paging_class.php
+	Func:__construct    	Class:IPaging        	Type:->   	Line:121  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:95   	File:E:\wamp\www\iwebshop\runtime\mastercode\amniotic_types_list.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:414  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:redirect       	Class:IController    	Type:->   	Line:457  	File:E:\wamp\www\iwebshop\controllers\mastercode.php
+	Func:amniotic_types_list	Class:Mastercode     	Type:->   	Line:24   	File:IWEB_PATH/web\action\inline_action.php
+	Func:run            	Class:IInlineAction  	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: is_bold
+errFile:E:\wamp\www\iwebshop\runtime\mastercode\amniotic_types_edit.php
+errLine:128
+errTime:12-05-17 16:34:31
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\mastercode\\amniotic_types_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/mastercode/amniotic_types_edit',
+     'vcurrent' => '/mastercode/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>------
+errID:8
+errStr:Undefined variable: is_bold
+errFile:E:\wamp\www\iwebshop\runtime\mastercode\amniotic_types_edit.php
+errLine:128
+errTime:12-05-17 16:42:42
+##出错时变量的值：##
+array (
+  '__runtimeFile' => 'E:/wamp/www/iwebshop/runtime\\mastercode\\amniotic_types_edit.php',
+  'data' => NULL,
+  'admin_id' => '1',
+  'query' => 
+  IQuery::__set_state(array(
+     'dbo' => 
+    IMysql::__set_state(array(
+       'linkRes' => NULL,
+    )),
+     'sql' => 
+    array (
+      'table' => 'dbclass_quick_naviga',
+      'fields' => '*',
+      'where' => 'where adminid = 1 and is_del = 0',
+      'join' => '',
+      'group' => '',
+      'having' => '',
+      'order' => '',
+      'limit' => 'limit 500',
+      'distinct' => '',
+    ),
+     'paging' => NULL,
+     'tablePre' => 'dbclass_',
+  )),
+  'items' => 
+  array (
+  ),
+  'menu' => 
+  Menu::__set_state(array(
+     'current' => '/mastercode/amniotic_types_edit',
+     'vcurrent' => '/mastercode/',
+  )),
+)
+-------</pre>
+
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>
+
+
+<pre>----------
+Mess: select  sum(order_amount) as amount from dbclass_order  where `status` = 5    limit 500
+ -- Table 'dbclass.dbclass_order' doesn't exist
+Line: 89
+File: IWEB_PATH/db\driver\mysql_class.php
+##Debug_backtrace:##
+	Func:read           	Class:IMysql         	Type:->   	Line:59   	File:IWEB_PATH/db\driver\mysql_class.php
+	Func:doSql          	Class:IMysql         	Type:->   	Line:87   	File:IWEB_PATH/db\db_class.php
+	Func:query          	Class:IDB            	Type:->   	Line:128  	File:IWEB_PATH/core\query_class.php
+	Func:find           	Class:IQuery         	Type:->   	Line:67   	File:E:\wamp\www\iwebshop\runtime\system\default.php
+	Func:require        	Class:               	Type:     	Line:116  	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:requireFile    	Class:IControllerBase	Type:->   	Line:82   	File:IWEB_PATH/web\controller\controllerbase_class.php
+	Func:renderView     	Class:IControllerBase	Type:->   	Line:265  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:render         	Class:IController    	Type:->   	Line:46   	File:IWEB_PATH/web\action\view_action.php
+	Func:run            	Class:IViewAction    	Type:->   	Line:200  	File:IWEB_PATH/web\controller\controller_class.php
+	Func:run            	Class:IController    	Type:->   	Line:29   	File:IWEB_PATH/core\webapplication_class.php
+	Func:execRequest    	Class:IWebApplication	Type:->   	Line:150  	File:IWEB_PATH/core\application_class.php
+	Func:run            	Class:IApplication   	Type:->   	Line:5    	File:E:\wamp\www\iwebshop\index.php
+------------</pre>

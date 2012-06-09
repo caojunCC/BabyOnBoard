@@ -5,14 +5,14 @@
 <title>管理后台登录</title>
 <link rel="stylesheet" href="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/css/admin.css";?>" />
 <script type="text/javascript" src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/javascript/common.js";?>"></script>
-<script charset="UTF-8" src="/iwebshop/runtime/systemjs/jquery-1.4.4.min.js"></script>
-<script charset="UTF-8" src="/iwebshop/runtime/systemjs/artdialog/artDialog.min.js"></script>
+<script charset="UTF-8" src="/board/runtime/systemjs/jquery-1.4.4.min.js"></script>
+<script charset="UTF-8" src="/board/runtime/systemjs/artdialog/artDialog.min.js"></script>
 </head>
 <body id="login">
 	<div class="container">
 		<div id="header">
 			<div class="logo">
-				<a href="#"><img src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/admin/logo.gif";?>" width="303" height="43" /></a>
+				<a href="#"><img src="<?php echo IUrl::creatUrl("")."views/".$this->theme."/skin/".$this->skin."/images/bob2_anime.gif";?>" width="70" height="70" /></a>
 			</div>
 		</div>
 		<div id="wrapper" class="clearfix">
@@ -44,7 +44,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="footer">Power by iWebshop 聚易信息技术有限公司 Copyright &copy; 2005-2011</div>
+		<div id="footer"></div>
 	</div>
 </body>
 </html>

@@ -11,39 +11,85 @@
 					Size针号<input type="text" class='small' name="iv_start_size" value="{$iv_start_size}"></p>
 					<p>Fluid 液体type/Rate种类/滴速<input type="text" class='small' name="fluid_type_rate" value="{$fluid_type_rate}">
 					Glucose血糖<input type="text" class='small' name="fluid_glucose" value="{$fluid_glucose}"></p>
-					<p>SSE:Examiner检查人<input type="text" class='small' name="fluid_glucose" value="{$fluid_glucose}">
-					Date/Time时间<input type="text" class='small' name="initial_date" value="{$initial_date}"   onclick="MyCalendar.SetDate(this)" ></p>
-					<p><input type="checkbox" name='nkda' {if:$nkda==1}checked{/if} value='1'>Intact完整
-					<input type="checkbox" value="">ROM Color破膜羊水颜色________</p>
-					<p>Ferning羊齿状结晶：<input type="checkbox" value="">Absent阴性<input type="checkbox" value="">Present阳性</p>
-					<p>Nitrazine石蕊试纸：<input type="checkbox" value="">Absent阴性<input type="checkbox" value="">Present阳性(碱性)</p>
-					<p>Pooling羊水池：<input type="checkbox" value="">Absent阴性<input type="checkbox" value="">Present阳性</p>
-					<p><input type="checkbox" value="">Labs Sent送血检________<input type="checkbox" value="">Urine sent送尿检______</p>
-					<p><input type="checkbox" value="">Cultures sent送培养_______<input type="checkbox" value="">Other其他_______</p>
-					<p>URINALYSIS尿常规：S-Gravity比重_______Color颜色_______</p>
-					<p>Apprnce外观______Leuko白细胞_____Heme尿红素_____</p>
-					<p>Glucose糖______Ketones酮______Proein蛋白_______</p>		
+					<p>SSE:Examiner检查人<input type="text" class='small' name="sse_examiner" value="{$sse_examiner}">
+					Date/Time时间<input type="text" class='small' name="sse_date_time" value="{$sse_date_time}"   onclick="MyCalendar.SetDate(this)" ></p>
+					<p>
+					<input type="checkbox" name='sse_intact' {if:$sse_intact==1}checked{/if} value='1'>Intact完整
+					ROM Color破膜羊水颜色 <input type="text" class='small' name="sse_rom_color" value="{$sse_rom_color}"></p>
+					
+					<p>Ferning羊齿状结晶：
+					 <input type="radio" name="sse_ferning" {if:$sse_ferning==1}checked=true{/if} value="1">Absent阴性
+					 <input type="radio" name="sse_ferning" {if:$sse_ferning==2}checked=true{/if} value="2">Present阳性
+					</p>
+					
+					<p>Nitrazine石蕊试纸：
+					 <input type="radio" name="sse_nitrazine" {if:$sse_nitrazine==1}checked=true{/if} value="1">Absent阴性
+					 <input type="radio" name="sse_nitrazine" {if:$sse_nitrazine==2}checked=true{/if} value="2">Present阳性(碱性)
+					</p>
+					
+					<p>Pooling羊水池：
+					 <input type="radio" name="sse_pooling" {if:$sse_pooling==1}checked=true{/if} value="1">Absent阴性
+					 <input type="radio" name="sse_pooling" {if:$sse_pooling==2}checked=true{/if} value="2">Present阳性
+					</p>
+					<p>
+					 <input type="checkbox" name='sse_is_labs_sent' {if:$sse_is_labs_sent==1}checked{/if} value='1'>Labs Sent送血检 <input type="text" class='small' name="sse_labs_sent" value="{$sse_labs_sent}">
+					  <input type="checkbox" name='sse_is_urine_sent' {if:$sse_is_urine_sent==1}checked{/if} value='1'>Urine sent送尿检 <input type="text" class='small' name="sse_urine_sent" value="{$sse_urine_sent}">
+					</p>
+					<p>
+					 <input type="checkbox" name='sse_is_cultures_sent' {if:$sse_is_cultures_sent==1}checked{/if} value='1'>Cultures sent送培养 <input type="text" class='small' name="sse_cultures_sent" value="{$sse_cultures_sent}">
+					 <input type="checkbox" name='sse_is_other' {if:$sse_is_other==1}checked{/if} value='1'>Other其他 <input type="text" class='small' name="sse_other" value="{$sse_other}">
+					</p>
+					<p>URINALYSIS尿常规：</p>
+					<p>
+					S-Gravity比重 <input type="text" class='small' name="urinalysis_sgravity" value="{$urinalysis_sgravity}">
+					Color颜色 <input type="text" class='small' name="urinalysis_color" value="{$urinalysis_color}">
+					</p>
+					<p>Apprnce外观 <input type="text" class='small' name="urinalysis_apprnce" value="{$urinalysis_apprnce}">
+					Leuko白细胞 <input type="text" class='small' name="urinalysis_leuo" value="{$urinalysis_leuo}">
+					</p>
+					<p>
+					Heme尿红素 <input type="text" class='small' name="urinalysis_heme" value="{$urinalysis_heme}">
+					Glucose糖 <input type="text" class='small' name="urinalysis_glucose" value="{$urinalysis_glucose}">
+					</p>
+					<p>
+					Ketones酮 <input type="text" class='small' name="urinalysis_ketones" value="{$urinalysis_ketones}">
+					Proein蛋白 <input type="text" class='small' name="urinalysis_protein" value="{$urinalysis_protein}">
+					</p>		
 				</td>
 				<td>
 					<p>RESEARCH SUDIES参加研究：</p>
-					<p><input type="checkbox" value="">No 无<input type="checkbox" value="">Yes 有_________</p>
+					<p>
+					 <input type="radio" name="is_research_sudies" {if:$is_research_sudies==1}checked=true{/if} value="1">No 无
+					 <input type="radio" name="is_research_sudies" {if:$is_research_sudies==2}checked=true{/if} value="2">Yes 有 <input type="text" class='small' name="research_sudies" value="{$research_sudies}"></p>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<p>AMBULATION活动</p>
-					<p>EFM off无胎心监护______Walking for 行走_______Hrs小时</p>
-					<p>DISPOSITION 出产房 Date/Time时间_______</p>
-					<p><input type="checkbox" value="">Admitted to 住院病区________</p>
-					<p>via通过：<input type="checkbox" value="">Ambulatory行走<input type="checkbox" value="">Wheelchair轮椅<input type="checkbox" value="">Cart推车</p>
-					<p>Report given to交班给：_________</p>
-					<p><input type="checkbox" value="">ID Band Applied病人手镯<input type="checkbox" value="">Clinical Nutrition Consult营养师会诊</p>
-					<p><input type="checkbox" value="">Home W/Instruction带出院指导回家</p>
-					<p><input type="checkbox" value="">Verbalize Understanding能理解口头交代</p>
-					<p><input type="checkbox" value="">Discharge AMA自动离院</p>
-					<p><input type="checkbox" value="">Social Work/Wellness Center Consult社区服务中心</p>
+					<p>EFM off无胎心监护 <input type="text" class='small' name="ambulation_em_off" value="{$ambulation_em_off}">
+					Walking for 行走 <input type="text" class='small' name="ambulation_walking_for" value="{$ambulation_walking_for}">Hrs小时
+					</p>
+					<p>
+					DISPOSITION 
+					出产房 Date/Time时间<input type="text" class='small' name="disposition_date" value="{$disposition_date}"   onclick="MyCalendar.SetDate(this)" >
+					</p>
+					<p>
+					<input type="checkbox" value="">
+					Admitted to 住院病区 <input type="text" class='small' name="disposition_admitted" value="{$disposition_admitted}"></p>
+					<p>via通过：
+					 <input type="radio" name="disposition_via" {if:$disposition_via==1}checked=true{/if} value="1">Ambulatory行走
+					 <input type="radio" name="disposition_via" {if:$disposition_via==2}checked=true{/if} value="2">Wheelchair轮椅
+					 <input type="radio" name="disposition_via" {if:$disposition_via==3}checked=true{/if} value="3">Cart推车</p>
+					<p>Report given to交班给： <input type="text" class='small' name="disposition_report_given" value="{$disposition_report_given}"></p>
+					<p><input type="checkbox" name='ida' {if:$ida==1}checked{/if} value='1'>ID Band Applied病人手镯
+					<input type="checkbox" name='clinical_nutrition_consult' {if:$clinical_nutrition_consult==1}checked{/if} value='1'>Clinical Nutrition Consult营养师会诊</p>
+					<p><input type="checkbox" name='home_with_instruction' {if:$home_with_instruction==1}checked{/if} value='1'>Home W/Instruction带出院指导回家</p>
+					<p><input type="checkbox" name='verbalizes_understand' {if:$verbalizes_understand==1}checked{/if} value='1'>Verbalize Understanding能理解口头交代</p>
+					<p><input type="checkbox" name='discharge_ama' {if:$discharge_ama==1}checked{/if} value='1'>Discharge AMA自动离院</p>
+					<p><input type="checkbox" name='social_work_center_consult' {if:$social_work_center_consult==1}checked{/if} value='1'>Social Work/Wellness Center Consult社区服务中心</p>
 				</td>
 			</tr>
 	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
 </form>
 </div>

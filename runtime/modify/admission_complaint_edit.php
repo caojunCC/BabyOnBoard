@@ -16,8 +16,8 @@
 						<p><input type="checkbox" id='pre_sympton' name='pre_sympton[]' <?php if(in_array(6,$this->select)){?>checked<?php }?> value="6">Headache头痛</p>
 						<p><input type="checkbox" id='pre_sympton' name='pre_sympton[]' <?php if(in_array(7,$this->select)){?>checked<?php }?> value="7">Nausea/Vomiting恶心/呕吐</p>
 						<p><input type="checkbox" id='pre_sympton' name='pre_sympton[]' <?php if(in_array(8,$this->select)){?>checked<?php }?> value="8">Status Post Fall/MVA摔倒/车祸</p>
-						<p><input type="checkbox" id='pre_sympton' name='pre_sympton[]' <?php if(in_array(9,$this->select)){?>checked<?php }?> value="9">Scheduled Procedure预约操作</p>
-						<p><input type="checkbox" id='pre_sympton' name='pre_sympton[]' <?php if(in_array(10,$this->select)){?>checked<?php }?> value="10">Other其他</p>
+						<p><input type="checkbox" id='pre_sympton' name='pre_sympton[]' <?php if(in_array(9,$this->select)){?>checked<?php }?> value="9">Scheduled Procedure预约操作<input type="text" class='small' name="scheduled_provedure" value="<?php echo isset($scheduled_provedure)?$scheduled_provedure:"";?>"></p>
+						<p><input type="checkbox" id='pre_sympton' name='pre_sympton[]' <?php if(in_array(10,$this->select)){?>checked<?php }?> value="10">Other其他 <input type="text" class='small' name="other" value="<?php echo isset($other)?$other:"";?>"></p>
 			</td>
 			<td>AGE年龄  <input type="text" class='small' name="age" value="<?php echo isset($age)?$age:"";?>"> </td>
 			<td>GRACIDA次孕  <input type="text" class='small' name="gracida" value="<?php echo isset($gracida)?$gracida:"";?>"></td>
