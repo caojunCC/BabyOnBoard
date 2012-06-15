@@ -211,6 +211,14 @@ class Menu
 				'/obstetrical/surgery_list' =>'list',
 				'/obstetrical/surgery_edit' =>'edit',
 				),
+			'Analgesia Record' => array(
+				'/obstetrical/analgesia_list' =>'list',
+				'/obstetrical/analgesia_edit' =>'edit',
+				),
+			'Progress Record' => array(
+				'/obstetrical/progress_list' =>'list',
+				'/obstetrical/progress_edit' =>'edit',
+				),
 				/*
 			'report_stats报告统计' =>array(
 				'/patient/report_stats_list ' =>'list报告统计',

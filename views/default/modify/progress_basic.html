@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+
+<div class="xf-main1">
+<form id="progress_basic" action="{url:/modify/progress_basic_act}"  method="post">
+	<table style="border-collapse:collapse" >
+		<tr>
+		<input type='hidden' name='id' value='{$id}'/>
+		<input type='hidden' name='basic_id' value='{$this->id }'/>
+		<tr>
+			<td>AD DATE<br>入院日期<br><input type="text" id="time" name="time" value="{$detail[time]}"   onclick="MyCalendar.SetDate(this)" ></td>
+			<td>BLOOD TYPE<br>血型<br><input type="text" id="blood_type" name="blood_type" value="{$prenatal[blood_type]}"></td>
+			<td>EDC<br>预产期<br><input type="text" id="edc" name="edc" value="{$physical[edc]}"></td>
+			<td>GESTATION<br>孕周<br><input type="text" id="gestation" name="gestation" value="{$progress[gestation]}"></td>
+			<td>GRAVIDA<br>孕次<br><input type="text" id="gracida" name="gracida" value="{$physical[gracida]}"></td>
+			<td>ALLERGIES过敏/副反应<br><input type="text" id="allergies" name="allergies" value="{$current[allergies]}"></td>
+		</tr>
+		<tr>
+			<td>TERM<br>足月<br><input type="text" id="term" name="term" value="{$physical[term]}"></td>
+			<td>PRETERM<br>早产<br><input type="text" id="preter" name="preter" value="{$physical[preter]}"></td>
+			<td>ABORTIO<br>NS流产<br><input type="text" id="abortions" name="abortions" value="{$progress[abortions]}"></td>
+			<td>LIVING<br>存活<br><input type="text" id="living" name="living" value="{$physical[living]}"></td>
+			<td>BOM 羊膜囊<br>
+				<input type="radio" id="bom" name="bom" {if:$progress[bom] ==1}checked=true{/if} value="1">INTACT完整<br>
+				<input type="radio" id="bom" name="bom" {if:$progress[bom] ==2}checked=true{/if} value="2">SROM自然破<br>
+				<input type="radio" id="bom" name="bom" {if:$progress[bom] ==3}checked=true{/if} value="3">AROM人工破</td>	
+		</tr>
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div>

@@ -2,7 +2,7 @@
 class Modify extends IController
 {
 	public $layout='';
-
+	public  $data =array();
 	public function init()
 	{
 		$checkObj = new CheckRights($this);
@@ -788,6 +788,582 @@ class Modify extends IController
 		$url = IUrl::creatUrl("/obstetrical/surgery_edit/id/").$basic_id;
 		header('Location:'.$url);
 	}
+	
+	
+	//progress_basic
+	public function progress_basic()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		if($id)
+		{
+			$where = 'basic_id ='.$id;
+			
+			$Obj = new IModel('admission_detail_info');
+			$this->data['detail'] = $Obj->getObj($where);
+			$Obj = new IModel('admission_prenatal_labs');
+			$this->data['prenatal'] = $Obj->getObj($where);
+			$Obj = new IModel('admission_ob_physical_info');
+			$this->data['physical'] = $Obj->getObj($where);
+			$Obj = new IModel('admission_current_info');
+			$this->data['current'] = $Obj->getObj($where);
+			$Obj = new IModel('obstetrical_progress_basic');
+			$this->data['progress'] = $Obj->getObj($where);
+			
+			if(!empty($this->data))
+			{
+				$this->setRenderData($this->data);
+			}
+		}
+		$this->redirect('progress_basic');
+	}
+	
+	public function progress_basic_act()
+	{
+		$id = IReq::get('id');
+		$basic_id = IReq::get('basic_id');
+		//更新time
+		$dataarray= array(
+				'time' => IReq:: get('time'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+		$Obj = new IModel('admission_detail_info');
+		$where ='basic_id ='.$basic_id;
+		$is_in = $Obj ->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		//更新prenatal_labs
+		$dataarray= array(
+				'blood_type' => IReq:: get('blood_type'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+		$Obj = new IModel('admission_prenatal_labs');
+		$where ='basic_id ='.$basic_id;
+		$is_in = $Obj ->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		//更新admission_ob_physical_info
+		$dataarray= array(
+				'edc' => IReq:: get('edc'),
+				'gracida' => IReq:: get('gracida'),
+				'term' => IReq:: get('term'),
+				'preter' => IReq:: get('preter'),
+				'living' => IReq:: get('living'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+		$Obj = new IModel('admission_ob_physical_info');
+		$where ='basic_id ='.$basic_id;
+		$is_in = $Obj ->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		//更新admission_current_info
+		$dataarray= array(
+				'allergies' => IReq:: get('allergies'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+		$Obj = new IModel('admission_current_info');
+		$where ='basic_id ='.$basic_id;
+		$is_in = $Obj ->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		//更新obstetrical_progress_basic
+		$dataarray= array(
+				'gestation' => IReq:: get('gestation'),
+				'bom' => IReq:: get('bom'),
+				'abortions' => IReq:: get('abortions'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+		$Obj = new IModel('obstetrical_progress_basic');
+		$where ='basic_id ='.$basic_id;
+		$is_in = $Obj ->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		
+		$url = IUrl::creatUrl("/obstetrical/progress_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	//progress_time
+	public function progress_time()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		if($id)
+		{
+			$where = 'basic_id ='.$id;
+			$Obj = new IModel('obstetrical_progress_time');
+			$dataRow = $Obj->query($where);
+			if(!empty($dataRow))
+			{
+				$this->setRenderData($dataRow);
+			}
+		}
+		$this->redirect('progress_time');
+	}
+	
+	public function progress_time_act()
+	{
+		$id = IReq::get('id');
+		$basic_id = IReq::get('basic_id');
+		
+		$time1=IReq:: get('time1');
+		$time2=IReq:: get('time2');
+		$time3=IReq:: get('time3');
+		$time4=IReq:: get('time4');
+		$time5=IReq:: get('time5');
+		$time6=IReq:: get('time6');
+		$time7=IReq:: get('time7');
+		$time8=IReq:: get('time8');
+		//更新time1
+		if(!empty($time1))
+		{
+			$dataarray=array(
+				'time' => $time1,
+				'time_id' => '11',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 11';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+				
+				$dataarray=array(
+					'time_id' => '12',
+					'basic_id' => IReq:: get('basic_id')	
+				);
+				$Obj = new IModel('obstetrical_progress_time');
+				$Obj->setData($dataarray);
+				$Obj->add();	
+			}
+		}
+		else 
+		{
+			$dataarray=array(
+				'time' => $time1,
+				'time_id' => '11',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 11';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+		}
+		//更新time2
+		if(!empty($time2))
+		{
+			$dataarray=array(
+				'time' => $time2,
+				'time_id' => '21',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 21';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+				
+				$dataarray=array(
+					'time_id' => '22',
+					'basic_id' => IReq:: get('basic_id')	
+				);
+				$Obj = new IModel('obstetrical_progress_time');
+				$Obj->setData($dataarray);
+				$Obj->add();	
+			}
+		}
+		else 
+		{
+			$dataarray=array(
+				'time' => $time2,
+				'time_id' => '21',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 21';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+		}
+		//更新time3
+		if(!empty($time3))
+		{
+			$dataarray=array(
+				'time' => $time3,
+				'time_id' => '31',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 31';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+				
+				$dataarray=array(
+					'time_id' => '32',
+					'basic_id' => IReq:: get('basic_id')	
+				);
+				$Obj = new IModel('obstetrical_progress_time');
+				$Obj->setData($dataarray);
+				$Obj->add();	
+			}
+		}
+		else 
+		{
+			$dataarray=array(
+				'time' => $time3,
+				'time_id' => '31',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 31';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+		}
+		//更新time4
+		if(!empty($time4))
+		{
+			$dataarray=array(
+				'time' => $time4,
+				'time_id' => '41',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 41';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+				
+				$dataarray=array(
+					'time_id' => '42',
+					'basic_id' => IReq:: get('basic_id')	
+				);
+				$Obj = new IModel('obstetrical_progress_time');
+				$Obj->setData($dataarray);
+				$Obj->add();	
+			}
+		}
+		else 
+		{
+			$dataarray=array(
+				'time' => $time4,
+				'time_id' => '41',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 41';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+		}
+		//更新time5
+		if(!empty($time5))
+		{
+			$dataarray=array(
+				'time' => $time5,
+				'time_id' => '51',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 51';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+				
+				$dataarray=array(
+					'time_id' => '52',
+					'basic_id' => IReq:: get('basic_id')	
+				);
+				$Obj = new IModel('obstetrical_progress_time');
+				$Obj->setData($dataarray);
+				$Obj->add();	
+			}
+		}
+		else 
+		{
+			$dataarray=array(
+				'time' => $time5,
+				'time_id' => '51',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 51';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+		}
+		//更新time6
+		if(!empty($time6))
+		{
+			$dataarray=array(
+				'time' => $time6,
+				'time_id' => '61',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 61';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+				
+				$dataarray=array(
+					'time_id' => '62',
+					'basic_id' => IReq:: get('basic_id')	
+				);
+				$Obj = new IModel('obstetrical_progress_time');
+				$Obj->setData($dataarray);
+				$Obj->add();	
+			}
+		}
+		else 
+		{
+			$dataarray=array(
+				'time' => $time6,
+				'time_id' => '61',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 61';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+		}
+		//更新time7
+		if(!empty($time7))
+		{
+			$dataarray=array(
+				'time' => $time7,
+				'time_id' => '71',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 71';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+				
+				$dataarray=array(
+					'time_id' => '72',
+					'basic_id' => IReq:: get('basic_id')	
+				);
+				$Obj = new IModel('obstetrical_progress_time');
+				$Obj->setData($dataarray);
+				$Obj->add();	
+			}
+		}
+		else 
+		{
+			$dataarray=array(
+				'time' => $time7,
+				'time_id' => '71',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 71';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+		}
+		//更新time8
+		if(!empty($time8))
+		{
+			$dataarray=array(
+				'time' => $time8,
+				'time_id' => '81',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 81';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+				
+				$dataarray=array(
+					'time_id' => '82',
+					'basic_id' => IReq:: get('basic_id')	
+				);
+				$Obj = new IModel('obstetrical_progress_time');
+				$Obj->setData($dataarray);
+				$Obj->add();	
+			}
+		}
+		else 
+		{
+			$dataarray=array(
+				'time' => $time8,
+				'time_id' => '81',
+				'basic_id' => IReq:: get('basic_id')	
+			);
+			$Obj = new IModel('obstetrical_progress_time');
+			$where ='basic_id ='.$basic_id.' AND time_id = 81';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+		}
+		$url = IUrl::creatUrl("/obstetrical/progress_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+
+	//progress_patient
+	public function progress_patient()
+	{
+	
+		$id = IReq::get('id');
+		$this->id = $id;
+		/*
+		if($id)
+		{
+			$where = 'basic_id ='.$id;
+			$Obj = new IModel('obstetrical_progress_patient');
+			$dataRow = $Obj->getObj($where);
+			if(!empty($dataRow))
+			{
+				$this->setRenderData($dataRow);
+			}
+		}*/
+		$this->redirect('progress_patient');
+	}
+	
+	
+	public function progress_patient_act()
+	{/*
+		$id = IReq::get('id');
+		$basic_id = IReq::get('basic_id');
+		$dataarray= array(
+				'anesthetic_plan' => IReq:: get('anesthetic_plan'),
+				'obstetrical_plan' => IReq:: get('obstetrical_plan'),
+				'obsterian' => IReq:: get('obsterian'),
+				'anesthesiologist' => IReq:: get('anesthesiologist'),
+				'sign_date' => IReq:: get('sign_date'),
+				'sign_time' => IReq:: get('sign_time'),
+				'basic_id' => IReq:: get('basic_id')
+				);
+
+		$Obj = new IModel('surgery_plan');
+		$where ='basic_id ='.$basic_id;
+		$is_in = $Obj ->getObj($where);
+		
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}*/
+		$url = IUrl::creatUrl("/obstetrical/surgery_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	
 }
 
 ?>

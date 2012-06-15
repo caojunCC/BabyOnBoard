@@ -9,7 +9,7 @@ class Obstetrical extends IController
 	protected $checkRight = 'all';
 	public   $role_hospital_id ;
 	public   $role_hospital_data ;
-	
+	public $data = array();
 	function init()
 	{
 		$checkObj = new CheckRights($this);
@@ -133,6 +133,37 @@ class Obstetrical extends IController
 			Util::showMessage('Please choose a person');
 		}
 	}
+	
+	//progress surgery
+	function progress_list()
+	{
+		$this->redirect('progress_list');
+	}
+	
+	function progress_edit()
+	{
+		$id = IReq::get('id');
+		if($id)
+		{
+			$progress_Obj = new IModel('obstetrical_progress_view');
+			$where ='basic_id= '.$id;		
+			$this->data['data'] = $progress_Obj->query($where);
+			
+			$progress_Obj = new IModel('obstetrical_progress_basic_view');
+			$where ='id= '.$id;		
+			$this->data['basic'] = $progress_Obj->getObj($where);
+			
+			
+			$this->setRenderData($this->data);
+			$this->redirect('progress_edit');
+		}
+		else 
+		{
+			$this->redirect('progress_list',false);
+			Util::showMessage('Please choose a person');
+		}
+	}
+	
 }
 
 ?>

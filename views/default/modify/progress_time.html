@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+
+<div class="xf-main1">
+<form id="progress_time" action="{url:/modify/progress_time_act}"  method="post">
+	<table style="border-collapse:collapse" >
+		<tr>
+		<input type='hidden' name='id' value="{$this->id}"/>
+		<input type='hidden' name='basic_id' value='{$this->id }'/>
+		<tr>
+			<td>time1:
+			{set:$t=0;}
+			{query: name=obstetrical_progress_time as bpt where=bpt.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" id="time1" name="time1" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+			{/query}
+			{if:$t==0}<input type="text" id="time1" name="time1">{/if}
+			</td>
+			<td>time2:
+			{set:$t=0;}
+			{query: name=obstetrical_progress_time as bpt where=bpt.time_id eq 21}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" id="time2" name="time2" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+			{/query}
+			{if:$t==0}<input type="text" id="time2" name="time2">{/if}
+			</td>
+			<td>time3:
+			{set:$t=0;}
+			{query: name=obstetrical_progress_time as bpt where=bpt.time_id eq 31}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" id="time3" name="time3" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+			{/query}
+			{if:$t==0}<input type="text" id="time3" name="time3">{/if}
+			</td>
+			<td>time4:
+			{set:$t=0;}
+			{query: name=obstetrical_progress_time as bpt where=bpt.time_id eq 41}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" id="time4" name="time4" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+			{/query}
+			{if:$t==0}<input type="text" id="time4" name="time4">{/if}
+			</td>
+		</tr>
+		<tr>
+			<td>time5:
+			{set:$t=0;}
+			{query: name=obstetrical_progress_time as bpt where=bpt.time_id eq 51}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" id="time5" name="time5" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+			{/query}
+			{if:$t==0}<input type="text" id="time5" name="time5">{/if}
+			</td>
+			<td>time6:
+			{set:$t=0;}
+			{query: name=obstetrical_progress_time as bpt where=bpt.time_id eq 61}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" id="time6" name="time6" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+			{/query}
+			{if:$t==0}<input type="text" id="time6" name="time6">{/if}
+			</td>
+			<td>time7:
+			{set:$t=0;}
+			{query: name=obstetrical_progress_time as bpt where=bpt.time_id eq 71}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" id="time7" name="time7" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+			{/query}
+			{if:$t==0}<input type="text" id="time7" name="time7">{/if}
+			</td>
+			<td>time8:
+			{set:$t=0;}
+			{query: name=obstetrical_progress_time as bpt where=bpt.time_id eq 81}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" id="time8" name="time8" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+			{/query}
+			{if:$t==0}<input type="text" id="time8" name="time8">{/if}
+			</td>
+		</tr>
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div>
