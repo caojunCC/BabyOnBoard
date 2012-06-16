@@ -2,6 +2,15 @@
 <script type="text/javascript" src="{theme:javascript/Calendar4.js}"></script> 
 <script language="JavaScript" type="text/javascript">
 
+$(window).load(function()
+		{
+			var winHeight =700;
+		 if(window.screen.height)
+				winHeight=window.screen.height;
+			winHeight=winHeight-300;
+			$('#content1').css("height",winHeight+"px");
+		}
+		)
 
 function progress_basic()
 {
@@ -38,8 +47,8 @@ function progress_patient()
 <div class="headbar">
 	<div class="position"><span>Obstetrical</span><span>></span><span>Progress Record</span><span>></span><span>edit</span></div>
 </div>
-<div class="content1"  >
-	<table>
+<div class="content1" id="content1" >
+	<table >
 		<tr>
 			<td>Name:{$name}&nbsp;&nbsp;&nbsp;</td>
 			<td>Hospital:{$hospital}&nbsp;&nbsp;&nbsp;</td>

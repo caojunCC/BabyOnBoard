@@ -1360,7 +1360,7 @@ class Modify extends IController
 		{
 			$Obj->add();	
 		}*/
-		$url = IUrl::creatUrl("/obstetrical/surgery_edit/id/").$basic_id;
+		$url = IUrl::creatUrl("/obstetrical/progress_edit/id/").$basic_id;
 		header('Location:'.$url);
 	}
 	
