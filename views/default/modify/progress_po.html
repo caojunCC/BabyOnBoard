@@ -1,0 +1,561 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<div style="height:550px;width:1000px;overflow-y:scroll;overflow-x:hidden;"> 
+<div class="xf-main1">
+<form id="progress_po" action="{url:/modify/progress_po_act}"  method="post">
+	{set:$i=0;}
+	{query: name=obstetrical_progress_time as opt where=opt.time_id eq -1}
+		{set:$i=1;}
+	{/query}
+	<table style="border-collapse:collapse" >
+		<input type='hidden' name='i' value="{$i}"/>
+		<input type='hidden' name='id' value="{$this->id}"/>
+		<input type='hidden' name='basic_id' value='{$this->id }'/>
+		<col width="20px" />
+	    <col width="100px" />
+	    <col width="100px" />
+		<tr>
+		<td>PO进食</td>
+		<td>Liquids 饮料</td>
+		<td>Diet/Appetite 固体饮食/胃口</td>
+		</tr>
+		<!-- time1 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 11}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time11 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 11}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids11" name="liquids11" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da11" name="da11" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids11" name="liquids11">
+				</td>
+				<td> 
+				<input type="text" id="da11" name="da11">
+				</td>
+				</tr>
+		{/if}
+		<!-- time12 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 12}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids12" name="liquids12" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da12" name="da12" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids12" name="liquids12">
+				</td>
+				<td> 
+				<input type="text" id="da12" name="da12">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time2 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 21}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time21 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 21}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids21" name="liquids21" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da21" name="da21" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids21" name="liquids21">
+				</td>
+				<td> 
+				<input type="text" id="da21" name="da21">
+				</td>
+				</tr>
+		{/if}
+		<!-- time22 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 22}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids22" name="liquids22" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da22" name="da22" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids22" name="liquids22">
+				</td>
+				<td> 
+				<input type="text" id="da22" name="da22">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time3 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 31}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time31 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 31}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids31" name="liquids31" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da31" name="da31" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids31" name="liquids31">
+				</td>
+				<td> 
+				<input type="text" id="da31" name="da31">
+				</td>
+				</tr>
+		{/if}
+		<!-- time32 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 32}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids32" name="liquids32" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da32" name="da32" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids32" name="liquids32">
+				</td>
+				<td> 
+				<input type="text" id="da32" name="da32">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time4 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 41}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time41 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 41}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids41" name="liquids41" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da41" name="da41" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids41" name="liquids41">
+				</td>
+				<td> 
+				<input type="text" id="da41" name="da41">
+				</td>
+				</tr>
+		{/if}
+		<!-- time42 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 42}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids42" name="liquids42" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da42" name="da42" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids42" name="liquids42">
+				</td>
+				<td> 
+				<input type="text" id="da42" name="da42">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time5 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 51}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time51 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 51}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids51" name="liquids51" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da51" name="da51" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids51" name="liquids51">
+				</td>
+				<td> 
+				<input type="text" id="da51" name="da51">
+				</td>
+				</tr>
+		{/if}
+		<!-- time52 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 52}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids52" name="liquids52" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da52" name="da52" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids52" name="liquids52">
+				</td>
+				<td> 
+				<input type="text" id="da52" name="da52">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time6 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 61}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time61 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 61}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids61" name="liquids61" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da61" name="da61" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids61" name="liquids61">
+				</td>
+				<td> 
+				<input type="text" id="da61" name="da61">
+				</td>
+				</tr>
+		{/if}
+		<!-- time62 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 62}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids62" name="liquids62" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da62" name="da62" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids62" name="liquids62">
+				</td>
+				<td> 
+				<input type="text" id="da62" name="da62">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time7 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 71}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time71 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 71}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids71" name="liquids71" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da71" name="da71" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids71" name="liquids71">
+				</td>
+				<td> 
+				<input type="text" id="da71" name="da71">
+				</td>
+				</tr>
+		{/if}
+		<!-- time72 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 72}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids72" name="liquids72" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da72" name="da72" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids72" name="liquids72">
+				</td>
+				<td> 
+				<input type="text" id="da72" name="da72">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time8 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 81}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time81 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 81}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids81" name="liquids81" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da81" name="da81" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids81" name="liquids81">
+				</td>
+				<td> 
+				<input type="text" id="da81" name="da81">
+				</td>
+				</tr>
+		{/if}
+		<!-- time82 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq 82}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids82" name="liquids82" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da82" name="da82" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="liquids82" name="liquids82">
+				</td>
+				<td> 
+				<input type="text" id="da82" name="da82">
+				</td>
+				</tr>
+		{/if}
+	
+		<!-- 详细记录 -->
+				<tr>
+					<td rowspan="2" width="30px">
+						<br>NOTES详细记录<br>
+					</td>
+				</tr>
+		{set:$t=0;}
+		{query: name=obstetrical_progress_po as opp where=opp.time_id eq -1}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="liquids01" name="liquids01" value="{$item[liquids]}">
+				</td>
+				<td> 
+				<input type="text" id="da01" name="da01" value="{$item[da]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0}
+				<tr>
+				<td> 
+				<input type="text" id="liquids01" name="liquids01">
+				</td>
+				<td> 
+				<input type="text" id="da01" name="da01">
+				</td>
+				</tr>
+		{/if}
+				
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div> 
+</div>

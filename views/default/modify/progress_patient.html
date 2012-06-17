@@ -1,9 +1,13 @@
 <link rel="stylesheet" href="{skin:css/xf-table.css}" />
-<div style="height:400px;overflow-y:scroll;overflow-x:hidden;"> 
+<div style="height:550px;width:1000px;overflow-y:scroll;overflow-x:hidden;"> 
 <div class="xf-main1">
 <form id="progress_patient" action="{url:/modify/progress_patient_act}"  method="post">
+	{set:$i=0;}
+	{query: name=obstetrical_progress_time as opt where=opt.time_id eq -1}
+		{set:$i=1;}
+	{/query}
 	<table style="border-collapse:collapse" >
-		
+		<input type='hidden' name='i' value="{$i}"/>
 		<input type='hidden' name='id' value="{$this->id}"/>
 		<input type='hidden' name='basic_id' value='{$this->id }'/>
 		<!-- time1 -->
@@ -13,7 +17,7 @@
 			{set:$k=1}
 				<tr>
 					<td rowspan="9" width="30px">
-						<br><a style='color:red'>time:{$item[time]}</a><br>
+						<br>{$item[time]}<br>
 					</td>
 				</tr>
 			{/if}
@@ -327,7 +331,7 @@
 			{set:$k=1}
 				<tr>
 					<td rowspan="9" width="30px">
-						<br><a style='color:red'>time:{$item[time]}</a><br>
+						<br>{$item[time]}<br>
 					</td>
 				</tr>
 			{/if}
@@ -641,7 +645,7 @@
 			{set:$k=1}
 				<tr>
 					<td rowspan="9" width="30px">
-						<br><a style='color:red'>time:{$item[time]}</a><br>
+						<br>{$item[time]}<br>
 					</td>
 				</tr>
 			{/if}
@@ -955,7 +959,7 @@
 			{set:$k=1}
 				<tr>
 					<td rowspan="9" width="30px">
-						<br><a style='color:red'>time:{$item[time]}</a><br>
+						<br>{$item[time]}<br>
 					</td>
 				</tr>
 			{/if}
@@ -1269,7 +1273,7 @@
 			{set:$k=1}
 				<tr>
 					<td rowspan="9" width="30px">
-						<br><a style='color:red'>time:{$item[time]}</a><br>
+						<br>{$item[time]}<br>
 					</td>
 				</tr>
 			{/if}
@@ -1583,7 +1587,7 @@
 			{set:$k=1}
 				<tr>
 					<td rowspan="9" width="30px">
-						<br><a style='color:red'>time:{$item[time]}</a><br>
+						<br>{$item[time]}<br>
 					</td>
 				</tr>
 			{/if}
@@ -1897,7 +1901,7 @@
 			{set:$k=1}
 				<tr>
 					<td rowspan="9" width="30px">
-						<br><a style='color:red'>time:{$item[time]}</a><br>
+						<br>{$item[time]}<br>
 					</td>
 				</tr>
 			{/if}
@@ -2211,7 +2215,7 @@
 			{set:$k=1}
 				<tr>
 					<td rowspan="9" width="30px">
-						<br><a style='color:red'>time:{$item[time]}</a><br>
+						<br>{$item[time]}<br>
 					</td>
 				</tr>
 			{/if}
@@ -2515,6 +2519,162 @@
 				</td>
 				<td>Heart Rate Patterns 胎心模式*
 				<br><input type="text" id="h_r_p82" name="h_r_p82">
+				</td>
+				</tr>
+		{/if}
+		<!-- 详细记录 -->
+				<tr>
+					<td rowspan="5" width="30px">
+						<br>NOTES详细记录<br>
+					</td>
+				</tr>
+		{set:$t=0;}
+		{query: name=obstetrical_progress_patient as opp where=opp.time_id eq -1}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>Temp 体温
+				<br><input type="text" id="temp81" name="temp81" value="{$item[temp]}">
+				</td>
+				<td>Pulse 脉搏
+				<br><input type="text" id="pulse81" name="pulse81" value="{$item[pulse]}">
+				</td>
+				<td>RR 呼吸频率
+				<br><input type="text" id="rr81" name="rr81" value="{$item[rr]}">
+				</td>
+				<td>BP 血压
+				<br><input type="text" id="bp81" name="bp81" value="{$item[bp]}">
+				</td>
+				<td>PAIN（0-10） 疼痛程度*
+				<br><input type="text" id="pain81" name="pain81" value="{$item[pain]}">
+				</td>
+				</tr>
+				
+				<tr>
+				<td>LOC 神智*
+				<br><input type="text" id="loc81" name="loc81" value="{$item[loc]}">
+				</td>
+				<td>Psychosocial 心理社会*
+				<br><input type="text" id="psy81" name="psy81" value="{$item[psy]}">
+				</td>
+				<td>Wt(kg) 体重
+				<br><input type="text" id="wt81" name="wt81" value="{$item[wt]}">
+				</td>
+				<td>Activity/Position 活动/体位
+				<br><input type="text" id="act81" name="act81" value="{$item[act]}">
+				</td>
+				<td>N/V 恶心呕吐
+				<br><input type="text" id="nv81" name="nv81" value="{$item[nv]}">
+				</td>
+				</tr>
+				
+				<tr>
+				<td>CNSC/O 中枢神经系统主诉
+				<br><input type="text" id="cnsc81" name="cnsc81" value="{$item[cnsc]}">
+				</td>
+				<td>Reflexes/Clonus(DTRS) 反射/阵挛
+				<br><input type="text" id="ref81" name="ref81" value="{$item[ref]}">
+				</td>
+				<td>Homan's Sign 霍曼斯氏征
+				<br><input type="text" id="hom81" name="hom81" value="{$item[hom]}">
+				</td>
+				<td>Edema 水肿
+				<br><input type="text" id="edema81" name="edema81" value="{$item[edema]}">
+				</td>
+				<td>Breath Sounds 呼吸音
+				<br><input type="text" id="breath81" name="breath81" value="{$item[breath]}">
+				</td>
+				</tr>
+				
+				<tr>
+				<td>Fundus 宫底
+				<br><input type="text" id="fundus81" name="fundus81" value="{$item[fundus]}">
+				</td>
+				<td>Lochia 恶露
+				<br><input type="text" id="lochia81" name="lochia81" value="{$item[lochia]}">
+				</td>
+				<td>Episiotomy 会阴侧切
+				<br><input type="text" id="episiotomy81" name="episiotomy81" value="{$item[episiotomy]}">
+				</td>
+				<td>Bladder/Voiding/Foley 膀胱/排尿
+				<br><input type="text" id="bladder81" name="bladder81" value="{$item[bladder]}">
+				</td>
+				<td>Heart Rate Patterns 胎心模式*
+				<br><input type="text" id="h_r_p81" name="h_r_p81" value="{$item[h_r_p]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0}
+			<tr>
+				<td>Temp 体温
+				<br><input type="text" id="temp01" name="temp01" >
+				</td>
+				<td>Pulse 脉搏
+				<br><input type="text" id="pulse01" name="pulse01" >
+				</td>
+				<td>RR 呼吸频率
+				<br><input type="text" id="rr01" name="rr01" >
+				</td>
+				<td>BP 血压
+				<br><input type="text" id="bp01" name="bp01" >
+				</td>
+				<td>PAIN（0-10） 疼痛程度*
+				<br><input type="text" id="pain01" name="pain01" >
+				</td>
+				</tr>
+				
+				<tr>
+				<td>LOC 神智*
+				<br><input type="text" id="loc01" name="loc01" >
+				</td>
+				<td>Psychosocial 心理社会*
+				<br><input type="text" id="psy01" name="psy01" >
+				</td>
+				<td>Wt(kg) 体重
+				<br><input type="text" id="wt01" name="wt01" >
+				</td>
+				<td>Activity/Position 活动/体位
+				<br><input type="text" id="act01" name="act01" >
+				</td>
+				<td>N/V 恶心呕吐
+				<br><input type="text" id="nv01" name="nv01" >
+				</td>
+				</tr>
+				
+				<tr>
+				<td>CNSC/O 中枢神经系统主诉
+				<br><input type="text" id="cnsc01" name="cnsc01">
+				</td>
+				<td>Reflexes/Clonus(DTRS) 反射/阵挛
+				<br><input type="text" id="ref01" name="ref01" >
+				</td>
+				<td>Homan's Sign 霍曼斯氏征
+				<br><input type="text" id="hom01" name="hom01">
+				</td>
+				<td>Edema 水肿
+				<br><input type="text" id="edema01" name="edema01">
+				</td>
+				<td>Breath Sounds 呼吸音
+				<br><input type="text" id="breath01" name="breath01">
+				</td>
+				</tr>
+				
+				<tr>
+				<td>Fundus 宫底
+				<br><input type="text" id="fundus01" name="fundus01" >
+				</td>
+				<td>Lochia 恶露
+				<br><input type="text" id="lochia01" name="lochia01">
+				</td>
+				<td>Episiotomy 会阴侧切
+				<br><input type="text" id="episiotomy01" name="episiotomy01">
+				</td>
+				<td>Bladder/Voiding/Foley 膀胱/排尿
+				<br><input type="text" id="bladder01" name="bladder01">
+				</td>
+				<td>Heart Rate Patterns 胎心模式*
+				<br><input type="text" id="h_r_p01" name="h_r_p01">
 				</td>
 				</tr>
 		{/if}

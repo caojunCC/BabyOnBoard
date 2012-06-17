@@ -143,16 +143,32 @@ class Obstetrical extends IController
 	function progress_edit()
 	{
 		$id = IReq::get('id');
+		$this->id = $id;
 		if($id)
 		{
-			$progress_Obj = new IModel('obstetrical_progress_view');
-			$where ='basic_id= '.$id;		
-			$this->data['data'] = $progress_Obj->query($where);
-			
 			$progress_Obj = new IModel('obstetrical_progress_basic_view');
 			$where ='id= '.$id;		
 			$this->data['basic'] = $progress_Obj->getObj($where);
 			
+			$progress_Obj = new IModel('obstetrical_progress_medsname');
+			$where ='basic_id= '.$id;		
+			$this->data['meds'] = $progress_Obj->getObj($where);
+			
+			$progress_Obj = new IModel('obstetrical_progress_ivname');
+			$where ='basic_id= '.$id;		
+			$this->data['iv'] = $progress_Obj->getObj($where);
+			
+			$progress_Obj = new IModel('obstetrical_progress_ivnotes');
+			$where ='basic_id= '.$id;		
+			$this->data['ivnotes'] = $progress_Obj->getObj($where);
+			
+			$progress_Obj = new IModel('obstetrical_progress_opnotes');
+			$where ='basic_id= '.$id;		
+			$this->data['opnotes'] = $progress_Obj->getObj($where);
+			
+			$progress_Obj = new IModel('obstetrical_progress_opname');
+			$where ='basic_id= '.$id;		
+			$this->data['op'] = $progress_Obj->getObj($where);
 			
 			$this->setRenderData($this->data);
 			$this->redirect('progress_edit');

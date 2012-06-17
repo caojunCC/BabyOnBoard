@@ -7,7 +7,7 @@ $(window).load(function()
 			var winHeight =700;
 		 if(window.screen.height)
 				winHeight=window.screen.height;
-			winHeight=winHeight-300;
+			winHeight=winHeight-250;
 			$('#content1').css("height",winHeight+"px");
 		}
 		)
@@ -42,8 +42,62 @@ function progress_patient()
 	}, true);
 }
 
-</script>
 
+function progress_fetal()
+{
+	art.dialog.load('{url:/modify/progress_fetal/id/$basic[id]}', {
+		id:'progress_fetal',
+		lock: true,
+	    title: 'progress_fetal',
+	    width: '1000px'
+	}, true);
+}
+function progress_contractions()
+{
+	art.dialog.load('{url:/modify/progress_contractions/id/$basic[id]}', {
+		id:'progress_contractions',
+		lock: true,
+	    title: 'progress_contractions',
+	    width: '1200px'
+	}, true);
+}
+function progress_meds()
+{
+	art.dialog.load('{url:/modify/progress_meds/id/$basic[id]}', {
+		id:'progress_meds',
+		lock: true,
+	    title: 'progress_meds',
+	    width: '1200px'
+	}, true);
+}
+function progress_po()
+{
+	art.dialog.load('{url:/modify/progress_po/id/$basic[id]}', {
+		id:'progress_po',
+		lock: true,
+	    title: 'progress_po',
+	    width: '1000px'
+	}, true);
+}
+function progress_iv()
+{
+	art.dialog.load('{url:/modify/progress_iv/id/$basic[id]}', {
+		id:'progress_iv',
+		lock: true,
+	    title: 'progress_iv',
+	    width: '1000px'
+	}, true);
+}
+function progress_op()
+{
+	art.dialog.load('{url:/modify/progress_op/id/$basic[id]}', {
+		id:'progress_op',
+		lock: true,
+	    title: 'progress_op',
+	    width: '1000px'
+	}, true);
+}
+</script>
 <div class="headbar">
 	<div class="position"><span>Obstetrical</span><span>></span><span>Progress Record</span><span>></span><span>edit</span></div>
 </div>
@@ -1936,7 +1990,7 @@ function progress_patient()
 					</td>
 				</tr>
 			</table>
-		    <table style="border-collapse:collapse" onclick='progress_time();'>
+		    <table style="border-collapse:collapse" onclick='progress_fetal();'>
 		    		<col width="30px" />
 			     	<col width="10%" />
 	            	<col width="4%" />
@@ -2311,7 +2365,7 @@ function progress_patient()
 					</td>
 				</tr>
 			</table>
-		    <table style="border-collapse:collapse" onclick='progress_time();'>
+		    <table style="border-collapse:collapse" onclick='progress_contractions();'>
 		    		<col width="30px" />
 			     	<col width="10%" />
 	            	<col width="4%" />
@@ -2862,7 +2916,7 @@ function progress_patient()
 					</td>
 				</tr>
 			</table>
-		    <table style="border-collapse:collapse" onclick='progress_time();'>
+		    <table style="border-collapse:collapse" onclick='progress_meds();'>
 		    		<col width="30px" />
 			     	<col width="10%" />
 	            	<col width="4%" />
@@ -2885,7 +2939,9 @@ function progress_patient()
 	            	<col />
 				<tr>
 				    <td rowspan="4">M<br>E<br>D<br>S<br>药<br>物</td>
-				    <td></td>
+				    <td>
+				    	<a style='color:red'/>{$meds[meds1]}
+				    </td>
 					<td>
 						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 11}
 							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[meds1]}{/if}
@@ -2973,7 +3029,9 @@ function progress_patient()
 					</td>
 				</tr>
 				<tr>
-				    <td></td>
+				    <td>
+				    	<a style='color:red'/>{$meds[meds2]}
+				    </td>
 					<td>
 						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 11}
 							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[meds2]}{/if}
@@ -3061,7 +3119,9 @@ function progress_patient()
 					</td>
 				</tr>
 				<tr>
-				    <td></td>
+				    <td>
+				    	<a style='color:red'/>{$meds[meds3]}
+				    </td>
 					<td>
 						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 11}
 							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[meds3]}{/if}
@@ -3149,7 +3209,9 @@ function progress_patient()
 					</td>
 				</tr>
 				<tr>
-				    <td></td>
+				    <td>
+				    	<a style='color:red'/>{$meds[meds4]}
+				    </td>
 					<td>
 						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 11}
 							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[meds4]}{/if}
@@ -3237,7 +3299,7 @@ function progress_patient()
 					</td>
 				</tr>
 			</table>
-		    <table style="border-collapse:collapse" onclick='progress_time();'>
+		    <table style="border-collapse:collapse" onclick='progress_po();'>
 		    		<col width="30px" />
 			     	<col width="10%" />
 	            	<col width="4%" />
@@ -3436,7 +3498,7 @@ function progress_patient()
 					</td>
 				</tr>
 			</table>
-		    <table style="border-collapse:collapse" onclick='progress_time();'>
+		    <table style="border-collapse:collapse" onclick='progress_iv();'>
 		    
 		    		<col width="30px" />
 			     	<col width="10%" />
@@ -3460,7 +3522,9 @@ function progress_patient()
 	            	<col />
 				<tr>
 				    <td rowspan="4">I<br>V<br>静<br>脉</td>
-				    <td></td>
+				    <td>
+				    	<a style='color:red'/>{$iv[iv1]}
+				    </td>
 					<td>
 						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 11}
 							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[iv1]}{/if}
@@ -3542,13 +3606,13 @@ function progress_patient()
 						{/query}
 					</td>
 					<td>
-						{query: name=obstetrical_progress_view as opv where=opv.time_id eq -1}
-							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[iv1]}{/if}
-						{/query}
+						<a style='color:red'/>{$ivnotes[notes1]}
 					</td>
 				</tr>
 				<tr>
-				    <td></td>
+				    <td>
+				    	<a style='color:red'/>{$iv[iv2]}
+				    </td>
 					<td>
 						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 11}
 							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[iv2]}{/if}
@@ -3630,13 +3694,13 @@ function progress_patient()
 						{/query}
 					</td>
 					<td>
-						{query: name=obstetrical_progress_view as opv where=opv.time_id eq -1}
-							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[iv2]}{/if}
-						{/query}
+						<a style='color:red'/>{$ivnotes[notes2]}	
 					</td>
 				</tr>
 				<tr>
-				    <td></td>
+				    <td>
+				    	<a style='color:red'/>{$iv[iv3]}
+				    </td>
 					<td>
 						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 11}
 							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[iv3]}{/if}
@@ -3718,33 +3782,161 @@ function progress_patient()
 						{/query}
 					</td>
 					<td>
-						{query: name=obstetrical_progress_view as opv where=opv.time_id eq -1}
-							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[iv3]}{/if}
-						{/query}
+						<a style='color:red'/>{$ivnotes[notes3]}	
 					</td>
 				</tr>
 				<tr>
 				    <td>TOTAL<br>(8/24hrs)<br>合计</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 11}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 12}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 21}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 22}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 31}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 32}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 41}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 42}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 51}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 52}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 61}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 62}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 71}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 72}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 81}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_iv as opv where=opv.time_id eq 82}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[iv1]+$item[iv2]+$item[iv3]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+						<a style='color:red'/>{$ivnotes[notes]}
+					</td>
 				</tr>
 			</table>
-		    <table style="border-collapse:collapse" onclick='progress_time();'>
+		    <table style="border-collapse:collapse" onclick='progress_op();'>
 					<col width="20px" />
 			     	<col width="10%" />
 	            	<col width="4%" />
@@ -3766,7 +3958,7 @@ function progress_patient()
 	            	<col width="16%" />
 	            	<col />
 				<tr>
-				    <td rowspan="8">O<br>/<br>P<br>出<br>量</td>
+				    <td rowspan="6">O<br>/<br>P<br>出<br>量</td>
 				    <td>UOP<br>尿量</td>
 					<td>
 						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 11}
@@ -3849,9 +4041,7 @@ function progress_patient()
 						{/query}
 					</td>
 					<td>
-						{query: name=obstetrical_progress_view as opv where=opv.time_id eq -1}
-							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[uop]}{/if}
-						{/query}
+						<a style='color:red'/>{$opnotes[notes1]}
 					</td>
 				</tr>
 				<tr>
@@ -3937,30 +4127,158 @@ function progress_patient()
 						{/query}
 					</td>
 					<td>
-						{query: name=obstetrical_progress_view as opv where=opv.time_id eq -1}
-							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[ebl]}{/if}
-						{/query}
+						<a style='color:red'/>{$opnotes[notes2]}
 					</td>
 				</tr>
 				<tr>
 				    <td>TOTAL<br>(8/24hrs)<br>合计</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 11}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 12}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 21}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 22}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 31}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 32}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 41}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 42}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 51}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 52}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 61}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 62}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 71}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 72}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 81}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=obstetrical_progress_op as opv where=opv.time_id eq 82}
+							{if:$item[basic_id]==$basic[id]}
+							<a style='color:red'>
+							{set:$tot=$item[uop]+$item[ebl]}
+							{$tot}
+							{/if}
+					{/query}
+					</td>
+					<td>
+						<a style='color:red'/>{$opnotes[notes3]}
+					</td>
 				</tr>
 				<tr>
 				    <td>LAST<br>BM<br>末次大便</td>
@@ -4045,52 +4363,209 @@ function progress_patient()
 						{/query}
 					</td>
 					<td>
-						{query: name=obstetrical_progress_view as opv where=opv.time_id eq -1}
-							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[last_bm]}{/if}
-						{/query}
+						<a style='color:red'/>{$opnotes[notes4]}
 					</td>
 				</tr>
 				<tr>
-				    <td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>
+						<a style='color:red'/>{$op[name1]}
+					</td>
+				    <td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 11}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 12}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 21}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 22}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 31}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 32}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 41}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 42}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 51}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 52}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 61}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 62}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 71}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 72}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 81}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 82}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other1]}{/if}
+						{/query}
+					</td>
+					<td>
+						<a style='color:red'/>{$opnotes[notes5]}
+					</td>
 				</tr>
 				<tr>
-				    <td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+				    <td>
+				    	<a style='color:red'/>{$op[name2]}
+				    </td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 11}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 12}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 21}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 22}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 31}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 32}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 41}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 42}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 51}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 52}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 61}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 62}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 71}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 72}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 81}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						{query: name=obstetrical_progress_view as opv where=opv.time_id eq 82}
+							{if:$item[basic_id]==$basic[id]}<a style='color:red'>{$item[other2]}{/if}
+						{/query}
+					</td>
+					<td>
+						<a style='color:red'/>{$opnotes[notes6]}
+					</td>
 				</tr>
+				</table>
+				<table style="border-collapse:collapse">
+					<col width="20px" />
+			     	<col width="10%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="4%" />
+	            	<col width="16%" />
+	            	<col />
 				<tr>
+					<td rowspan="2">#</td>
 				    <td></td>
 					<td></td>
 					<td></td>

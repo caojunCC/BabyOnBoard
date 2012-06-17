@@ -1,0 +1,764 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<div style="height:550px;width:1000px;overflow-y:scroll;overflow-x:hidden;"> 
+<div class="xf-main1">
+<form id="progress_fetal" action="{url:/modify/progress_fetal_act}"  method="post">
+	{set:$i=0;}
+	{query: name=obstetrical_progress_time as opt where=opt.time_id eq -1}
+		{set:$i=1;}
+	{/query}
+	<table style="border-collapse:collapse" >
+		<input type='hidden' name='i' value="{$i}"/>
+		<input type='hidden' name='id' value="{$this->id}"/>
+		<input type='hidden' name='basic_id' value='{$this->id }'/>
+		<tr>
+		<td>Fetal胎儿</td>
+		<td>Variability 胎心变异性*</td>
+		<td>FHR/FHT/FM 胎心胎心音胎动</td>
+		<td>Frequency 频率</td>
+		<td>Duration 持续时间</td>
+		</tr>
+		<!-- time1 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 11}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time11 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 11}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability11" name="variability11" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr11" name="fhr11" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency11" name="frequency11" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration11" name="duration11" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability11" name="variability11" >
+				</td>
+				<td> 
+				<input type="text" id="fhr11" name="fhr11">
+				</td>
+				<td> 
+				<input type="text" id="frequency11" name="frequency11">
+				</td>
+				<td> 
+				<input type="text" id="duration11" name="duration11">
+				</td>
+				</tr>
+		{/if}
+		<!-- time12 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 12}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability12" name="variability12" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr12" name="fhr12" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency12" name="frequency12" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration12" name="duration12" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability12" name="variability12" >
+				</td>
+				<td> 
+				<input type="text" id="fhr12" name="fhr12">
+				</td>
+				<td> 
+				<input type="text" id="frequency12" name="frequency12">
+				</td>
+				<td> 
+				<input type="text" id="duration12" name="duration12">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time2 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 21}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time21 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 21}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability21" name="variability21" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr21" name="fhr21" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency21" name="frequency21" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration21" name="duration21" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability21" name="variability21" >
+				</td>
+				<td> 
+				<input type="text" id="fhr21" name="fhr21">
+				</td>
+				<td> 
+				<input type="text" id="frequency21" name="frequency21">
+				</td>
+				<td> 
+				<input type="text" id="duration21" name="duration21">
+				</td>
+				</tr>
+		{/if}
+		<!-- time22 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 22}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability22" name="variability22" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr22" name="fhr22" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency22" name="frequency22" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration22" name="duration22" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability22" name="variability22" >
+				</td>
+				<td> 
+				<input type="text" id="fhr22" name="fhr22">
+				</td>
+				<td> 
+				<input type="text" id="frequency22" name="frequency22">
+				</td>
+				<td> 
+				<input type="text" id="duration22" name="duration22">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time3 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 31}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time31 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 31}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability31" name="variability31" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr31" name="fhr31" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency31" name="frequency31" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration31" name="duration31" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability31" name="variability31" >
+				</td>
+				<td> 
+				<input type="text" id="fhr31" name="fhr31">
+				</td>
+				<td> 
+				<input type="text" id="frequency31" name="frequency31">
+				</td>
+				<td> 
+				<input type="text" id="duration31" name="duration31">
+				</td>
+				</tr>
+		{/if}
+		<!-- time32 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 32}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability32" name="variability32" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr32" name="fhr32" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency32" name="frequency32" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration32" name="duration32" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability32" name="variability32" >
+				</td>
+				<td> 
+				<input type="text" id="fhr32" name="fhr32">
+				</td>
+				<td> 
+				<input type="text" id="frequency32" name="frequency32">
+				</td>
+				<td> 
+				<input type="text" id="duration32" name="duration32">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time4 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 41}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time41 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 41}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability41" name="variability41" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr41" name="fhr41" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency41" name="frequency41" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration41" name="duration41" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability41" name="variability41" >
+				</td>
+				<td> 
+				<input type="text" id="fhr41" name="fhr41">
+				</td>
+				<td> 
+				<input type="text" id="frequency41" name="frequency41">
+				</td>
+				<td> 
+				<input type="text" id="duration41" name="duration41">
+				</td>
+				</tr>
+		{/if}
+		<!-- time42 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 42}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability42" name="variability42" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr42" name="fhr42" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency42" name="frequency42" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration42" name="duration42" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability42" name="variability42" >
+				</td>
+				<td> 
+				<input type="text" id="fhr42" name="fhr42">
+				</td>
+				<td> 
+				<input type="text" id="frequency42" name="frequency42">
+				</td>
+				<td> 
+				<input type="text" id="duration42" name="duration42">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time5 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 51}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time51 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 51}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability51" name="variability51" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr51" name="fhr51" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency51" name="frequency51" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration51" name="duration51" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability51" name="variability51" >
+				</td>
+				<td> 
+				<input type="text" id="fhr51" name="fhr51">
+				</td>
+				<td> 
+				<input type="text" id="frequency51" name="frequency51">
+				</td>
+				<td> 
+				<input type="text" id="duration51" name="duration51">
+				</td>
+				</tr>
+		{/if}
+		<!-- time52 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 52}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability52" name="variability52" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr52" name="fhr52" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency52" name="frequency52" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration52" name="duration52" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability52" name="variability52" >
+				</td>
+				<td> 
+				<input type="text" id="fhr52" name="fhr52">
+				</td>
+				<td> 
+				<input type="text" id="frequency52" name="frequency52">
+				</td>
+				<td> 
+				<input type="text" id="duration52" name="duration52">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time6 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 61}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time61 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 61}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability61" name="variability61" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr61" name="fhr61" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency61" name="frequency61" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration61" name="duration61" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability61" name="variability61" >
+				</td>
+				<td> 
+				<input type="text" id="fhr61" name="fhr61">
+				</td>
+				<td> 
+				<input type="text" id="frequency61" name="frequency61">
+				</td>
+				<td> 
+				<input type="text" id="duration61" name="duration61">
+				</td>
+				</tr>
+		{/if}
+		<!-- time62 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 62}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability62" name="variability62" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr62" name="fhr62" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency62" name="frequency62" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration62" name="duration62" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability62" name="variability62" >
+				</td>
+				<td> 
+				<input type="text" id="fhr62" name="fhr62">
+				</td>
+				<td> 
+				<input type="text" id="frequency62" name="frequency62">
+				</td>
+				<td> 
+				<input type="text" id="duration62" name="duration62">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time7 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 71}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time71 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 71}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability71" name="variability71" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr71" name="fhr71" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency71" name="frequency71" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration71" name="duration71" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability71" name="variability71" >
+				</td>
+				<td> 
+				<input type="text" id="fhr71" name="fhr71">
+				</td>
+				<td> 
+				<input type="text" id="frequency71" name="frequency71">
+				</td>
+				<td> 
+				<input type="text" id="duration71" name="duration71">
+				</td>
+				</tr>
+		{/if}
+		<!-- time72 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 72}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability72" name="variability72" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr72" name="fhr72" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency72" name="frequency72" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration72" name="duration72" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability72" name="variability72" >
+				</td>
+				<td> 
+				<input type="text" id="fhr72" name="fhr72">
+				</td>
+				<td> 
+				<input type="text" id="frequency72" name="frequency72">
+				</td>
+				<td> 
+				<input type="text" id="duration72" name="duration72">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time8 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 81}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time81 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 81}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability81" name="variability81" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr81" name="fhr81" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency81" name="frequency81" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration81" name="duration81" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability81" name="variability81" >
+				</td>
+				<td> 
+				<input type="text" id="fhr81" name="fhr81">
+				</td>
+				<td> 
+				<input type="text" id="frequency81" name="frequency81">
+				</td>
+				<td> 
+				<input type="text" id="duration81" name="duration81">
+				</td>
+				</tr>
+		{/if}
+		<!-- time82 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opf where=opf.time_id eq 82}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability82" name="variability82" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr82" name="fhr82" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency82" name="frequency82" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration82" name="duration82" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+			<tr>
+				<td> 
+				<input type="text" id="variability82" name="variability82" >
+				</td>
+				<td> 
+				<input type="text" id="fhr82" name="fhr82">
+				</td>
+				<td> 
+				<input type="text" id="frequency82" name="frequency82">
+				</td>
+				<td> 
+				<input type="text" id="duration82" name="duration82">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- 详细记录 -->
+				<tr>
+					<td rowspan="2" width="30px">
+						<br>NOTES详细记录<br>
+					</td>
+				</tr>
+		{set:$t=0;}
+		{query: name=obstetrical_progress_fetal as opp where=opp.time_id eq -1}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="variability01" name="variability01" value="{$item[variability]}">
+				</td>
+				<td> 
+				<input type="text" id="fhr01" name="fhr01" value="{$item[fhr]}">
+				</td>
+				<td> 
+				<input type="text" id="frequency01" name="frequency01" value="{$item[frequency]}">
+				</td>
+				<td> 
+				<input type="text" id="duration01" name="duration01" value="{$item[duration]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0}
+			<tr>
+				<td> 
+				<input type="text" id="variability01" name="variability01" >
+				</td>
+				<td> 
+				<input type="text" id="fhr01" name="fhr01">
+				</td>
+				<td> 
+				<input type="text" id="frequency01" name="frequency01">
+				</td>
+				<td> 
+				<input type="text" id="duration01" name="duration01">
+				</td>
+			</tr>
+		{/if}
+				
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div> 
+</div>

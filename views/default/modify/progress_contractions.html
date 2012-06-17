@@ -1,0 +1,1039 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<div style="height:550px;width:1200px;overflow-y:scroll;overflow-x:hidden;"> 
+<div class="xf-main1">
+<form id="progress_contractions" action="{url:/modify/progress_contractions_act}"  method="post">
+	{set:$i=0;}
+	{query: name=obstetrical_progress_time as opt where=opt.time_id eq -1}
+		{set:$i=1;}
+	{/query}
+	<table style="border-collapse:collapse" >
+		<input type='hidden' name='i' value="{$i}"/>
+		<input type='hidden' name='id' value="{$this->id}"/>
+		<input type='hidden' name='basic_id' value='{$this->id }'/>
+		
+		<tr>
+		<td>CONTRA<br>CTIONS 宫缩产道</td>
+		<td>Quality（intensity） 强度*</td>
+		<td>Resting Tone 静止期子宫张力*</td>
+		<td>Position/Station 先露/高度</td>
+		<td>Cervical Dil 宫口大小</td>
+		<td>Vaginal Drainage 阴道排泄物</td>
+		<td>Oxytocic/Tocolytic 催产/安胎</td>
+		</tr>
+		<!-- time1 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 11}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time11 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 11}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality11" name="quality11" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone11" name="tone11" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position11" name="position11" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical11" name="cervical11" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal11" name="vaginal11" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic11" name="oxytocic11" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality11" name="quality11" >
+				</td>
+				<td> 
+				<input type="text" id="tone11" name="tone11">
+				</td>
+				<td> 
+				<input type="text" id="position11" name="position11">
+				</td>
+				<td> 
+				<input type="text" id="cervical11" name="cervical11">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal11" name="vaginal11">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic11" name="oxytocic11">
+				</td>
+				</tr>
+		{/if}
+		<!-- time12 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 12}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality12" name="quality12" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone12" name="tone12" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position12" name="position12" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical12" name="cervical12" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal12" name="vaginal12" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic12" name="oxytocic12" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality12" name="quality12" >
+				</td>
+				<td> 
+				<input type="text" id="tone12" name="tone12">
+				</td>
+				<td> 
+				<input type="text" id="position12" name="position12">
+				</td>
+				<td> 
+				<input type="text" id="cervical12" name="cervical12">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal12" name="vaginal12">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic12" name="oxytocic12">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time2 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 21}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time21 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 21}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality21" name="quality21" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone21" name="tone21" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position21" name="position21" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical21" name="cervical21" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal21" name="vaginal21" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic21" name="oxytocic21" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality21" name="quality21" >
+				</td>
+				<td> 
+				<input type="text" id="tone21" name="tone21">
+				</td>
+				<td> 
+				<input type="text" id="position21" name="position21">
+				</td>
+				<td> 
+				<input type="text" id="cervical21" name="cervical21">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal21" name="vaginal21">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic21" name="oxytocic21">
+				</td>
+				</tr>
+		{/if}
+		<!-- time22 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 22}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality22" name="quality22" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone22" name="tone22" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position22" name="position22" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical22" name="cervical22" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal22" name="vaginal22" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic22" name="oxytocic22" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality22" name="quality22" >
+				</td>
+				<td> 
+				<input type="text" id="tone22" name="tone22">
+				</td>
+				<td> 
+				<input type="text" id="position22" name="position22">
+				</td>
+				<td> 
+				<input type="text" id="cervical22" name="cervical22">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal22" name="vaginal22">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic22" name="oxytocic22">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time3 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 31}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time31 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 31}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality31" name="quality31" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone31" name="tone31" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position31" name="position31" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical31" name="cervical31" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal31" name="vaginal31" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic31" name="oxytocic31" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality31" name="quality31" >
+				</td>
+				<td> 
+				<input type="text" id="tone31" name="tone31">
+				</td>
+				<td> 
+				<input type="text" id="position31" name="position31">
+				</td>
+				<td> 
+				<input type="text" id="cervical31" name="cervical31">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal31" name="vaginal31">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic31" name="oxytocic31">
+				</td>
+				</tr>
+		{/if}
+		<!-- time32 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 32}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality32" name="quality32" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone32" name="tone32" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position32" name="position32" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical32" name="cervical32" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal32" name="vaginal32" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic32" name="oxytocic32" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality32" name="quality32" >
+				</td>
+				<td> 
+				<input type="text" id="tone32" name="tone32">
+				</td>
+				<td> 
+				<input type="text" id="position32" name="position32">
+				</td>
+				<td> 
+				<input type="text" id="cervical32" name="cervical32">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal32" name="vaginal32">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic32" name="oxytocic32">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time4 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 41}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time41 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 41}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality41" name="quality41" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone41" name="tone41" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position41" name="position41" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical41" name="cervical41" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal41" name="vaginal41" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic41" name="oxytocic41" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality41" name="quality41" >
+				</td>
+				<td> 
+				<input type="text" id="tone41" name="tone41">
+				</td>
+				<td> 
+				<input type="text" id="position41" name="position41">
+				</td>
+				<td> 
+				<input type="text" id="cervical41" name="cervical41">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal41" name="vaginal41">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic41" name="oxytocic41">
+				</td>
+				</tr>
+		{/if}
+		<!-- time42 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 42}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality42" name="quality42" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone42" name="tone42" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position42" name="position42" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical42" name="cervical42" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal42" name="vaginal42" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic42" name="oxytocic42" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality42" name="quality42" >
+				</td>
+				<td> 
+				<input type="text" id="tone42" name="tone42">
+				</td>
+				<td> 
+				<input type="text" id="position42" name="position42">
+				</td>
+				<td> 
+				<input type="text" id="cervical42" name="cervical42">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal42" name="vaginal42">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic42" name="oxytocic42">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time5 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 51}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time51 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 51}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality51" name="quality51" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone51" name="tone51" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position51" name="position51" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical51" name="cervical51" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal51" name="vaginal51" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic51" name="oxytocic51" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality51" name="quality51" >
+				</td>
+				<td> 
+				<input type="text" id="tone51" name="tone51">
+				</td>
+				<td> 
+				<input type="text" id="position51" name="position51">
+				</td>
+				<td> 
+				<input type="text" id="cervical51" name="cervical51">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal51" name="vaginal51">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic51" name="oxytocic51">
+				</td>
+				</tr>
+		{/if}
+		<!-- time52 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 52}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality52" name="quality52" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone52" name="tone52" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position52" name="position52" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical52" name="cervical52" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal52" name="vaginal52" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic52" name="oxytocic52" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality52" name="quality52" >
+				</td>
+				<td> 
+				<input type="text" id="tone52" name="tone52">
+				</td>
+				<td> 
+				<input type="text" id="position52" name="position52">
+				</td>
+				<td> 
+				<input type="text" id="cervical52" name="cervical52">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal52" name="vaginal52">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic52" name="oxytocic52">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time6 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 61}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time61 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 61}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality61" name="quality61" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone61" name="tone61" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position61" name="position61" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical61" name="cervical61" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal61" name="vaginal61" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic61" name="oxytocic61" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality61" name="quality61" >
+				</td>
+				<td> 
+				<input type="text" id="tone61" name="tone61">
+				</td>
+				<td> 
+				<input type="text" id="position61" name="position61">
+				</td>
+				<td> 
+				<input type="text" id="cervical61" name="cervical61">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal61" name="vaginal61">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic61" name="oxytocic61">
+				</td>
+				</tr>
+		{/if}
+		<!-- time62 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 62}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality62" name="quality62" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone62" name="tone62" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position62" name="position62" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical62" name="cervical62" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal62" name="vaginal62" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic62" name="oxytocic62" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality62" name="quality62" >
+				</td>
+				<td> 
+				<input type="text" id="tone62" name="tone62">
+				</td>
+				<td> 
+				<input type="text" id="position62" name="position62">
+				</td>
+				<td> 
+				<input type="text" id="cervical62" name="cervical62">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal62" name="vaginal62">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic62" name="oxytocic62">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time7 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 71}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time71 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 71}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality71" name="quality71" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone71" name="tone71" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position71" name="position71" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical71" name="cervical71" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal71" name="vaginal71" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic71" name="oxytocic71" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality71" name="quality71" >
+				</td>
+				<td> 
+				<input type="text" id="tone71" name="tone71">
+				</td>
+				<td> 
+				<input type="text" id="position71" name="position71">
+				</td>
+				<td> 
+				<input type="text" id="cervical71" name="cervical71">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal71" name="vaginal71">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic71" name="oxytocic71">
+				</td>
+				</tr>
+		{/if}
+		<!-- time72 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 72}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality72" name="quality72" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone72" name="tone72" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position72" name="position72" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical72" name="cervical72" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal72" name="vaginal72" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic72" name="oxytocic72" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality72" name="quality72" >
+				</td>
+				<td> 
+				<input type="text" id="tone72" name="tone72">
+				</td>
+				<td> 
+				<input type="text" id="position72" name="position72">
+				</td>
+				<td> 
+				<input type="text" id="cervical72" name="cervical72">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal72" name="vaginal72">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic72" name="oxytocic72">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time8 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 81}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time81 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 81}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality81" name="quality81" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone81" name="tone81" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position81" name="position81" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical81" name="cervical81" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal81" name="vaginal81" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic81" name="oxytocic81" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality81" name="quality81" >
+				</td>
+				<td> 
+				<input type="text" id="tone81" name="tone81">
+				</td>
+				<td> 
+				<input type="text" id="position81" name="position81">
+				</td>
+				<td> 
+				<input type="text" id="cervical81" name="cervical81">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal81" name="vaginal81">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic81" name="oxytocic81">
+				</td>
+				</tr>
+		{/if}
+		<!-- time82 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq 82}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality82" name="quality82" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone82" name="tone82" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position82" name="position82" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical82" name="cervical82" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal82" name="vaginal82" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic82" name="oxytocic82" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td> 
+				<input type="text" id="quality82" name="quality82" >
+				</td>
+				<td> 
+				<input type="text" id="tone82" name="tone82">
+				</td>
+				<td> 
+				<input type="text" id="position82" name="position82">
+				</td>
+				<td> 
+				<input type="text" id="cervical82" name="cervical82">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal82" name="vaginal82">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic82" name="oxytocic82">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- 详细记录 -->
+				<tr>
+					<td rowspan="2" width="30px">
+						<br>NOTES详细记录<br>
+					</td>
+				</tr>
+		{set:$t=0;}
+		{query: name=obstetrical_progress_contractions as opc where=opc.time_id eq -1}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td> 
+				<input type="text" id="quality01" name="quality01" value="{$item[quality]}">
+				</td>
+				<td> 
+				<input type="text" id="tone01" name="tone01" value="{$item[tone]}">
+				</td>
+				<td> 
+				<input type="text" id="position01" name="position01" value="{$item[position]}">
+				</td>
+				<td> 
+				<input type="text" id="cervical01" name="cervical01" value="{$item[cervical]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal01" name="vaginal01" value="{$item[vaginal]}">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic01" name="oxytocic01" value="{$item[oxytocic]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0}
+				<tr>
+				<td> 
+				<input type="text" id="quality01" name="quality01" >
+				</td>
+				<td> 
+				<input type="text" id="tone01" name="tone01">
+				</td>
+				<td> 
+				<input type="text" id="position01" name="position01">
+				</td>
+				<td> 
+				<input type="text" id="cervical01" name="cervical01">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="vaginal01" name="vaginal01">
+				</td>
+				</td>
+				<td> 
+				<input type="text" id="oxytocic01" name="oxytocic01">
+				</td>
+				</tr>
+		{/if}
+				
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div> 
+</div>

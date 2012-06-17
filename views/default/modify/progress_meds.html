@@ -1,0 +1,781 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<div style="height:550px;width:1200px;overflow-y:scroll;overflow-x:hidden;"> 
+<div class="xf-main1">
+<form id="progress_meds" action="{url:/modify/progress_meds_act}"  method="post">
+	{set:$i=0;}
+	{query: name=obstetrical_progress_time as opt where=opt.time_id eq -1}
+		{set:$i=1;}
+	{/query}
+	<table style="border-collapse:collapse" >
+		<input type='hidden' name='i' value="{$i}"/>
+		<input type='hidden' name='id' value="{$this->id}"/>
+		<input type='hidden' name='basic_id' value='{$this->id }'/>
+		<!-- 药物名 -->
+		<tr>
+			<td rowspan="2" width="30px">
+				<br>药物名<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="text" id="meds1" name="meds1" value="{$meds1}">
+			</td>
+			
+			<td>
+			<input type="text" id="meds2" name="meds2" value="{$meds2}">
+			</td>
+			
+			<td>
+			<input type="text" id="meds3" name="meds3" value="{$meds3}">
+			</td>
+			
+			<td>
+			<input type="text" id="meds4" name="meds4" value="{$meds4}">
+			</td>
+		</tr>
+
+		<!-- time1 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 11}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time11 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 11}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds111" name="meds111" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds211" name="meds211" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds311" name="meds311" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds411" name="meds411" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds111" name="meds111">
+				</td>
+				<td>
+				<input type="text" id="meds211" name="meds211">
+				</td>
+				<td>
+				<input type="text" id="meds311" name="meds311">
+				</td>
+				<td>
+				<input type="text" id="meds411" name="meds411">
+				</td>
+				</tr>
+		{/if}
+		<!-- time12 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 12}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds112" name="meds112" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds212" name="meds212" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds312" name="meds312" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds412" name="meds412" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds112" name="meds112">
+				</td>
+				<td>
+				<input type="text" id="meds212" name="meds212">
+				</td>
+				<td>
+				<input type="text" id="meds312" name="meds312">
+				</td>
+				<td>
+				<input type="text" id="meds412" name="meds412">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time2 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 21}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time21 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 21}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds121" name="meds121" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds221" name="meds221" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds321" name="meds321" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds421" name="meds421" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds121" name="meds121">
+				</td>
+				<td>
+				<input type="text" id="meds221" name="meds221">
+				</td>
+				<td>
+				<input type="text" id="meds321" name="meds321">
+				</td>
+				<td>
+				<input type="text" id="meds421" name="meds421">
+				</td>
+				</tr>
+		{/if}
+		<!-- time22 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 22}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds122" name="meds122" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds222" name="meds222" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds322" name="meds322" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds422" name="meds422" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds122" name="meds122">
+				</td>
+				<td>
+				<input type="text" id="meds222" name="meds222">
+				</td>
+				<td>
+				<input type="text" id="meds322" name="meds322">
+				</td>
+				<td>
+				<input type="text" id="meds422" name="meds422">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time3 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 31}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time31 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 31}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds131" name="meds131" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds231" name="meds231" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds331" name="meds331" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds431" name="meds431" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds131" name="meds131">
+				</td>
+				<td>
+				<input type="text" id="meds231" name="meds231">
+				</td>
+				<td>
+				<input type="text" id="meds331" name="meds331">
+				</td>
+				<td>
+				<input type="text" id="meds431" name="meds431">
+				</td>
+				</tr>
+		{/if}
+		<!-- time32 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 32}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds132" name="meds132" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds232" name="meds232" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds332" name="meds332" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds432" name="meds432" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds132" name="meds132">
+				</td>
+				<td>
+				<input type="text" id="meds232" name="meds232">
+				</td>
+				<td>
+				<input type="text" id="meds332" name="meds332">
+				</td>
+				<td>
+				<input type="text" id="meds432" name="meds432">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time4 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 41}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time41 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 41}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds141" name="meds141" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds241" name="meds241" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds341" name="meds341" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds441" name="meds441" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds141" name="meds141">
+				</td>
+				<td>
+				<input type="text" id="meds241" name="meds241">
+				</td>
+				<td>
+				<input type="text" id="meds341" name="meds341">
+				</td>
+				<td>
+				<input type="text" id="meds441" name="meds441">
+				</td>
+				</tr>
+		{/if}
+		<!-- time42 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 42}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds142" name="meds142" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds242" name="meds242" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds342" name="meds342" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds442" name="meds442" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds142" name="meds142">
+				</td>
+				<td>
+				<input type="text" id="meds242" name="meds242">
+				</td>
+				<td>
+				<input type="text" id="meds342" name="meds342">
+				</td>
+				<td>
+				<input type="text" id="meds442" name="meds442">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time5 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 51}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time51 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 51}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds151" name="meds151" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds251" name="meds251" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds351" name="meds351" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds451" name="meds451" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds151" name="meds151">
+				</td>
+				<td>
+				<input type="text" id="meds251" name="meds251">
+				</td>
+				<td>
+				<input type="text" id="meds351" name="meds351">
+				</td>
+				<td>
+				<input type="text" id="meds451" name="meds451">
+				</td>
+				</tr>
+		{/if}
+		<!-- time52 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 52}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds152" name="meds152" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds252" name="meds252" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds352" name="meds352" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds452" name="meds452" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds152" name="meds152">
+				</td>
+				<td>
+				<input type="text" id="meds252" name="meds252">
+				</td>
+				<td>
+				<input type="text" id="meds352" name="meds352">
+				</td>
+				<td>
+				<input type="text" id="meds452" name="meds452">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time6 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 61}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time61 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 61}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds161" name="meds161" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds261" name="meds261" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds361" name="meds361" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds461" name="meds461" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds161" name="meds161">
+				</td>
+				<td>
+				<input type="text" id="meds261" name="meds261">
+				</td>
+				<td>
+				<input type="text" id="meds361" name="meds361">
+				</td>
+				<td>
+				<input type="text" id="meds461" name="meds461">
+				</td>
+				</tr>
+		{/if}
+		<!-- time62 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 62}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds162" name="meds162" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds262" name="meds262" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds362" name="meds362" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds462" name="meds462" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds162" name="meds162">
+				</td>
+				<td>
+				<input type="text" id="meds262" name="meds262">
+				</td>
+				<td>
+				<input type="text" id="meds362" name="meds362">
+				</td>
+				<td>
+				<input type="text" id="meds462" name="meds462">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time7 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 71}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time71 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 71}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds171" name="meds171" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds271" name="meds271" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds371" name="meds371" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds471" name="meds471" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds171" name="meds171">
+				</td>
+				<td>
+				<input type="text" id="meds271" name="meds271">
+				</td>
+				<td>
+				<input type="text" id="meds371" name="meds371">
+				</td>
+				<td>
+				<input type="text" id="meds471" name="meds471">
+				</td>
+				</tr>
+		{/if}
+		<!-- time72 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 72}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds172" name="meds172" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds272" name="meds272" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds372" name="meds372" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds472" name="meds472" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds172" name="meds172">
+				</td>
+				<td>
+				<input type="text" id="meds272" name="meds272">
+				</td>
+				<td>
+				<input type="text" id="meds372" name="meds372">
+				</td>
+				<td>
+				<input type="text" id="meds472" name="meds472">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time8 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 81}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time81 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 81}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds181" name="meds181" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds281" name="meds281" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds381" name="meds381" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds481" name="meds481" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds181" name="meds181">
+				</td>
+				<td>
+				<input type="text" id="meds281" name="meds281">
+				</td>
+				<td>
+				<input type="text" id="meds381" name="meds381">
+				</td>
+				<td>
+				<input type="text" id="meds481" name="meds481">
+				</td>
+				</tr>
+		{/if}
+		<!-- time82 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq 82}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds182" name="meds182" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds282" name="meds282" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds382" name="meds382" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds482" name="meds482" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="meds182" name="meds182">
+				</td>
+				<td>
+				<input type="text" id="meds282" name="meds282">
+				</td>
+				<td>
+				<input type="text" id="meds382" name="meds382">
+				</td>
+				<td>
+				<input type="text" id="meds482" name="meds482">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- 详细记录 -->
+				<tr>
+					<td rowspan="2" width="30px">
+						<br>NOTES详细记录<br>
+					</td>
+				</tr>
+		{set:$t=0;}
+		{query: name=obstetrical_progress_meds as opm where=opm.time_id eq -1}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="meds101" name="meds101" value="{$item[meds1]}">
+				</td>
+				<td>
+				<input type="text" id="meds201" name="meds201" value="{$item[meds2]}">
+				</td>
+				<td>
+				<input type="text" id="meds301" name="meds301" value="{$item[meds3]}">
+				</td>
+				<td>
+				<input type="text" id="meds401" name="meds401" value="{$item[meds4]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0}
+				<tr>
+				<td>
+				<input type="text" id="meds101" name="meds101">
+				</td>
+				<td>
+				<input type="text" id="meds201" name="meds201">
+				</td>
+				<td>
+				<input type="text" id="meds301" name="meds301">
+				</td>
+				<td>
+				<input type="text" id="meds401" name="meds401">
+				</td>
+				</tr>
+		{/if}
+				
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div> 
+</div>

@@ -1,0 +1,663 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<div style="height:550px;width:1000px;overflow-y:scroll;overflow-x:hidden;"> 
+<div class="xf-main1">
+<form id="progress_iv" action="{url:/modify/progress_iv_act}"  method="post">
+	{set:$i=0;}
+	{query: name=obstetrical_progress_time as opt where=opt.time_id eq -1}
+		{set:$i=1;}
+	{/query}
+	<table style="border-collapse:collapse" >
+		<input type='hidden' name='i' value="{$i}"/>
+		<input type='hidden' name='id' value="{$this->id}"/>
+		<input type='hidden' name='basic_id' value='{$this->id }'/>
+		<!-- 静脉 -->
+		<tr>
+			<td rowspan="2" width="30px">
+				<br>静脉<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="text" id="iv1" name="iv1" value="{$name[iv1]}">
+			</td>
+			
+			<td>
+			<input type="text" id="iv2" name="iv2" value="{$name[iv2]}">
+			</td>
+			
+			<td>
+			<input type="text" id="iv3" name="iv3" value="{$name[iv3]}">
+			</td>
+		</tr>
+
+		<!-- time1 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 11}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time11 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 11}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv111" name="iv111" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv211" name="iv211" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv311" name="iv311" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv111" name="iv111">
+				</td>
+				<td>
+				<input type="text" id="iv211" name="iv211">
+				</td>
+				<td>
+				<input type="text" id="iv311" name="iv311">
+				</td>
+				</tr>
+		{/if}
+		<!-- time12 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 12}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv112" name="iv112" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv212" name="iv212" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv312" name="iv312" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv112" name="iv112">
+				</td>
+				<td>
+				<input type="text" id="iv212" name="iv212">
+				</td>
+				<td>
+				<input type="text" id="iv312" name="iv312">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time2 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 21}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time21 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 21}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv121" name="iv121" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv221" name="iv221" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv321" name="iv321" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv121" name="iv121">
+				</td>
+				<td>
+				<input type="text" id="iv221" name="iv221">
+				</td>
+				<td>
+				<input type="text" id="iv321" name="iv321">
+				</td>
+				</tr>
+		{/if}
+		<!-- time22 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 22}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv122" name="iv122" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv222" name="iv222" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv322" name="iv322" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv122" name="iv122">
+				</td>
+				<td>
+				<input type="text" id="iv222" name="iv222">
+				</td>
+				<td>
+				<input type="text" id="iv322" name="iv322">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time3 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 31}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time31 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 31}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv131" name="iv131" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv231" name="iv231" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv331" name="iv331" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv131" name="iv131">
+				</td>
+				<td>
+				<input type="text" id="iv231" name="iv231">
+				</td>
+				<td>
+				<input type="text" id="iv331" name="iv331">
+				</td>
+				</tr>
+		{/if}
+		<!-- time32 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 32}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv132" name="iv132" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv232" name="iv232" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv332" name="iv332" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv132" name="iv132">
+				</td>
+				<td>
+				<input type="text" id="iv232" name="iv232">
+				</td>
+				<td>
+				<input type="text" id="iv332" name="iv332">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time4 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 41}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time41 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 41}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv141" name="iv141" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv241" name="iv241" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv341" name="iv341" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv141" name="iv141">
+				</td>
+				<td>
+				<input type="text" id="iv241" name="iv241">
+				</td>
+				<td>
+				<input type="text" id="iv341" name="iv341">
+				</td>
+				</tr>
+		{/if}
+		<!-- time42 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 42}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv142" name="iv142" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv242" name="iv242" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv342" name="iv342" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv142" name="iv142">
+				</td>
+				<td>
+				<input type="text" id="iv242" name="iv242">
+				</td>
+				<td>
+				<input type="text" id="iv342" name="iv342">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time5 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 51}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time51 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 51}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv151" name="iv151" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv251" name="iv251" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv351" name="iv351" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv151" name="iv151">
+				</td>
+				<td>
+				<input type="text" id="iv251" name="iv251">
+				</td>
+				<td>
+				<input type="text" id="iv351" name="iv351">
+				</td>
+				</tr>
+		{/if}
+		<!-- time52 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 52}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv152" name="iv152" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv252" name="iv252" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv352" name="iv352" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv152" name="iv152">
+				</td>
+				<td>
+				<input type="text" id="iv252" name="iv252">
+				</td>
+				<td>
+				<input type="text" id="iv352" name="iv352">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time6 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 61}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time61 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 61}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv161" name="iv161" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv261" name="iv261" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv361" name="iv361" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv161" name="iv161">
+				</td>
+				<td>
+				<input type="text" id="iv261" name="iv261">
+				</td>
+				<td>
+				<input type="text" id="iv361" name="iv361">
+				</td>
+				</tr>
+		{/if}
+		<!-- time62 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 62}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv162" name="iv162" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv262" name="iv262" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv362" name="iv362" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv162" name="iv162">
+				</td>
+				<td>
+				<input type="text" id="iv262" name="iv262">
+				</td>
+				<td>
+				<input type="text" id="iv362" name="iv362">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time7 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 71}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time71 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 71}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv171" name="iv171" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv271" name="iv271" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv371" name="iv371" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv171" name="iv171">
+				</td>
+				<td>
+				<input type="text" id="iv271" name="iv271">
+				</td>
+				<td>
+				<input type="text" id="iv371" name="iv371">
+				</td>
+				</tr>
+		{/if}
+		<!-- time72 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 72}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv172" name="iv172" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv272" name="iv272" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv372" name="iv372" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv172" name="iv172">
+				</td>
+				<td>
+				<input type="text" id="iv272" name="iv272">
+				</td>
+				<td>
+				<input type="text" id="iv372" name="iv372">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- time8 -->
+		{set:$k=0;}
+		{query: name=obstetrical_progress_time as opt where=opt.time_id eq 81}
+			{if:$item[basic_id]==$this->id}
+			{set:$k=1}
+				<tr>
+					<td rowspan="3" width="30px">
+						<br>{$item[time]}<br>
+					</td>
+				</tr>
+			{/if}
+		{/query}
+		<!-- time81 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 81}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv181" name="iv181" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv281" name="iv281" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv381" name="iv381" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv181" name="iv181">
+				</td>
+				<td>
+				<input type="text" id="iv281" name="iv281">
+				</td>
+				<td>
+				<input type="text" id="iv381" name="iv381">
+				</td>
+				</tr>
+		{/if}
+		<!-- time82 -->
+		{set:$t=0;}
+		{query: name=obstetrical_progress_iv as opm where=opm.time_id eq 82}
+			{if:$item[basic_id]==$this->id}
+				{set:$t=1;}
+				<tr>
+				<td>
+				<input type="text" id="iv182" name="iv182" value="{$item[iv1]}">
+				</td>
+				<td>
+				<input type="text" id="iv282" name="iv282" value="{$item[iv2]}">
+				</td>
+				<td>
+				<input type="text" id="iv382" name="iv382" value="{$item[iv3]}">
+				</td>
+				</tr>
+			{/if}
+		{/query}
+		{if:$t==0&&$k==1}
+				<tr>
+				<td>
+				<input type="text" id="iv182" name="iv182">
+				</td>
+				<td>
+				<input type="text" id="iv282" name="iv282">
+				</td>
+				<td>
+				<input type="text" id="iv382" name="iv382">
+				</td>
+				</tr>
+		{/if}
+		
+		<!-- 详细记录 -->
+				<tr>
+					<td rowspan="2" width="30px">
+						<br>NOTES详细记录<br>
+					</td>
+				</tr>
+					<td>
+					<input type="text" id="notes1" name="notes1" value="{$notes[notes1]}">
+					</td>
+					
+					<td>
+					<input type="text" id="notes2" name="notes2" value="{$notes[notes2]}">
+					</td>
+					
+					<td>
+					<input type="text" id="notes3" name="notes3" value="{$notes[notes3]}">
+					</td>
+				<tr>
+				</tr>
+				<tr>
+				<td>总记录</td>
+				<td colspan="3">
+				<input type="text" id="notes" name="notes" value="{$notes[notes]}">
+				</td>
+				</tr>
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div> 
+</div>
