@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<div class="xf-main1">
+<form id="postpartum_record" action="{url:/modify/postpartum_record_act}"  method="post">
+	<table style="border-collapse:collapse" >
+		<tr>
+		<input type='hidden' name='basic_id' value='{$this->id }'/>
+		<input type='hidden' name='time_id' value='{$this->time_id}'/>
+		<tr>
+			<td>Time时间<br>
+			{set: $k=0;}
+			{if:$time_id < 14 && $time_id >0}
+			{query: name=obstetrical_postpartum_time as opt where=opt.time_id eq $time_id}
+					{if:$item[basic_id] == $this->id}
+					{set: $k=1;}
+					<input type="text" id="time" name="time" value="{$item[time]}">
+					{/if}
+			{/query}
+			{/if}
+			{if:$k==0}
+			<input type="text" id="time" name="time">
+			{/if}
+			</td>
+			<td>BP血压<br><input type="text" id="bp" name="bp" value="{$bp}"></td>
+			<td>P/RR脉搏呼吸<br><input type="text" id="prr" name="prr" value="{$prr}"></td>
+			<td>Temp体温<br><input type="text" id="temp" name="temp" value="{$temp}"></td>
+		</tr>
+		<tr>
+			<td>SpO2血氧<br><input type="text" id="spo" name="spo" value="{$spo}"></td>
+			<td>O2给氧<br><input type="text" id="ox" name="ox" value="{$ox}"></td>
+			<td>Ss.lvl感觉平面<br><input type="text" id="ss" name="ss" value="{$ss}"></td>
+			<td>Motor肌力<br><input type="text" id="motor" name="motor" value="{$motor}"></td>
+		</tr>
+		<tr>
+			<td>Iv site静脉<br><input type="text" id="iv" name="iv" value="{$iv}"></td>
+			<td>Fundus宫底<br><input type="text" id="fun" name="fun" value="{$fun}"></td>
+			<td>Lochia恶露<br><input type="text" id="loc" name="loc" value="{$loc}"></td>
+			<td>Perineuml/Epis会阴<br><input type="text" id="per" name="per" value="{$per}"></td>
+		</tr>
+		<tr>
+			<td>Incision切开<br><input type="text" id="inc" name="inc" value="{$inc}"></td>
+			<td>Dressing敷料<br><input type="text" id="dre" name="dre" value="{$dre}"></td>
+			<td>Medictions药物<br><input type="text" id="med" name="med" value="{$med}"></td>
+			<td>initials签名<br><input type="text" id="ini" name="ini" value="{$ini}"></td>
+		</tr>
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+</div>

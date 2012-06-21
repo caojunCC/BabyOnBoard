@@ -3,6 +3,7 @@ class Modify extends IController
 {
 	public $layout='';
 	public  $data =array();
+	public $time_id = 0;
 	public function init()
 	{
 		$checkObj = new CheckRights($this);
@@ -4790,6 +4791,128 @@ class Modify extends IController
 		$url = IUrl::creatUrl("/obstetrical/progress_edit/id/").$basic_id;
 		header('Location:'.$url);
 	}
+	
+	//postpartum_basic
+	public function postpartum_basic()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		
+		$where = 'basic_id ='.$id;
+		$Obj = new IModel('obstetrical_postpartum_basic');
+		$data= $Obj->getObj($where);
+		if(!empty($data))
+		{
+			$this->setRenderData($data);
+		}
+		$this->redirect('postpartum_basic');
+	}
+	
+	
+	public function postpartum_basic_act()
+	{
+		$basic_id = IReq::get('basic_id');
+		$dataarray=array(
+				'date' => IReq:: get('date'),
+				'svb' => IReq:: get('svb'),
+				'pm' => IReq:: get('pm'),
+				'at' => IReq:: get('at'),
+				'toe' => IReq:: get('toe'),
+				'ox' => IReq:: get('ox'),
+				'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('obstetrical_postpartum_basic');
+		$where ='basic_id ='.$basic_id;
+		$is_in = $Obj ->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		$url = IUrl::creatUrl("/obstetrical/postpartum_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	
+	//postpartum_record
+	public function postpartum_record()
+	{
+		$id = IReq::get('id');	//id中整数部分为$id,小数部分为$time_id
+		$this->id = floor($id);
+		$this->time_id = ($id - $this->id) * 100;
+		$where = 'basic_id ='.$this->id.' AND time_id ='.$this->time_id;
+		$Obj = new IModel('obstetrical_postpartum_record');
+		$data= $Obj->getObj($where);
+		if(!empty($data))
+		{
+			$this->setRenderData($data);
+		}
+		$this->redirect('postpartum_record');
+	}
+	
+	
+	public function postpartum_record_act()
+	{
+		$basic_id = IReq::get('basic_id');
+		$time_id = IReq::get('time_id');
+		//更新时间
+		$dataarray=array(
+				'time' => IReq:: get('time'),
+				'time_id' => IReq:: get('time_id'),
+				'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('obstetrical_postpartum_time');
+		$where ='basic_id ='.$basic_id.' AND time_id ='.$time_id;
+		$is_in = $Obj ->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		//更新record
+		$dataarray=array(
+				'bp' => IReq:: get('bp'),
+				'prr' => IReq:: get('prr'),
+				'temp' => IReq:: get('temp'),
+				'spo' => IReq:: get('spo'),
+				'ox' => IReq:: get('ox'),
+				'ss' => IReq:: get('ss'),
+				'motor' => IReq:: get('motor'),
+				'iv' => IReq:: get('iv'),
+				'fun' => IReq:: get('fun'),
+				'loc' => IReq:: get('loc'),
+				'per' => IReq:: get('per'),
+				'inc' => IReq:: get('inc'),
+				'dre' => IReq:: get('dre'),
+				'med' => IReq:: get('med'),
+				'ini' => IReq:: get('ini'),
+				'time_id' => IReq:: get('time_id'),
+				'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('obstetrical_postpartum_record');
+		$where ='basic_id ='.$basic_id.' AND time_id ='.$time_id;
+		$is_in = $Obj ->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{	
+			$Obj->update($where);	
+		}
+		else 
+		{
+			$Obj->add();	
+		}
+		$url = IUrl::creatUrl("/obstetrical/postpartum_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	
+	
 	
 	
 }

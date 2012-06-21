@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<div class="xf-main1">
+<form id="postpartum_basic" action="{url:/modify/postpartum_basic_act}"  method="post">
+	<table style="border-collapse:collapse" >
+		<tr>
+		<input type='hidden' name='basic_id' value='{$this->id }'/>
+		<tr>
+			<td>DATE日期<br><input type="text" id="date" name="date" value="{$date}"   onclick="MyCalendar.SetDate(this)" ></td>
+			<td>Surgery外科<br>VAGINAL BIRTH 阴道分娩<br><input type="text" id="svb" name="svb" value="{$svb}"></td>
+			<td>PHYSICIAN/MV医生/助产士<br><input type="text" id="pm" name="pm" value="{$pm}"></td>
+		</tr>
+		<tr>
+			<td>ANESTHESZIA TYPE麻醉方式<br><input type="text" id="at" name="at" value="{$at}"></td>
+			<td>TIME OF ENTERY入住时间GRAVIDA<br>孕次<br><input type="text" id="toe" name="toe" value="{$toe}"></td>
+			<td>O2给氧<br>
+				<input type="radio" id="ox" name="ox" {if:$ox == 1}checked=true{/if} value="1">NC鼻导管<br>
+				<input type="radio" id="ox" name="ox" {if:$ox == 2}checked=true{/if} value="2">Mask面罩</td>	
+		</tr>
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+</div>

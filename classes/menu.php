@@ -219,6 +219,10 @@ class Menu
 				'/obstetrical/progress_list' =>'list',
 				'/obstetrical/progress_edit' =>'edit',
 				),
+			'Postpartum Care' => array(
+				'/obstetrical/postpartum_list' =>'list',
+				'/obstetrical/postpartum_edit' =>'edit',
+				),
 				/*
 			'report_stats报告统计' =>array(
 				'/patient/report_stats_list ' =>'list报告统计',

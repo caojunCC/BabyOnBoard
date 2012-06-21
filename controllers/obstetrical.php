@@ -134,7 +134,7 @@ class Obstetrical extends IController
 		}
 	}
 	
-	//progress surgery
+	//progress
 	function progress_list()
 	{
 		$this->redirect('progress_list');
@@ -176,6 +176,30 @@ class Obstetrical extends IController
 		else 
 		{
 			$this->redirect('progress_list',false);
+			Util::showMessage('Please choose a person');
+		}
+	}
+	//postpartum 
+	function postpartum_list()
+	{
+		$this->redirect('postpartum_list');
+	}
+	
+	function postpartum_edit()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		if($id)
+		{
+			$postpartum_Obj = new IModel('obstetrical_postpartum_basic_view');
+			$where ='id= '.$id;		
+			$data = $postpartum_Obj->getObj($where);		
+			$this->setRenderData($data);
+			$this->redirect('postpartum_edit');
+		}
+		else 
+		{
+			$this->redirect('postpartum_list',false);
 			Util::showMessage('Please choose a person');
 		}
 	}

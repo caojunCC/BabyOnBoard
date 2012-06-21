@@ -1,0 +1,1284 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<script type="text/javascript" src="{theme:javascript/Calendar4.js}"></script> 
+<script language="JavaScript" type="text/javascript">
+
+$(window).load(function()
+		{
+			var winHeight =700;
+		 if(window.screen.height)
+				winHeight=window.screen.height;
+			winHeight=winHeight-250;
+			$('#content1').css("height",winHeight+"px");
+		}
+		)
+
+function postpartum_basic()
+{
+	art.dialog.load('{url:/modify/postpartum_basic/id/$id}', {
+		id:'postpartum_basic',
+		lock: true,
+	    title: 'postpartum_basic',
+	    width: '1000px'
+	}, true);
+}
+function postpartum_record($time_id)
+{ 
+	if($time_id == 1)
+		{
+			art.dialog.load('{url:/modify/postpartum_record/id/$id.01}', {
+				id:'postpartum_record',
+				lock: true,
+			    title: 'postpartum_record',
+			    width: '1000px'
+			}, true);
+		}
+	else if($time_id == 2)
+		{
+			art.dialog.load('{url:/modify/postpartum_record/id/$id.02}', {
+				id:'postpartum_record',
+				lock: true,
+			    title: 'postpartum_record',
+			    width: '1000px'
+			}, true);
+		}
+	else if($time_id == 3)
+	{
+		art.dialog.load('{url:/modify/postpartum_record/id/$id.03}', {
+			id:'postpartum_record',
+			lock: true,
+		    title: 'postpartum_record',
+		    width: '1000px'
+		}, true);
+	}
+	else if($time_id == 4)
+	{
+		art.dialog.load('{url:/modify/postpartum_record/id/$id.04}', {
+			id:'postpartum_record',
+			lock: true,
+		    title: 'postpartum_record',
+		    width: '1000px'
+		}, true);
+	}
+	else if($time_id == 5)
+	{
+		art.dialog.load('{url:/modify/postpartum_record/id/$id.05}', {
+			id:'postpartum_record',
+			lock: true,
+		    title: 'postpartum_record',
+		    width: '1000px'
+		}, true);
+	}
+	else if($time_id == 6)
+	{
+		art.dialog.load('{url:/modify/postpartum_record/id/$id.06}', {
+			id:'postpartum_record',
+			lock: true,
+		    title: 'postpartum_record',
+		    width: '1000px'
+		}, true);
+	}
+	else if($time_id == 7)
+	{
+		art.dialog.load('{url:/modify/postpartum_record/id/$id.07}', {
+			id:'postpartum_record',
+			lock: true,
+		    title: 'postpartum_record',
+		    width: '1000px'
+		}, true);
+	}
+	else if($time_id == 8)
+	{
+		art.dialog.load('{url:/modify/postpartum_record/id/$id.08}', {
+			id:'postpartum_record',
+			lock: true,
+		    title: 'postpartum_record',
+		    width: '1000px'
+		}, true);
+	}
+	else if($time_id == 9)
+	{
+		art.dialog.load('{url:/modify/postpartum_record/id/$id.09}', {
+			id:'postpartum_record',
+			lock: true,
+		    title: 'postpartum_record',
+		    width: '1000px'
+		}, true);
+	}
+	else if($time_id == 10)
+	{
+		art.dialog.load('{url:/modify/postpartum_record/id/$id.10}', {
+			id:'postpartum_record',
+			lock: true,
+		    title: 'postpartum_record',
+		    width: '1000px'
+		}, true);
+	}
+	else if($time_id == 11)
+	{
+		art.dialog.load('{url:/modify/postpartum_record/id/$id.11}', {
+			id:'postpartum_record',
+			lock: true,
+		    title: 'postpartum_record',
+		    width: '1000px'
+		}, true);
+	}
+	else if($time_id == 12)
+	{
+		art.dialog.load('{url:/modify/postpartum_record/id/$id.12}', {
+			id:'postpartum_record',
+			lock: true,
+		    title: 'postpartum_record',
+		    width: '1000px'
+		}, true);
+	}
+	else if($time_id == 13)
+	{
+		art.dialog.load('{url:/modify/postpartum_record/id/$id.13}', {
+			id:'postpartum_record',
+			lock: true,
+		    title: 'postpartum_record',
+		    width: '1000px'
+		}, true);
+	}
+	
+}
+
+</script>
+<div class="headbar">
+	<div class="position"><span>Obstetrical</span><span>></span><span>Progress Record</span><span>></span><span>edit</span></div>
+</div>
+<div class="content1" id="content1" >
+	<table >
+		<tr>
+			<td>Name:{$name}&nbsp;&nbsp;&nbsp;</td>
+			<td>Hospital:{$hospital}&nbsp;&nbsp;&nbsp;</td>
+			<td>Date:{$date}&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+	</table>
+	
+	<div class="xf-main01">
+	    <table style="border-collapse:collapse">
+                 Postpartum Care产褥护理
+			 <tr onclick='postpartum_basic();'>
+                 <td colspan="3">Date日期<br><a style='color:red'>{$date_p}</a></td>
+				 <td colspan="4">Surgery外科<br>
+				 VAGINAL BIRTH 阴道分娩<br><a style='color:red'>{$svb}</td>
+				 <td colspan="4">PHYSICIAN/MV医生/助产士<br><a style='color:red'>{$pm}</td>
+				 <td colspan="3" >ANESTHESZIA TYPE麻醉方式<br><a style='color:red'>{$at}</td>
+				 <td colspan="2" >TIME OF ENTERY入住时间<br><a style='color:red'>{$toe}</td>
+             </tr>
+			 <tr>
+                 <td>Time时间</td>
+				 <td>BP血压</td>
+				 <td>P/RR脉搏呼吸</td>
+				 <td>Temp体温</td>
+				 <td>SpO2血氧</td>
+				 <td onclick='postpartum_basic();'>O2给氧<br>
+				 {if:$ox == 1}<a style='color:red'>√</a>{else:}□{/if}NC鼻导管<br>
+				 {if:$ox == 2}<a style='color:red'>√</a>{else:}□{/if}Mask面罩</td>
+				 <td>Ss.lvl感觉平面</td>
+				 <td>Motor肌力</td>
+				 <td>Iv site静脉</td>
+				 <td>Fundus宫底</td>
+				 <td>Lochia恶露</td>
+				 <td>Perineuml/<br>Epis会阴</td>
+				 <td>Incision切开</td>
+				 <td>Dressing敷料</td>
+				 <td>Medictions药物</td>
+				 <td>initials签名</td>
+             </tr>
+			 <tr onclick='postpartum_record(1);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 1}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(2);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 2}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(3);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 3}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(4);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 4}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(5);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 5}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(6);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 6}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(7);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 7}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(8);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 8}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(9);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 9}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(10);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 10}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(11);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 11}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(12);'>
+                 <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 12}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+			 <tr onclick='postpartum_record(13);'>
+			     <td>
+                 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}
+						<a style='color:red'>{$item[time]}
+					{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[bp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[prr]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[temp]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[spo]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ox]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ss]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[motor]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[iv]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[fun]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[loc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[per]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[inc]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[dre]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[med]}{/if}
+				 {/query}
+				 </td>
+				 <td>
+				 {query: name=obstetrical_postpartum_record_view as opv where=opv.time_id eq 13}
+					{if:$item[basic_id]==$id}<a style='color:red'>{$item[ini]}{/if}
+				 {/query}
+				 </td>
+             </tr>
+        </table>	
+</div>
+</div>
