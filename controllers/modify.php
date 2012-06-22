@@ -790,6 +790,2366 @@ class Modify extends IController
 		header('Location:'.$url);
 	}
 	
+	public function analgesia_basic()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		if($id)
+		{
+			$where = 'basic_id ='.$id;
+			$Obj = new IModel('labor_analgesia_basic');
+			$this->data['operate'] = $Obj->getObj($where);
+			$Obj = new IModel('admission_ob_physical_info');
+			$this->data['htwt'] = $Obj->getObj($where);
+			$Obj = new IModel('admission_ultrasound_other');
+			$this->data['ega'] = $Obj->getObj($where);
+			$Obj = new IModel('admission_current_info');
+			$this->data['history']=$Obj->getObj($where);
+			$Obj = new IModel('surgery_plan');
+			$this->data['doctor']=$Obj->getObj($where);
+			if(!empty($this->data) )
+			{
+				$this->setRenderData($this->data);
+			}
+		}
+		$this->redirect('analgesia_basic');
+	}
+	
+	public function analgesia_basic_act()
+	{
+		$basic_id = IReq::get('basic_id');
+		//更新operate
+		$dataarray = array(
+			'diagnosis' => IReq:: get('diagnosis'),
+			'procedure' => IReq:: get('procedure'),
+			'trainee' => IReq:: get('trainee'),
+			'start_date' => IReq:: get('start_date'),
+			'start_time' => IReq:: get('start_time'),
+			'end_date' => IReq:: get('end_date'),
+			'end_time' => IReq:: get('end_time'),
+			'ldr' => IReq:: get('ldr'),
+			'page' => IReq:: get('page'),
+			'para' => IReq:: get('para'),
+			'asa_pa' => IReq:: get('asa_pa'),
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_basic');
+		$where = 'basic_id ='.$basic_id;
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else 
+		{
+			$Obj->add();
+		}
+		//更新htwt
+		$dataarray = array(
+			'age' => IReq:: get('age'),
+			'ht' => IReq:: get('ht'),
+			'wt' => IReq:: get('wt'),
+			'gracida' => IReq:: get('gracida'),
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('admission_ob_physical_info');
+		$where = 'basic_id='.$basic_id;
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		//更新ega
+		$dataarray = array(
+			'ega_by_us' => IReq:: get('ega_by_us'),
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('admission_ultrasound_other');
+		$where = 'basic_id='.$basic_id;
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		//更新history
+		$dataarray = array(
+			'current_medication' => IReq:: get('current_medication'),
+			'allergies' => IReq::get('allergies'),
+			'medical_surgical_hx' => IReq::get('medical_surgical_hx'),
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('admission_current_info');
+		$where = 'basic_id='.$basic_id;
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		//更新doctor
+		$dataarray = array(
+			'obsterian' => IReq:: get('obsterian'),
+			'anesthesiologist' => IReq::get('anesthesiologist'),
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('surgery_plan');
+		$where = 'basic_id='.$basic_id;
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		
+		$url = IUrl::creatUrl("/obstetrical/analgesia_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	
+	public function analgesia_operate()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		if($id)
+		{
+			$where = 'basic_id ='.$id;
+			$Obj = new IModel('labor_analgesia_operate');
+			$dataRow = $Obj->getObj($where);
+			if(!empty($dataRow) )
+			{
+				$this->setRenderData($dataRow);
+			}
+		}
+		$this->redirect('analgesia_operate');
+	}
+	public function analgesia_operate_act()
+	{
+		$basic_id = IReq::get('basic_id');
+		//更新
+		$dataarray = array(
+			'equip_drugs_check' => IReq:: get('equip_drugs_check'),
+			'special_access' => IReq:: get('special_access'),
+			'aline' => IReq:: get('aline'),
+			'aline_loc' => IReq:: get('aline_loc'),
+			'cline' => IReq:: get('cline'),
+			'cline_loc' => IReq:: get('cline_loc'),
+			'pacath' => IReq:: get('pacath'),
+			'pacath_loc' => IReq:: get('pacath_loc'),
+			'epidural' => IReq:: get('epidural'),
+			'prep' => IReq:: get('prep'),
+			'position' => IReq:: get('position'),
+			'spinal' => IReq:: get('spinal'),
+			'epidural_needle' => IReq:: get('epidural_needle'),
+			'l_o_r' => IReq:: get('l_o_r'),
+			'cse' => IReq:: get('cse'),
+			'spinal_needle' => IReq:: get('spinal_needle'),
+			'csf' => IReq:: get('csf'),
+			'pcea' => IReq:: get('pcea'),
+			'site_1' => IReq:: get('site_1'),
+			'site_2' => IReq:: get('site_2'),
+			'site_3' => IReq:: get('site_3'),
+			'cathin_space' => IReq:: get('cathin_space'),
+			'at_skin' => IReq:: get('at_skin'),
+			'ambulatory' => IReq:: get('ambulatory'),
+			'test_dose_via_cath' => IReq:: get('test_dose_via_cath'),
+			'csf_w' => IReq:: get('csf_w'),
+			'epid_needle1' => IReq:: get('epid_needle1'),
+			'epid_cath1' => IReq:: get('epid_cath1'),
+			'blood_w' => IReq:: get('blood_w'),
+			'spinal_needle1' => IReq:: get('spinal_needle1'),
+			'epid_needle2' => IReq:: get('epid_needle2'),
+			'epid_cath2' => IReq:: get('epid_cath2'),
+			'parasthesis_w' => IReq:: get('parasthesis_w'),
+			'spinal_needle2' => IReq:: get('spinal_needle2'),
+			'epid_needle3' => IReq:: get('epid_needle3'),
+			'epid_cath3' => IReq:: get('epid_cath3'),
+			'left' => IReq:: get('left'),
+			'right' => IReq:: get('right'),
+			'transient' => IReq:: get('transient'),
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_operate');
+		$where = 'basic_id='.$basic_id;
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		
+		$url = IUrl::creatUrl("/obstetrical/analgesia_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	
+	public function analgesia_drugs()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		$this->redirect('analgesia_drugs');
+	}
+	public function analgesia_drugs_act()
+	{
+		$basic_id = IReq::get('basic_id');		
+	//更新time1
+		$dataarray = array(
+			'time' => IReq:: get('time1'),
+			'time_id' => '1',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 1';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 1';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'oxygen' => IReq:: get('oxygen1'),
+				'bupivacaiane' => IReq:: get('bupivacaiane1'),
+				'ropivacaine' => IReq:: get('ropivacaine1'),
+				'lidocaine' => IReq:: get('lidocaine1'),
+				'lid_epi' => IReq:: get('lid_epi1'),
+				'fentanyl' => IReq:: get('fentanyl1'),
+				'ephedrine' => IReq:: get('ephedrine1'),
+				'phenyephrine' => IReq:: get('phenyephrine1'),
+				'bup_fen' => IReq:: get('bup_fen1'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '1'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 1';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time2
+		$dataarray = array(
+			'time' => IReq:: get('time2'),
+			'time_id' => '2',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 2';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 2';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'oxygen' => IReq:: get('oxygen2'),
+				'bupivacaiane' => IReq:: get('bupivacaiane2'),
+				'ropivacaine' => IReq:: get('ropivacaine2'),
+				'lidocaine' => IReq:: get('lidocaine2'),
+				'lid_epi' => IReq:: get('lid_epi2'),
+				'fentanyl' => IReq:: get('fentanyl2'),
+				'ephedrine' => IReq:: get('ephedrine2'),
+				'phenyephrine' => IReq:: get('phenyephrine2'),
+				'bup_fen' => IReq:: get('bup_fen2'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '2'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 2';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time3
+		$dataarray = array(
+			'time' => IReq:: get('time3'),
+			'time_id' => '3',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 3';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 3';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'oxygen' => IReq:: get('oxygen3'),
+				'bupivacaiane' => IReq:: get('bupivacaiane3'),
+				'ropivacaine' => IReq:: get('ropivacaine3'),
+				'lidocaine' => IReq:: get('lidocaine3'),
+				'lid_epi' => IReq:: get('lid_epi3'),
+				'fentanyl' => IReq:: get('fentanyl3'),
+				'ephedrine' => IReq:: get('ephedrine3'),
+				'phenyephrine' => IReq:: get('phenyephrine3'),
+				'bup_fen' => IReq:: get('bup_fen3'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '3'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 3';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time4
+		$dataarray = array(
+			'time' => IReq:: get('time4'),
+			'time_id' => '4',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 4';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 4';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'oxygen' => IReq:: get('oxygen4'),
+				'bupivacaiane' => IReq:: get('bupivacaiane4'),
+				'ropivacaine' => IReq:: get('ropivacaine4'),
+				'lidocaine' => IReq:: get('lidocaine4'),
+				'lid_epi' => IReq:: get('lid_epi4'),
+				'fentanyl' => IReq:: get('fentanyl4'),
+				'ephedrine' => IReq:: get('ephedrine4'),
+				'phenyephrine' => IReq:: get('phenyephrine4'),
+				'bup_fen' => IReq:: get('bup_fen4'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '4'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 4';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time5
+		$dataarray = array(
+			'time' => IReq:: get('time5'),
+			'time_id' => '5',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 5';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 5';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'oxygen' => IReq:: get('oxygen5'),
+				'bupivacaiane' => IReq:: get('bupivacaiane5'),
+				'ropivacaine' => IReq:: get('ropivacaine5'),
+				'lidocaine' => IReq:: get('lidocaine5'),
+				'lid_epi' => IReq:: get('lid_epi5'),
+				'fentanyl' => IReq:: get('fentanyl5'),
+				'ephedrine' => IReq:: get('ephedrine5'),
+				'phenyephrine' => IReq:: get('phenyephrine5'),
+				'bup_fen' => IReq:: get('bup_fen5'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '5'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 5';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time6
+		$dataarray = array(
+			'time' => IReq:: get('time6'),
+			'time_id' => '6',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 6';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 6';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'oxygen' => IReq:: get('oxygen6'),
+				'bupivacaiane' => IReq:: get('bupivacaiane6'),
+				'ropivacaine' => IReq:: get('ropivacaine6'),
+				'lidocaine' => IReq:: get('lidocaine6'),
+				'lid_epi' => IReq:: get('lid_epi6'),
+				'fentanyl' => IReq:: get('fentanyl6'),
+				'ephedrine' => IReq:: get('ephedrine6'),
+				'phenyephrine' => IReq:: get('phenyephrine6'),
+				'bup_fen' => IReq:: get('bup_fen6'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '6'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 6';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time7
+		$dataarray = array(
+			'time' => IReq:: get('time7'),
+			'time_id' => '7',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 7';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 7';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'oxygen' => IReq:: get('oxygen7'),
+				'bupivacaiane' => IReq:: get('bupivacaiane7'),
+				'ropivacaine' => IReq:: get('ropivacaine7'),
+				'lidocaine' => IReq:: get('lidocaine7'),
+				'lid_epi' => IReq:: get('lid_epi7'),
+				'fentanyl' => IReq:: get('fentanyl7'),
+				'ephedrine' => IReq:: get('ephedrine7'),
+				'phenyephrine' => IReq:: get('phenyephrine7'),
+				'bup_fen' => IReq:: get('bup_fen7'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '7'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 7';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time8
+		$dataarray = array(
+			'time' => IReq:: get('time8'),
+			'time_id' => '8',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 8';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 8';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'oxygen' => IReq:: get('oxygen8'),
+				'bupivacaiane' => IReq:: get('bupivacaiane8'),
+				'ropivacaine' => IReq:: get('ropivacaine8'),
+				'lidocaine' => IReq:: get('lidocaine8'),
+				'lid_epi' => IReq:: get('lid_epi8'),
+				'fentanyl' => IReq:: get('fentanyl8'),
+				'ephedrine' => IReq:: get('ephedrine8'),
+				'phenyephrine' => IReq:: get('phenyephrine8'),
+				'bup_fen' => IReq:: get('bup_fen8'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '8'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 8';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time9
+		$dataarray = array(
+			'time' => IReq:: get('time9'),
+			'time_id' => '9',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 9';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 9';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'oxygen' => IReq:: get('oxygen9'),
+				'bupivacaiane' => IReq:: get('bupivacaiane9'),
+				'ropivacaine' => IReq:: get('ropivacaine9'),
+				'lidocaine' => IReq:: get('lidocaine9'),
+				'lid_epi' => IReq:: get('lid_epi9'),
+				'fentanyl' => IReq:: get('fentanyl9'),
+				'ephedrine' => IReq:: get('ephedrine9'),
+				'phenyephrine' => IReq:: get('phenyephrine9'),
+				'bup_fen' => IReq:: get('bup_fen9'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '9'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 9';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time10
+		$dataarray = array(
+			'time' => IReq:: get('time10'),
+			'time_id' => '10',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 10';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 10';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'oxygen' => IReq:: get('oxygen10'),
+				'bupivacaiane' => IReq:: get('bupivacaiane10'),
+				'ropivacaine' => IReq:: get('ropivacaine10'),
+				'lidocaine' => IReq:: get('lidocaine10'),
+				'lid_epi' => IReq:: get('lid_epi10'),
+				'fentanyl' => IReq:: get('fentanyl10'),
+				'ephedrine' => IReq:: get('ephedrine10'),
+				'phenyephrine' => IReq:: get('phenyephrine10'),
+				'bup_fen' => IReq:: get('bup_fen10'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '10'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 10';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time11
+		$dataarray = array(
+			'time' => IReq:: get('time11'),
+			'time_id' => '11',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 11';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 11';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'oxygen' => IReq:: get('oxygen11'),
+				'bupivacaiane' => IReq:: get('bupivacaiane11'),
+				'ropivacaine' => IReq:: get('ropivacaine11'),
+				'lidocaine' => IReq:: get('lidocaine11'),
+				'lid_epi' => IReq:: get('lid_epi11'),
+				'fentanyl' => IReq:: get('fentanyl11'),
+				'ephedrine' => IReq:: get('ephedrine11'),
+				'phenyephrine' => IReq:: get('phenyephrine11'),
+				'bup_fen' => IReq:: get('bup_fen11'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '11'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 11';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		$url = IUrl::creatUrl("/obstetrical/analgesia_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+
+	public function analgesia_fluids()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		$this->redirect('analgesia_fluids');
+	}
+	public function analgesia_fluids_act()
+	{
+		$basic_id = IReq::get('basic_id');		
+	//更新time1
+		$dataarray = array(
+			'time' => IReq:: get('time1'),
+			'time_id' => '1',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 1';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 1';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'blood_f' => IReq:: get('blood_f1'),
+				'bloodLoss_f' => IReq:: get('bloodLoss_f1'),
+				'unine_f' => IReq:: get('unine_f1'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '1'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 1';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新tim2
+		$dataarray = array(
+			'time' => IReq:: get('time2'),
+			'time_id' => '2',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 2';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 2';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'blood_f' => IReq:: get('blood_f2'),
+				'bloodLoss_f' => IReq:: get('bloodLoss_f2'),
+				'unine_f' => IReq:: get('unine_f2'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '2'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 2';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time3
+		$dataarray = array(
+			'time' => IReq:: get('time3'),
+			'time_id' => '3',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 3';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 3';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'blood_f' => IReq:: get('blood_f3'),
+				'bloodLoss_f' => IReq:: get('bloodLoss_f3'),
+				'unine_f' => IReq:: get('unine_f3'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '3'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 3';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time4
+		$dataarray = array(
+			'time' => IReq:: get('time4'),
+			'time_id' => '4',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 4';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 4';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'blood_f' => IReq:: get('blood_f4'),
+				'bloodLoss_f' => IReq:: get('bloodLoss_f4'),
+				'unine_f' => IReq:: get('unine_f4'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '4'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 4';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time5
+		$dataarray = array(
+			'time' => IReq:: get('time5'),
+			'time_id' => '5',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 5';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 5';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'blood_f' => IReq:: get('blood_f5'),
+				'bloodLoss_f' => IReq:: get('bloodLoss_f5'),
+				'unine_f' => IReq:: get('unine_f5'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '5'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 5';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time6
+		$dataarray = array(
+			'time' => IReq:: get('time6'),
+			'time_id' => '6',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 6';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 6';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'blood_f' => IReq:: get('blood_f6'),
+				'bloodLoss_f' => IReq:: get('bloodLoss_f6'),
+				'unine_f' => IReq:: get('unine_f6'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '6'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 6';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time7
+		$dataarray = array(
+			'time' => IReq:: get('time7'),
+			'time_id' => '7',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 7';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 7';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'blood_f' => IReq:: get('blood_f7'),
+				'bloodLoss_f' => IReq:: get('bloodLoss_f7'),
+				'unine_f' => IReq:: get('unine_f7'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '7'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 7';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time8
+		$dataarray = array(
+			'time' => IReq:: get('time8'),
+			'time_id' => '8',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 8';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 8';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'blood_f' => IReq:: get('blood_f8'),
+				'bloodLoss_f' => IReq:: get('bloodLoss_f8'),
+				'unine_f' => IReq:: get('unine_f8'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '8'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 8';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time9
+		$dataarray = array(
+			'time' => IReq:: get('time9'),
+			'time_id' => '9',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 9';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 9';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'blood_f' => IReq:: get('blood_f9'),
+				'bloodLoss_f' => IReq:: get('bloodLoss_f9'),
+				'unine_f' => IReq:: get('unine_f9'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '9'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 9';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time10
+		$dataarray = array(
+			'time' => IReq:: get('time10'),
+			'time_id' => '10',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 10';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 10';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'blood_f' => IReq:: get('blood_f10'),
+				'bloodLoss_f' => IReq:: get('bloodLoss_f10'),
+				'unine_f' => IReq:: get('unine_f10'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '10'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 10';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time11
+		$dataarray = array(
+			'time' => IReq:: get('time11'),
+			'time_id' => '11',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 11';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 11';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'blood_f' => IReq:: get('blood_f11'),
+				'bloodLoss_f' => IReq:: get('bloodLoss_f11'),
+				'unine_f' => IReq:: get('unine_f11'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '11'
+			);
+			$Obj = new IModel('labor_analgesia_drugs');
+			$where ='basic_id ='.$basic_id.' AND time_id = 11';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		$url = IUrl::creatUrl("/obstetrical/analgesia_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	public function analgesia_pain()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		$this->redirect('analgesia_pain');
+	}
+	public function analgesia_pain_act()
+	{
+		$basic_id = IReq::get('basic_id');
+	//更新time1
+		$dataarray = array(
+			'time' => IReq:: get('time1'),
+			'time_id' => '1',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 1';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 1';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'pain' => IReq:: get('pain1'),
+				'sensory_l' => IReq:: get('sensory_l1'),
+				'sensory_r' => IReq:: get('sensory_r1'),
+				'ob_dilation' => IReq:: get('ob_dilation1'),
+				'ob_station' => IReq:: get('ob_station1'),
+				'temperature' => IReq:: get('temperature1'),
+				'cv_ecg' => IReq:: get('cv_ecg1'),
+				'cv_spo' => IReq:: get('cv_spo1'),
+				'resident' => IReq:: get('resident1'),
+				'rttending' => IReq:: get('rttending1'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '1'
+			);
+			$Obj = new IModel('labor_analgesia_comments');
+			$where ='basic_id ='.$basic_id.' AND time_id = 1';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time2
+		$dataarray = array(
+			'time' => IReq:: get('time2'),
+			'time_id' => '2',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 2';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 2';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'pain' => IReq:: get('pain2'),
+				'sensory_l' => IReq:: get('sensory_l2'),
+				'sensory_r' => IReq:: get('sensory_r2'),
+				'ob_dilation' => IReq:: get('ob_dilation2'),
+				'ob_station' => IReq:: get('ob_station2'),
+				'temperature' => IReq:: get('temperature2'),
+				'cv_ecg' => IReq:: get('cv_ecg2'),
+				'cv_spo' => IReq:: get('cv_spo2'),
+				'resident' => IReq:: get('resident2'),
+				'rttending' => IReq:: get('rttending2'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '2'
+			);
+			$Obj = new IModel('labor_analgesia_comments');
+			$where ='basic_id ='.$basic_id.' AND time_id = 2';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time3
+		$dataarray = array(
+			'time' => IReq:: get('time3'),
+			'time_id' => '3',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 3';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 3';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'pain' => IReq:: get('pain3'),
+				'sensory_l' => IReq:: get('sensory_l3'),
+				'sensory_r' => IReq:: get('sensory_r3'),
+				'ob_dilation' => IReq:: get('ob_dilation3'),
+				'ob_station' => IReq:: get('ob_station3'),
+				'temperature' => IReq:: get('temperature3'),
+				'cv_ecg' => IReq:: get('cv_ecg3'),
+				'cv_spo' => IReq:: get('cv_spo3'),
+				'resident' => IReq:: get('resident3'),
+				'rttending' => IReq:: get('rttending3'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '3'
+			);
+			$Obj = new IModel('labor_analgesia_comments');
+			$where ='basic_id ='.$basic_id.' AND time_id = 3';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}	
+	//更新time4
+		$dataarray = array(
+			'time' => IReq:: get('time4'),
+			'time_id' => '4',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 4';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 4';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'pain' => IReq:: get('pain4'),
+				'sensory_l' => IReq:: get('sensory_l4'),
+				'sensory_r' => IReq:: get('sensory_r4'),
+				'ob_dilation' => IReq:: get('ob_dilation4'),
+				'ob_station' => IReq:: get('ob_station4'),
+				'temperature' => IReq:: get('temperature4'),
+				'cv_ecg' => IReq:: get('cv_ecg4'),
+				'cv_spo' => IReq:: get('cv_spo4'),
+				'resident' => IReq:: get('resident4'),
+				'rttending' => IReq:: get('rttending4'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '4'
+			);
+			$Obj = new IModel('labor_analgesia_comments');
+			$where ='basic_id ='.$basic_id.' AND time_id = 4';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time5
+		$dataarray = array(
+			'time' => IReq:: get('time5'),
+			'time_id' => '5',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 5';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 5';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'pain' => IReq:: get('pain5'),
+				'sensory_l' => IReq:: get('sensory_l5'),
+				'sensory_r' => IReq:: get('sensory_r5'),
+				'ob_dilation' => IReq:: get('ob_dilation5'),
+				'ob_station' => IReq:: get('ob_station5'),
+				'temperature' => IReq:: get('temperature5'),
+				'cv_ecg' => IReq:: get('cv_ecg5'),
+				'cv_spo' => IReq:: get('cv_spo5'),
+				'resident' => IReq:: get('resident5'),
+				'rttending' => IReq:: get('rttending5'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '5'
+			);
+			$Obj = new IModel('labor_analgesia_comments');
+			$where ='basic_id ='.$basic_id.' AND time_id = 5';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time6
+		$dataarray = array(
+			'time' => IReq:: get('time6'),
+			'time_id' => '6',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 6';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 6';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'pain' => IReq:: get('pain6'),
+				'sensory_l' => IReq:: get('sensory_l6'),
+				'sensory_r' => IReq:: get('sensory_r6'),
+				'ob_dilation' => IReq:: get('ob_dilation6'),
+				'ob_station' => IReq:: get('ob_station6'),
+				'temperature' => IReq:: get('temperature6'),
+				'cv_ecg' => IReq:: get('cv_ecg6'),
+				'cv_spo' => IReq:: get('cv_spo6'),
+				'resident' => IReq:: get('resident6'),
+				'rttending' => IReq:: get('rttending6'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '6'
+			);
+			$Obj = new IModel('labor_analgesia_comments');
+			$where ='basic_id ='.$basic_id.' AND time_id = 6';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time7
+		$dataarray = array(
+			'time' => IReq:: get('time7'),
+			'time_id' => '7',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 7';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 7';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'pain' => IReq:: get('pain7'),
+				'sensory_l' => IReq:: get('sensory_l7'),
+				'sensory_r' => IReq:: get('sensory_r7'),
+				'ob_dilation' => IReq:: get('ob_dilation7'),
+				'ob_station' => IReq:: get('ob_station7'),
+				'temperature' => IReq:: get('temperature7'),
+				'cv_ecg' => IReq:: get('cv_ecg7'),
+				'cv_spo' => IReq:: get('cv_spo7'),
+				'resident' => IReq:: get('resident7'),
+				'rttending' => IReq:: get('rttending7'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '7'
+			);
+			$Obj = new IModel('labor_analgesia_comments');
+			$where ='basic_id ='.$basic_id.' AND time_id = 7';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time8
+		$dataarray = array(
+			'time' => IReq:: get('time8'),
+			'time_id' => '8',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 8';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 8';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'pain' => IReq:: get('pain8'),
+				'sensory_l' => IReq:: get('sensory_l8'),
+				'sensory_r' => IReq:: get('sensory_r8'),
+				'ob_dilation' => IReq:: get('ob_dilation8'),
+				'ob_station' => IReq:: get('ob_station8'),
+				'temperature' => IReq:: get('temperature8'),
+				'cv_ecg' => IReq:: get('cv_ecg8'),
+				'cv_spo' => IReq:: get('cv_spo8'),
+				'resident' => IReq:: get('resident8'),
+				'rttending' => IReq:: get('rttending8'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '8'
+			);
+			$Obj = new IModel('labor_analgesia_comments');
+			$where ='basic_id ='.$basic_id.' AND time_id = 8';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time9
+		$dataarray = array(
+			'time' => IReq:: get('time9'),
+			'time_id' => '9',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 9';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 9';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'pain' => IReq:: get('pain9'),
+				'sensory_l' => IReq:: get('sensory_l9'),
+				'sensory_r' => IReq:: get('sensory_r9'),
+				'ob_dilation' => IReq:: get('ob_dilation9'),
+				'ob_station' => IReq:: get('ob_station9'),
+				'temperature' => IReq:: get('temperature9'),
+				'cv_ecg' => IReq:: get('cv_ecg9'),
+				'cv_spo' => IReq:: get('cv_spo9'),
+				'resident' => IReq:: get('resident9'),
+				'rttending' => IReq:: get('rttending9'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '9'
+			);
+			$Obj = new IModel('labor_analgesia_comments');
+			$where ='basic_id ='.$basic_id.' AND time_id = 9';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time10
+		$dataarray = array(
+			'time' => IReq:: get('time10'),
+			'time_id' => '10',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 10';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 10';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'pain' => IReq:: get('pain10'),
+				'sensory_l' => IReq:: get('sensory_l10'),
+				'sensory_r' => IReq:: get('sensory_r10'),
+				'ob_dilation' => IReq:: get('ob_dilation10'),
+				'ob_station' => IReq:: get('ob_station10'),
+				'temperature' => IReq:: get('temperature10'),
+				'cv_ecg' => IReq:: get('cv_ecg10'),
+				'cv_spo' => IReq:: get('cv_spo10'),
+				'resident' => IReq:: get('resident10'),
+				'rttending' => IReq:: get('rttending10'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '10'
+			);
+			$Obj = new IModel('labor_analgesia_comments');
+			$where ='basic_id ='.$basic_id.' AND time_id = 10';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+	//更新time11
+		$dataarray = array(
+			'time' => IReq:: get('time11'),
+			'time_id' => '11',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 11';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 11';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'pain' => IReq:: get('pain11'),
+				'sensory_l' => IReq:: get('sensory_l11'),
+				'sensory_r' => IReq:: get('sensory_r11'),
+				'ob_dilation' => IReq:: get('ob_dilation11'),
+				'ob_station' => IReq:: get('ob_station11'),
+				'temperature' => IReq:: get('temperature11'),
+				'cv_ecg' => IReq:: get('cv_ecg11'),
+				'cv_spo' => IReq:: get('cv_spo11'),
+				'resident' => IReq:: get('resident11'),
+				'rttending' => IReq:: get('rttending11'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '11'
+			);
+			$Obj = new IModel('labor_analgesia_comments');
+			$where ='basic_id ='.$basic_id.' AND time_id = 11';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		$url = IUrl::creatUrl("/obstetrical/analgesia_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	
+	public function analgesia_other()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		if($id)
+		{
+			$where = 'basic_id ='.$id;
+			$Obj = new IModel('labor_analgesia_other');
+			$dataRow = $Obj->getObj($where);
+			if(!empty($dataRow) )
+			{
+				$this->setRenderData($dataRow);
+			}
+		}
+		$this->redirect('analgesia_other');
+	}
+	public function analgesia_other_act()
+	{
+		$basic_id = IReq::get('basic_id');
+		//更新
+		$dataarray= array(
+			'attending_available' =>IReq::get('attending_available'),
+			'nsvd' =>IReq::get('nsvd'),
+			'vac' =>IReq::get('vac'),
+			'forceps' =>IReq::get('forceps'),
+			'reason' =>IReq::get('reason'),
+			'time_c' =>IReq::get('time_c'),
+			'apgar_1' =>IReq::get('apgar_1'),
+			'apgar_2' =>IReq::get('apgar_2'),
+			'cath' =>IReq::get('cath'),
+			'tip' =>IReq::get('tip'),
+			'wasted_fen' =>IReq::get('wasted_fen'),
+			'wasted_other' =>IReq::get('wasted_other'),
+			'wasted_inf' =>IReq::get('wasted_inf'),
+			'basic_id' => IReq:: get('basic_id')
+			);
+		$Obj = new IModel('labor_analgesia_other');
+		$where = 'basic_id='.$basic_id;
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$url = IUrl::creatUrl("/obstetrical/analgesia_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}
+	public function analgesia_legend()
+	{
+		$id = IReq::get('id');
+		$this->id = $id;
+		$this->redirect('analgesia_legend');
+	}
+	public function analgesia_legend_act()
+	{
+		$basic_id = IReq::get('basic_id');		
+	//更新time1
+		$dataarray = array(
+			'time' => IReq:: get('time1'),
+			'time_id' => '1',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 1';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 1';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'cuff_bp' => IReq:: get('cuff_bp1'),
+				'aline_bp' => IReq:: get('aline_bp1'),
+				'hr' => IReq:: get('hr1'),
+				'fetal_hr' => IReq:: get('fetal_hr1'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '1'
+			);
+			$Obj = new IModel('labor_analgesia_bphp');
+			$where ='basic_id ='.$basic_id.' AND time_id = 1';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		//更新time2
+		$dataarray = array(
+			'time' => IReq:: get('time2'),
+			'time_id' => '2',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 2';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 2';
+		$is_in = $Obj->getObj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'cuff_bp' => IReq:: get('cuff_bp2'),
+				'aline_bp' => IReq:: get('aline_bp2'),
+				'hr' => IReq:: get('hr1'),
+				'fetal_hr' => IReq:: get('fetal_hr2'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '2'
+			);
+			$Obj = new IModel('labor_analgesia_bphp');
+			$where ='basic_id ='.$basic_id.' AND time_id = 2';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		//更新time3
+		$dataarray = array(
+			'time' => IReq:: get('time3'),
+			'time_id' => '3',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 3';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 3';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'cuff_bp' => IReq:: get('cuff_bp3'),
+				'aline_bp' => IReq:: get('aline_bp3'),
+				'hr' => IReq:: get('hr3'),
+				'fetal_hr' => IReq:: get('fetal_hr3'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '3'
+			);
+			$Obj = new IModel('labor_analgesia_bphp');
+			$where ='basic_id ='.$basic_id.' AND time_id = 3';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		//更新time4
+		$dataarray = array(
+			'time' => IReq:: get('time4'),
+			'time_id' => '4',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 4';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 4';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'cuff_bp' => IReq:: get('cuff_bp4'),
+				'aline_bp' => IReq:: get('aline_bp4'),
+				'hr' => IReq:: get('hr4'),
+				'fetal_hr' => IReq:: get('fetal_hr4'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '4'
+			);
+			$Obj = new IModel('labor_analgesia_bphp');
+			$where ='basic_id ='.$basic_id.' AND time_id = 4';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		//更新time5
+		$dataarray = array(
+			'time' => IReq:: get('time5'),
+			'time_id' => '5',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 5';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 5';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'cuff_bp' => IReq:: get('cuff_bp5'),
+				'aline_bp' => IReq:: get('aline_bp5'),
+				'hr' => IReq:: get('hr5'),
+				'fetal_hr' => IReq:: get('fetal_hr5'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '5'
+			);
+			$Obj = new IModel('labor_analgesia_bphp');
+			$where ='basic_id ='.$basic_id.' AND time_id = 5';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		//更新time6
+		$dataarray = array(
+			'time' => IReq:: get('time6'),
+			'time_id' => '6',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where = 'basic_id='.$basic_id.' AND time_id = 6';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 6';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'cuff_bp' => IReq:: get('cuff_bp6'),
+				'aline_bp' => IReq:: get('aline_bp6'),
+				'hr' => IReq:: get('hr6'),
+				'fetal_hr' => IReq:: get('fetal_hr6'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '6'
+			);
+			$Obj = new IModel('labor_analgesia_bphp');
+			$where ='basic_id ='.$basic_id.' AND time_id = 6';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		//更新time7
+		$dataarray = array(
+			'time' => IReq:: get('time7'),
+			'time_id' => '7',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 7';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 7';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'cuff_bp' => IReq:: get('cuff_bp7'),
+				'aline_bp' => IReq:: get('aline_bp7'),
+				'hr' => IReq:: get('hr7'),
+				'fetal_hr' => IReq:: get('fetal_hr7'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '7'
+			);
+			$Obj = new IModel('labor_analgesia_bphp');
+			$where ='basic_id ='.$basic_id.' AND time_id = 7';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		//更新time8
+		$dataarray = array(
+			'time' => IReq:: get('time8'),
+			'time_id' => '8',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 8';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 8';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'cuff_bp' => IReq:: get('cuff_bp8'),
+				'aline_bp' => IReq:: get('aline_bp8'),
+				'hr' => IReq:: get('hr8'),
+				'fetal_hr' => IReq:: get('fetal_hr8'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '8'
+			);
+			$Obj = new IModel('labor_analgesia_bphp');
+			$where ='basic_id ='.$basic_id.' AND time_id = 8';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		//更新time9
+		$dataarray = array(
+			'time' => IReq:: get('time9'),
+			'time_id' => '9',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 9';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 9';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'cuff_bp' => IReq:: get('cuff_bp9'),
+				'aline_bp' => IReq:: get('aline_bp9'),
+				'hr' => IReq:: get('hr9'),
+				'fetal_hr' => IReq:: get('fetal_hr9'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '9'
+			);
+			$Obj = new IModel('labor_analgesia_bphp');
+			$where ='basic_id ='.$basic_id.' AND time_id = 9';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		//更新time10
+		$dataarray = array(
+			'time' => IReq:: get('time10'),
+			'time_id' => '10',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 10';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 10';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'cuff_bp' => IReq:: get('cuff_bp10'),
+				'aline_bp' => IReq:: get('aline_bp10'),
+				'hr' => IReq:: get('hr10'),
+				'fetal_hr' => IReq:: get('fetal_hr10'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '10'
+			);
+			$Obj = new IModel('labor_analgesia_bphp');
+			$where ='basic_id ='.$basic_id.' AND time_id = 10';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		//更新time11
+		$dataarray = array(
+			'time' => IReq:: get('time11'),
+			'time_id' => '11',
+			'basic_id' => IReq:: get('basic_id')
+		);
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 11';
+		$is_in = $Obj->getObj($where);
+		$Obj->setData($dataarray);
+		if(!empty($is_in))
+		{
+			$Obj->update($where);
+		}
+		else
+		 {
+			$Obj->add();
+		}
+		$Obj = new IModel('labor_analgesia_time');
+		$where ='basic_id ='.$basic_id.' AND time_id = 11';
+		$is_in = $Obj->getobj($where);
+		if(!empty($is_in))
+		{		
+			$dataarray=array(
+				'cuff_bp' => IReq:: get('cuff_bp11'),
+				'aline_bp' => IReq:: get('aline_bp11'),
+				'hr' => IReq:: get('hr11'),
+				'fetal_hr' => IReq:: get('fetal_hr11'),
+				'basic_id' => IReq:: get('basic_id'),
+				'time_id' => '11'
+			);
+			$Obj = new IModel('labor_analgesia_bphp');
+			$where ='basic_id ='.$basic_id.' AND time_id = 11';
+			$is_in = $Obj ->getObj($where);
+			$Obj->setData($dataarray);
+			if(!empty($is_in))
+			{	
+				$Obj->update($where);	
+			}
+			else 
+			{
+				$Obj->add();	
+			}
+		}
+		$url = IUrl::creatUrl("/obstetrical/analgesia_edit/id/").$basic_id;
+		header('Location:'.$url);
+	}	
 	
 	//progress_basic
 	public function progress_basic()

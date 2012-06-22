@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+
+<div class="xf-main1" style="width:500px;">
+<form id="analgesia_other_act" action="{url:/modify/analgesia_other_act}"  method="post">
+	<input type='hidden' name='basic_id' value='{$this->id }'/>
+	<table style="border-collapse:collapse" >
+		<tr>
+			<td>
+				 COMMENTS记录：<br />
+				 <input type="checkbox" name='attending_available' {if:$attending_available==1}checked{/if} value='1'>Attending Available主治在病房<br /><br />
+				 DELIVRY产出：<br />
+				 <input type="checkbox" name='nsvd' {if:$nsvd==1}checked{/if} value='1'>NSVD自然<input type="checkbox" name='vac' {if:$vac==1}checked{/if} value='1'>VAC吸引<input type="checkbox" name='forceps' {if:$forceps==1}checked{/if} value='1'>Forceps产钳<br />
+				 C/SReason剖宫产原因<input type="text" id="reason" name="reason" value="{$reason}"><br />
+				 Time时间<input type="text" id="time_c" name="time_c" value="{$time_c}"><br />
+				 Apgar阿普加<input type="text" class='small' id="apgar_1" name="apgar_1" value="{$apgar_1}"> / <input type="text" class='small' id="apgar_2" name="apgar_2" value="{$apgar_2}"><br /><br />
+				 DECOVERY恢复：<br />
+				 D/C Cath@拔管时间<input type="text" id="cath" name="cath" value="{$cath}"><br />
+				 <input type="checkbox" name='tip' {if:$tip==1}checked{/if} value='1'>Tip intact管头完整<br /><br />
+				 CONTROLLED DRUGS控制药物<br />
+				 ml wasted 浪费，initial处方<br />
+				 Fentanyl 芬太尼<input type="text" id="wasted_fen" name="wasted_fen" value="{$wasted_fen}"><br />
+				 Other其他<input type="text" id="wasted_other" name="wasted_other" value="{$wasted_other}"><br />
+				 Infusion of 滴注液<input type="text" id="wasted_inf" name="wasted_inf" value="{$wasted_inf}">
+			 </td>
+		</tr>
+	</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div>

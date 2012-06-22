@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+
+<div class="xf-main1" style="width:1200px;">
+<form id="analgesia_operate_act" action="{url:/modify/analgesia_operate_act}"  method="post">
+<input type='hidden' name='basic_id' value='{$this->id }'/>
+	<table style="border-collapse:collapse" >
+			     <tr>
+				    <td><input type="checkbox" name='equip_drugs_check' {if:$equip_drugs_check==1}checked{/if} value='1'>EQUIP/DIUGS CHECKED检查药物/器械<br>
+					<input type="checkbox" name='special_access' {if:$special_access==1}checked{/if} value='1'>SPECIAL ACCESS特殊通道<br>
+					ALINE动脉#<input type="text" class='small' id="aline" name="aline" value="{$aline}"><br>
+					LOC部位<input type="text" class='small' id="aline_loc" name="aline_loc" value="{$aline_loc}"><br>
+					CLINE中心静脉#<input type="text" class='small' id="cline" name="cline" value="{$cline}"><br>
+					LOC部位<input type="text" class='small' id="cline_loc" name="cline_loc" value="{$cline_loc}"><br>
+					PACATH肺动脉导管#<input type="text" class='small' id="pacath" name="pacath" value="{$pacath}"><br>
+					LOC部位<input type="text" class='small' id="pacath_loc" name="pacath_loc" value="{$pacath_loc}"></td>
+					<td>ANESTHETIC TECHNIQUE麻醉操作<br>
+					<input type="checkbox" id="epidural" name="epidural" {if:$epidural==1}checked{/if} value="1">EPIDURAL硬膜外    PREP皮肤准备<input type="text" class='small' id="prep" name="prep" value="{$prep}">   Position体位<input type="text" class='small' id="position" name="position" value="{$position}"><br>
+					<input type="checkbox" id="spinal" name="spinal" {if:$spinal==1}checked{/if} value="1">SPINAL腰麻    Epidural Needle硬膜外针#<input type="text" class='small' id="epidural_needle" name="epidural_needle" value="{$epidural_needle}"><input type="checkbox" id="l_o_r" name="l_o_r" {if:$l_o_r==1}checked{/if} value="1">L-O-R阻力消失<br>
+					<input type="checkbox" id="cse" name="cse" {if:$cse==1}checked{/if} value="1">CSE腰硬联合      Spinal Needle腰麻针#<input type="text" class='small' id="spinal_needle" name="spinal_needle" value="{$spinal_needle}"><input type="checkbox" id="csf" name="csf" {if:$csf==1}checked{/if} value="1">CSF脑脊液<br>
+					<input type="checkbox" id="pcea" name="pcea" {if:$pcea==1}checked{/if} value="1">+PCEA病人自控镇痛        Site部位#1<input type="text" class='small' id="site_1" name="site_1" value="{$site_1}">2<input type="text" class='small' id="site_2" name="site_2" value="{$site_2}">3<input type="text" class='small' id="site_3" name="site_3" value="{$site_3}">Cathin Space腔内留管<input type="text" class='small' id="cathin_space" name="cathin_space" value="{$cathin_space}">cm，At Skin皮肤<input type="text" class='small' id="at_skin" name="at_skin" value="{$at_skin}">cm<br>
+					<input type="checkbox" id="ambulatory" name="ambulatory" {if:$ambulatory==1}checked{/if} value="1">+AMBULATORY行走      Test Dose via Cath硬膜外置管试验：<input type="radio" id="test_dose_via_cath" name="test_dose_via_cath" {if:$test_dose_via_cath ==1}checked=true{/if} value="1">Neg阴性<input type="radio" id="test_dose_via_cath" name="test_dose_via_cath" {if:$test_dose_via_cath==2}checked=true{/if} value="2">Pos阳性<br></td>
+					<td>EVENTS(if any）事件<br>
+					<input type="checkbox" id="csf_w" name="csf_w" {if:$csf_w==1}checked{/if} value="1">+CSFw/脑脊液（由）       <input type="checkbox" id="epid_needle1" name="epid_needle1" {if:$epid_needle1==1}checked{/if} value="1">epid needle硬膜外针         <input type="checkbox" id="epid_cath1" name="epid_cath1" {if:$epid_cath1==1}checked{/if} value="1">epid cath硬膜外导管<br>
+					<input type="checkbox" id="blood_w" name="blood_w" {if:$blood_w==1}checked{/if} value="1">+Blood w/血液（由）       <input type="checkbox" id="spinal_needle1" name="spinal_needle1" {if:$spinal_needle1==1}checked{/if} value="1">spinal needle腰穿针           <input type="checkbox" id="epid_needle2" name="epid_needle2" {if:$epid_needle2==1}checked{/if} value="1">epid needle硬膜外针        <input type="checkbox" id="epid_cath2" name="epid_cath2" {if:$epid_cath2==1}checked{/if} value="1">epid cath硬膜外导管<br>
+					<input type="checkbox" id="parasthesis_w" name="parasthesis_w" {if:$parasthesis_w==1}checked{/if} value="1">+Parasthesis w/触电感（由）           <input type="checkbox" id="spinal_needle2" name="spinal_needle2" {if:$spinal_needle2==1}checked{/if} value="1">spinal needle腰穿针            <input type="checkbox" id="epid_needle3" name="epid_needle3" {if:$epid_needle3==1}checked{/if} value="1">epid needle硬膜外针        <input type="checkbox" id="epid_cath3" name="epid_cath3" {if:$epid_cath3==1}checked{/if} value="1">epid cath硬膜外导管<br>
+					<input type="checkbox" id="left" name="left" {if:$left==1}checked{/if} value="1">Lefe左       <input type="checkbox" id="right" name="right" {if:$right==1}checked{/if} value="1">Right右         <input type="checkbox" id="transient" name="transient" {if:$transient==1}checked{/if} value="1">Transient-过性<br></td>
+				</tr>
+		</table>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div>

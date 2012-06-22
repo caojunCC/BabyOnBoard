@@ -1,0 +1,514 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<head> 
+ 
+<style> 
+ 
+body { 
+	margin: 20px; 
+	font-family: "Myriad Web","Trebuchet MS","Tahoma","Helvetica","Arial","sans-serif"; 
+}
+ 
+</style> 
+ 
+<!-- libs --> 
+<!--[if IE]>
+<script type="text/javascript" src="./lib/excanvas/excanvas-compressed.js"></script>
+<![endif]--> 
+<script type="text/javascript" src="./lib/jquery-1.2.3.min.js"></script> 
+ 
+<!-- for drag. add  ui.mouse.js,ui.draggable.js,ui.draggable.ext.js--> 
+<script src="lib/jquery.ui/ui.mouse.js"></script> 
+<script src="lib/jquery.ui/ui.draggable.js"></script> 
+<script src="lib/jquery.ui/ui.draggable.ext.js"></script> 
+ 
+<script src="lib/jquery.ui/jquery.dimensions.js" type="text/javascript"></script> 
+<script src="lib/jquery.ui/ui.droppable.js" type="text/javascript"></script> 
+<script src="lib/jquery.ui/ui.droppable.ext.js" type="text/javascript"></script> 
+ 
+<script type="text/javascript" src="jquery.jqchart.js" charset="utf-8"></script> 
+ 
+<!-- enchant --> 
+<script type="text/javascript" src="./lib/enchant/fx.js"></script> 
+<script type="text/javascript" src="./lib/enchant/fx.slide.js"></script> 
+ 
+</head><body> 
+<script src="./tools/info.js" type="text/javascript" charset="utf-8"></script> 
+<div style="text-align:center"><p><script>                                      document.write($.jQchart.ver)</script></p></div> 
+ 
+<style> 
+ 
+#myBgBox{
+	background-color:#3f464c;
+	padding:30px;
+	padding-top:10px;
+	padding-bottom:20px;
+	text-align:center;
+	color:white;
+}
+#myBgBox h5{
+	margin :20px;
+	font-size : 18px;
+}
+ 
+#ctrllinks { 
+	padding-top:20px;
+	font-size: 12px; 
+}
+#ctrllinks a { 
+	color : #999; 
+}
+ 
+.jQchart{
+	font-size : 12px;
+	margin:auto
+}
+.jQchart-labelData{
+	font-size : 9px;
+}
+.jQchart-title{
+	font-size : 12px;
+}
+ 
+.droppable-active {
+	opacity: 1.0;
+}
+ 
+.droppable-hover {
+	opacity: 0.7;
+}
+ 
+</style> 
+<script type="text/javascript">
+
+    var data = [
+  	[234, 555, 234],
+  	[300, 700, 600],
+  	[789, 666, 887],
+  	[456, 890, 226],
+  	[336, 666, 776],
+  	[458, 788, 888],
+  	[123, 333, 567],
+  	[786, 221, 777],
+  	[666, 567, 789],
+  	[895, 654, 888],
+  	[333, 222, 444],
+  	[456, 123, 789],
+  	[543, 235, 999],
+  	[444, 666, 227],
+  	[123, 234, 222]
+  ];
+
+    var data2 = [
+  	[435, 500, 600, 700, 888, 777, 925],
+  	[60, 435, 456, 352, 567, 678, 1260],
+  	[200, 123, 312, 200, 402, 300, 512]
+  ];
+
+    var data3 = [
+  	[312, 500, 402, 700, 512, 777, 925],
+  	[200, 123, 312, 200, 402, 300, 512]
+  ];
+
+
+    var data4 = [
+
+  	[435, 332, 524, 688, 774, 825, 999],
+  	[600, 335, 584, 333, 457, 788, 900],
+  	[60, 435, 456, 352, 567, 678, 1260],
+  	[200, 123, 312, 200, 402, 300, 512]
+
+  ]
+
+    function chgChart(fx, mid, type, colorSet, gradient, title, data) {
+
+        var methodA = (fx == 'slide') ? 'hide' : 'fadeOut',
+		methodB = (fx == 'slide') ? 'show' : 'fadeIn'
+
+        if (mid != '#myBgBox') $('#jQchart-canvasMyID1')[methodA]();
+        else if (mid == '#myBgBox') $('#myBgBox')[methodA]();
+
+        $('#canvasMyID1').jQchart({
+            config: {
+                title: title,
+                type: type,
+                colorSet: (typeof colorSet == 'string') ? $.jQchart.colorSets[colorSet] : colorSet,
+                bgGradient: {
+                    direction: gradient.direction,
+                    from: gradient.from,
+                    to: gradient.to
+                },
+                ondrawend: function(oj) { }
+            },
+            data: data
+        });
+
+        if (mid == '#myBgBox') { $('#myBgBox')[methodB](fx, { direction: 'right' }); }
+        else if (fx == 'slide' && mid != '#myBgBox') $('#jQchart-canvasMyID1')[methodB](fx, { direction: 'right' });
+        else if (fx == 'fade' && mid != '#myBgBox') $('#jQchart-canvasMyID1')[methodB]();
+
+        return false;
+    }
+ 
+</script> 
+ 
+<div id="myBgBox"> 
+	<h5>jQchart + CanvasGradient</h5> 
+	<canvas id="canvasMyID1" width="500" height="220"></canvas> 
+ 
+ 
+ <p id="ctrllinks"> 
+  
+  Efect Canvas 'slide';&nbsp;&nbsp;--	
+  <a href="#" onClick="chgChart('slide','','bar','','','type:bar , colorSet is omitted',data)">bar,default</a> | 
+  <a href="#" onClick="chgChart('slide','','bar','rikyu','','type:bar , colorSet:rikyu',data)">bar,rikyu</a> | 
+  <a href="#" onClick="chgChart('slide','','bar','gray','','type:bar , colorSet:gray',data3)">bar,gray</a> | 
+  <a href="#" onClick="chgChart('slide','','line','','','type:line , colorSet is omitted',data2)">line,default</a> | 
+  <a href="#" onClick=" 
+  
+	$('#jQchart-canvasMyID1').fadeOut();
+	$('#canvasMyID1').jQchart({
+		config:{
+			title      : 'type:line , Direct colorSet',
+			type       : 'line',
+			colorSet   : ['#adadad','orange','#dddcd6'],
+			bgGradient : true
+		},
+		data : data2
+	});
+	$('#jQchart-canvasMyID1')
+		.show('slide',{ direction: 'right' })
+		.find('.jQchart-labelData')
+		.css('font-size','18px')
+		.css('font-family','Times');
+		
+  ">line,Direct colorSet</a> | 
+  <a href="#" onClick=" 
+  
+	$('#jQchart-canvasMyID1').fadeOut();
+	$('#canvasMyID1').jQchart({
+		config:{
+			title      : 'type:line,etc...',
+			type       : 'line',
+			colorSet   : ['#06D000','#000000','gold','#eeeeee'],
+			bgGradient :{
+				direction : 'vertical',
+				from      : '#444444',
+				to        : '#00aaaa'
+			}
+		},
+		data : data4
+	});
+	$('#jQchart-canvasMyID1')
+		.show('slide',{ direction: 'right' })
+		
+  ">line,etc...</a> | 
+  
+  <br> 
+ 
+  Efect Canvas 'fade';&nbsp;&nbsp;--	
+  <a href="#" onClick="chgChart('fade','','bar','','','type:bar , colorSet is omitted',data)">bar,default</a> | 
+  <a href="#" onClick="chgChart('fade','','bar','rikyu','','type:bar , colorSet:rikyu',data3)">bar,rikyu</a> | 
+  <a href="#" onClick="chgChart('fade','','bar','gray','','type:bar , colorSet:gray',data)">bar,gray</a> | 
+  <a href="#" onClick="chgChart('fade','','line','','','type:line , colorSet is omitted',data4)">line,default</a> | 
+  <a href="#" onClick="chgChart('fade','','line',['#adadad','#000000','#dddcd6'],{},'type:line , Direct colorSet',data2)">line,Direct colorSet</a> | 
+  <a href="#" onClick="chgChart('fade','','line',['#06D000','#000000','#dddcd6','cyan'],{
+      from  : '#444466',
+      to    : '#0055aa',
+      direction:'vertical'
+    },'type:line,etc...',[
+    
+  	[435,332,524,688,774,825,999],
+  	[600,335,584,333,457,788,900],
+  	[60,435,456,352,567,678,1260],
+  	[200,123,312,200,402,300,512]
+  	
+    ])">line,etc...</a> | 
+  
+  <br> 
+  
+   Efect Box 'slide'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--
+  <a href="#" onClick="chgChart('slide','#myBgBox','bar','','','type:bar , colorSet is omitted',data4)">bar,default</a> | 
+  <a href="#" onClick="chgChart('slide','#myBgBox','bar','rikyu','','type:bar , colorSet:rikyu',data)">bar,rikyu</a> | 
+  <a href="#" onClick="chgChart('slide','#myBgBox','bar','gray','','type:bar , colorSet:gray',data)">bar,gray</a> | 
+  <a href="#" onClick="chgChart('slide','#myBgBox','line','','','type:line , colorSet is omitted',data3)">line,default</a> | 
+  <a href="#" onClick="chgChart('slide','#myBgBox','line',['#adadad','#000000','#dddcd6'],{},'type:line , Direct colorSet',data2)">line,Direct colorSet</a> | 
+  <a href="#" onClick="chgChart('slide','#myBgBox','line',['#06D000','#000000','#dddcd6'],{
+      from  : '#aaaa00',
+      to    : '#000000',
+      direction:'vertical'
+    },'type:line,etc...',data2)">line,etc...</a> | 
+    
+<br> 
+  <input id="drgchbx" type="checkbox" 
+         onclick="if(this.checked){
+           $('#jQchart-canvasMyID1').dblclick()
+         }else{
+           $('h5','#myBgBox')
+              .after($('#jQchart-canvasMyID1')
+              .css({'position':'relative','top':'0px','left':'0px'}));
+           $('#jQchart-canvasMyID1').draggableDisable()
+              .css('border','0px')
+              .removeClass('ui-draggable')
+              .addClass('ui-draggable-disabled')
+           $('.jQchart-drgmsg-M').remove();
+         }">--drag(or dblclik the chart)
+    
+ </p> 
+</div> 
+ 
+<script type="text/javascript">
+
+    jQuery(function($) {
+        $('#myBgBox').dblclick(function(e) {
+            if (!$(this).hasClass("ui-draggable")) {
+                $('#drgchbx')[0].checked = true
+            }
+        })
+	.addClass('droppable-active')
+		.droppable({
+		    accept: '#jQchart-canvasMyID1',
+		    hoverClass: 'droppable-hover',
+		    tolerance: 'touch',
+		    drop: function(ev, ui) {
+		        $('#drgchbx')[0].checked = false
+		        //$('h5',this).after($('#jQchart-canvasMyID1').css({'position':'relative','top':'0px','left':'0px'}));
+		    }
+		});
+
+
+        chgChart('fade', '', 'bar', 'gray', '', 'type:bar , colorSet:gray', data)
+    })
+ 
+</script> 
+ 
+ 
+ 
+<!--//////////////   links    //////////////--> 
+<div style="text-align:center;margin-top:20px;margin-bottom:20px;font-size:0.9em">|<a href="http://jsgt.org/mt/01/"><font size="-1">++かも日記</font></a> | 
+ jQuery &#8250; Downloads &#8250; Plugins <a href="http://plugins.jquery.com/project/jQchart">&#8250; jQchart </a> | 
+<a href="http://jsgt.org/lib/jquery/plugin/jqchart/nightly/nightly.htm">nightly.htm</a> |
+<br> 
+ | 
+ 
+ jQuery &#8250; Downloads &#8250; Plugins <a href="http://plugins.jquery.com/project/csv2table">&#8250; csv2table </a> (<a href="http://jsgt.org/lib/jquery/plugin/csv2table/v002/test.htm">v002 test</a>)
+</div> 
+ 
+<table border="0"><tr><td width="300"> 
+<script type="text/javascript"><!--
+    google_ad_client = "pub-7598465699071822";
+    /* 200x90, 作成済み 08/03/11 */
+    google_ad_slot = "9342628654";
+    google_ad_width = 200;
+    google_ad_height = 90;
+//-->
+</script> 
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+</td> 
+<td> 
+ 
+<script type="text/javascript" src="./tools/gradient-sample-lists.js" charset="utf-8"></script> 
+ 
+</td> 
+</tr></table> 
+ 
+ 
+<!--//////////////   source    //////////////--> 
+<div id="source" title="source"> 
+<pre style="padding:24px;padding-left:48px;font:100 12px Courier New;background:#aaa;border:1px solid #ddd ;"> 
+&lt;!--[if IE]>
+&lt;script type="text/javascript" src="./lib/excanvas/<b>excanvas-compressed.js</b>">&lt;/script>
+&lt;![endif]-->
+&lt;script type="text/javascript" src="./lib/<b>jquery.js</b>">&lt;/script>
+ 
+&lt;!-- for drag. add  ui.mouse.js,ui.draggable.js,ui.draggable.ext.js-->
+&lt;script src="./lib/jquery.ui/ui.mouse.js">&lt;/script>
+&lt;script src="./lib/jquery.ui/ui.draggable.js">&lt;/script>
+&lt;script src="./lib/jquery.ui/ui.draggable.ext.js">&lt;/script>
+ 
+&lt;script src="./lib/jquery.ui/jquery.dimensions.js" type="text/javascript">&lt;/script>
+&lt;script src="./lib/jquery.ui/ui.droppable.js" type="text/javascript">&lt;/script>
+&lt;script src="./lib/jquery.ui/ui.droppable.ext.js" type="text/javascript">&lt;/script>
+ 
+&lt;script type="text/javascript" src="./<b>jquery.jqchart.js</b>" charset="utf-8">&lt;/script>
+ 
+&lt;!-- enchant -->
+&lt;script type="text/javascript" src="./lib/enchant/fx.js">&lt;/script>
+&lt;script type="text/javascript" src="./lib/enchant/fx.slide.js">&lt;/script>
+ 
+</pre> 
+<pre style="padding:24px;padding-left:48px;font:100 12px Courier New;background:#aaa;border:1px solid #ddd ;"> 
+ 
+&lt;style>
+ 
+#myBgBox{
+	background-color:#3f464c;
+	padding:30px;
+	padding-top:10px;
+	padding-bottom:20px;
+	text-align:center;
+	color:white;
+}
+#myBgBox h5{
+	margin :20px;
+	font-size : 18px;
+}
+ 
+#ctrllinks { 
+	padding-top:20px;
+	font-size: 12px; 
+}
+#ctrllinks a { 
+	color : #999; 
+}
+ 
+.jQchart{
+	font-size : 12px;
+	margin:auto
+}
+.jQchart-labelData{
+	font-size : 9px;
+}
+.jQchart-title{
+	font-size : 12px;
+}
+ 
+.droppable-active {
+	opacity: 1.0;
+}
+ 
+.droppable-hover {
+	opacity: 0.7;
+}
+ 
+&lt;/style>
+ 
+</pre> 
+<pre style="padding:24px;padding-left:48px;font:100 12px Courier New;background:#aaa;border:1px solid #ddd ;"> 
+ 
+&lt;script type="text/javascript">
+ 
+var data = [
+  	[234,555,234],
+  	[300,700,600],
+  	[789,666,887],
+  	[456,890,226],
+  	[336,666,776],
+  	[458,788,888],
+  	[123,333,567],
+  	[786,221,777],
+  	[666,567,789],
+  	[895,654,888],
+  	[333,222,444],
+  	[456,123,789],
+  	[543,235,999],
+  	[444,666,227],
+  	[123,234,222]
+  ];
+ 
+var data2 = [
+  	[435,500,600,700,888,777,925],
+  	[60,435,456,352,567,678,1260],
+  	[200,123,312,200,402,300,512]
+  ];
+ 
+var data3 = [
+  	[312,500,402,700,512,777,925],
+  	[200,123,312,200,402,300,512]
+  ];
+ 
+ 
+var data4 = [
+ 
+  	[435,332,524,688,774,825,999],
+  	[600,335,584,333,457,788,900],
+  	[60,435,456,352,567,678,1260],
+  	[200,123,312,200,402,300,512]
+  	
+  ]
+ 
+</pre> 
+<pre style="padding:24px;padding-left:48px;font:100 12px Courier New;background:#aaa;border:1px solid #ddd ;"> 
+ 
+&lt;div id="myBgBox">
+	&lt;h5>jQchart + CanvasGradient&lt;/h5>
+	&lt;canvas <b>id="canvasMyID1"</b> width="500" height="220">&lt;/canvas>
+&lt;/div>
+ 
+</pre> 
+<pre style="padding:24px;padding-left:48px;font:100 12px Courier New;background:#aaa;border:1px solid #ddd ;"> 
+ 
+ 
+  <h5>The simplest setting example for useing   bgGradient.</h5> 
+  
+  &lt;a href="#" onClick="
+  
+	<b>$('#canvasMyID1').jQchart({	
+		config : { bgGradient : true },
+		data   : data2
+	});</b> 
+		
+  ">click!&lt;/a> | 
+  
+ 
+ <h5>Setting examples</h5> 
+ 
+ &lt;p id="ctrllinks">
+ 
+  Efect Canvas 'slide';&nbsp;&nbsp;--
+  &lt;a href="#" onClick="
+  
+	$('#jQchart-canvasMyID1').fadeOut();<b> 
+	$('#canvasMyID1').jQchart({
+		config:{
+			title      : 'type:line , Direct colorSet',
+			type       : 'line',
+			colorSet   : ['#adadad','orange','#dddcd6'],
+			bgGradient : true
+		},
+		data : data2
+	});</b> 
+	$('#jQchart-canvasMyID1')
+		.show('slide',{ direction: 'right' })
+		.find('.jQchart-labelData')
+		.css('font-size','18px')
+		.css('font-family','Times');
+		
+  ">line,Direct colorSet&lt;/a> | 
+  &lt;a href="#" onClick="
+  
+	$('#jQchart-canvasMyID1').fadeOut();<b> 
+	$('#canvasMyID1').jQchart({
+		config:{
+			title      : 'type:line,etc...',
+			type       : 'line',
+			colorSet   : ['#06D000','#000000','gold','#eeeeee'],
+			bgGradient :{
+				direction : 'vertical',
+				from      : '#444444',
+				to        : '#00aaaa'
+			},
+			ondrawend : function(oj,cvs){
+				$('.jQchart-labelX',oj).css('color','#bbb')
+				$('.jQchart-labelY',oj).css('font-size','14px')
+			}
+		},
+		data : data4
+	});</b> 
+	$('#jQchart-canvasMyID1')
+		.show('slide',{ direction: 'right' })
+		
+  ">line,etc...&lt;/a> | 
+  
+ &lt;/p>
+ 
+ <h5>Please see <a href="http://jsgt.org/lib/jquery/plugin/jqchart/sample/v003/min0-5.htm">csv2table</a> if you want to using CSV data.</h5> 
+ 
+ 
+ </pre> 
+*on win IE(excanvas), 'vertical' is not work well.
+</div> 
+ 
+</body> 
+</html> 

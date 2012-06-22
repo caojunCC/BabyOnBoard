@@ -1,0 +1,1273 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+
+<div class="xf-main1" style="width:1200px;">
+<form id="analgesia_pain_act" action="{url:/modify/analgesia_pain_act}"  method="post">
+	<input type='hidden' name='basic_id' value='{$this->id }'/>
+<div style="height:500px;width:1200px;overflow-y:scroll;overflow-x:scroll;overflow-y:scroll;">
+	<table style="border-collapse:collapse" >
+		<tr>
+			<td colspan="2">TIME时间</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time1" name="time1" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time1" name="time1">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time2" name="time2" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time2" name="time2">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time3" name="time3" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time3" name="time3">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time4" name="time4" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time4" name="time4">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time5" name="time5" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time5" name="time5">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time6" name="time6" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time6" name="time6">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time7" name="time7" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time7" name="time7">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time8" name="time8" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time8" name="time8">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time9" name="time9" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time9" name="time9">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time10" name="time10" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time10" name="time10">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time11" name="time11" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time11" name="time11">{/if}
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">PAIN SCORE疼痛分值（0-10）</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="pain1" name="pain1" value="{$item[pain]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="pain1" name="pain1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="pain2" name="pain2" value="{$item[pain]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="pain2" name="pain2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="pain3" name="pain3" value="{$item[pain]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="pain3" name="pain3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="pain4" name="pain4" value="{$item[pain]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="pain4" name="pain4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="pain5" name="pain5" value="{$item[pain]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="pain5" name="pain5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="pain6" name="pain6" value="{$item[pain]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="pain6" name="pain6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="pain7" name="pain7" value="{$item[pain]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="pain7" name="pain7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="pain8" name="pain8" value="{$item[pain]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="pain8" name="pain8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="pain9" name="pain9" value="{$item[pain]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="pain9" name="pain9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="pain10" name="pain10" value="{$item[pain]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="pain10" name="pain10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="pain11" name="pain11" value="{$item[pain]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="pain11" name="pain11">{/if}
+			</td>
+		</tr>
+		 <tr>
+			  <td rowspan="2">SENSORY LVL感觉平面</td>
+			 <td>left左</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_l1" name="sensory_l1" value="{$item[sensory_l]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_l1" name="sensory_l1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_l2" name="sensory_l2" value="{$item[sensory_l]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_l2" name="sensory_l2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_l3" name="sensory_l3" value="{$item[sensory_l]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_l3" name="sensory_l3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_l4" name="sensory_l4" value="{$item[sensory_l]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_l4" name="sensory_l4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_l5" name="sensory_l5" value="{$item[sensory_l]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_l5" name="sensory_l5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_l6" name="sensory_l6" value="{$item[sensory_l]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_l6" name="sensory_l6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_l7" name="sensory_l7" value="{$item[sensory_l]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_l7" name="sensory_l7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_l8" name="sensory_l8" value="{$item[sensory_l]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_l8" name="sensory_l8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_l9" name="sensory_l9" value="{$item[sensory_l]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_l9" name="sensory_l9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_l10" name="sensory_l10" value="{$item[sensory_l]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_l10" name="sensory_l10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_l11" name="sensory_l11" value="{$item[sensory_l]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_l11" name="sensory_l11">{/if}
+			</td>
+		</tr>
+		<tr>
+			 <td>right右</td>
+			<td>
+			{set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_r1" name="sensory_r1" value="{$item[sensory_r]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_r1" name="sensory_r1">{/if}
+			</td>
+			<td>
+			{set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_r2" name="sensory_r2" value="{$item[sensory_r]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_r2" name="sensory_r2">{/if}
+			</td>
+			<td>
+			{set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_r3" name="sensory_r3" value="{$item[sensory_r]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_r3" name="sensory_r3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_r4" name="sensory_r4" value="{$item[sensory_r]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_r4" name="sensory_r4">{/if}
+			</td>
+			<td>
+			{set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_r5" name="sensory_r5" value="{$item[sensory_r]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_r5" name="sensory_r5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_r6" name="sensory_r6" value="{$item[sensory_r]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_r6" name="sensory_r6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_r7" name="sensory_r7" value="{$item[sensory_r]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_r7" name="sensory_r7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_r8" name="sensory_r8" value="{$item[sensory_r]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_r8" name="sensory_r8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_r9" name="sensory_r9" value="{$item[sensory_r]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_r9" name="sensory_r9">{/if}
+			</td>
+			<td>
+			{set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_r10" name="sensory_r10" value="{$item[sensory_r]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_r10" name="sensory_r10">{/if}
+			</td>
+			<td>
+			{set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="sensory_r11" name="sensory_r11" value="{$item[sensory_r]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="sensory_r11" name="sensory_r11">{/if}
+			</td>
+		</tr>
+		 <tr>
+		   <td rowspan="2">OB产科</td>
+			 <td>Dilation宫口</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_dilation1" name="ob_dilation1" value="{$item[ob_dilation]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_dilation1" name="ob_dilation1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_dilation2" name="ob_dilation2" value="{$item[ob_dilation]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_dilation2" name="ob_dilation2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_dilation3" name="ob_dilation3" value="{$item[ob_dilation]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_dilation3" name="ob_dilation3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_dilation4" name="ob_dilation4" value="{$item[ob_dilation]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_dilation4" name="ob_dilation4">{/if}
+			</td>
+			<td>
+			{set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_dilation5" name="ob_dilation5" value="{$item[ob_dilation]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_dilation5" name="ob_dilation5">{/if}
+			</td>
+			<td>
+			{set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_dilation6" name="ob_dilation6" value="{$item[ob_dilation]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_dilation6" name="ob_dilation6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_dilation7" name="ob_dilation7" value="{$item[ob_dilation]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_dilation7" name="ob_dilation7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_dilation8" name="ob_dilation8" value="{$item[ob_dilation]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_dilation8" name="ob_dilation8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_dilation9" name="ob_dilation9" value="{$item[ob_dilation]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_dilation9" name="ob_dilation9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_dilation10" name="ob_dilation10" value="{$item[ob_dilation]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_dilation10" name="ob_dilation10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_dilation11" name="ob_dilation11" value="{$item[ob_dilation]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_dilation11" name="ob_dilation11">{/if}
+			</td>
+		</tr>
+		 <tr>
+			 <td>Station</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_station1" name="ob_station1" value="{$item[ob_station]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_station1" name="ob_ob_station1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_station2" name="ob_station2" value="{$item[ob_station]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_station2" name="ob_ob_station2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_station3" name="ob_station3" value="{$item[ob_station]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_station3" name="ob_ob_station3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_station4" name="ob_station4" value="{$item[ob_station]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_station4" name="ob_ob_station4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_station5" name="ob_station5" value="{$item[ob_station]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_station5" name="ob_ob_station5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_station6" name="ob_station6" value="{$item[ob_station]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_station6" name="ob_ob_station6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_station7" name="ob_station7" value="{$item[ob_station]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_station7" name="ob_ob_station7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_station8" name="ob_station8" value="{$item[ob_station]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_station8" name="ob_ob_station8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_station9" name="ob_station9" value="{$item[ob_station]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_station9" name="ob_ob_station9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_station10" name="ob_station10" value="{$item[ob_station]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_station10" name="ob_ob_station10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="ob_station11" name="ob_station11" value="{$item[ob_station]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="ob_station11" name="ob_ob_station11">{/if}
+			</td>
+		</tr>
+		 <tr>
+			 <td colspan="2">TEMPERATURE体温</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="temperature1" name="temperature1" value="{$item[temperature]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="temperature1" name="temperature1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="temperature2" name="temperature2" value="{$item[temperature]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="temperature2" name="temperature2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="temperature3" name="temperature3" value="{$item[temperature]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="temperature3" name="temperature3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="temperature4" name="temperature4" value="{$item[temperature]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="temperature4" name="temperature4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="temperature5" name="temperature5" value="{$item[temperature]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="temperature5" name="temperature5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="temperature6" name="temperature6" value="{$item[temperature]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="temperature6" name="temperature6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="temperature7" name="temperature7" value="{$item[temperature]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="temperature7" name="temperature7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="temperature8" name="temperature8" value="{$item[temperature]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="temperature8" name="temperature8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="temperature9" name="temperature9" value="{$item[temperature]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="temperature9" name="temperature9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="temperature10" name="temperature10" value="{$item[temperature]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="temperature10" name="temperature10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="temperature11" name="temperature11" value="{$item[temperature]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="temperature11" name="temperature11">{/if}
+			</td>
+		</tr>
+		 <tr>
+			 <td rowspan="3" >CV/Resp心肺监护</td>
+			 <td>ECG心电图</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_ecg1" name="cv_ecg1" value="{$item[cv_ecg]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_ecg1" name="cv_ecg1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_ecg2" name="cv_ecg2" value="{$item[cv_ecg]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_ecg2" name="cv_ecg2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_ecg3" name="cv_ecg3" value="{$item[cv_ecg]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_ecg3" name="cv_ecg3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_ecg4" name="cv_ecg4" value="{$item[cv_ecg]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_ecg4" name="cv_ecg4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_ecg5" name="cv_ecg5" value="{$item[cv_ecg]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_ecg5" name="cv_ecg5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_ecg6" name="cv_ecg6" value="{$item[cv_ecg]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_ecg6" name="cv_ecg6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_ecg7" name="cv_ecg7" value="{$item[cv_ecg]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_ecg7" name="cv_ecg7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_ecg8" name="cv_ecg8" value="{$item[cv_ecg]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_ecg8" name="cv_ecg8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_ecg9" name="cv_ecg9" value="{$item[cv_ecg]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_ecg9" name="cv_ecg9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_ecg10" name="cv_ecg10" value="{$item[cv_ecg]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_ecg10" name="cv_ecg10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_ecg11" name="cv_ecg11" value="{$item[cv_ecg]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_ecg11" name="cv_ecg11">{/if}
+			</td>
+		</tr>
+		 <tr>
+			 <td>SPO2血氧饱和度</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_spo1" name="cv_spo1" value="{$item[cv_spo]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_spo1" name="cv_spo1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_spo2" name="cv_spo2" value="{$item[cv_spo]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_spo2" name="cv_spo2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_spo3" name="cv_spo3" value="{$item[cv_spo]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_spo3" name="cv_spo3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_spo4" name="cv_spo4" value="{$item[cv_spo]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_spo4" name="cv_spo4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_spo5" name="cv_spo5" value="{$item[cv_spo]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_spo5" name="cv_spo5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_spo6" name="cv_spo6" value="{$item[cv_spo]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_spo6" name="cv_spo6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_spo7" name="cv_spo7" value="{$item[cv_spo]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_spo7" name="cv_spo7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_spo8" name="cv_spo8" value="{$item[cv_spo]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_spo8" name="cv_spo8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_spo9" name="cv_spo9" value="{$item[cv_spo]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_spo9" name="cv_spo9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_spo10" name="cv_spo10" value="{$item[cv_spo]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_spo10" name="cv_spo10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cv_spo11" name="cv_spo11" value="{$item[cv_spo]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cv_spo11" name="cv_spo11">{/if}
+			</td>
+		</tr>
+		 <tr>
+			 <td></td>
+			 <td></td>
+			 <td></td>
+			 <td></td>
+			 <td></td>
+			 <td></td>
+			 <td></td>
+			 <td></td>
+			 <td></td>
+			 <td></td>
+			 <td></td>
+			 <td></td>
+		</tr>
+		 <tr>
+			 <td colspan="2" >RESIDENT PRESENT住院医师到场</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="resident1" name="resident1" value="{$item[resident]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="resident1" name="resident1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="resident2" name="resident2" value="{$item[resident]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="resident2" name="resident2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="resident3" name="resident3" value="{$item[resident]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="resident3" name="resident3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="resident4" name="resident4" value="{$item[resident]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="resident4" name="resident4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="resident5" name="resident5" value="{$item[resident]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="resident5" name="resident5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="resident6" name="resident6" value="{$item[resident]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="resident6" name="resident6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="resident7" name="resident7" value="{$item[resident]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="resident7" name="resident7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="resident8" name="resident8" value="{$item[resident]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="resident8" name="resident8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="resident9" name="resident9" value="{$item[resident]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="resident9" name="resident9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="resident10" name="resident10" value="{$item[resident]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="resident10" name="resident10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="resident11" name="resident11" value="{$item[resident]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="resident11" name="resident11">{/if}
+			</td>
+		</tr>
+		 <tr>
+			 <td colspan="2">RTTENDING PRESENT主治/任医师到场</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="rttending1" name="rttending1" value="{$item[rttending]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="rttending1" name="rttending1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="rttending2" name="rttending2" value="{$item[rttending]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="rttending2" name="rttending2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="rttending3" name="rttending3" value="{$item[rttending]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="rttending3" name="rttending3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="rttending4" name="rttending4" value="{$item[rttending]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="rttending4" name="rttending4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="rttending5" name="rttending5" value="{$item[rttending]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="rttending5" name="rttending5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="rttending6" name="rttending6" value="{$item[rttending]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="rttending6" name="rttending6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="rttending7" name="rttending7" value="{$item[rttending]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="rttending7" name="rttending7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="rttending8" name="rttending8" value="{$item[rttending]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="rttending8" name="rttending8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="rttending9" name="rttending9" value="{$item[rttending]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="rttending9" name="rttending9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="rttending10" name="rttending10" value="{$item[rttending]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="rttending10" name="rttending10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_comments as lac where=lac.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="rttending11" name="rttending11" value="{$item[rttending]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="rttending11" name="rttending11">{/if}
+			</td>
+		</tr>
+	</table>
+	</div>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div>

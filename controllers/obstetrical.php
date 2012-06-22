@@ -134,6 +134,33 @@ class Obstetrical extends IController
 		}
 	}
 	
+	//labor analgesia record
+	function analgesia_list()
+	{
+		$this->redirect('analgesia_list');
+	}
+	//analgesia_edit
+	function analgesia_edit()
+	{
+		
+		$id = IReq::get('id');
+		if($id)
+		{
+			$analgesia_Obj = new IModel('labor_analgesia_view');
+			$where ='id= '.$id;		
+			$data = array();		
+			$data = $analgesia_Obj->getObj($where);
+			
+			$this->setRenderData($data);
+			$this->redirect('analgesia_edit');
+		}
+		else 
+		{
+			$this->redirect('analgesia_list',false);
+			Util::showMessage('Please choose a person');
+		}
+	}
+		
 	//progress
 	function progress_list()
 	{

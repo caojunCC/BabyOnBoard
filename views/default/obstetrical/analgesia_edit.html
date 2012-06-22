@@ -1,0 +1,1977 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<script type="text/javascript" src="{theme:javascript/Calendar4.js}"></script> 
+
+<script type="text/javascript" src="{theme:javascript/jquery_chart/lib/jquery-1.2.3.min.js}"></script>
+<script type="text/javascript" src="{theme:javascript/jquery_chart/jquery.jqchart.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{theme:javascript/jquery_chart/lib/jquery.dimensions.js}"></script>
+<script type="text/javascript" src="{theme:javascript/jquery_chart/jquery.gradient-forjqchart.js}"></script>
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+$(window).load(function()
+		{
+		var winHeight =700;
+		 if(window.screen.height)
+		winHeight=window.screen.height;
+		winHeight=winHeight-250;
+		$('#content1').css("height",winHeight+"px");
+		}
+		)
+//analgesia_basic
+function analgesia_basic()
+{
+	art.dialog.load('{url:/modify/analgesia_basic/id/$id}', {
+		id:'add_basic',
+		lock: true,
+	    title: 'Edit Basic Data'
+
+	}, true);
+}
+
+//analgesia_operate
+function analgesia_operate()
+{
+	art.dialog.load('{url:/modify/analgesia_operate/id/$id}', {
+		id:'add_operate',
+		lock: true,
+	    title: 'Edit Opterate Data',
+	    width: '1000px'
+	}, true);
+}
+//analgesia_drug
+function analgesia_drugs()
+{
+	art.dialog.load('{url:/modify/analgesia_drugs/id/$id}', {
+		id:'add_drugs',
+		lock: true,
+	    title: 'Edit Drugs Data',
+	    width: '1000px'
+	}, true);
+}
+//analgesia_fluids
+function analgesia_fluids()
+{
+	art.dialog.load('{url:/modify/analgesia_fluids/id/$id}', {
+		id:'add_fluids',
+		lock: true,
+	    title: 'Edit Fluids Data',
+	    width: '1000px'
+	}, true);
+}
+//analgesia_pain
+function  analgesia_pain()
+{
+	art.dialog.load('{url:/modify/analgesia_pain/id/$id}', {
+		id:'add_pain',
+		lock: true,
+	    title: 'Edit Pain Data',
+	    width: '1000px'
+	}, true);
+}
+//analgesia_other
+function analgesia_other()
+{
+	art.dialog.load('{url:/modify/analgesia_other/id/$id}', {
+		id:'add_other',
+		lock: true,
+	    title: 'Edit Other Data',
+	    width: '1000px'
+	}, true);
+}
+//analgesia_legend
+function analgesia_legend()
+{
+	art.dialog.load('{url:/modify/analgesia_legend/id/$id}', {
+		id:'add_legend',
+		lock: true,
+	    title: 'Edit Legend Data',
+	    width: '1000px'
+	}, true);
+}
+
+
+</script>
+<div class="headbar">
+
+	<div class="position"><span>Obstetrical</span><span>></span><span>Analgesia Record</span><span>></span><span>edit</span></div>
+</div>
+	<div class="content1"  id="content1">
+	<table>
+		<tr>
+			<td>Name:{$name}&nbsp;&nbsp;&nbsp;</td>
+			<td>Hospital:{$hospital}&nbsp;&nbsp;&nbsp;</td>
+			<td>Date:{$date}&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+	</table>
+	<div class="xf-main">
+			<table style="border-collapse:collapse"  onclick='analgesia_basic();'> 
+			     <tr>
+				    <td>DIAGNOSIS诊断<a style='color:red'>{$diagnosis}</a></td>
+					<td rowspan="2">STRT 起始 </td>
+					<td>DATE日期<a style='color:red'>{$start_date}</a></td>
+					<td>AGE年龄<a style='color:red'>{$age}</a></td>
+					<td>HT身高<a style='color:red'>{$ht}</a></td>
+					<td>WT体重<a style='color:red'>{$wt}</a></td>
+					<td>PAGE页码/<a style='color:red'>{$page}</a></td>
+				</tr>
+				<tr>
+				    <td>PROCEDURE操作<a style='color:red'>{$procedure}</a></td>
+					<td>TIME时间<a style='color:red'>{$start_time}</a></td>
+					<td>GRAVIDA孕次<a style='color:red'>{$gracida}</a></td>
+					<td>Para产次<a style='color:red'>{$para}</a></td>
+					<td>Gest Age胎龄（周）<a style='color:red'>{$ega_by_us}</a></td>
+					<td>ASA PA体检分级：
+					{if:$asa_pa == 1}<a style='color:red'>√</a>{else:}□{/if}1
+					{if:$asa_pa == 2}<a style='color:red'>√</a>{else:}□{/if}2
+					{if:$asa_pa == 3}<a style='color:red'>√</a>{else:}□{/if}3
+					{if:$asa_pa == 4}<a style='color:red'>√</a>{else:}□{/if}4
+					{if:$asa_pa == 5}<a style='color:red'>√</a>{else:}□{/if}5
+					{if:$asa_pa == 6}<a style='color:red'>√</a>{else:}□{/if}6
+					{if:$asa_pa == 7}<a style='color:red'>√</a>{else:}□{/if}E
+					
+					</td>
+					
+				</tr>
+				 <tr>
+				    <td>OBSTESTRICIAN产科医师<a style='color:red'>{$obsterian}</a></td>
+					<td rowspan="2">END 结束</td>
+					<td>DATE日期<a style='color:red'>{$end_date}</a></td>
+					<td rowspan="3" colspan="4">HISTORY病史<a style='color:red'>{$medical_surgical_hx}</a><br>
+						MEDICATIONS用药<a style='color:red'>{$current_medication}</a><br>
+						Allergies过敏/副反应<a style='color:red'>{$allergies}</a>
+					</td>
+					<br>MEDICATIONS用药<br>Allergies过敏/副反应<a style='color:red'>{$allergies}</a></td>
+				</tr>
+				<tr>
+				    <td>ANESTHESIOLOGIST麻醉主治医师<a style='color:red'>{$anesthesiologist}</a></td>
+					<td>TIME时间<a style='color:red'>{$end_time}</a></td>
+				</tr>
+				<tr>
+				    <td>TRAINEE住院医师<a style='color:red'>{$trainee}</a></td>
+					<td colspan="2">LDR 产房#<a style='color:red'>{$ldr}</a></td>
+				</tr>
+		</table>
+		<table style="border-collapse:collapse"  onclick='analgesia_operate();'>
+			     <tr>
+				    <td>{if:$equip_drugs_check == 1}<a style='color:red'>√</a>{else:}□{/if}EQUIP/DIUGS CHECKED检查药物/器械<br>
+					{if:$special_access == 1}<a style='color:red'>√</a>{else:}□{/if}SPECIAL ACCESS特殊通道<br>
+					ALINE动脉#{if:$aline != ""}<u><a style='color:red'>{$aline}</a></u> {else:}_______{/if}<br>
+					LOC部位{if:$aline_loc != ""}<u><a style='color:red'>{$aline_loc}</a></u>{else:}_______{/if}<br>
+					CLINE中心静脉#{if:$cline != ""}<a style='color:red'>{$cline}</a>{else:}_______{/if}<br> 
+					LOC部位{if:$cline_loc != ""}<a style='color:red'>{$cline_loc}</a>{else:}_______{/if}<br>
+					PACATH肺动脉导管#{if:$pacath != ""}<a style='color:red'>{$pacath}</a>{else:}_______{/if}<br>
+					LOC部位{if:$pacath_loc != ""}<a style='color:red'>{$pacath_loc}</a>{else:}_______{/if}</td>
+					<td>ANESTHETIC TECHNIQUE麻醉操作<br>
+					{if:$epidural == 1}<a style='color:red'>√</a>{else:}□{/if}EPIDURAL硬膜外    PREP皮肤准备{if:$prep != ""}<u><a style='color:red'>{$prep}</a></u> {else:}_______{/if}Position体位{if:$position != ""}<u><a style='color:red'>{$position}</a></u> {else:}_______{/if}<br>
+					{if:$spinal == 1}<a style='color:red'>√</a>{else:}□{/if}SPINAL腰麻    Epidural Needle硬膜外针#{if:$epidural_needle != ""}<u><a style='color:red'>{$epidural_needle}</a></u> {else:}_______{/if}{if:$l_o_r == 1}<a style='color:red'>√</a>{else:}□{/if}L-O-R阻力消失<br>
+					{if:$cse == 1}<a style='color:red'>√</a>{else:}□{/if}CSE腰硬联合      Spinal Needle腰麻针#{if:$spinal_needle != ""}<u><a style='color:red'>{$spinal_needle}</a></u> {else:}_______{/if}{if:$csf == 1}<a style='color:red'>√</a>{else:}□{/if}CSF脑脊液<br>
+					{if:$pcea == 1}<a style='color:red'>√</a>{else:}□{/if}+PCEA病人自控镇痛        Site部位#1{if:$site_1 != ""}<u><a style='color:red'>{$site_1}</a></u> {else:}_______{/if}2{if:$site_2 != ""}<u><a style='color:red'>{$site_2}</a></u> {else:}_______{/if}3{if:$site_3 != ""}<u><a style='color:red'>{$site_3}</a></u> {else:}_______{/if}CathinSpace腔内留管{if:$cathin_space != ""}<u><a style='color:red'>{$cathin_space}</a></u> {else:}_______{/if}cm，AtSkin皮肤{if:$at_skin != ""}<u><a style='color:red'>{$at_skin}</a></u> {else:}_______{/if}cm<br>
+					{if:$ambulatory == 1}<a style='color:red'>√</a>{else:}□{/if}+AMBULATORY行走      Test Dose via Cath硬膜外置管试验：{if:$test_dose_via_cath == 1}<a style='color:red'>√</a>{else:}□{/if}Neg阴性{if:$test_dose_via_cath == 2}<a style='color:red'>√</a>{else:}□{/if}Pos阳性<br></td>
+					<td>EVENTS(if any）事件<br>
+					{if:$csf_w == 1}<a style='color:red'>√</a>{else:}□{/if}+CSFw/脑脊液（由）       {if:$epid_needle1 == 1}<a style='color:red'>√</a>{else:}□{/if}epid needle硬膜外针         {if:$epid_cath1 == 1}<a style='color:red'>√</a>{else:}□{/if}epid cath硬膜外导管<br>
+					{if:$blood_w == 1}<a style='color:red'>√</a>{else:}□{/if}+Blood w/血液（由）       {if:$spinal_needle1 == 1}<a style='color:red'>√</a>{else:}□{/if}spinal needle腰穿针           {if:$epid_needle2 == 1}<a style='color:red'>√</a>{else:}□{/if}epid needle硬膜外针       {if:$epid_cath2 == 1}<a style='color:red'>√</a>{else:}□{/if}epid cath硬膜外导管<br>
+					{if:$parasthesis_w == 1}<a style='color:red'>√</a>{else:}□{/if}+Parasthesis w/触电感（由）           {if:$spinal_needle2 == 1}<a style='color:red'>√</a>{else:}□{/if}spinal needle腰穿针            {if:$epid_needle3 == 1}<a style='color:red'>√</a>{else:}□{/if}epid needle硬膜外针        {if:$epid_cath3 == 1}<a style='color:red'>√</a>{else:}□{/if}epid cath硬膜外导管<br>
+					{if:$left == 1}<a style='color:red'>√</a>{else:}□{/if}Lefe左       {if:$right == 1}<a style='color:red'>√</a>{else:}□{/if}Right右         {if:$transient == 1}<a style='color:red'>√</a>{else:}□{/if}Lransient-过性<br></td>
+				</tr>
+		</table>
+	
+		<table style="border-collapse:collapse">
+		    <col width="100" />
+			<col width="165" />
+			     <tr onclick='analgesia_drugs();'>
+				    <td>Rte途径</td>
+					<td>Drugs药物</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td colspan="2" >Total总量</td>
+				</tr>
+				<tr onclick='analgesia_drugs();'>
+				    <td></td>
+					<td >Oxygen氧气</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[oxygen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[oxygen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[oxygen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[oxygen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[oxygen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[oxygen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[oxygen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[oxygen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[oxygen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[oxygen]}{/if}
+					{/query}
+					</td>
+					<td>{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[oxygen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[oxygen];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+					<td rowspan="11" style="width:150px;"> Drugs 药物</td>
+				</tr>
+				<tr onclick='analgesia_drugs();'>
+				    <td></td>
+					<td>Bupivacaiane布比卡因  %</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bupivacaiane]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bupivacaiane]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bupivacaiane]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bupivacaiane]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bupivacaiane]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bupivacaiane]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bupivacaiane]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bupivacaiane]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bupivacaiane]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bupivacaiane]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bupivacaiane]}{/if}
+					{/query}
+					</td>
+					<td>
+					{set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[bupivacaiane];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+				</tr>
+				<tr onclick='analgesia_drugs();'>
+				    <td></td>
+					<td>Ropivacaine罗哌卡因  %</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ropivacaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ropivacaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ropivacaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ropivacaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ropivacaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ropivacaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ropivacaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ropivacaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ropivacaine]}{/if}
+					{/query}
+					</td>
+					<td>{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ropivacaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ropivacaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[ropivacaine];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+				</tr>
+				<tr onclick='analgesia_drugs();'>
+				    <td></td>
+					<td>Lidocaine利多卡因  %</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lidocaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lidocaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lidocaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lidocaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lidocaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lidocaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lidocaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lidocaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lidocaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lidocaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lidocaine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[lidocaine];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+				</tr>
+				<tr onclick='analgesia_drugs();'>
+				    <td>E硬膜外</td>
+					<td>Lidocaine1.5%+epi试验剂</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lid_epi]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lid_epi]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lid_epi]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lid_epi]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lid_epi]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lid_epi]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lid_epi]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lid_epi]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lid_epi]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lid_epi]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[lid_epi]}{/if}
+					{/query}
+					</td>
+					<td>
+					{set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[lid_epi];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+				</tr>
+				<tr onclick='analgesia_drugs();'>
+				    <td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr onclick='analgesia_drugs();'>
+				    <td></td>
+					<td>Fentanyl芬太尼  （mcg）</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[fentanyl]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[fentanyl]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[fentanyl]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[fentanyl]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[fentanyl]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[fentanyl]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[fentanyl]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[fentanyl]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[fentanyl]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[fentanyl]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[fentanyl]}{/if}
+					{/query}
+					</td>
+					<td>
+					{set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[fentanyl];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+				</tr>
+				<tr onclick='analgesia_drugs();'>
+				    <td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr onclick='analgesia_drugs();'>
+				    <td>IV静脉</td>
+					<td>Ephedrine麻黄素  （mg）</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ephedrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ephedrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ephedrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ephedrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ephedrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ephedrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ephedrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ephedrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ephedrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ephedrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ephedrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[ephedrine];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+				</tr>
+				<tr onclick='analgesia_drugs();'>
+				    <td>IV静脉</td>
+					<td>Phenyephrine正肾  （mcg）</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[phenyephrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[phenyephrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[phenyephrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[phenyephrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[phenyephrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[phenyephrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[phenyephrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[phenyephrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[phenyephrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[phenyephrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[phenyephrine]}{/if}
+					{/query}
+					</td>
+					<td>
+					{set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[phenyephrine];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+				</tr>
+				<tr onclick='analgesia_drugs();'>
+				    <td>E硬膜外</td>
+					<td>Bupivacaine0.06%+Fentanyl 2mcglcc</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bup_fen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bup_fen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bup_fen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bup_fen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bup_fen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bup_fen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bup_fen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bup_fen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bup_fen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bup_fen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bup_fen]}{/if}
+					{/query}
+					</td>
+					<td>
+					{set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[bup_fen];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+				</tr>
+			     <tr onclick='analgesia_fluids();'>
+				     <td rowspan="5">Fluids 液体</td>
+					 <td style="width:150px;"></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td rowspan="5">Fluids 液体</td>
+			    </tr>
+				<tr onclick='analgesia_fluids();'>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+			    </tr>
+				<tr onclick='analgesia_fluids();'>
+					 <td>Blood输血</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[blood_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[blood_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[blood_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[blood_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[blood_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[blood_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[blood_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[blood_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[blood_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[blood_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[blood_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[blood_f];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+			    </tr>
+				<tr onclick='analgesia_fluids();'>
+					 <td>BloodLoss出血量</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bloodLoss_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bloodLoss_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bloodLoss_f]}{/if}
+					{/query}
+					 </td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bloodLoss_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bloodLoss_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bloodLoss_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bloodLoss_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bloodLoss_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bloodLoss_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bloodLoss_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[bloodLoss_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[bloodLoss_f];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+			    </tr>
+				<tr onclick='analgesia_fluids();'>
+					 <td>Unine O/P尿量</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[unine_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[unine_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[unine_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[unine_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[unine_f]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[unine_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[unine_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[unine_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[unine_f]}{/if}
+					{/query}
+					</td>
+					<td>
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[unine_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[unine_f]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {set: $tot=0;}
+					{query: name=labor_analgesia_drugs_view as ladv where=ladv.basic_id eq $id}
+							{set:$tot=$tot+$item[unine_f];}
+					{/query}
+					<a style='color:red'>{$tot}</a>
+					</td>
+			    </tr>
+			     <tr>
+				     <td colspan="2" onclick='analgesia_pain();'>PAIN SCORE疼痛分值（0-10）</td>
+					 <td onclick='analgesia_pain();'>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[pain]}{/if}
+					{/query}
+					</td>
+					 <td onclick='analgesia_pain();'>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[pain]}{/if}
+					{/query}
+					</td>
+					 <td onclick='analgesia_pain();'>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[pain]}{/if}
+					{/query}
+					</td>
+					 <td onclick='analgesia_pain();'>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[pain]}{/if}
+					{/query}
+					</td>
+					 <td onclick='analgesia_pain();'>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[pain]}{/if}
+					{/query}
+					</td>
+					 <td onclick='analgesia_pain();'>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[pain]}{/if}
+					{/query}
+					</td>
+					 <td onclick='analgesia_pain();'>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[pain]}{/if}
+					{/query}
+					</td>
+					 <td onclick='analgesia_pain();'>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[pain]}{/if}
+					{/query}
+					</td>
+					 <td onclick='analgesia_pain();'>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[pain]}{/if}
+					{/query}
+					</td>
+					 <td onclick='analgesia_pain();'>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[pain]}{/if}
+					{/query}
+					</td>
+					 <td onclick='analgesia_pain();'>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[pain]}{/if}
+					{/query}
+					</td>
+					  <td rowspan="12" colspan="2" onclick='analgesia_other();'>COMMENTS记录<br />
+					  {if:$attending_available == 1}<a style='color:red'>√</a>{else:}□{/if}Attending Avaiable主治在病房
+					  </td>
+				</tr>
+				 <tr onclick='analgesia_pain();'>
+				     <td rowspan="2">SENSORY LVL感觉平面</td>
+					 <td>left左</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_l]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_l]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_l]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_l]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_l]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_l]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_l]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_l]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_l]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_l]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_l]}{/if}
+					{/query}
+					</td>
+				</tr>
+				 <tr onclick='analgesia_pain();'>
+					 <td>right右</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_r]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_r]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_r]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_r]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_r]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_r]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_r]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_r]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_r]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_r]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[sensory_r]}{/if}
+					{/query}
+					</td>
+				</tr>
+				 <tr onclick='analgesia_pain();'>
+				     <td rowspan="2">OB产科</td>
+					 <td>Dilation宫口</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_dilation]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_dilation]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_dilation]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_dilation]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_dilation]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_dilation]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_dilation]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_dilation]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_dilation]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_dilation]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_dilation]}{/if}
+					{/query}
+					</td>
+				</tr>
+				 <tr onclick='analgesia_pain();'>
+					 <td>Station</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_station]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_station]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_station]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_station]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_station]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_station]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_station]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_station]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_station]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_station]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[ob_station]}{/if}
+					{/query}
+					</td>
+				</tr>
+				 <tr onclick='analgesia_pain();'>
+					 <td colspan="2">TEMPERATURE体温</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[temperature]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[temperature]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[temperature]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[temperature]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[temperature]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[temperature]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[temperature]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[temperature]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[temperature]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[temperature]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[temperature]}{/if}
+					{/query}
+					</td>
+				</tr>
+				 <tr onclick='analgesia_pain();'>
+					 <td rowspan="3" >CV/Resp心肺监护</td>
+					 <td>ECG心电图</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_ecg]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_ecg]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_ecg]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_ecg]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_ecg]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_ecg]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_ecg]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_ecg]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_ecg]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_ecg]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_ecg]}{/if}
+					{/query}
+					</td>
+				</tr>
+				 <tr onclick='analgesia_pain();'>
+					 <td>SPO2血氧饱和度</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_spo]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_spo]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_spo]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_spo]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_spo]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_spo]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_spo]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_spo]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_spo]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_spo]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[cv_spo]}{/if}
+					{/query}
+					</td>
+				</tr>
+				 <tr onclick='analgesia_pain();'>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+				</tr>
+				 <tr onclick='analgesia_pain();'>
+					 <td colspan="2" >RESIDENT PRESENT住院医师到场</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[resident]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[resident]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[resident]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[resident]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[resident]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[resident]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[resident]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[resident]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[resident]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[resident]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[resident]}{/if}
+					{/query}
+					</td>
+				</tr>
+				 <tr onclick='analgesia_pain();'>
+					 <td colspan="2">RTTENDING PRESENT主治/任医师到场</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[rttending]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[rttending]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[rttending]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[rttending]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[rttending]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[rttending]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[rttending]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[rttending]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[rttending]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[rttending]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[rttending]}{/if}
+					{/query}
+					</td>
+				</tr>
+
+				<tr>
+					 <td colspan="2" >TIME时间</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[time]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[time]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[time]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[time]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[time]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[time]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[time]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[time]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[time]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[time]}{/if}
+					{/query}
+					</td>
+					 <td>
+					 {query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+							{if:$item[basic_id]==$id}<a style='color:red'>{$item[time]}{/if}
+					{/query}
+					</td>
+					
+				</tr>
+						</table>
+		<table style="border-collapse:collapse">
+					<col width="100" />
+					<col width="165" />
+			     <tr>
+			     <td onclick='analgesia_legend();'>LEGEND符号：<br>
+			     血压：红色<br>
+			     “<a style='color:#ee0000'>————</a>”<br>
+			     动脉压:黄色<br>
+			     “<a style='color:#eeee00'>————</a>”<br>
+			     心率:绿色<br>
+			     “<a style='color:#00ff00'>————</a>”<br>
+			     胎心率:蓝色<br>
+			     “<a style='color:#bbffff'>————</a>”
+			     </td>
+			     <td colspan="11" onclick='analgesia_legend();'>
+			     <style>
+
+					body { 
+					 margin: 30px; 
+					  
+					}
+					
+					#myBgBox{
+					 background-color:#3f464c;
+					 padding:30px;
+					 padding-top:15px;
+					 text-align:center;
+					 color:white;
+					}
+					#myBgBox h5{
+					 margin :15px;
+					 font-size : 18px;
+					}
+					.jQchart{
+					 font-size : 12px;
+					}
+					.jQchart-bg{
+					 margin-left  : auto ;
+					 margin-right : auto ;
+					}
+					.jQchart-labelData{
+					 font-size : 12px;
+					}
+					.jQchart-title{
+					 font-size : 12px;
+					}
+
+					</style>
+			     <div id="myBgBox" >
+ 					<canvas id="canvasMyID1" width="500" height="400"></canvas>
+					</div>
+					<script type="text/javascript">
+					
+					var data = [
+					             	[{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+  									{if:$item[basic_id]==$id}{$item[cuff_bp]}{/if}
+  										{/query},
+  											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+  	  									{if:$item[basic_id]==$id}{$item[cuff_bp]}{/if}
+  	  										{/query},
+  	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+  	    									{if:$item[basic_id]==$id}{$item[cuff_bp]}{/if}
+  	    										{/query},
+  	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+  	    	  									{if:$item[basic_id]==$id}{$item[cuff_bp]}{/if}
+  	    	  										{/query},
+  	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+  	    	    									{if:$item[basic_id]==$id}{$item[cuff_bp]}{/if}
+  	    	    										{/query},
+  	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+  	    	    	  									{if:$item[basic_id]==$id}{$item[cuff_bp]}{/if}
+  	    	    	  										{/query},
+  	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+  	    	    	    									{if:$item[basic_id]==$id}{$item[cuff_bp]}{/if}
+  	    	    	    										{/query},
+  	    	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+  	    	    	    	  									{if:$item[basic_id]==$id}{$item[cuff_bp]}{/if}
+  	    	    	    	  										{/query},
+  	    	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+  	    	    	    	    									{if:$item[basic_id]==$id}{$item[cuff_bp]}{/if}
+  	    	    	    	    										{/query},
+  	    	    	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+  	    	    	    	    	  									{if:$item[basic_id]==$id}{$item[cuff_bp]}{/if}
+  	    	    	    	    	  										{/query},
+  	    	    	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+  	    	    	    	    	    									{if:$item[basic_id]==$id}{$item[cuff_bp]}{/if}
+  	    	    	    	    	    										{/query}
+  	    	    	    	  			],
+					             	[{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+  									{if:$item[basic_id]==$id}{$item[aline_bp]}{/if}
+  										{/query},
+  											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+  	  									{if:$item[basic_id]==$id}{$item[aline_bp]}{/if}
+  	  										{/query}, 
+  	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+  	    									{if:$item[basic_id]==$id}{$item[aline_bp]}{/if}
+  	    										{/query}, 
+  	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+  	    	  									{if:$item[basic_id]==$id}{$item[aline_bp]}{/if}
+  	    	  										{/query}, 
+  	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+  	    	    									{if:$item[basic_id]==$id}{$item[aline_bp]}{/if}
+  	    	    										{/query}, 
+  	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+  	    	    	  									{if:$item[basic_id]==$id}{$item[aline_bp]}{/if}
+  	    	    	  										{/query}, 
+  	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+  	    	    	    									{if:$item[basic_id]==$id}{$item[aline_bp]}{/if}
+  	    	    	    										{/query},
+  	    	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+  	    	    	    	  									{if:$item[basic_id]==$id}{$item[aline_bp]}{/if}
+  	    	    	    	  										{/query},
+  	    	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+  	    	    	    	    									{if:$item[basic_id]==$id}{$item[aline_bp]}{/if}
+  	    	    	    	    										{/query},
+  	    	    	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+  	    	    	    	    	  									{if:$item[basic_id]==$id}{$item[aline_bp]}{/if}
+  	    	    	    	    	  										{/query},
+  	    	    	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+  	    	    	    	    	    									{if:$item[basic_id]==$id}{$item[aline_bp]}{/if}
+  	    	    	    	    	    										{/query}
+					             	 ],
+					            	[{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+  									{if:$item[basic_id]==$id}{$item[hr]}{/if}
+  										{/query}, 
+  											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+  	  									{if:$item[basic_id]==$id}{$item[hr]}{/if}
+  	  										{/query}, 
+  	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+  	    									{if:$item[basic_id]==$id}{$item[hr]}{/if}
+  	    										{/query}, 
+  	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+  	    	  									{if:$item[basic_id]==$id}{$item[hr]}{/if}
+  	    	  										{/query}, 
+  	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+  	    	    									{if:$item[basic_id]==$id}{$item[hr]}{/if}
+  	    	    										{/query}, 
+  	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+  	    	    	  									{if:$item[basic_id]==$id}{$item[hr]}{/if}
+  	    	    	  										{/query}, 
+  	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+  	    	    	    									{if:$item[basic_id]==$id}{$item[hr]}{/if}
+  	    	    	    										{/query},
+  	    	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+  	    	    	    	  									{if:$item[basic_id]==$id}{$item[hr]}{/if}
+  	    	    	    	  										{/query},
+  	    	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+  	    	    	    	    									{if:$item[basic_id]==$id}{$item[hr]}{/if}
+  	    	    	    	    										{/query},
+  	    	    	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+  	    	    	    	    	  									{if:$item[basic_id]==$id}{$item[hr]}{/if}
+  	    	    	    	    	  										{/query},
+  	    	    	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+  	    	    	    	    	    									{if:$item[basic_id]==$id}{$item[hr]}{/if}
+  	    	    	    	    	    										{/query}
+					            	 ],
+					            	[{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+  									{if:$item[basic_id]==$id}{$item[fetal_hr]}{/if}
+  										{/query},
+  											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+  	  									{if:$item[basic_id]==$id}{$item[fetal_hr]}{/if}
+  	  										{/query}, 
+  	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+  	    									{if:$item[basic_id]==$id}{$item[fetal_hr]}{/if}
+  	    										{/query}, 
+  	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+  	    	  									{if:$item[basic_id]==$id}{$item[fetal_hr]}{/if}
+  	    	  										{/query},
+  	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+  	    	    									{if:$item[basic_id]==$id}{$item[fetal_hr]}{/if}
+  	    	    										{/query},
+  	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+  	    	    	  									{if:$item[basic_id]==$id}{$item[fetal_hr]}{/if}
+  	    	    	  										{/query}, 
+  	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+  	    	    	    									{if:$item[basic_id]==$id}{$item[fetal_hr]}{/if}
+  	    	    	    										{/query},
+  	    	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+  	    	    	    	  									{if:$item[basic_id]==$id}{$item[fetal_hr]}{/if}
+  	    	    	    	  										{/query},
+  	    	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+  	    	    	    	    									{if:$item[basic_id]==$id}{$item[fetal_hr]}{/if}
+  	    	    	    	    										{/query},
+  	    	    	    	    											{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+  	    	    	    	    	  									{if:$item[basic_id]==$id}{$item[fetal_hr]}{/if}
+  	    	    	    	    	  										{/query},
+  	    	    	    	    	  										{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+  	    	    	    	    	    									{if:$item[basic_id]==$id}{$item[fetal_hr]}{/if}
+  	    	    	    	    	    										{/query}
+					            	 ]
+					            ];
+			     	
+			   		  	 var chartSetting1={
+ 						 config:{
+  						 title    : ' ',
+  						 labelX : ["{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 1}
+  									{if:$item[basic_id]==$id}{$item[time]}{/if}
+  										{/query}",
+  										"{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 2}
+  									{if:$item[basic_id]==$id}{$item[time]}{/if}
+  										{/query}",
+  										"{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 3}
+  									{if:$item[basic_id]==$id}{$item[time]}{/if}
+  										{/query}",
+  										"{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 4}
+  									{if:$item[basic_id]==$id}{$item[time]}{/if}
+  										{/query}",
+  										"{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 5}
+  									{if:$item[basic_id]==$id}{$item[time]}{/if}
+  										{/query}",
+  										"{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 6}
+  									{if:$item[basic_id]==$id}{$item[time]}{/if}
+  										{/query}",
+  										"{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 7}
+  									{if:$item[basic_id]==$id}{$item[time]}{/if}
+  										{/query}",
+  										"{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 8}
+  									{if:$item[basic_id]==$id}{$item[time]}{/if}
+  										{/query}",
+  										"{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 9}
+  									{if:$item[basic_id]==$id}{$item[time]}{/if}
+  										{/query}",
+  										"{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 10}
+  									{if:$item[basic_id]==$id}{$item[time]}{/if}
+  										{/query}",
+  										"{query: name=labor_analgesia_drugs_view as ladv where=ladv.time_id eq 11}
+  									{if:$item[basic_id]==$id}{$item[time]}{/if}
+  										{/query}"],
+  						 scaleY   : {min: 0,max:200,gap:20},
+					     type     : 'line',
+					     colorSet   : ['#ee0000','#eeee00','#00ff00','#bbffff'],
+					     bgGradient : true
+						 },
+						 data : data
+						 };
+						 jQuery(function($){
+						 $('#canvasMyID1').jQchart(chartSetting1);
+						 })
+			
+					</script>
+					</td>
+					 <td style="width:150px;" onclick='analgesia_other();'>
+					 DELIVRY产出：<br />
+					 {if:$nsvd == 1}<a style='color:red'>√</a>{else:}□{/if}NSVD自然
+					 {if:$vac == 1}<a style='color:red'>√</a>{else:}□{/if}VAC吸引
+					 {if:$forceps == 1}<a style='color:red'>√</a>{else:}□{/if}Forceps产钳<br />
+					 C/SReason剖宫产原因{if:$reason != ""}<a style='color:red'>{$reason}</a>{else:}_______{/if}<br />
+					 Time时间{if:$time_c != ""}<a style='color:red'>{$time_c}</a>{else:}_______{/if}<br />
+					 Apgar阿普加{if:$apgar_1 != ""}<a style='color:red'>{$apgar_1}</a>{else:}_______{/if} / {if:$apgar_2 != ""}<a style='color:red'>{$apgar_2}</a>{else:}_______{/if}<br />
+					 DECOVERY恢复：<br />
+					 D/C Cath@拔管时间{if:$cath != ""}<a style='color:red'>{$cath}</a>{else:}_______{/if}<br />
+					 {if:$tip == 1}<a style='color:red'>√</a>{else:}□{/if}Tip intact管头完整<br />
+					 CONTROLLED DRUGS控制药物<br />
+					 ml wasted 浪费，initial处方<br />
+					 Fentanyl 芬太尼{if:$wasted_fen != ""}<a style='color:red'>{$wasted_fen}</a>{else:}_______{/if}<br />
+					 Other其他{if:$wasted_other != ""}<a style='color:red'>{$wasted_other}</a>{else:}_______{/if}<br />
+					 Infusion of 滴注液{if:$wasted_inf != ""}<a style='color:red'>{$wasted_inf}</a>{else:}_______{/if}
+					 </td>
+			     </tr>
+                     
+        </table>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+</div>
+</div>

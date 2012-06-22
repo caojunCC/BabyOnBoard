@@ -1,0 +1,579 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+
+<div class="xf-main1" style="width:1200px;">
+<form id="analgesia_legend_act" action="{url:/modify/analgesia_legend_act}"  method="post">
+	<input type='hidden' name='basic_id' value='{$this->id }'/>
+<div style="height:250pxpx;width:1200px;overflow-y:scroll;overflow-x:scroll;">
+	<table style="border-collapse:collapse" >
+	
+	<tr>
+			<td colspan="2">TIME时间</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time1" name="time1" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time1" name="time1">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time2" name="time2" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time2" name="time2">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time3" name="time3" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time3" name="time3">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time4" name="time4" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time4" name="time4">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time5" name="time5" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time5" name="time5">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time6" name="time6" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time6" name="time6">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time7" name="time7" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time7" name="time7">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time8" name="time8" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time8" name="time8">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time9" name="time9" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time9" name="time9">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time10" name="time10" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time10" name="time10">{/if}
+			</td>
+			<td>
+				{set:$t=0;}
+				{query: name=labor_analgesia_time as lat where=lat.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="time11" name="time11" value="{$item[time]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="time11" name="time11">{/if}
+			</td>
+		</tr>
+				<tr>
+			 <td colspan="2">血压</td>
+			 <td>
+			 	{set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cuff_bp1" name="cuff_bp1" value="{$item[cuff_bp ]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cuff_bp1" name="cuff_bp1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cuff_bp2" name="cuff_bp2" value="{$item[cuff_bp ]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cuff_bp2" name="cuff_bp2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cuff_bp3" name="cuff_bp3" value="{$item[cuff_bp ]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cuff_bp3" name="cuff_bp3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cuff_bp4" name="cuff_bp4" value="{$item[cuff_bp ]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cuff_bp4" name="cuff_bp4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cuff_bp5" name="cuff_bp5" value="{$item[cuff_bp ]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cuff_bp5" name="cuff_bp5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cuff_bp6" name="cuff_bp6" value="{$item[cuff_bp ]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cuff_bp6" name="cuff_bp6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cuff_bp7" name="cuff_bp7" value="{$item[cuff_bp ]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cuff_bp7" name="cuff_bp7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cuff_bp8" name="cuff_bp8" value="{$item[cuff_bp ]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cuff_bp8" name="cuff_bp8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cuff_bp9" name="cuff_bp9" value="{$item[cuff_bp ]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cuff_bp9" name="cuff_bp9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cuff_bp10" name="cuff_bp10" value="{$item[cuff_bp ]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cuff_bp10" name="cuff_bp10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="cuff_bp11" name="cuff_bp11" value="{$item[cuff_bp ]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="cuff_bp11" name="cuff_bp11">{/if}
+			</td>
+		</tr>
+				<tr>
+			 <td colspan="2">动脉压</td>
+			 <td>
+			 	{set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="aline_bp1" name="aline_bp1" value="{$item[aline_bp]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="aline_bp1" name="aline_bp1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="aline_bp2" name="aline_bp2" value="{$item[aline_bp]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="aline_bp2" name="aline_bp2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="aline_bp3" name="aline_bp3" value="{$item[aline_bp]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="aline_bp3" name="aline_bp3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="aline_bp4" name="aline_bp4" value="{$item[aline_bp]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="aline_bp4" name="aline_bp4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="aline_bp5" name="aline_bp5" value="{$item[aline_bp]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="aline_bp5" name="aline_bp5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="aline_bp6" name="aline_bp6" value="{$item[aline_bp]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="aline_bp6" name="aline_bp6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="aline_bp7" name="aline_bp7" value="{$item[aline_bp]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="aline_bp7" name="aline_bp7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="aline_bp8" name="aline_bp8" value="{$item[aline_bp]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="aline_bp8" name="aline_bp8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="aline_bp9" name="aline_bp9" value="{$item[aline_bp]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="aline_bp9" name="aline_bp9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="aline_bp10" name="aline_bp10" value="{$item[aline_bp]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="aline_bp10" name="aline_bp10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="aline_bp11" name="aline_bp11" value="{$item[aline_bp]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="aline_bp11" name="aline_bp11">{/if}
+			</td>
+		</tr>
+				<tr>
+			 <td colspan="2">心率</td>
+			 <td>
+			 	{set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="hr1" name="hr1" value="{$item[hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="hr1" name="hr1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="hr2" name="hr2" value="{$item[hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="hr2" name="hr2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="hr3" name="hr3" value="{$item[hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="hr3" name="hr3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="hr4" name="hr4" value="{$item[hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="hr4" name="hr4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="hr5" name="hr5" value="{$item[hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="hr5" name="hr5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="hr6" name="hr6" value="{$item[hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="hr6" name="hr6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="hr7" name="hr7" value="{$item[hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="hr7" name="hr7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="hr8" name="hr8" value="{$item[hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="hr8" name="hr8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="hr9" name="hr9" value="{$item[hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="hr9" name="hr9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="hr10" name="hr10" value="{$item[hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="hr10" name="hr10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="hr11" name="hr11" value="{$item[hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="hr11" name="hr11">{/if}
+			</td>
+		</tr>
+				<tr>
+			 <td colspan="2">胎心率</td>
+			 <td>
+			 	{set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 1}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="fetal_hr1" name="fetal_hr1" value="{$item[fetal_hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="fetal_hr1" name="fetal_hr1">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 2}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="fetal_hr2" name="fetal_hr2" value="{$item[fetal_hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="fetal_hr2" name="fetal_hr2">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 3}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="fetal_hr3" name="fetal_hr3" value="{$item[fetal_hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="fetal_hr3" name="fetal_hr3">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 4}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="fetal_hr4" name="fetal_hr4" value="{$item[fetal_hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="fetal_hr4" name="fetal_hr4">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 5}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="fetal_hr5" name="fetal_hr5" value="{$item[fetal_hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="fetal_hr5" name="fetal_hr5">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 6}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="fetal_hr6" name="fetal_hr6" value="{$item[fetal_hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="fetal_hr6" name="fetal_hr6">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 7}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="fetal_hr7" name="fetal_hr7" value="{$item[fetal_hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="fetal_hr7" name="fetal_hr7">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 8}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="fetal_hr8" name="fetal_hr8" value="{$item[fetal_hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="fetal_hr8" name="fetal_hr8">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 9}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="fetal_hr9" name="fetal_hr9" value="{$item[fetal_hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="fetal_hr9" name="fetal_hr9">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 10}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="fetal_hr10" name="fetal_hr10" value="{$item[fetal_hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="fetal_hr10" name="fetal_hr10">{/if}
+			</td>
+			 <td>
+			 {set:$t=0;}
+				{query: name=labor_analgesia_bphp as lab where=lab.time_id eq 11}
+				{if:$item[basic_id]==$this->id}
+				<input type="text" class='small' id="fetal_hr11" name="fetal_hr11" value="{$item[fetal_hr]}">
+				{set:$t=1;}
+				{/if}
+				{/query}
+				{if:$t==0}<input type="text" class='small' id="fetal_hr11" name="fetal_hr11">{/if}
+			</td>
+		</tr>
+	</table>
+	</div>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+
+</div>

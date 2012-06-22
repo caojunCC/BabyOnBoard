@@ -1,0 +1,1197 @@
+<link rel="stylesheet" href="{skin:css/xf-table.css}" />
+<div class="xf-main1" style="width:1200px;">
+<form id="analgesia_drugs" action="{url:/modify/analgesia_drugs_act}"  method="post">
+<input type='hidden' name='basic_id' value='{$this->id }'/>
+<div style="height:500px;width:1200px;overflow-y:scroll;overflow-x:scroll;overflow-y:scroll;">
+	<table style="border-collapse:collapse" >
+				<tr>
+					<td colspan="2">TIME时间</td>
+					<td>
+						{set:$t=0;}
+						{query: name=labor_analgesia_time as lat where=lat.time_id eq 1}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="time1" name="time1" value="{$item[time]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="time1" name="time1">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_time as lat where=lat.time_id eq 2}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="time2" name="time2" value="{$item[time]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="time2" name="time2">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_time as lat where=lat.time_id eq 3}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="time3" name="time3" value="{$item[time]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="time3" name="time3">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_time as lat where=lat.time_id eq 4}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="time4" name="time4" value="{$item[time]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="time4" name="time4">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_time as lat where=lat.time_id eq 5}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="time5" name="time5" value="{$item[time]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="time5" name="time5">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_time as lat where=lat.time_id eq 6}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="time6" name="time6" value="{$item[time]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="time6" name="time6">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_time as lat where=lat.time_id eq 7}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="time7" name="time7" value="{$item[time]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="time7" name="time7">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_time as lat where=lat.time_id eq 8}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="time8" name="time8" value="{$item[time]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="time8" name="time8">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_time as lat where=lat.time_id eq 9}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="time9" name="time9" value="{$item[time]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="time9" name="time9">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_time as lat where=lat.time_id eq 10}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="time10" name="time10" value="{$item[time]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="time10" name="time10">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_time as lat where=lat.time_id eq 11}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="time11" name="time11" value="{$item[time]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="time11" name="time11">{/if}
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+				    <td>Rte途径</td>
+					<td>Drugs药物</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td rowspan="12" style="width:150px;"> Drugs 药物</td>
+				</tr>
+				<tr>
+				    <td></td>
+					<td >Oxygen氧气</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 1}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="oxygen1" name="oxygen1" value="{$item[oxygen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="oxygen1" name="oxygen1">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 2}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="oxygen2" name="oxygen2" value="{$item[oxygen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="oxygen2" name="oxygen2">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 3}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="oxygen3" name="oxygen3" value="{$item[oxygen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="oxygen3" name="oxygen3">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 4}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="oxygen4" name="oxygen4" value="{$item[oxygen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="oxygen4" name="oxygen4">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 5}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="oxygen5" name="oxygen5" value="{$item[oxygen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="oxygen5" name="oxygen5">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 6}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="oxygen6" name="oxygen6" value="{$item[oxygen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="oxygen6" name="oxygen6">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 7}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="oxygen7" name="oxygen7" value="{$item[oxygen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="oxygen7" name="oxygen7">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 8}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="oxygen8" name="oxygen8" value="{$item[oxygen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="oxygen8" name="oxygen8">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 9}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="oxygen9" name="oxygen9" value="{$item[oxygen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="oxygen9" name="oxygen9">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 10}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="oxygen10" name="oxygen10" value="{$item[oxygen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="oxygen10" name="oxygen10">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 11}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="oxygen11" name="oxygen11" value="{$item[oxygen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="oxygen11" name="oxygen11">{/if}
+					</td>
+				</tr>
+				<tr>
+				    <td></td>
+					<td>Bupivacaiane布比卡因  %</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 1}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bupivacaiane1" name="bupivacaiane1" value="{$item[bupivacaiane]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bupivacaiane1" name="bupivacaiane1">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 2}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bupivacaiane2" name="bupivacaiane2" value="{$item[bupivacaiane]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bupivacaiane2" name="bupivacaiane2">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 3}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bupivacaiane3" name="bupivacaiane3" value="{$item[bupivacaiane]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bupivacaiane3" name="bupivacaiane3">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 4}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bupivacaiane4" name="bupivacaiane4" value="{$item[bupivacaiane]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bupivacaiane4" name="bupivacaiane4">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 5}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bupivacaiane5" name="bupivacaiane5" value="{$item[bupivacaiane]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bupivacaiane5" name="bupivacaiane5">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 6}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bupivacaiane6" name="bupivacaiane6" value="{$item[bupivacaiane]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bupivacaiane6" name="bupivacaiane6">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 7}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bupivacaiane7" name="bupivacaiane7" value="{$item[bupivacaiane]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bupivacaiane7" name="bupivacaiane7">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 8}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bupivacaiane8" name="bupivacaiane8" value="{$item[bupivacaiane]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bupivacaiane8" name="bupivacaiane8">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 9}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bupivacaiane9" name="bupivacaiane9" value="{$item[bupivacaiane]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bupivacaiane9" name="bupivacaiane9">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 10}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bupivacaiane10" name="bupivacaiane10" value="{$item[bupivacaiane]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bupivacaiane10" name="bupivacaiane10">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 11}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bupivacaiane11" name="bupivacaiane11" value="{$item[bupivacaiane]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bupivacaiane11" name="bupivacaiane11">{/if}
+					</td>
+				</tr>
+				<tr>
+				    <td></td>
+					<td>Ropivacaine罗哌卡因  %</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 1}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ropivacaine1" name="ropivacaine1" value="{$item[ropivacaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ropivacaine1" name="ropivacaine1">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 2}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ropivacaine2" name="ropivacaine2" value="{$item[ropivacaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ropivacaine2" name="ropivacaine2">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 3}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ropivacaine3" name="ropivacaine3" value="{$item[ropivacaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ropivacaine3" name="ropivacaine3">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 4}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ropivacaine4" name="ropivacaine4" value="{$item[ropivacaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ropivacaine4" name="ropivacaine4">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 5}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ropivacaine5" name="ropivacaine5" value="{$item[ropivacaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ropivacaine5" name="ropivacaine5">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 6}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ropivacaine6" name="ropivacaine6" value="{$item[ropivacaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ropivacaine6" name="ropivacaine6">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 7}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ropivacaine7" name="ropivacaine7" value="{$item[ropivacaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ropivacaine7" name="ropivacaine7">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 8}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ropivacaine8" name="ropivacaine8" value="{$item[ropivacaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ropivacaine8" name="ropivacaine8">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 9}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ropivacaine9" name="ropivacaine9" value="{$item[ropivacaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ropivacaine9" name="ropivacaine9">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 10}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ropivacaine10" name="ropivacaine10" value="{$item[ropivacaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ropivacaine10" name="ropivacaine10">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 11}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ropivacaine11" name="ropivacaine11" value="{$item[ropivacaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ropivacaine11" name="ropivacaine11">{/if}
+					</td>
+				</tr>
+				<tr>
+				    <td></td>
+					<td>Lidocaine利多卡因  %</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 1}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lidocaine1" name="lidocaine1" value="{$item[lidocaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lidocaine1" name="lidocaine1">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 2}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lidocaine2" name="lidocaine2" value="{$item[lidocaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lidocaine2" name="lidocaine2">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 3}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lidocaine3" name="lidocaine3" value="{$item[lidocaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lidocaine3" name="lidocaine3">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 4}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lidocaine4" name="lidocaine4" value="{$item[lidocaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lidocaine4" name="lidocaine4">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 5}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lidocaine5" name="lidocaine5" value="{$item[lidocaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lidocaine5" name="lidocaine5">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 6}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lidocaine6" name="lidocaine6" value="{$item[lidocaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lidocaine6" name="lidocaine6">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 7}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lidocaine7" name="lidocaine7" value="{$item[lidocaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lidocaine7" name="lidocaine7">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 8}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lidocaine8" name="lidocaine8" value="{$item[lidocaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lidocaine8" name="lidocaine8">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 9}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lidocaine9" name="lidocaine9" value="{$item[lidocaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lidocaine9" name="lidocaine9">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 10}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lidocaine10" name="lidocaine10" value="{$item[lidocaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lidocaine10" name="lidocaine10">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 11}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lidocaine11" name="lidocaine11" value="{$item[lidocaine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lidocaine11" name="lidocaine11">{/if}
+					</td>
+				</tr>
+				<tr>
+				    <td>E硬膜外</td>
+					<td>Lidocaine1.5%+epi试验剂</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 1}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lid_epi1" name="lid_epi1" value="{$item[lid_epi]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lid_epi1" name="lid_epi1">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 2}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lid_epi2" name="lid_epi2" value="{$item[lid_epi]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lid_epi2" name="lid_epi2">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 3}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lid_epi3" name="lid_epi3" value="{$item[lid_epi]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lid_epi3" name="lid_epi3">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 4}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lid_epi4" name="lid_epi4" value="{$item[lid_epi]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lid_epi4" name="lid_epi4">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 5}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lid_epi5" name="lid_epi5" value="{$item[lid_epi]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lid_epi5" name="lid_epi5">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 6}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lid_epi6" name="lid_epi6" value="{$item[lid_epi]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lid_epi6" name="lid_epi6">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 7}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lid_epi7" name="lid_epi7" value="{$item[lid_epi]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lid_epi7" name="lid_epi7">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 8}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lid_epi8" name="lid_epi8" value="{$item[lid_epi]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lid_epi8" name="lid_epi8">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 9}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lid_epi9" name="lid_epi9" value="{$item[lid_epi]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lid_epi9" name="lid_epi9">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 10}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lid_epi10" name="lid_epi10" value="{$item[lid_epi]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lid_epi10" name="lid_epi10">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 11}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="lid_epi11" name="lid_epi11" value="{$item[lid_epi]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="lid_epi11" name="lid_epi11">{/if}
+					</td>
+				</tr>
+				<tr>
+				    <td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+				    <td></td>
+					<td>Fentanyl芬太尼  （mcg）</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 1}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="fentanyl1" name="fentanyl1" value="{$item[fentanyl]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="fentanyl1" name="fentanyl1">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 2}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="fentanyl2" name="fentanyl2" value="{$item[fentanyl]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="fentanyl2" name="fentanyl2">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 3}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="fentanyl3" name="fentanyl3" value="{$item[fentanyl]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="fentanyl3" name="fentanyl3">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 4}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="fentanyl4" name="fentanyl4" value="{$item[fentanyl]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="fentanyl4" name="fentanyl4">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 5}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="fentanyl5" name="fentanyl5" value="{$item[fentanyl]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="fentanyl5" name="fentanyl5">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 6}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="fentanyl6" name="fentanyl6" value="{$item[fentanyl]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="fentanyl6" name="fentanyl6">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 7}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="fentanyl7" name="fentanyl7" value="{$item[fentanyl]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="fentanyl7" name="fentanyl7">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 8}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="fentanyl8" name="fentanyl8" value="{$item[fentanyl]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="fentanyl8" name="fentanyl8">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 9}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="fentanyl9" name="fentanyl9" value="{$item[fentanyl]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="fentanyl9" name="fentanyl9">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 10}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="fentanyl10" name="fentanyl10" value="{$item[fentanyl]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="fentanyl10" name="fentanyl10">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 11}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="fentanyl11" name="fentanyl11" value="{$item[fentanyl]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="fentanyl11" name="fentanyl11">{/if}
+					</td>
+				</tr>
+				<tr>
+				    <td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+				    <td>IV静脉</td>
+					<td>Ephedrine麻黄素  （mg）</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 1}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ephedrine1" name="ephedrine1" value="{$item[ephedrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ephedrine1" name="ephedrine1">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 2}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ephedrine2" name="ephedrine2" value="{$item[ephedrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ephedrine2" name="ephedrine2">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 3}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ephedrine3" name="ephedrine3" value="{$item[ephedrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ephedrine3" name="ephedrine3">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 4}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ephedrine4" name="ephedrine4" value="{$item[ephedrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ephedrine4" name="ephedrine4">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 5}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ephedrine5" name="ephedrine5" value="{$item[ephedrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ephedrine5" name="ephedrine5">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 6}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ephedrine6" name="ephedrine6" value="{$item[ephedrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ephedrine6" name="ephedrine6">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 7}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ephedrine7" name="ephedrine7" value="{$item[ephedrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ephedrine7" name="ephedrine7">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 8}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ephedrine8" name="ephedrine8" value="{$item[ephedrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ephedrine8" name="ephedrine8">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 9}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ephedrine9" name="ephedrine9" value="{$item[ephedrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ephedrine9" name="ephedrine9">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 10}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ephedrine10" name="ephedrine10" value="{$item[ephedrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ephedrine10" name="ephedrine10">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 11}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="ephedrine11" name="ephedrine11" value="{$item[ephedrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="ephedrine11" name="ephedrine11">{/if}
+					</td>
+				</tr>
+				<tr>
+				    <td>IV静脉</td>
+					<td>Phenyephrine正肾  （mcg）</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 1}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="phenyephrine1" name="phenyephrine1" value="{$item[phenyephrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="phenyephrine1" name="phenyephrine1">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 2}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="phenyephrine2" name="phenyephrine2" value="{$item[phenyephrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="phenyephrine2" name="phenyephrine2">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 3}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="phenyephrine3" name="phenyephrine3" value="{$item[phenyephrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="phenyephrine3" name="phenyephrine3">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 4}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="phenyephrine4" name="phenyephrine4" value="{$item[phenyephrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="phenyephrine4" name="phenyephrine4">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 5}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="phenyephrine5" name="phenyephrine5" value="{$item[phenyephrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="phenyephrine5" name="phenyephrine5">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 6}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="phenyephrine6" name="phenyephrine6" value="{$item[phenyephrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="phenyephrine6" name="phenyephrine6">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 7}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="phenyephrine7" name="phenyephrine7" value="{$item[phenyephrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="phenyephrine7" name="phenyephrine7">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 8}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="phenyephrine8" name="phenyephrine8" value="{$item[phenyephrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="phenyephrine8" name="phenyephrine8">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 9}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="phenyephrine9" name="phenyephrine9" value="{$item[phenyephrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="phenyephrine9" name="phenyephrine9">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 10}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="phenyephrine10" name="phenyephrine10" value="{$item[phenyephrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="phenyephrine10" name="phenyephrine10">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 11}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="phenyephrine11" name="phenyephrine11" value="{$item[phenyephrine]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="phenyephrine11" name="phenyephrine11">{/if}
+					</td>
+				</tr>
+				<tr>
+				    <td>E硬膜外</td>
+					<td>Bupivacaine0.06%+Fentanyl 2mcglcc</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 1}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bup_fen1" name="bup_fen1" value="{$item[bup_fen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bup_fen1" name="bup_fen1">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 2}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bup_fen2" name="bup_fen2" value="{$item[bup_fen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bup_fen2" name="bup_fen2">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 3}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bup_fen3" name="bup_fen3" value="{$item[bup_fen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bup_fen3" name="bup_fen3">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 4}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bup_fen4" name="bup_fen4" value="{$item[bup_fen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bup_fen4" name="bup_fen4">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 5}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bup_fen5" name="bup_fen5" value="{$item[bup_fen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bup_fen5" name="bup_fen5">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 6}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bup_fen6" name="bup_fen6" value="{$item[bup_fen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bup_fen6" name="bup_fen6">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 7}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bup_fen7" name="bup_fen7" value="{$item[bup_fen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bup_fen7" name="bup_fen7">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 8}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bup_fen8" name="bup_fen8" value="{$item[bup_fen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bup_fen8" name="bup_fen8">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 9}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bup_fen9" name="bup_fen9" value="{$item[bup_fen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bup_fen9" name="bup_fen9">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 10}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bup_fen10" name="bup_fen10" value="{$item[bup_fen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bup_fen10" name="bup_fen10">{/if}
+					</td>
+					<td>
+					{set:$t=0;}
+						{query: name=labor_analgesia_drugs as lad where=lad.time_id eq 11}
+						{if:$item[basic_id]==$this->id}
+						<input type="text" class='small' id="bup_fen11" name="bup_fen11" value="{$item[bup_fen]}">
+						{set:$t=1;}
+						{/if}
+						{/query}
+						{if:$t==0}<input type="text" class='small' id="bup_fen11" name="bup_fen11">{/if}
+					</td>
+				</tr>
+	</table>
+	</div>
+	<button class="submit" type="submit"><span>确 定</span></button>
+</form>
+</div>
